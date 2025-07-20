@@ -8,33 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cash Climb Design System - Gamified Financial Platform */
+    --background: 220 20% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 25% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep forest green for growth/money */
+    --primary: 140 60% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 140 60% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Rich gold for achievement */
+    --secondary: 45 90% 55%;
+    --secondary-foreground: 220 25% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Subtle blue-grays */
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Bright trust blue */
+    --accent: 200 80% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 140 60% 35%;
+
+    /* Custom gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(140 60% 25%), hsl(140 60% 35%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 55%), hsl(35 85% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 4%), hsl(140 40% 8%));
+    --shadow-glow: 0 0 40px hsl(140 60% 35% / 0.3);
+    --shadow-gold: 0 10px 30px hsl(45 90% 55% / 0.2);
 
     --radius: 0.5rem;
 
