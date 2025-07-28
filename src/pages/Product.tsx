@@ -13,6 +13,7 @@ import {
   CheckCircle,
   Star
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const features = [
@@ -131,9 +132,11 @@ const Product = () => {
                 Master personal finance with our interactive platform that combines education with entertainment. Level up your money skills while having fun!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="animate-glow">
-                  Start Playing Free
-                  <Gamepad2 className="ml-2 h-5 w-5" />
+                <Button variant="hero" size="lg" className="animate-glow" asChild>
+                  <Link to="/game">
+                    Start Playing Free
+                    <Gamepad2 className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg">
                   Watch Demo
