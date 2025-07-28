@@ -45,8 +45,8 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
-              Get Started
+            <Button variant="hero" size="sm" asChild>
+              <Link to="/auth">Get Started</Link>
             </Button>
           </div>
 
@@ -81,8 +81,8 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button variant="hero" size="sm" className="w-full">
-                  Get Started
+                <Button variant="hero" size="sm" className="w-full" asChild>
+                  <Link to="/auth">Get Started</Link>
                 </Button>
               </div>
             </div>
