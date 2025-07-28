@@ -175,9 +175,11 @@ const Home = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join thousands of users who are already climbing their way to financial success. Your future self will thank you.
           </p>
-          <Button variant="gold" size="lg" className="animate-glow">
-            Join Cash Climb Today
-            <TrendingUp className="ml-2 h-5 w-5" />
+          <Button variant="gold" size="lg" className="animate-glow" asChild>
+            <Link to="/auth">
+              Join Cash Climb Today
+              <TrendingUp className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </section>
