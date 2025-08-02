@@ -1,113 +1,163 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
-  Gamepad2, 
-  Trophy, 
   Coins, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  Calendar,
-  PlayCircle,
-  Settings,
+  Trophy, 
   Home,
-  Book
+  Heart,
+  Star,
+  CheckCircle,
+  XCircle,
+  Hammer,
+  Zap,
+  Target
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Game = () => {
-  const playerStats = {
-    level: 7,
-    xp: 1250,
-    xpToNext: 500,
-    coins: 2850,
-    badges: 12,
-    streak: 5
-  };
+  const [gameState, setGameState] = useState({
+    coins: 0,
+    score: 0,
+    level: 1,
+    lives: 3,
+    currentTask: 0,
+    villageProgress: 0,
+    correctAnswers: 0,
+    totalQuestions: 0
+  });
 
-  const availableGames = [
+  const [showQuestion, setShowQuestion] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showResult, setShowResult] = useState(false);
+
+  // Village building tasks that earn coins
+  const tasks = [
+    { id: 1, name: "Clean the Village Square", coins: 10, completed: false },
+    { id: 2, name: "Help Build Houses", coins: 15, completed: false },
+    { id: 3, name: "Plant Flowers in Garden", coins: 8, completed: false },
+    { id: 4, name: "Repair the Bridge", coins: 20, completed: false },
+    { id: 5, name: "Organize Village Market", coins: 12, completed: false }
+  ];
+
+  // Needs vs Wants questions
+  const questions = [
     {
       id: 1,
-      title: "Budget Battle Royale",
-      description: "Manage your virtual budget while facing unexpected expenses and opportunities",
-      difficulty: "Beginner",
-      duration: "15 min",
-      xpReward: 150,
-      coinReward: 50,
-      category: "Budgeting",
-      isLocked: false
+      question: "Sarah wants to buy something. Help her decide if it's a NEED or a WANT:",
+      item: "A warm winter coat",
+      image: "🧥",
+      correctAnswer: "need",
+      explanation: "A warm coat is a NEED because it protects you from cold weather and keeps you healthy!"
     },
     {
       id: 2,
-      title: "Investment Island",
-      description: "Navigate the stock market and build a diversified portfolio",
-      difficulty: "Intermediate", 
-      duration: "25 min",
-      xpReward: 300,
-      coinReward: 100,
-      category: "Investing",
-      isLocked: false
+      question: "Tommy is at the store. Is this a NEED or a WANT?",
+      item: "A video game",
+      image: "🎮",
+      correctAnswer: "want",
+      explanation: "A video game is a WANT because it's fun but not necessary for survival."
     },
     {
       id: 3,
-      title: "Debt Dungeon Escape",
-      description: "Strategically pay off debts and escape the dungeon of financial burden",
-      difficulty: "Beginner",
-      duration: "20 min", 
-      xpReward: 200,
-      coinReward: 75,
-      category: "Debt Management",
-      isLocked: false
+      question: "Emma is shopping with her mom. Is this a NEED or a WANT?",
+      item: "Fresh vegetables for dinner",
+      image: "🥕",
+      correctAnswer: "need",
+      explanation: "Fresh vegetables are a NEED because our bodies need healthy food to grow strong!"
     },
     {
       id: 4,
-      title: "Crypto Kingdom",
-      description: "Learn cryptocurrency basics while exploring a digital kingdom",
-      difficulty: "Advanced",
-      duration: "30 min",
-      xpReward: 400,
-      coinReward: 150,
-      category: "Cryptocurrency",
-      isLocked: true
+      question: "Alex wants to buy something special. Is this a NEED or a WANT?",
+      item: "A fancy toy robot",
+      image: "🤖",
+      correctAnswer: "want",
+      explanation: "A toy robot is a WANT because it's fun to play with but not necessary."
+    },
+    {
+      id: 5,
+      question: "Maria is getting ready for school. Is this a NEED or a WANT?",
+      item: "School shoes",
+      image: "👟",
+      correctAnswer: "need",
+      explanation: "School shoes are a NEED because you need proper shoes to walk safely and follow school rules!"
     }
   ];
 
-  const dailyChallenges = [
-    {
-      title: "Save $5 Challenge",
-      description: "Find creative ways to save $5 today",
-      progress: 60,
-      reward: "25 XP"
-    },
-    {
-      title: "Read 3 Finance Articles",
-      description: "Expand your knowledge with curated content",
-      progress: 33,
-      reward: "50 XP"
-    },
-    {
-      title: "Complete a Learning Module",
-      description: "Finish any module to complete this challenge",
-      progress: 0,
-      reward: "100 XP"
-    }
-  ];
+  const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
+  const [completedTasks, setCompletedTasks] = useState<number[]>([]);
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case "Beginner": return "bg-success/20 text-success";
-      case "Intermediate": return "bg-warning/20 text-warning";
-      case "Advanced": return "bg-destructive/20 text-destructive";
-      default: return "bg-primary/20 text-primary";
+  const completeTask = (taskId: number) => {
+    const task = tasks.find(t => t.id === taskId);
+    if (task && !completedTasks.includes(taskId)) {
+      setCompletedTasks([...completedTasks, taskId]);
+      setGameState(prev => ({
+        ...prev,
+        coins: prev.coins + task.coins,
+        villageProgress: Math.min(prev.villageProgress + 20, 100)
+      }));
+      toast.success(`Task completed! +${task.coins} coins earned!`);
+      
+      // Start a question after completing a task
+      setTimeout(() => setShowQuestion(true), 1000);
     }
+  };
+
+  const answerQuestion = (answer: string) => {
+    setSelectedAnswer(answer);
+    setShowResult(true);
+    
+    const isCorrect = answer === currentQuestion.correctAnswer;
+    
+    setGameState(prev => ({
+      ...prev,
+      totalQuestions: prev.totalQuestions + 1,
+      correctAnswers: isCorrect ? prev.correctAnswers + 1 : prev.correctAnswers,
+      coins: isCorrect ? prev.coins + 5 : prev.coins,
+      score: isCorrect ? prev.score + 10 : prev.score,
+      lives: isCorrect ? prev.lives : Math.max(prev.lives - 1, 0)
+    }));
+
+    if (isCorrect) {
+      toast.success("Correct! +5 coins & +10 points!");
+    } else {
+      toast.error("Not quite right. Try to remember for next time!");
+    }
+
+    // Move to next question after 3 seconds
+    setTimeout(() => {
+      const nextQuestionIndex = (questions.findIndex(q => q.id === currentQuestion.id) + 1) % questions.length;
+      setCurrentQuestion(questions[nextQuestionIndex]);
+      setSelectedAnswer(null);
+      setShowResult(false);
+      setShowQuestion(false);
+    }, 3000);
+  };
+
+  const resetGame = () => {
+    setGameState({
+      coins: 0,
+      score: 0,
+      level: 1,
+      lives: 3,
+      currentTask: 0,
+      villageProgress: 0,
+      correctAnswers: 0,
+      totalQuestions: 0
+    });
+    setCompletedTasks([]);
+    setShowQuestion(false);
+    setSelectedAnswer(null);
+    setShowResult(false);
+    toast.success("Game reset! Start earning coins by helping the village!");
   };
 
   return (
     <div className="min-h-screen pt-20 pb-8">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
@@ -118,182 +168,217 @@ const Game = () => {
               </Link>
             </Button>
             <h1 className="text-3xl md:text-4xl font-bold">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Game Center</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">
+                Village Rebuild: Money Basics
+              </span>
             </h1>
           </div>
           <p className="text-lg text-muted-foreground">
-            Build your financial skills through interactive games and challenges
+            Help rebuild the village by completing tasks and learning about money! 🏘️
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-6">
-          {/* Sidebar - Player Stats */}
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Game Stats Sidebar */}
           <div className="lg:col-span-1">
             <Card className="mb-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Trophy className="h-5 w-5 text-primary" />
-                  Player Stats
+                  Your Progress
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-3 bg-gradient-subtle rounded-lg">
+                    <div className="flex items-center justify-center gap-1 text-xl font-bold text-warning">
+                      <Coins className="h-5 w-5" />
+                      {gameState.coins}
+                    </div>
+                    <p className="text-xs text-muted-foreground">Coins Earned</p>
+                  </div>
+                  <div className="text-center p-3 bg-gradient-subtle rounded-lg">
+                    <div className="flex items-center justify-center gap-1 text-xl font-bold text-primary">
+                      <Star className="h-5 w-5" />
+                      {gameState.score}
+                    </div>
+                    <p className="text-xs text-muted-foreground">Score</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center gap-1">
+                  {[...Array(3)].map((_, i) => (
+                    <Heart 
+                      key={i} 
+                      className={`h-6 w-6 ${
+                        i < gameState.lives ? 'text-red-500 fill-current' : 'text-gray-300'
+                      }`} 
+                    />
+                  ))}
+                </div>
+
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium">Level {playerStats.level}</span>
-                    <span className="text-xs text-muted-foreground">
-                      {playerStats.xp}/{playerStats.xp + playerStats.xpToNext} XP
-                    </span>
+                    <span className="text-sm font-medium">Village Progress</span>
+                    <span className="text-xs text-muted-foreground">{gameState.villageProgress}%</span>
                   </div>
-                  <Progress value={(playerStats.xp / (playerStats.xp + playerStats.xpToNext)) * 100} />
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 text-lg font-bold text-warning">
-                      <Coins className="h-4 w-4" />
-                      {playerStats.coins}
-                    </div>
-                    <p className="text-xs text-muted-foreground">Coins</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 text-lg font-bold text-primary">
-                      <Trophy className="h-4 w-4" />
-                      {playerStats.badges}
-                    </div>
-                    <p className="text-xs text-muted-foreground">Badges</p>
-                  </div>
+                  <Progress value={gameState.villageProgress} className="h-3" />
                 </div>
 
-                <div className="text-center p-3 bg-gradient-subtle rounded-lg">
-                  <div className="flex items-center justify-center gap-1 text-lg font-bold text-success">
-                    <Zap className="h-4 w-4" />
-                    {playerStats.streak}
-                  </div>
-                  <p className="text-xs text-muted-foreground">Day Streak</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Daily Challenges */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  Daily Challenges
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {dailyChallenges.map((challenge, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between items-start">
-                      <h4 className="font-medium text-sm">{challenge.title}</h4>
-                      <Badge variant="outline" className="text-xs">
-                        {challenge.reward}
-                      </Badge>
+                {gameState.totalQuestions > 0 && (
+                  <div className="text-center p-3 bg-primary/10 rounded-lg">
+                    <div className="text-lg font-bold text-primary">
+                      {gameState.correctAnswers}/{gameState.totalQuestions}
                     </div>
-                    <p className="text-xs text-muted-foreground">{challenge.description}</p>
-                    <Progress value={challenge.progress} className="h-2" />
+                    <p className="text-xs text-muted-foreground">Questions Correct</p>
                   </div>
-                ))}
+                )}
+
+                <Button onClick={resetGame} variant="outline" className="w-full">
+                  <Zap className="h-4 w-4 mr-2" />
+                  New Game
+                </Button>
               </CardContent>
             </Card>
           </div>
 
-          {/* Main Content - Games */}
-          <div className="lg:col-span-3">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Available Games</h2>
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm">
-                  <Book className="h-4 w-4 mr-2" />
-                  Learning Modules
-                </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {availableGames.map((game) => (
-                <Card 
-                  key={game.id} 
-                  className={`group hover:scale-105 transition-all duration-300 ${
-                    game.isLocked 
-                      ? 'opacity-60 cursor-not-allowed' 
-                      : 'hover:border-primary/50 hover:shadow-glow cursor-pointer'
-                  }`}
-                >
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-lg">{game.title}</CardTitle>
-                      {game.isLocked && <Badge variant="secondary">Locked</Badge>}
-                    </div>
-                    <div className="flex gap-2 mb-3">
-                      <Badge className={getDifficultyColor(game.difficulty)}>
-                        {game.difficulty}
-                      </Badge>
-                      <Badge variant="outline">{game.category}</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{game.description}</p>
-                  </CardHeader>
+          {/* Main Game Area */}
+          <div className="lg:col-span-2">
+            {/* Question Modal */}
+            {showQuestion && (
+              <Card className="mb-6 border-primary/50 shadow-glow animate-scale-in">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-xl">💭 Money Decision Time!</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center space-y-4">
+                  <div className="text-6xl mb-4">{currentQuestion.image}</div>
+                  <p className="text-lg">{currentQuestion.question}</p>
+                  <div className="text-xl font-bold text-primary">"{currentQuestion.item}"</div>
                   
-                  <CardContent>
-                    <div className="flex justify-between items-center mb-4">
-                      <div className="flex gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Target className="h-3 w-3" />
-                          {game.duration}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Trophy className="h-3 w-3" />
-                          {game.xpReward} XP
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Coins className="h-3 w-3" />
-                          {game.coinReward}
+                  {!showResult ? (
+                    <div className="flex gap-4 justify-center">
+                      <Button
+                        size="lg"
+                        variant="hero"
+                        onClick={() => answerQuestion("need")}
+                        className="bg-green-500 hover:bg-green-600"
+                      >
+                        <Target className="h-5 w-5 mr-2" />
+                        NEED
+                      </Button>
+                      <Button
+                        size="lg"
+                        variant="hero"
+                        onClick={() => answerQuestion("want")}
+                        className="bg-blue-500 hover:bg-blue-600"
+                      >
+                        <Star className="h-5 w-5 mr-2" />
+                        WANT
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-center gap-2">
+                        {selectedAnswer === currentQuestion.correctAnswer ? (
+                          <CheckCircle className="h-8 w-8 text-green-500" />
+                        ) : (
+                          <XCircle className="h-8 w-8 text-red-500" />
+                        )}
+                        <span className="text-xl font-bold">
+                          {selectedAnswer === currentQuestion.correctAnswer ? "Correct!" : "Not quite!"}
                         </span>
                       </div>
+                      <p className="text-muted-foreground">{currentQuestion.explanation}</p>
                     </div>
-                    
-                    <Button 
-                      className="w-full" 
-                      variant={game.isLocked ? "outline" : "gaming"}
-                      disabled={game.isLocked}
-                    >
-                      {game.isLocked ? (
-                        <>Unlock at Level {game.id + 5}</>
-                      ) : (
-                        <>
-                          <PlayCircle className="h-4 w-4 mr-2" />
-                          Start Game
-                        </>
-                      )}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  )}
+                </CardContent>
+              </Card>
+            )}
 
-            {/* Coming Soon Section */}
-            <div className="mt-12">
-              <h3 className="text-xl font-bold mb-4">Coming Soon</h3>
-              <div className="grid md:grid-cols-3 gap-4">
-                {[
-                  "Retirement Planning Simulator",
-                  "Tax Strategy Battle",
-                  "Real Estate Tycoon"
-                ].map((title, index) => (
-                  <Card key={index} className="opacity-60">
-                    <CardContent className="p-4 text-center">
-                      <Gamepad2 className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-                      <h4 className="font-medium text-sm">{title}</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Coming Q2 2024</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+            {/* Village Tasks */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Hammer className="h-5 w-5 text-primary" />
+                  Village Tasks - Earn Coins!
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-4">
+                  {tasks.map((task) => (
+                    <div
+                      key={task.id}
+                      className={`p-4 rounded-lg border transition-all ${
+                        completedTasks.includes(task.id)
+                          ? 'bg-green-50 border-green-200'
+                          : 'bg-card border-border hover:border-primary/50'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          {completedTasks.includes(task.id) ? (
+                            <CheckCircle className="h-6 w-6 text-green-500" />
+                          ) : (
+                            <div className="h-6 w-6 rounded-full border-2 border-gray-300" />
+                          )}
+                          <div>
+                            <h3 className="font-medium">{task.name}</h3>
+                            <div className="flex items-center gap-1 text-sm text-warning">
+                              <Coins className="h-3 w-3" />
+                              {task.coins} coins
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          onClick={() => completeTask(task.id)}
+                          disabled={completedTasks.includes(task.id)}
+                          variant={completedTasks.includes(task.id) ? "outline" : "gaming"}
+                          size="sm"
+                        >
+                          {completedTasks.includes(task.id) ? "Completed!" : "Start Task"}
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {gameState.villageProgress === 100 && (
+                  <div className="mt-6 text-center p-6 bg-gradient-primary/10 rounded-lg">
+                    <Trophy className="h-12 w-12 mx-auto mb-4 text-primary" />
+                    <h3 className="text-xl font-bold mb-2">🎉 Village Rebuilt!</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Congratulations! You've helped rebuild the entire village and learned about earning money and needs vs wants!
+                    </p>
+                    <Badge variant="outline" className="text-lg p-2">
+                      Master Village Builder! 🏆
+                    </Badge>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Learning Summary */}
+            <Card className="mt-6">
+              <CardHeader>
+                <CardTitle>💡 What You're Learning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-blue-50 rounded-lg">
+                    <h4 className="font-bold text-blue-800 mb-2">Earning Money</h4>
+                    <p className="text-sm text-blue-700">
+                      Complete tasks and chores to earn coins. In real life, people work jobs to earn money!
+                    </p>
+                  </div>
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <h4 className="font-bold text-green-800 mb-2">Needs vs Wants</h4>
+                    <p className="text-sm text-green-700">
+                      Needs are things you must have to live safely. Wants are nice to have but not necessary.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
