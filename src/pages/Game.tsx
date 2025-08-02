@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,12 +14,18 @@ import {
   XCircle,
   Hammer,
   Zap,
-  Target
+  Target,
+  ArrowLeft,
+  ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 const Game = () => {
+  const { moduleId } = useParams();
+  const navigate = useNavigate();
+  const currentModule = parseInt(moduleId || "1");
+
   const [gameState, setGameState] = useState({
     coins: 0,
     score: 0,
@@ -33,6 +40,32 @@ const Game = () => {
   const [showQuestion, setShowQuestion] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [gameCompleted, setGameCompleted] = useState(false);
+
+  const moduleInfo = {
+    1: {
+      title: "Village Rebuild: Money Basics",
+      description: "Help rebuild the village by completing tasks and learning about money! 🏘️",
+      emoji: "🏘️"
+    },
+    2: {
+      title: "Lemonade Stand: Saving & Budgeting",
+      description: "Run your lemonade stand and learn to save and budget! 🍋",
+      emoji: "🍋"
+    },
+    3: {
+      title: "Bank Explorer: Interest & Accounts",
+      description: "Discover how banks work and make your money grow! 🏦",
+      emoji: "🏦"
+    },
+    4: {
+      title: "Shop Owner: Credit & Debt",
+      description: "Manage your shop and learn about borrowing responsibly! 🏪",
+      emoji: "🏪"
+    }
+  };
+
+  const currentModuleInfo = moduleInfo[currentModule as keyof typeof moduleInfo] || moduleInfo[1];
 
   // Village building tasks that earn coins
   const tasks = [
@@ -137,6 +170,24 @@ const Game = () => {
     }, 3000);
   };
 
+  // Check if module is completed
+  useEffect(() => {
+    if (gameState.villageProgress === 100 && !gameCompleted) {
+      setGameCompleted(true);
+      toast.success("Module completed! Ready for the next challenge!");
+    }
+  }, [gameState.villageProgress, gameCompleted]);
+
+  const nextModule = () => {
+    if (currentModule < 4) {
+      navigate(`/game/module/${currentModule + 1}`);
+    }
+  };
+
+  const goBackToModules = () => {
+    navigate('/game');
+  };
+
   const resetGame = () => {
     setGameState({
       coins: 0,
@@ -152,6 +203,7 @@ const Game = () => {
     setShowQuestion(false);
     setSelectedAnswer(null);
     setShowResult(false);
+    setGameCompleted(false);
     toast.success("Game reset! Start earning coins by helping the village!");
   };
 
@@ -161,20 +213,25 @@ const Game = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
+            <Button variant="outline" size="sm" onClick={goBackToModules}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              All Modules
+            </Button>
             <Button variant="outline" size="sm" asChild>
               <Link to="/">
                 <Home className="h-4 w-4 mr-2" />
                 Home
               </Link>
             </Button>
-            <h1 className="text-3xl md:text-4xl font-bold">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Village Rebuild: Money Basics
-              </span>
-            </h1>
+            <Badge variant="outline">Module {currentModule}</Badge>
           </div>
+          <h1 className="text-3xl md:text-4xl font-bold">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              {currentModuleInfo.title}
+            </span>
+          </h1>
           <p className="text-lg text-muted-foreground">
-            Help rebuild the village by completing tasks and learning about money! 🏘️
+            {currentModuleInfo.description}
           </p>
         </div>
 
@@ -345,13 +402,27 @@ const Game = () => {
                 {gameState.villageProgress === 100 && (
                   <div className="mt-6 text-center p-6 bg-gradient-primary/10 rounded-lg">
                     <Trophy className="h-12 w-12 mx-auto mb-4 text-primary" />
-                    <h3 className="text-xl font-bold mb-2">🎉 Village Rebuilt!</h3>
+                    <h3 className="text-xl font-bold mb-2">🎉 Module {currentModule} Complete!</h3>
                     <p className="text-muted-foreground mb-4">
-                      Congratulations! You've helped rebuild the entire village and learned about earning money and needs vs wants!
+                      Congratulations! You've mastered {currentModuleInfo.title.split(':')[1]}!
                     </p>
-                    <Badge variant="outline" className="text-lg p-2">
-                      Master Village Builder! 🏆
-                    </Badge>
+                    <div className="flex justify-center gap-4">
+                      <Badge variant="outline" className="text-lg p-2">
+                        Module {currentModule} Master! 🏆
+                      </Badge>
+                    </div>
+                    <div className="mt-4 flex justify-center gap-3">
+                      <Button onClick={goBackToModules} variant="outline">
+                        <ArrowLeft className="h-4 w-4 mr-2" />
+                        All Modules
+                      </Button>
+                      {currentModule < 4 && (
+                        <Button onClick={nextModule} variant="hero">
+                          Next Module
+                          <ArrowRight className="h-4 w-4 ml-2" />
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 )}
               </CardContent>

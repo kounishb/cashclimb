@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
+import GameStart from "./pages/GameStart";
 import Game from "./pages/Game";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,14 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route 
               path="/game" 
+              element={
+                <ProtectedRoute>
+                  <GameStart />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/game/module/:moduleId" 
               element={
                 <ProtectedRoute>
                   <Game />
