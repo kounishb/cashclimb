@@ -62,6 +62,26 @@ const Game = () => {
       title: "Shop Owner: Credit & Debt",
       description: "Manage your shop and learn about borrowing responsibly! 🏪",
       emoji: "🏪"
+    },
+    5: {
+      title: "Smart Shopper: Spending Wisely",
+      description: "Plan a school fundraiser and shop for supplies within budget! 🛒",
+      emoji: "🛒"
+    },
+    6: {
+      title: "Career Explorer: Earning & Jobs",
+      description: "Try different career paths and learn about jobs vs careers! 💼",
+      emoji: "💼"
+    },
+    7: {
+      title: "Digital Detective: Online Safety",
+      description: "Navigate the digital world safely and avoid online scams! 🔒",
+      emoji: "🔒"
+    },
+    8: {
+      title: "Family Planner: Smart Decisions",
+      description: "Help plan a family vacation and make wise financial choices! ✈️",
+      emoji: "✈️"
     }
   };
 
@@ -179,7 +199,7 @@ const Game = () => {
   }, [gameState.villageProgress, gameCompleted]);
 
   const nextModule = () => {
-    if (currentModule < 4) {
+    if (currentModule < 8) {
       navigate(`/game/module/${currentModule + 1}`);
     }
   };
@@ -416,7 +436,7 @@ const Game = () => {
                         <ArrowLeft className="h-4 w-4 mr-2" />
                         All Modules
                       </Button>
-                      {currentModule < 4 && (
+                      {currentModule < 8 && (
                         <Button onClick={nextModule} variant="hero">
                           Next Module
                           <ArrowRight className="h-4 w-4 ml-2" />

@@ -86,6 +86,62 @@ const GameStart = () => {
       badge: "Credit Master",
       isUnlocked: false,
       isCompleted: false
+    },
+    {
+      id: 5,
+      title: "Spending Wisely",
+      subtitle: "Making smart purchase decisions",
+      targetGrades: "6-8",
+      description: "Plan a school fundraiser and shop for supplies within budget while learning about comparison shopping and avoiding impulse buys.",
+      topics: ["Comparison shopping", "Unit prices & discounts", "Impulse vs. planned spending"],
+      gameScenario: "School Fundraiser Planner",
+      estimatedTime: "25-30 minutes",
+      xpReward: 300,
+      badge: "Smart Shopper",
+      isUnlocked: false,
+      isCompleted: false
+    },
+    {
+      id: 6,
+      title: "Earning & Careers",
+      subtitle: "Exploring the world of work",
+      targetGrades: "6-8",
+      description: "Try out different career paths and learn about jobs vs careers, hourly wages vs salaries, and how paychecks work.",
+      topics: ["Jobs vs. careers", "Hourly wage vs. salary", "Paychecks and taxes"],
+      gameScenario: "Career Exploration Quest",
+      estimatedTime: "30-35 minutes",
+      xpReward: 350,
+      badge: "Career Explorer",
+      isUnlocked: false,
+      isCompleted: false
+    },
+    {
+      id: 7,
+      title: "Digital Money & Scams",
+      subtitle: "Staying safe in the digital world",
+      targetGrades: "7-8",
+      description: "Navigate online payments and digital wallets while learning to spot and avoid scams and phishing attempts.",
+      topics: ["Online payments & apps", "Digital wallets", "Spotting scams & phishing"],
+      gameScenario: "Digital Detective Mission",
+      estimatedTime: "30-35 minutes",
+      xpReward: 400,
+      badge: "Digital Detective",
+      isUnlocked: false,
+      isCompleted: false
+    },
+    {
+      id: 8,
+      title: "Financial Decision-Making",
+      subtitle: "Making smart long-term choices",
+      targetGrades: "7-8", 
+      description: "Help plan a family vacation and learn about opportunity cost, risk vs reward, and making smart long-term financial decisions.",
+      topics: ["Opportunity cost", "Risk vs. reward", "Smart long-term choices"],
+      gameScenario: "Family Vacation Planner",
+      estimatedTime: "35-40 minutes",
+      xpReward: 500,
+      badge: "Decision Master",
+      isUnlocked: false,
+      isCompleted: false
     }
   ];
 
@@ -230,7 +286,11 @@ const GameStart = () => {
                       <div className="text-6xl mb-4">
                         {selectedModuleData.id === 1 ? "🏘️" : 
                          selectedModuleData.id === 2 ? "🍋" :
-                         selectedModuleData.id === 3 ? "🏦" : "🏪"}
+                         selectedModuleData.id === 3 ? "🏦" : 
+                         selectedModuleData.id === 4 ? "🏪" :
+                         selectedModuleData.id === 5 ? "🛒" :
+                         selectedModuleData.id === 6 ? "💼" :
+                         selectedModuleData.id === 7 ? "🔒" : "✈️"}
                       </div>
                       <h3 className="text-lg font-bold mb-2">
                         {selectedModuleData.title}
