@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Target, Trophy, Users, Star, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/hero-bg.jpg";
+import heroImage from "../assets/hero-bg-clean.jpg";
 
 const Home = () => {
   const features = [
