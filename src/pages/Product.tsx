@@ -66,34 +66,46 @@ const Product = () => {
     "Seasonal events and tournaments"
   ];
 
-  const learningPaths = [
-    {
-      title: "Beginner Budgeter",
-      description: "Master the basics of budgeting and expense tracking",
-      duration: "2-3 weeks",
-      modules: 8,
-      difficulty: "Beginner"
+  const gameModules = [
+    { 
+      title: "Money Basics", 
+      description: "Understanding money, needs vs wants, and simple budgeting",
+      grades: "4-6"
     },
-    {
-      title: "Investment Explorer",
-      description: "Learn stocks, bonds, and portfolio management",
-      duration: "4-6 weeks", 
-      modules: 12,
-      difficulty: "Intermediate"
+    { 
+      title: "Banking & Saving", 
+      description: "Bank accounts, savings goals, and compound interest",
+      grades: "5-7"
     },
-    {
-      title: "Debt Destroyer",
-      description: "Strategies to eliminate debt and build credit",
-      duration: "3-4 weeks",
-      modules: 10,
-      difficulty: "Beginner"
+    { 
+      title: "Budgeting & Goals", 
+      description: "Creating budgets, tracking expenses, and smart financial goals",
+      grades: "5-7"
     },
-    {
-      title: "Wealth Builder",
-      description: "Advanced investing and wealth accumulation",
-      duration: "6-8 weeks",
-      modules: 16,
-      difficulty: "Advanced"
+    { 
+      title: "Credit & Debt", 
+      description: "Understanding credit scores, loans, and responsible borrowing",
+      grades: "6-8"
+    },
+    { 
+      title: "Spending Wisely", 
+      description: "Comparison shopping, unit prices, and avoiding impulse buying",
+      grades: "6-8"
+    },
+    { 
+      title: "Earning & Careers", 
+      description: "Jobs vs careers, wages vs salary, and understanding paychecks",
+      grades: "6-8"
+    },
+    { 
+      title: "Digital Money & Scams", 
+      description: "Online payments, digital wallets, and spotting scams",
+      grades: "7-8"
+    },
+    { 
+      title: "Financial Decision-Making", 
+      description: "Opportunity cost, risk vs reward, and long-term thinking",
+      grades: "7-8"
     }
   ];
 
@@ -226,7 +238,7 @@ const Product = () => {
                 Real <span className="bg-gradient-gold bg-clip-text text-transparent">Gaming</span> Elements
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We don't just add points to boring content. Cash Climb is built from the ground up as a game that happens to teach finance.
+                One comprehensive game with 8 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
@@ -267,47 +279,38 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Learning Paths Section */}
+      {/* Game Modules Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your <span className="bg-gradient-primary bg-clip-text text-transparent">Learning Path</span>
+              Complete <span className="bg-gradient-primary bg-clip-text text-transparent">8 Learning Modules</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Structured courses designed to take you from beginner to expert in specific financial areas.
+              One engaging game with 8 comprehensive modules covering all essential financial skills for grades 4-8.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {learningPaths.map((path, index) => (
+            {gameModules.map((module, index) => (
               <Card key={index} className="hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <Badge 
-                      variant={path.difficulty === 'Beginner' ? 'secondary' : path.difficulty === 'Intermediate' ? 'default' : 'destructive'}
-                      className="mb-2"
-                    >
-                      {path.difficulty}
+                    <Badge variant="secondary" className="mb-2">
+                      Module {index + 1}
                     </Badge>
-                    <h3 className="text-lg font-semibold">{path.title}</h3>
+                    <Badge variant="outline" className="mb-2 ml-2">
+                      Grades {module.grades}
+                    </Badge>
+                    <h3 className="text-lg font-semibold">{module.title}</h3>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm mb-4">{path.description}</p>
+                  <p className="text-muted-foreground text-sm mb-4">{module.description}</p>
                   
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span>Duration:</span>
-                      <span className="font-medium">{path.duration}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Modules:</span>
-                      <span className="font-medium">{path.modules}</span>
-                    </div>
-                  </div>
-                  
-                  <Button variant="outline" size="sm" className="w-full mt-4">
-                    Start Path
+                  <Button variant="outline" size="sm" className="w-full mt-4" asChild>
+                    <Link to="/game-start">
+                      Play Module
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
