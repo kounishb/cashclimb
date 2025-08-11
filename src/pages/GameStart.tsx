@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -21,15 +21,20 @@ import { Link, useNavigate } from "react-router-dom";
 const GameStart = () => {
   const navigate = useNavigate();
   const [selectedModule, setSelectedModule] = useState(1);
+  const [completedModules, setCompletedModules] = useState<number[]>([]);
+  const [totalXP, setTotalXP] = useState(0);
 
-  // Progress tracking (this would normally come from user data)
-  const playerProgress = {
-    completedModules: [0], // Module 1 is unlocked by default
-    currentModule: 1,
-    totalXP: 0,
-    badges: []
-  };
+  // Load progress from localStorage on component mount
+  useEffect(() => {
+    const savedProgress = localStorage.getItem('cashClimbProgress');
+    if (savedProgress) {
+      const progress = JSON.parse(savedProgress);
+      setCompletedModules(progress.completedModules || []);
+      setTotalXP(progress.totalXP || 0);
+    }
+  }, []);
 
+  // Generate modules with dynamic unlock/completion status
   const modules = [
     {
       id: 1,
@@ -41,9 +46,7 @@ const GameStart = () => {
       gameScenario: "Village Rebuild Adventure",
       estimatedTime: "15-20 minutes",
       xpReward: 100,
-      badge: "Village Helper",
-      isUnlocked: true,
-      isCompleted: false
+      badge: "Village Helper"
     },
     {
       id: 2,
@@ -55,9 +58,7 @@ const GameStart = () => {
       gameScenario: "Lemonade Stand Business",
       estimatedTime: "20-25 minutes",
       xpReward: 150,
-      badge: "Smart Saver",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Smart Saver"
     },
     {
       id: 3,
@@ -69,9 +70,7 @@ const GameStart = () => {
       gameScenario: "Bank Explorer Quest",
       estimatedTime: "20-25 minutes",
       xpReward: 200,
-      badge: "Bank Explorer",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Bank Explorer"
     },
     {
       id: 4,
@@ -83,9 +82,7 @@ const GameStart = () => {
       gameScenario: "Shop Owner Challenge",
       estimatedTime: "25-30 minutes",
       xpReward: 250,
-      badge: "Credit Master",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Credit Master"
     },
     {
       id: 5,
@@ -97,9 +94,7 @@ const GameStart = () => {
       gameScenario: "School Fundraiser Planner",
       estimatedTime: "25-30 minutes",
       xpReward: 300,
-      badge: "Smart Shopper",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Smart Shopper"
     },
     {
       id: 6,
@@ -111,9 +106,7 @@ const GameStart = () => {
       gameScenario: "Career Exploration Quest",
       estimatedTime: "30-35 minutes",
       xpReward: 350,
-      badge: "Career Explorer",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Career Explorer"
     },
     {
       id: 7,
@@ -125,9 +118,7 @@ const GameStart = () => {
       gameScenario: "Digital Detective Mission",
       estimatedTime: "30-35 minutes",
       xpReward: 400,
-      badge: "Digital Detective",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Digital Detective"
     },
     {
       id: 8,
@@ -139,11 +130,13 @@ const GameStart = () => {
       gameScenario: "Family Vacation Planner",
       estimatedTime: "35-40 minutes",
       xpReward: 500,
-      badge: "Decision Master",
-      isUnlocked: false,
-      isCompleted: false
+      badge: "Decision Master"
     }
-  ];
+  ].map(module => ({
+    ...module,
+    isCompleted: completedModules.includes(module.id),
+    isUnlocked: module.id === 1 || completedModules.includes(module.id - 1)
+  }));
 
   const startGame = () => {
     navigate(`/game/module/${selectedModule}`);
@@ -353,17 +346,17 @@ const GameStart = () => {
                     <div className="flex justify-between">
                       <span className="text-sm">Modules Completed:</span>
                       <span className="text-sm font-bold">
-                        {playerProgress.completedModules.length - 1}/{modules.length}
+                        {completedModules.length}/{modules.length}
                       </span>
                     </div>
                     <Progress 
-                      value={((playerProgress.completedModules.length - 1) / modules.length) * 100} 
+                      value={(completedModules.length / modules.length) * 100} 
                       className="h-2"
                     />
                     <div className="text-center">
                       <div className="flex items-center justify-center gap-1 text-primary">
                         <Coins className="h-4 w-4" />
-                        <span className="font-bold">{playerProgress.totalXP} Total XP</span>
+                        <span className="font-bold">{totalXP} Total XP</span>
                       </div>
                     </div>
                   </div>

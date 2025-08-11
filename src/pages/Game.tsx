@@ -194,9 +194,21 @@ const Game = () => {
   useEffect(() => {
     if (gameState.villageProgress === 100 && !gameCompleted) {
       setGameCompleted(true);
+      
+      // Save completion to localStorage
+      const savedProgress = localStorage.getItem('cashClimbProgress');
+      const progress = savedProgress ? JSON.parse(savedProgress) : { completedModules: [], totalXP: 0 };
+      
+      if (!progress.completedModules.includes(currentModule)) {
+        const moduleXP = [100, 150, 200, 250, 300, 350, 400, 500][currentModule - 1] || 100;
+        progress.completedModules.push(currentModule);
+        progress.totalXP += moduleXP;
+        localStorage.setItem('cashClimbProgress', JSON.stringify(progress));
+      }
+      
       toast.success("Module completed! Ready for the next challenge!");
     }
-  }, [gameState.villageProgress, gameCompleted]);
+  }, [gameState.villageProgress, gameCompleted, currentModule]);
 
   const nextModule = () => {
     if (currentModule < 8) {
