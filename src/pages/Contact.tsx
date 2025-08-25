@@ -198,7 +198,16 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground mb-8">
             We're here to help! Reach out to us and we'll get back to you as soon as possible.
           </p>
-          <Button variant="gold" size="lg">
+          <Button 
+            variant="gold" 
+            size="lg"
+            onClick={() => {
+              const formSection = document.querySelector('h2');
+              if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             Contact Our Team
             <MessageCircle className="ml-2 h-5 w-5" />
           </Button>

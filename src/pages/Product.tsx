@@ -70,59 +70,27 @@ const Product = () => {
     { 
       title: "Money Basics", 
       description: "Understanding money, needs vs wants, and simple budgeting",
-      grades: "4-6"
+      grades: "4"
     },
     { 
       title: "Banking & Saving", 
       description: "Bank accounts, savings goals, and compound interest",
-      grades: "5-7"
+      grades: "5"
     },
     { 
       title: "Budgeting & Goals", 
       description: "Creating budgets, tracking expenses, and smart financial goals",
-      grades: "5-7"
+      grades: "6"
     },
     { 
       title: "Credit & Debt", 
       description: "Understanding credit scores, loans, and responsible borrowing",
-      grades: "6-8"
+      grades: "7"
     },
     { 
       title: "Spending Wisely", 
       description: "Comparison shopping, unit prices, and avoiding impulse buying",
-      grades: "6-8"
-    },
-    { 
-      title: "Earning & Careers", 
-      description: "Jobs vs careers, wages vs salary, and understanding paychecks",
-      grades: "6-8"
-    },
-    { 
-      title: "Digital Money & Scams", 
-      description: "Online payments, digital wallets, and spotting scams",
-      grades: "7-8"
-    },
-    { 
-      title: "Financial Decision-Making", 
-      description: "Opportunity cost, risk vs reward, and long-term thinking",
-      grades: "7-8"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jamie Park",
-      role: "Marketing Manager",
-      content: "The investment simulator helped me understand portfolio diversification before I started investing real money. Saved me from costly mistakes!",
-      rating: 5,
-      feature: "Portfolio Simulator"
-    },
-    {
-      name: "Carlos Rodriguez", 
-      role: "College Student",
-      content: "The budgeting game made me actually excited to track my expenses. I've saved $2,000 in just 3 months!",
-      rating: 5,
-      feature: "Budgeting Game"
+      grades: "8"
     }
   ];
 
@@ -238,7 +206,7 @@ const Product = () => {
                 Real <span className="bg-gradient-gold bg-clip-text text-transparent">Gaming</span> Elements
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                One comprehensive game with 8 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
+                One comprehensive game with 5 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
@@ -284,14 +252,14 @@ const Product = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete <span className="bg-gradient-primary bg-clip-text text-transparent">8 Learning Modules</span>
+              Complete <span className="bg-gradient-primary bg-clip-text text-transparent">5 Learning Modules</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              One engaging game with 8 comprehensive modules covering all essential financial skills for grades 4-8.
+              One engaging game with 5 comprehensive modules covering all essential financial skills - one module per grade level (4-8).
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gameModules.map((module, index) => (
               <Card key={index} className="hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
                 <CardContent className="p-6">
@@ -300,7 +268,7 @@ const Product = () => {
                       Module {index + 1}
                     </Badge>
                     <Badge variant="outline" className="mb-2 ml-2">
-                      Grades {module.grades}
+                      Grade {module.grades}
                     </Badge>
                     <h3 className="text-lg font-semibold">{module.title}</h3>
                   </div>
@@ -319,41 +287,6 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Success <span className="bg-gradient-gold bg-clip-text text-transparent">Stories</span>
-            </h2>
-            <p className="text-xl text-muted-foreground">See how our users have transformed their financial lives.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:scale-105 transition-all duration-300 border-border/50 hover:border-secondary/50 hover:shadow-gold">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex mr-2">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
-                      ))}
-                    </div>
-                    <Badge variant="outline" className="ml-auto">
-                      {testimonial.feature}
-                    </Badge>
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-hero">
@@ -362,7 +295,7 @@ const Product = () => {
             Ready to Level Up Your <span className="bg-gradient-gold bg-clip-text text-transparent">Financial Game</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of players who are already climbing their way to financial success. Start your journey today!
+            Start your journey to financial success today! Master essential money skills through our engaging game-based platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="animate-glow" asChild>

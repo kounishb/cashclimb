@@ -12,8 +12,8 @@ const About = () => {
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Community-Focused",
-      description: "Learning together makes us stronger. We foster a supportive environment where everyone can succeed."
+      title: "Engagement-First",
+      description: "We make financial learning irresistibly fun through interactive gaming that keeps students motivated and excited to learn."
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
@@ -22,8 +22,8 @@ const About = () => {
     },
     {
       icon: <Heart className="h-8 w-8" />,
-      title: "Empathy-First",
-      description: "We understand that money can be stressful. Our approach is gentle, encouraging, and judgment-free."
+      title: "Results-Driven",
+      description: "Every feature is designed to deliver measurable learning outcomes and real-world financial skills that students can use immediately."
     }
   ];
 
