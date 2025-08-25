@@ -17,22 +17,6 @@ const Home = () => {
     title: "Gamified Experience",
     description: "Turn learning into an adventure with points, levels, badges, and challenges that make financial education fun and engaging."
   }];
-  const testimonials = [{
-    name: "Sarah Johnson",
-    role: "College Student",
-    content: "Cash Climb made budgeting fun! I learned more in a month than in my entire economics class.",
-    rating: 5
-  }, {
-    name: "Mike Chen",
-    role: "Young Professional",
-    content: "The investment challenges helped me understand the stock market without risking real money.",
-    rating: 5
-  }, {
-    name: "Emily Rodriguez",
-    role: "Recent Graduate",
-    content: "Finally, a platform that doesn't make finance boring. The gamification keeps me engaged!",
-    rating: 5
-  }];
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-hero bg-cover bg-center" style={{
@@ -259,39 +243,6 @@ const Home = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What <span className="bg-gradient-primary bg-clip-text text-transparent">Students</span> Say
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Real feedback from students who've climbed their way to financial knowledge.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-gold fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
