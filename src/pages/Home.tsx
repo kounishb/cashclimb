@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Target, Trophy, Users, Star, ChevronRight } from "lucide-react";
+import { TrendingUp, Target, Trophy, Users, Star, ChevronRight, BookOpen, Shield, Clock, Gamepad2, DollarSign, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "../assets/hero-bg-clean.jpg";
 const Home = () => {
@@ -97,10 +97,204 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Making <span className="bg-gradient-primary bg-clip-text text-transparent">Financial Education</span> Accessible
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Empowering young learners with essential financial skills through gamified learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">5</div>
+              <div className="text-sm text-muted-foreground">Learning Modules</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-sm text-muted-foreground">Achievements</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">9-14</div>
+              <div className="text-sm text-muted-foreground">Age Range</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Free to Play</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              How <span className="bg-gradient-primary bg-clip-text text-transparent">Cash Climb</span> Works
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Simple steps to start your financial education journey through our gamified learning platform.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="bg-gradient-primary p-4 rounded-full inline-flex mb-6">
+                  <Gamepad2 className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">1. Start Playing</h3>
+                <p className="text-muted-foreground">
+                  Create your account and jump into our interactive financial education game designed specifically for grades 4-8.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="bg-gradient-primary p-4 rounded-full inline-flex mb-6">
+                  <BookOpen className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">2. Learn & Progress</h3>
+                <p className="text-muted-foreground">
+                  Complete 5 progressive modules covering money basics, banking, budgeting, credit, and smart spending habits.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="bg-gradient-primary p-4 rounded-full inline-flex mb-6">
+                  <Trophy className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">3. Master Skills</h3>
+                <p className="text-muted-foreground">
+                  Earn achievements, track progress, and apply your newfound financial knowledge in real-world scenarios.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Benefits Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why <span className="bg-gradient-primary bg-clip-text text-transparent">Financial Education</span> Matters
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Building essential money skills early sets the foundation for lifelong financial success.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary/20 p-2 rounded-lg">
+                  <DollarSign className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Build Money Confidence</h3>
+                  <p className="text-muted-foreground">Learn to make smart financial decisions early, building confidence with money management.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary/20 p-2 rounded-lg">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Develop Life Skills</h3>
+                  <p className="text-muted-foreground">Master budgeting, saving, and spending wisely - skills that benefit you for life.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary/20 p-2 rounded-lg">
+                  <Shield className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Avoid Common Pitfalls</h3>
+                  <p className="text-muted-foreground">Learn about credit, debt, and financial traps before they become real-world problems.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-primary/20 p-2 rounded-lg">
+                  <Target className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Set & Achieve Goals</h3>
+                  <p className="text-muted-foreground">Learn the power of goal setting and tracking progress toward financial objectives.</p>
+                </div>
+              </div>
+            </div>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold mb-4">Safe Learning Environment</h3>
+                  <p className="text-muted-foreground">
+                    Practice with virtual scenarios - no real money, no real risk, just real learning.
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Learning Progress</span>
+                    <span className="text-primary font-semibold">Grade 4-8</span>
+                  </div>
+                  <div className="w-full bg-border rounded-full h-3">
+                    <div className="bg-gradient-primary h-3 rounded-full w-[75%]"></div>
+                  </div>
+                  <div className="text-center text-sm text-muted-foreground">
+                    Progress through age-appropriate financial concepts
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
-      
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What <span className="bg-gradient-primary bg-clip-text text-transparent">Students</span> Say
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Real feedback from students who've climbed their way to financial knowledge.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-gold fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero">
