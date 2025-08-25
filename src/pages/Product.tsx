@@ -42,10 +42,10 @@ const Product = () => {
       highlight: "Active community"
     },
     {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile-Friendly Design",
-      description: "Play anywhere, anytime on any device. Our responsive design ensures a seamless experience across phones, tablets, and computers.",
-      highlight: "Cross-platform"
+      icon: <BarChart3 className="h-8 w-8" />,
+      title: "Real-Time Analytics",
+      description: "Track your learning progress with detailed analytics, performance metrics, and personalized insights to optimize your financial education journey.",
+      highlight: "Smart insights"
     },
     {
       icon: <Shield className="h-8 w-8" />,
@@ -100,7 +100,7 @@ const Product = () => {
       <section className="py-20 px-4 bg-gradient-hero">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center">
               <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
                 🎮 Gamified Learning Platform
               </Badge>
@@ -111,7 +111,7 @@ const Product = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Master personal finance with our interactive platform that combines education with entertainment. Level up your money skills while having fun!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="animate-glow" asChild>
                   <Link to="/game">
                     Start Playing Free
@@ -123,41 +123,6 @@ const Product = () => {
                 </Button>
               </div>
             </div>
-            
-            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
-              <CardContent className="p-8">
-                <div className="bg-muted/50 rounded-lg p-6 mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold">Your Progress</h3>
-                    <Badge variant="secondary">Level 7</Badge>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-sm">
-                      <span>Budgeting Master</span>
-                      <span className="text-primary">850/1000 XP</span>
-                    </div>
-                    <div className="w-full bg-border rounded-full h-2">
-                      <div className="bg-gradient-primary h-2 rounded-full w-[85%]"></div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-4 bg-muted/30 rounded-lg">
-                    <div className="text-2xl font-bold text-primary">12</div>
-                    <div className="text-sm text-muted-foreground">Achievements</div>
-                  </div>
-                  <div className="text-center p-4 bg-muted/30 rounded-lg">
-                    <div className="text-2xl font-bold text-secondary">$5,420</div>
-                    <div className="text-sm text-muted-foreground">Saved</div>
-                  </div>
-                </div>
-                
-                <p className="text-sm text-muted-foreground italic">
-                  "This is what your dashboard could look like after just a few weeks!"
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
