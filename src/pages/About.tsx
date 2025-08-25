@@ -1,13 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Users, Lightbulb, Heart, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const values = [
     {
       icon: <Target className="h-8 w-8" />,
-      title: "Purpose-Driven",
-      description: "We believe financial literacy should be accessible to everyone, regardless of background or experience level."
+      title: "Youth-Focused",
+      description: "Everything we build is designed specifically for young learners, meeting them where they are in their digital-first world."
     },
     {
       icon: <Users className="h-8 w-8" />,
@@ -76,13 +77,13 @@ const About = () => {
                 Our <span className="bg-gradient-gold bg-clip-text text-transparent">Mission</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Traditional financial education is broken. It's boring, intimidating, and often disconnected from real life. We're changing that.
+                Traditional financial education fails young people. It's boring, intimidating, and often disconnected from their digital-first world and real-life challenges.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Cash Climb transforms learning about money into an engaging adventure. Through gamification, we make complex financial concepts simple, fun, and memorable.
+                Cash Climb transforms learning about money into an engaging adventure specifically designed for young students. Through gamification and interactive challenges, we make complex financial concepts simple, fun, and memorable.
               </p>
               <p className="text-lg text-muted-foreground">
-                Our goal is to empower a generation of financially literate individuals who can make informed decisions, build wealth, and achieve their dreams.
+                Our goal is to empower the next generation with essential financial literacy skills, helping young students build wealth, make informed decisions, and achieve their dreams from an early age.
               </p>
             </div>
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow">
@@ -92,10 +93,10 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">The Problem We Solve</h3>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li>• 66% of Americans can't pass a basic financial literacy test</li>
-                  <li>• Traditional education methods have 23% retention rates</li>
-                  <li>• Young adults graduate without practical money skills</li>
-                  <li>• Financial stress affects 72% of adults regularly</li>
+                  <li>• 57% of young adults lack basic financial knowledge</li>
+                  <li>• Traditional education methods fail to engage digital natives</li>
+                  <li>• Students graduate without practical money management skills</li>
+                  <li>• Young people struggle with debt and financial stress early in life</li>
                 </ul>
               </CardContent>
             </Card>
@@ -131,70 +132,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Meet Our <span className="bg-gradient-gold bg-clip-text text-transparent">Team</span>
-            </h2>
-            <p className="text-xl text-muted-foreground">The passionate people behind Cash Climb's mission.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center hover:scale-105 transition-all duration-300 border-border/50 hover:border-secondary/50 hover:shadow-gold">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-secondary/20">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-secondary font-medium mb-3">{member.role}</p>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section className="py-20 px-4 bg-gradient-hero">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our <span className="bg-gradient-gold bg-clip-text text-transparent">Story</span>
-            </h2>
-          </div>
-          
-          <Card className="border-border/50">
-            <CardContent className="p-8 md:p-12">
-              <div className="prose prose-lg max-w-none text-muted-foreground">
-                <p className="mb-6">
-                  Cash Climb was born from a simple observation: people learn better when they're having fun. Our founders, Alex and Sarah, met at a fintech conference where they were both frustrated by the same problem.
-                </p>
-                <p className="mb-6">
-                  "Why is financial education so boring?" Alex asked during a particularly dry presentation about compound interest. Sarah, who had spent years creating engaging gaming experiences, knew the answer wasn't in the content—it was in the delivery.
-                </p>
-                <p className="mb-6">
-                  That conversation sparked an idea that would eventually become Cash Climb. What if learning about money could be as engaging as playing your favorite game? What if achieving financial goals felt like leveling up a character?
-                </p>
-                <p className="mb-6">
-                  After months of research, prototyping, and testing with users, Cash Climb launched with a simple premise: make financial education so engaging that people actually want to learn.
-                </p>
-                <p>
-                  Today, we're proud to serve thousands of users who are climbing their way to financial freedom, one level at a time.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -202,14 +139,14 @@ const About = () => {
             Ready to Join Our <span className="bg-gradient-primary bg-clip-text text-transparent">Mission</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Whether you're looking to learn, invest, or join our team, we'd love to hear from you.
+            Start your journey to financial literacy today with our gamified learning platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg">
-              Start Learning
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/auth">Start Learning</Link>
             </Button>
-            <Button variant="outline" size="lg">
-              Contact Us
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>

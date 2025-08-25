@@ -365,28 +365,12 @@ const Product = () => {
             Join thousands of players who are already climbing their way to financial success. Start your journey today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="animate-glow">
-              Play Now - It's Free!
-              <Gamepad2 className="ml-2 h-5 w-5" />
+            <Button variant="hero" size="lg" className="animate-glow" asChild>
+              <Link to="/auth">
+                Play Now - It's Free!
+                <Gamepad2 className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg">
-              Schedule Demo
-            </Button>
-          </div>
-          
-          <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-muted-foreground">
-            <div className="flex items-center">
-              <CheckCircle className="h-4 w-4 text-primary mr-2" />
-              Free to start
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="h-4 w-4 text-primary mr-2" />
-              No credit card required
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="h-4 w-4 text-primary mr-2" />
-              Cancel anytime
-            </div>
           </div>
         </div>
       </section>

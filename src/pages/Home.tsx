@@ -13,9 +13,9 @@ const Home = () => {
     title: "Achievement System",
     description: "Earn badges, unlock levels, and climb the leaderboard as you master financial concepts."
   }, {
-    icon: <Users className="h-8 w-8" />,
-    title: "Community Learning",
-    description: "Connect with peers, join challenges, and learn from a supportive community of financial climbers."
+    icon: <Trophy className="h-8 w-8" />,
+    title: "Gamified Experience",
+    description: "Turn learning into an adventure with points, levels, badges, and challenges that make financial education fun and engaging."
   }];
   const testimonials = [{
     name: "Sarah Johnson",
@@ -109,7 +109,7 @@ const Home = () => {
             Ready to Start Your <span className="bg-gradient-gold bg-clip-text text-transparent">Financial Journey</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of users who are already climbing their way to financial success. Your future self will thank you.
+            Join now to climb your way to financial success. Your future self will thank you.
           </p>
           <Button variant="gold" size="lg" className="animate-glow" asChild>
             <Link to="/auth">

@@ -1,40 +1,96 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { TrendingUp, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/contexts/AuthContext";
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Eye, EyeOff, User, Mail, Lock, TrendingUp } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/contexts/AuthContext';
+import { useToast } from '@/hooks/use-toast';
 
 const Auth = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [loginEmail, setLoginEmail] = useState('');
-  const [loginPassword, setLoginPassword] = useState('');
-  const [signupName, setSignupName] = useState('');
-  const [signupEmail, setSignupEmail] = useState('');
-  const [signupPassword, setSignupPassword] = useState('');
-  const [signupConfirmPassword, setSignupConfirmPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   
-  const { login } = useAuth();
   const navigate = useNavigate();
+  const { signIn, signUp, isAuthenticated } = useAuth();
+  const { toast } = useToast();
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (loginEmail && loginPassword) {
-      login(loginEmail, signupName);
+  useEffect(() => {
+    if (isAuthenticated) {
       navigate('/game');
     }
+  }, [isAuthenticated, navigate]);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    
+    const { error } = await signIn(email, password);
+    
+    if (error) {
+      toast({
+        title: "Login Failed",
+        description: error.message,
+        variant: "destructive"
+      });
+    } else {
+      toast({
+        title: "Welcome back!",
+        description: "Successfully logged in."
+      });
+      navigate('/game');
+    }
+    
+    setLoading(false);
   };
 
-  const handleSignup = (e: React.FormEvent) => {
+  const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (signupEmail && signupPassword && signupPassword === signupConfirmPassword) {
-      login(signupEmail, signupName);
+    
+    if (password !== confirmPassword) {
+      toast({
+        title: "Password Mismatch",
+        description: "Passwords do not match",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    if (password.length < 6) {
+      toast({
+        title: "Password Too Short",
+        description: "Password must be at least 6 characters",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setLoading(true);
+    
+    const { error } = await signUp(email, password, name);
+    
+    if (error) {
+      toast({
+        title: "Signup Failed",
+        description: error.message,
+        variant: "destructive"
+      });
+    } else {
+      toast({
+        title: "Account Created!",
+        description: "Welcome to Cash Climb! Please check your email to verify your account."
+      });
       navigate('/game');
     }
+    
+    setLoading(false);
   };
 
   return (
@@ -77,8 +133,8 @@ const Auth = () => {
                         type="email"
                         placeholder="Enter your email"
                         className="pl-10"
-                        value={loginEmail}
-                        onChange={(e) => setLoginEmail(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
@@ -92,8 +148,8 @@ const Auth = () => {
                         type={showPassword ? "text" : "password"}
                         placeholder="Enter your password"
                         className="pl-10 pr-10"
-                        value={loginPassword}
-                        onChange={(e) => setLoginPassword(e.target.value)}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                       />
                       <Button
@@ -120,11 +176,11 @@ const Auth = () => {
                       Forgot password?
                     </Link>
                   </div>
-                  <Button type="submit" variant="hero" className="w-full">
-                    Log In
+                  <Button type="submit" variant="hero" className="w-full" disabled={loading}>
+                    {loading ? "Signing In..." : "Sign In"}
                   </Button>
                 </form>
-                <div className="text-center">
+                <div className="text-center mt-4">
                   <span className="text-sm text-muted-foreground">
                     Don't have an account?{" "}
                     <Button variant="link" className="p-0 h-auto text-primary">
@@ -152,8 +208,8 @@ const Auth = () => {
                         type="text"
                         placeholder="Enter your full name"
                         className="pl-10"
-                        value={signupName}
-                        onChange={(e) => setSignupName(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                       />
                     </div>
@@ -167,8 +223,8 @@ const Auth = () => {
                         type="email"
                         placeholder="Enter your email"
                         className="pl-10"
-                        value={signupEmail}
-                        onChange={(e) => setSignupEmail(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                       />
                     </div>
@@ -182,8 +238,8 @@ const Auth = () => {
                         type={showPassword ? "text" : "password"}
                         placeholder="Create a password"
                         className="pl-10 pr-10"
-                        value={signupPassword}
-                        onChange={(e) => setSignupPassword(e.target.value)}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                       />
                       <Button
@@ -210,8 +266,8 @@ const Auth = () => {
                         type={showConfirmPassword ? "text" : "password"}
                         placeholder="Confirm your password"
                         className="pl-10 pr-10"
-                        value={signupConfirmPassword}
-                        onChange={(e) => setSignupConfirmPassword(e.target.value)}
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
                         required
                       />
                       <Button
@@ -242,11 +298,11 @@ const Auth = () => {
                       </Link>
                     </span>
                   </div>
-                  <Button type="submit" variant="hero" className="w-full">
-                    Create Account
+                  <Button type="submit" variant="hero" className="w-full" disabled={loading}>
+                    {loading ? "Creating Account..." : "Create Account"}
                   </Button>
                 </form>
-                <div className="text-center">
+                <div className="text-center mt-4">
                   <span className="text-sm text-muted-foreground">
                     Already have an account?{" "}
                     <Button variant="link" className="p-0 h-auto text-primary">

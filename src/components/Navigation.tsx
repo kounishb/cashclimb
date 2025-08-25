@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, TrendingUp } from "lucide-react";
+import { Menu, X, TrendingUp, LogOut, User } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { isAuthenticated, logout, user } = useAuth();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -45,9 +47,24 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm" asChild>
-              <Link to="/auth">Get Started</Link>
-            </Button>
+            {isAuthenticated ? (
+              <div className="flex items-center space-x-4">
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/game">
+                    <User className="h-4 w-4 mr-2" />
+                    Dashboard
+                  </Link>
+                </Button>
+                <Button variant="ghost" size="sm" onClick={logout}>
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Button variant="hero" size="sm" asChild>
+                <Link to="/auth">Get Started</Link>
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -81,9 +98,24 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button variant="hero" size="sm" className="w-full" asChild>
-                  <Link to="/auth">Get Started</Link>
-                </Button>
+                {isAuthenticated ? (
+                  <div className="space-y-2">
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <Link to="/game">
+                        <User className="h-4 w-4 mr-2" />
+                        Dashboard
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="sm" className="w-full" onClick={logout}>
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Logout
+                    </Button>
+                  </div>
+                ) : (
+                  <Button variant="hero" size="sm" className="w-full" asChild>
+                    <Link to="/auth">Get Started</Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
