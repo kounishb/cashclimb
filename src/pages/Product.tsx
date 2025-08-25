@@ -183,15 +183,12 @@ const Product = () => {
             {features.map((feature, index) => (
               <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
                 <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex justify-start mb-4">
                     <div className="bg-gradient-primary p-3 rounded-lg group-hover:animate-float">
                       <div className="text-primary-foreground">
                         {feature.icon}
                       </div>
                     </div>
-                    <Badge variant="secondary" className="text-xs">
-                      {feature.highlight}
-                    </Badge>
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
