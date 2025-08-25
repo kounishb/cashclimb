@@ -208,7 +208,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-2">How do I track my child's progress?</h3>
                 <p className="text-muted-foreground">
-                  Parents can create accounts to monitor their child's learning journey, view completed modules, and see achievements earned. We provide detailed progress reports and learning milestones.
+                  There's a built-in progress tracking feature within the game that shows your child's advancement through modules, achievements earned, and learning milestones. Parents can view this progress directly in the game interface.
                 </p>
               </CardContent>
             </Card>
