@@ -185,6 +185,60 @@ const Contact = () => {
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">What age group is Cash Climb designed for?</h3>
+                <p className="text-muted-foreground">
+                  Cash Climb is specifically designed for students in grades 4-8 (ages 9-14). Each module is grade-appropriate and builds progressively on financial concepts suitable for young learners.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">Can teachers use Cash Climb in their classrooms?</h3>
+                <p className="text-muted-foreground">
+                  Yes! Cash Climb is perfect for classroom use. Teachers can track student progress, assign specific modules, and use our educational content to supplement their financial literacy curriculum.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">How do I track my child's progress?</h3>
+                <p className="text-muted-foreground">
+                  Parents can create accounts to monitor their child's learning journey, view completed modules, and see achievements earned. We provide detailed progress reports and learning milestones.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">What devices can I use to play Cash Climb?</h3>
+                <p className="text-muted-foreground">
+                  Cash Climb works on any device with a web browser - computers, tablets, and smartphones. The game is fully responsive and adapts to different screen sizes for the best experience.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">Are there any technical requirements?</h3>
+                <p className="text-muted-foreground">
+                  Just a stable internet connection and a modern web browser. No downloads or installations required. Cash Climb runs entirely in your browser for maximum accessibility.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold mb-2">How often is new content added?</h3>
+                <p className="text-muted-foreground">
+                  We regularly update Cash Climb with new challenges, seasonal events, and educational content. Our development team releases updates monthly to keep the experience fresh and engaging.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

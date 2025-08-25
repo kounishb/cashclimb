@@ -39,13 +39,13 @@ const Product = () => {
       icon: <Users className="h-8 w-8" />,
       title: "Community Challenges",
       description: "Join group challenges, share progress with friends, and learn from a community of like-minded financial climbers.",
-      highlight: "10K+ active users"
+      highlight: "Active community"
     },
     {
-      icon: <BarChart3 className="h-8 w-8" />,
-      title: "Portfolio Simulator",
-      description: "Practice investing with virtual money, test strategies, and learn market dynamics without financial risk.",
-      highlight: "Real market data"
+      icon: <Smartphone className="h-8 w-8" />,
+      title: "Mobile-Friendly Design",
+      description: "Play anywhere, anytime on any device. Our responsive design ensures a seamless experience across phones, tablets, and computers.",
+      highlight: "Cross-platform"
     },
     {
       icon: <Shield className="h-8 w-8" />,
@@ -162,91 +162,6 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Powerful <span className="bg-gradient-primary bg-clip-text text-transparent">Features</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to master personal finance in an engaging, game-like environment.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="bg-gradient-primary p-3 rounded-lg group-hover:animate-float">
-                      <div className="text-primary-foreground">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <Badge variant="secondary" className="text-xs">
-                      {feature.highlight}
-                    </Badge>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Game Features Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Real <span className="bg-gradient-gold bg-clip-text text-transparent">Gaming</span> Elements
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                One comprehensive game with 5 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {gameFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <Card className="border-border/50 hover:border-secondary/50 transition-all duration-300 hover:shadow-gold">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <Zap className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-2xl font-semibold mb-2">Level Up Your Skills</h3>
-                  <p className="text-muted-foreground">Complete challenges to unlock new abilities and knowledge areas.</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
-                    <span className="font-medium">Budget Ninja</span>
-                    <Badge className="bg-secondary/20 text-secondary">Unlocked</Badge>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
-                    <span className="font-medium">Investment Wizard</span>
-                    <Badge variant="outline">Level 5 Required</Badge>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
-                    <span className="font-medium">Debt Slayer</span>
-                    <Badge variant="outline">Complete Quest</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Game Modules Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -287,6 +202,63 @@ const Product = () => {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Powerful <span className="bg-gradient-primary bg-clip-text text-transparent">Features</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Everything you need to master personal finance in an engaging, game-like environment.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
+                <CardContent className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="bg-gradient-primary p-3 rounded-lg group-hover:animate-float">
+                      <div className="text-primary-foreground">
+                        {feature.icon}
+                      </div>
+                    </div>
+                    <Badge variant="secondary" className="text-xs">
+                      {feature.highlight}
+                    </Badge>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Game Features Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Real <span className="bg-gradient-gold bg-clip-text text-transparent">Gaming</span> Elements
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              One comprehensive game with 5 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {gameFeatures.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-2 p-3 bg-background/50 rounded-lg">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-hero">
