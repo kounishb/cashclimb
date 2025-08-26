@@ -321,7 +321,7 @@ const GameStart = () => {
                     <Button
                       onClick={startGame}
                       disabled={!selectedModuleData.isUnlocked}
-                      className="w-full"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3"
                       size="lg"
                     >
                       {selectedModuleData.isUnlocked ? (
