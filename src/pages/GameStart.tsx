@@ -144,8 +144,12 @@ const GameStart = () => {
 
   const selectModule = (moduleId: number) => {
     const module = modules.find(m => m.id === moduleId);
+    console.log('Clicking module:', moduleId, 'Module data:', module);
     if (module && module.isUnlocked) {
       setSelectedModule(moduleId);
+      console.log('Module selected:', moduleId);
+    } else {
+      console.log('Module not unlocked or not found');
     }
   };
 
@@ -188,14 +192,17 @@ const GameStart = () => {
               {modules.map((module) => (
                 <Card
                   key={module.id}
-                  className={`cursor-pointer transition-all duration-300 ${
+                  className={`cursor-pointer transition-all duration-300 border-2 ${
                     selectedModule === module.id
-                      ? 'border-primary shadow-glow'
-                      : 'hover:border-primary/50'
+                      ? 'border-primary shadow-lg bg-primary/5'
+                      : 'border-gray-200 hover:border-primary/50 hover:shadow-md'
                   } ${
-                    !module.isUnlocked ? 'opacity-60' : ''
+                    !module.isUnlocked ? 'opacity-60 cursor-not-allowed' : ''
                   }`}
-                  onClick={() => selectModule(module.id)}
+                  onClick={() => {
+                    console.log('Card clicked for module:', module.id);
+                    selectModule(module.id);
+                  }}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
