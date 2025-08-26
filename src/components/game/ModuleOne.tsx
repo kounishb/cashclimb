@@ -285,13 +285,13 @@ const ModuleOne: React.FC<ModuleOneProps> = ({ gameState, setGameState, onModule
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-red-600">
               <Swords className="h-5 w-5" />
-              ⚔️ BOSS BATTLE: Impulse Dragon!
+              ⚔️ BOSS BATTLE: Mountain Dragon!
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             <div className="text-center">
               <div className="text-4xl mb-2">🐉</div>
-              <div className="text-lg font-bold text-red-600">Impulse Dragon</div>
+              <div className="text-lg font-bold text-red-600">Mountain Dragon</div>
               <Progress value={bossHealth} className="w-full mt-2" />
               <div className="text-sm text-muted-foreground">Health: {bossHealth}/100</div>
             </div>

@@ -35,36 +35,40 @@ const Game = () => {
     budgetingProgress: 0,
     goalProgress: 0,
     correctAnswers: 0,
-    totalQuestions: 0
+    totalQuestions: 0,
+    achievements: [],
+    experience: 0,
+    badges: [],
+    skillPoints: 0
   });
 
   const [gameCompleted, setGameCompleted] = useState(false);
 
   const moduleInfo = {
     1: {
-      title: "Money Basics",
-      description: "Help rebuild the village by completing tasks and learning about money! 🏘️",
-      emoji: "🏘️"
+      title: "Base Camp Setup",
+      description: "Begin your epic climb! Learn money basics at the mountain base! ⛰️",
+      emoji: "⛰️"
     },
     2: {
-      title: "Banking & Saving", 
-      description: "Run your lemonade stand and learn to save and budget! 🍋",
-      emoji: "🍋"
+      title: "Supply Station", 
+      description: "Manage resources and savings at the mountain supply station! 🏕️",
+      emoji: "🏕️"
     },
     3: {
-      title: "Budgeting & Goals",
-      description: "Discover how banks work and make your money grow! 🏦", 
-      emoji: "🏦"
+      title: "High Altitude Camp",
+      description: "Budget for gear and plan your route to the summit! 🏔️", 
+      emoji: "🏔️"
     },
     4: {
-      title: "Credit & Debt",
-      description: "Manage your shop and learn about borrowing responsibly! 🏪",
-      emoji: "🏪"
+      title: "Danger Zone",
+      description: "Navigate credit and debt challenges on the cliff face! 🧗",
+      emoji: "🧗"
     },
     5: {
-      title: "Spending Wisely",
-      description: "Plan a school fundraiser and shop for supplies within budget! 🛒",
-      emoji: "🛒"
+      title: "Summit Victory",
+      description: "Reach the peak and master spending wisely! 🏆",
+      emoji: "🏆"
     }
   };
 
@@ -109,10 +113,14 @@ const Game = () => {
       budgetingProgress: 0,
       goalProgress: 0,
       correctAnswers: 0,
-      totalQuestions: 0
+      totalQuestions: 0,
+      achievements: [],
+      experience: 0,
+      badges: [],
+      skillPoints: 0
     });
     setGameCompleted(false);
-    toast.success("Game reset! Start your financial journey!");
+    toast.success("Game reset! Start your climb adventure!");
   };
 
   return (

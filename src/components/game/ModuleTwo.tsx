@@ -266,7 +266,7 @@ const ModuleTwo: React.FC<ModuleTwoProps> = ({ gameState, setGameState, onModule
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Crown className="h-5 w-5 text-yellow-500" />
-            🏰 Lemonade Empire Dashboard
+            🏕️ Mountain Supply Station
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -347,11 +347,11 @@ const ModuleTwo: React.FC<ModuleTwoProps> = ({ gameState, setGameState, onModule
       {currentActivity === 'setup' && (
         <Card>
           <CardHeader>
-            <CardTitle>🏪 Build Your Lemonade Empire</CardTitle>
+            <CardTitle>🏕️ Setup Your Supply Station</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-center space-y-4">
-              <p>Start your legendary business! Buy supplies to begin.</p>
+              <p>Set up your mountain supply station! Buy provisions to begin.</p>
               <Button onClick={buySupplies} size="lg">
                 🛒 Buy Supplies ($30)
               </Button>
@@ -366,13 +366,13 @@ const ModuleTwo: React.FC<ModuleTwoProps> = ({ gameState, setGameState, onModule
       {currentActivity === 'selling' && (
         <Card>
           <CardHeader>
-            <CardTitle>🍋 Epic Lemonade Sales</CardTitle>
+            <CardTitle>🥤 Epic Supply Trading</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-center space-y-4">
-              <p>Build your empire one cup at a time!</p>
+              <p>Build your trading station one sale at a time!</p>
               <Button onClick={sellLemonade} size="lg">
-                💰 Sell Lemonade Today!
+                💰 Trade Supplies Today!
               </Button>
             </div>
           </CardContent>
