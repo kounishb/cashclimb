@@ -39,6 +39,14 @@ const App = () => (
               } 
             />
             <Route 
+              path="/game-start" 
+              element={
+                <ProtectedRoute>
+                  <GameStart />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
               path="/game/module/:moduleId" 
               element={
                 <ProtectedRoute>
