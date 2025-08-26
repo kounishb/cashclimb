@@ -1,284 +1,363 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { 
+  Store, 
   Coins, 
-  Trophy, 
-  Target,
-  CheckCircle,
-  TrendingUp,
-  Calendar,
+  TrendingUp, 
+  Target, 
   PiggyBank,
-  Bike,
-  ShoppingCart,
-  DollarSign
+  BarChart3,
+  Crown,
+  Zap,
+  Shield,
+  Award,
+  Swords,
+  Star
 } from "lucide-react";
 import { toast } from "sonner";
 
+interface GameState {
+  coins: number;
+  score: number;
+  lives: number;
+  level: number;
+  villageProgress: number;
+  achievements: string[];
+  experience: number;
+  badges: string[];
+  skillPoints: number;
+}
+
 interface ModuleTwoProps {
-  gameState: any;
-  setGameState: (state: any) => void;
+  gameState: GameState;
+  setGameState: React.Dispatch<React.SetStateAction<GameState>>;
   onModuleComplete: () => void;
 }
 
-const ModuleTwo = ({ gameState, setGameState, onModuleComplete }: ModuleTwoProps) => {
+const ModuleTwo: React.FC<ModuleTwoProps> = ({ gameState, setGameState, onModuleComplete }) => {
+  const [currentStoryPhase, setCurrentStoryPhase] = useState(0);
+  const [characterDialogue, setCharacterDialogue] = useState('');
+  const [showBossBattle, setShowBossBattle] = useState(false);
+  const [bossHealth, setBossHealth] = useState(100);
+  const [playerAttack, setPlayerAttack] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [currentBossQuestion, setCurrentBossQuestion] = useState(0);
+
+  // Epic lemonade business empire
   const [lemonadeStand, setLemonadeStand] = useState({
-    cupsStock: 50,
-    lemonsStock: 25,
-    sugarStock: 10,
-    money: 20,
-    totalEarned: 0,
-    day: 1
+    lemons: 0,
+    sugar: 0,
+    cups: 0,
+    money: 100,
+    earnings: 0,
+    day: 1,
+    reputation: 50,
+    totalRevenue: 0,
+    totalExpenses: 0
   });
-  
+
   const [budget, setBudget] = useState({
     income: 0,
     expenses: 0,
     savings: 0,
-    savingsGoal: 100
+    savingsGoal: 0,
+    budgetCreated: false
   });
 
   const [currentActivity, setCurrentActivity] = useState<'setup' | 'selling' | 'budgeting' | 'planning'>('setup');
-  const [showResult, setShowResult] = useState(false);
-  const [dayResults, setDayResults] = useState<any>(null);
-  const [goals, setGoals] = useState([
-    { id: 1, item: "New Bike", cost: 150, timeFrame: "2 months", completed: false },
-    { id: 2, item: "Video Game", cost: 60, timeFrame: "3 weeks", completed: false },
-    { id: 3, item: "Art Supplies", cost: 30, timeFrame: "1 week", completed: false }
-  ]);
+  const [showDayResults, setShowDayResults] = useState(false);
+  const [dayResults, setDayResults] = useState({ sold: 0, earned: 0, expenses: 0 });
 
-  const supplies = [
-    { name: "Lemons", cost: 0.50, makes: 4, icon: "🍋" },
-    { name: "Sugar", cost: 2.00, makes: 20, icon: "🍯" },
-    { name: "Cups", cost: 0.10, makes: 1, icon: "🥤" }
+  // Boss battle questions
+  const bossQuestions = [
+    {
+      id: 1,
+      question: "The Debt Dragon whispers: 'Spend all your lemonade profits on fancy decorations!' What should you do?",
+      options: ["Spend all profits on decorations", "Save some profits first"],
+      correct: "Save some profits first",
+      explanation: "Always save part of your income before spending on wants! This builds your financial foundation.",
+      damage: 25
+    },
+    {
+      id: 2,
+      question: "Dragon's curse: 'Don't track your expenses, just spend freely!' How do you resist?",
+      options: ["Ignore expense tracking", "Keep detailed budget records"],
+      correct: "Keep detailed budget records",
+      explanation: "Tracking expenses helps you understand where your money goes and make better decisions!",
+      damage: 30
+    }
   ];
 
-  const buySupplies = () => {
-    const totalCost = (supplies[0].cost * 5) + (supplies[1].cost * 1) + (supplies[2].cost * 20);
-    
-    if (lemonadeStand.money >= totalCost) {
-      setLemonadeStand(prev => ({
-        ...prev,
-        money: prev.money - totalCost,
-        lemonsStock: prev.lemonsStock + 5,
-        sugarStock: prev.sugarStock + 1,
-        cupsStock: prev.cupsStock + 20
-      }));
-      toast.success(`Supplies purchased! -$${totalCost.toFixed(2)}`);
-    } else {
-      toast.error("Not enough money for supplies!");
-    }
-  };
+  // Epic savings quests
+  const [goals, setGoals] = useState([
+    { id: 1, name: "🚲 Magic Bicycle", cost: 200, timeframe: "3 months", completed: false, description: "A enchanted bicycle that travels at lightning speed", priority: "Want", reward: "Speed Boost Badge" },
+    { id: 2, name: "🛡️ Emergency Shield", cost: 150, timeframe: "2 months", completed: false, description: "Financial protection against unexpected expenses", priority: "Need", reward: "Safety Badge" },
+    { id: 3, name: "📚 Wisdom Scrolls", cost: 500, timeframe: "12 months", completed: false, description: "Knowledge investment for future adventures", priority: "Need", reward: "Scholar Badge" }
+  ]);
 
   const sellLemonade = () => {
-    if (lemonadeStand.cupsStock < 10 || lemonadeStand.lemonsStock < 3 || lemonadeStand.sugarStock < 1) {
-      toast.error("Not enough supplies to sell!");
+    if (lemonadeStand.lemons < 2 || lemonadeStand.sugar < 1 || lemonadeStand.cups < 5) {
+      toast.error("🍋 Not enough supplies! Visit the supply merchant first.");
       return;
     }
 
-    // Simulate a day of selling
-    const cupsSold = Math.floor(Math.random() * 15) + 10; // 10-25 cups
-    const pricePerCup = 1.50;
-    const revenue = cupsSold * pricePerCup;
+    const cupsToMake = Math.min(
+      Math.floor(lemonadeStand.lemons / 2),
+      Math.floor(lemonadeStand.sugar / 1),
+      Math.floor(lemonadeStand.cups / 1)
+    );
     
-    const results = {
-      cupsSold,
-      revenue,
-      day: lemonadeStand.day
-    };
+    const pricePerCup = 2;
+    const soldCups = Math.floor(cupsToMake * (0.7 + Math.random() * 0.3));
+    const revenue = soldCups * pricePerCup;
+    const supplyCost = soldCups * 0.5;
+    const profit = revenue - supplyCost;
 
     setLemonadeStand(prev => ({
       ...prev,
-      cupsStock: prev.cupsStock - cupsSold,
-      lemonsStock: prev.lemonsStock - Math.ceil(cupsSold / 4),
-      sugarStock: prev.sugarStock - Math.ceil(cupsSold / 20),
-      money: prev.money + revenue,
-      totalEarned: prev.totalEarned + revenue,
-      day: prev.day + 1
+      lemons: prev.lemons - (soldCups * 2),
+      sugar: prev.sugar - soldCups,
+      cups: prev.cups - soldCups,
+      money: prev.money + profit,
+      earnings: prev.earnings + profit,
+      totalRevenue: prev.totalRevenue + revenue,
+      day: prev.day + 1,
+      reputation: Math.min(prev.reputation + (soldCups > 10 ? 5 : 2), 100)
     }));
 
-    setDayResults(results);
-    setShowResult(true);
-    
-    setGameState((prev: any) => ({
+    setGameState(prev => ({
       ...prev,
-      coins: prev.coins + Math.floor(revenue / 5),
-      businessProgress: Math.min(prev.businessProgress + 20, 100)
+      coins: prev.coins + Math.floor(profit / 5),
+      experience: (prev.experience || 0) + soldCups,
+      score: prev.score + soldCups * 10
     }));
 
-    toast.success(`Great day! Sold ${cupsSold} cups for $${revenue.toFixed(2)}!`);
+    setDayResults({ sold: soldCups, earned: revenue, expenses: supplyCost });
+    setShowDayResults(true);
     
-    setTimeout(() => {
-      setShowResult(false);
-      if (lemonadeStand.day >= 5) {
+    toast.success(`🎉 Day ${lemonadeStand.day} complete! Sold ${soldCups} cups!`);
+
+    if (lemonadeStand.day >= 3 && currentActivity === 'selling') {
+      setTimeout(() => {
         setCurrentActivity('budgeting');
-      }
-    }, 3000);
+        toast.info("💰 Time to learn budgeting!");
+      }, 2000);
+    }
+  };
+
+  const buySupplies = () => {
+    const cost = 30;
+    if (lemonadeStand.money >= cost) {
+      setLemonadeStand(prev => ({
+        ...prev,
+        lemons: prev.lemons + 10,
+        sugar: prev.sugar + 5,
+        cups: prev.cups + 20,
+        money: prev.money - cost,
+        totalExpenses: prev.totalExpenses + cost
+      }));
+      
+      toast.success("📦 Supplies purchased! Your lemonade empire grows!");
+    } else {
+      toast.error("💸 Not enough gold coins for supplies!");
+    }
   };
 
   const createBudget = (income: number, savings: number) => {
     const expenses = income - savings;
+    
     setBudget({
       income,
       expenses,
       savings,
-      savingsGoal: budget.savingsGoal
+      savingsGoal: savings * 12,
+      budgetCreated: true
     });
 
-    setGameState((prev: any) => ({
+    setGameState(prev => ({
       ...prev,
-      coins: prev.coins + 10,
-      budgetingProgress: Math.min(prev.budgetingProgress + 25, 100)
+      score: prev.score + 200,
+      coins: prev.coins + 30,
+      experience: (prev.experience || 0) + 25
     }));
 
-    toast.success("Budget created! +10 coins for smart planning!");
     setCurrentActivity('planning');
+    toast.success("📊 Budget mastered! You've learned financial planning!");
   };
 
   const selectGoal = (goalId: number) => {
     const goal = goals.find(g => g.id === goalId);
-    if (goal && lemonadeStand.totalEarned >= goal.cost) {
-      setGoals(goals.map(g => 
+    if (!goal || goal.completed) return;
+
+    if (lemonadeStand.earnings >= goal.cost) {
+      setGoals(prev => prev.map(g => 
         g.id === goalId ? { ...g, completed: true } : g
       ));
       
-      setGameState((prev: any) => ({
+      setLemonadeStand(prev => ({
         ...prev,
-        coins: prev.coins + 20,
-        goalProgress: Math.min(prev.goalProgress + 50, 100)
+        earnings: prev.earnings - goal.cost
       }));
 
-      toast.success(`Goal achieved! You can afford the ${goal.item}!`);
+      setGameState(prev => ({
+        ...prev,
+        score: prev.score + 300,
+        coins: prev.coins + 50
+      }));
+
+      toast.success(`🏆 Quest completed: ${goal.name}! Earned ${goal.reward}!`);
+
+      // Trigger boss battle
+      setTimeout(() => {
+        setShowBossBattle(true);
+        setBossHealth(100);
+        toast.warning("🐲 The Debt Dragon emerges! Prepare for financial battle!");
+      }, 2000);
+    } else {
+      toast.error(`💰 Need ${goal.cost - lemonadeStand.earnings} more gold coins!`);
     }
   };
 
-  // Check if module is completed
-  useEffect(() => {
-    if (lemonadeStand.day >= 5 && budget.savings > 0 && goals.some(g => g.completed)) {
-      onModuleComplete();
+  const answerBossQuestion = (answer: string) => {
+    const currentQuestion = bossQuestions[currentBossQuestion];
+    const isCorrect = answer === currentQuestion.correct;
+    
+    setSelectedAnswer(answer);
+
+    if (isCorrect) {
+      const damage = currentQuestion.damage;
+      setBossHealth(prev => Math.max(prev - damage, 0));
+      setPlayerAttack(damage);
+      
+      toast.success(`⚔️ Critical strike! ${damage} damage!`);
+    } else {
+      setGameState(prev => ({
+        ...prev,
+        lives: Math.max(prev.lives - 1, 0)
+      }));
+      toast.error(`🔥 Dragon breathes fire! You lose a life!`);
     }
-  }, [lemonadeStand.day, budget.savings, goals, onModuleComplete]);
+
+    setTimeout(() => {
+      if (bossHealth <= currentQuestion.damage && isCorrect) {
+        toast.success("🎉 Victory! The Debt Dragon is defeated!");
+        setShowBossBattle(false);
+        onModuleComplete();
+      } else if (currentBossQuestion < bossQuestions.length - 1) {
+        setCurrentBossQuestion(prev => prev + 1);
+        setSelectedAnswer('');
+        setPlayerAttack(0);
+      } else {
+        setShowBossBattle(false);
+        onModuleComplete();
+      }
+    }, 3000);
+  };
 
   return (
     <div className="space-y-6">
-      {/* Learning Objective */}
-      <Card className="border-primary/30 bg-primary/5">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg flex items-center gap-2">
-            <Target className="h-5 w-5 text-primary" />
-            Module 2 Goals: Banking & Saving 🍋
+      {/* Empire Dashboard */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Crown className="h-5 w-5 text-yellow-500" />
+            🏰 Lemonade Empire Dashboard
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${lemonadeStand.day >= 5 ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Run lemonade stand for 5 days</span>
+          <div className="grid md:grid-cols-5 gap-4 mb-4">
+            <div className="text-center p-3 bg-yellow-100 rounded-lg">
+              <Coins className="h-6 w-6 mx-auto mb-1 text-yellow-600" />
+              <div className="text-2xl font-bold text-yellow-600">${lemonadeStand.money}</div>
+              <div className="text-xs text-muted-foreground">Treasury</div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${budget.savings > 0 ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Create a budget with savings</span>
+            <div className="text-center p-3 bg-green-100 rounded-lg">
+              <Store className="h-6 w-6 mx-auto mb-1 text-green-600" />
+              <div className="text-2xl font-bold text-green-600">{lemonadeStand.day}</div>
+              <div className="text-xs text-muted-foreground">Days Open</div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${goals.some(g => g.completed) ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Achieve a savings goal</span>
+            <div className="text-center p-3 bg-blue-100 rounded-lg">
+              <TrendingUp className="h-6 w-6 mx-auto mb-1 text-blue-600" />
+              <div className="text-2xl font-bold text-blue-600">${lemonadeStand.earnings}</div>
+              <div className="text-xs text-muted-foreground">Profits</div>
+            </div>
+            <div className="text-center p-3 bg-purple-100 rounded-lg">
+              <Star className="h-6 w-6 mx-auto mb-1 text-purple-600" />
+              <div className="text-2xl font-bold text-purple-600">{lemonadeStand.reputation}%</div>
+              <div className="text-xs text-muted-foreground">Fame</div>
+            </div>
+            <div className="text-center p-3 bg-orange-100 rounded-lg">
+              <Zap className="h-6 w-6 mx-auto mb-1 text-orange-600" />
+              <div className="text-2xl font-bold text-orange-600">{gameState.experience || 0}</div>
+              <div className="text-xs text-muted-foreground">Experience</div>
             </div>
           </div>
+          <Progress value={lemonadeStand.reputation} className="w-full" />
         </CardContent>
       </Card>
 
-      {/* Business Dashboard */}
-      <div className="grid md:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">${lemonadeStand.money.toFixed(2)}</div>
-            <p className="text-sm text-muted-foreground">Current Money</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-primary">${lemonadeStand.totalEarned.toFixed(2)}</div>
-            <p className="text-sm text-muted-foreground">Total Earned</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-orange-600">Day {lemonadeStand.day}</div>
-            <p className="text-sm text-muted-foreground">Business Day</p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Day Results Modal */}
-      {showResult && dayResults && (
-        <Card className="border-primary/50 shadow-glow animate-scale-in">
-          <CardHeader className="text-center">
-            <CardTitle className="text-xl">🍋 Day {dayResults.day} Results!</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center space-y-4">
-            <div className="text-6xl mb-4">🏆</div>
-            <div className="space-y-2">
-              <p className="text-lg">Cups Sold: <span className="font-bold text-primary">{dayResults.cupsSold}</span></p>
-              <p className="text-lg">Revenue: <span className="font-bold text-green-600">${dayResults.revenue.toFixed(2)}</span></p>
+      {/* Boss Battle */}
+      <Dialog open={showBossBattle} onOpenChange={setShowBossBattle}>
+        <DialogContent className="max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-red-600">
+              <Swords className="h-5 w-5" />
+              ⚔️ BOSS BATTLE: Debt Dragon!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🐲</div>
+              <div className="text-lg font-bold text-red-600">Debt Dragon</div>
+              <Progress value={bossHealth} className="w-full mt-2" />
             </div>
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <p className="text-sm text-muted-foreground">Great job! Tomorrow is a new day to earn more!</p>
-            </div>
-          </CardContent>
-        </Card>
-      )}
 
-      {/* Current Activity */}
+            {bossQuestions[currentBossQuestion] && (
+              <>
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-sm font-medium text-red-800">
+                    {bossQuestions[currentBossQuestion].question}
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  {bossQuestions[currentBossQuestion].options.map((option) => (
+                    <Button
+                      key={option}
+                      onClick={() => answerBossQuestion(option)}
+                      variant={selectedAnswer === option ? "destructive" : "outline"}
+                      className="flex-1"
+                      disabled={selectedAnswer !== ''}
+                    >
+                      {option}
+                    </Button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Activity Sections */}
       {currentActivity === 'setup' && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <ShoppingCart className="h-5 w-5 text-primary" />
-              Stock Your Lemonade Stand 🍋
-            </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Buy supplies to start your business! You start with $20.
-            </p>
+            <CardTitle>🏪 Build Your Lemonade Empire</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="grid md:grid-cols-3 gap-4">
-                {supplies.map((supply, index) => (
-                  <div key={index} className="p-4 border rounded-lg text-center">
-                    <div className="text-3xl mb-2">{supply.icon}</div>
-                    <h3 className="font-medium">{supply.name}</h3>
-                    <p className="text-sm text-muted-foreground">${supply.cost} each</p>
-                    <p className="text-xs text-muted-foreground">Makes {supply.makes} servings</p>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="bg-muted/50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Current Stock:</h4>
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <div>🍋 Lemons: {lemonadeStand.lemonsStock}</div>
-                  <div>🍯 Sugar: {lemonadeStand.sugarStock}</div>
-                  <div>🥤 Cups: {lemonadeStand.cupsStock}</div>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Button onClick={buySupplies} variant="hero" className="flex-1">
-                  <ShoppingCart className="h-4 w-4 mr-2" />
-                  Buy Supplies ($7.50)
-                </Button>
-                <Button 
-                  onClick={() => setCurrentActivity('selling')} 
-                  variant="outline"
-                  disabled={lemonadeStand.cupsStock < 10}
-                >
-                  Start Selling
-                </Button>
-              </div>
+            <div className="text-center space-y-4">
+              <p>Start your legendary business! Buy supplies to begin.</p>
+              <Button onClick={buySupplies} size="lg">
+                🛒 Buy Supplies ($30)
+              </Button>
+              <Button onClick={() => setCurrentActivity('selling')} variant="outline">
+                Start Selling
+              </Button>
             </div>
           </CardContent>
         </Card>
@@ -287,49 +366,14 @@ const ModuleTwo = ({ gameState, setGameState, onModuleComplete }: ModuleTwoProps
       {currentActivity === 'selling' && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Coins className="h-5 w-5 text-primary" />
-              Selling Lemonade! 🍋
-            </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Sell lemonade for $1.50 per cup. Each day is different!
-            </p>
+            <CardTitle>🍋 Epic Lemonade Sales</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="bg-muted/50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Today's Stock:</h4>
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <div>🍋 Lemons: {lemonadeStand.lemonsStock}</div>
-                  <div>🍯 Sugar: {lemonadeStand.sugarStock}</div>
-                  <div>🥤 Cups: {lemonadeStand.cupsStock}</div>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <Button 
-                  onClick={sellLemonade} 
-                  variant="hero" 
-                  size="lg"
-                  disabled={lemonadeStand.cupsStock < 10 || lemonadeStand.lemonsStock < 3}
-                >
-                  <TrendingUp className="h-5 w-5 mr-2" />
-                  Sell Lemonade Today!
-                </Button>
-              </div>
-
-              {lemonadeStand.day >= 5 && (
-                <div className="mt-4 p-4 bg-primary/10 rounded-lg text-center">
-                  <p className="font-medium">Great week of business! Time to plan your budget!</p>
-                  <Button 
-                    onClick={() => setCurrentActivity('budgeting')} 
-                    variant="outline" 
-                    className="mt-2"
-                  >
-                    Create Budget
-                  </Button>
-                </div>
-              )}
+            <div className="text-center space-y-4">
+              <p>Build your empire one cup at a time!</p>
+              <Button onClick={sellLemonade} size="lg">
+                💰 Sell Lemonade Today!
+              </Button>
             </div>
           </CardContent>
         </Card>
@@ -338,67 +382,25 @@ const ModuleTwo = ({ gameState, setGameState, onModuleComplete }: ModuleTwoProps
       {currentActivity === 'budgeting' && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <PiggyBank className="h-5 w-5 text-primary" />
-              Create Your Budget 💰
-            </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Plan how to use your ${lemonadeStand.totalEarned.toFixed(2)} earnings!
-            </p>
+            <CardTitle>📊 Master Budget Creation</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div>
-                    <Label htmlFor="income">Weekly Income</Label>
-                    <Input
-                      id="income"
-                      type="number"
-                      value={budget.income}
-                      onChange={(e) => setBudget(prev => ({ ...prev, income: Number(e.target.value) }))}
-                      placeholder={`$${lemonadeStand.totalEarned.toFixed(2)}`}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="savings">How much to save?</Label>
-                    <Input
-                      id="savings"
-                      type="number"
-                      value={budget.savings}
-                      onChange={(e) => setBudget(prev => ({ ...prev, savings: Number(e.target.value) }))}
-                      placeholder="Enter savings amount"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-semibold mb-2">Budget Breakdown:</h4>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span>Income:</span>
-                        <span className="text-green-600">${budget.income.toFixed(2)}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Savings:</span>
-                        <span className="text-blue-600">${budget.savings.toFixed(2)}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Spending:</span>
-                        <span className="text-orange-600">${(budget.income - budget.savings).toFixed(2)}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <Input
+                type="number"
+                placeholder="Enter weekly income"
+                onChange={(e) => setBudget(prev => ({ ...prev, income: Number(e.target.value) }))}
+              />
+              <Input
+                type="number"
+                placeholder="How much to save?"
+                onChange={(e) => setBudget(prev => ({ ...prev, savings: Number(e.target.value) }))}
+              />
               <Button 
                 onClick={() => createBudget(budget.income, budget.savings)}
-                variant="hero"
                 className="w-full"
-                disabled={budget.income <= 0 || budget.savings <= 0}
               >
-                Create Budget
+                Create Epic Budget
               </Button>
             </div>
           </CardContent>
@@ -408,99 +410,40 @@ const ModuleTwo = ({ gameState, setGameState, onModuleComplete }: ModuleTwoProps
       {currentActivity === 'planning' && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Target className="h-5 w-5 text-primary" />
-              Savings Goals 🎯
-            </CardTitle>
-            <p className="text-sm text-muted-foreground">
-              What can you afford with your earnings? Choose wisely!
-            </p>
+            <CardTitle>🎯 Legendary Savings Quests</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid gap-4">
               {goals.map((goal) => (
-                <Card 
+                <div 
                   key={goal.id} 
-                  className={`cursor-pointer transition-all ${
-                    goal.completed ? 'bg-green-50 border-green-200' : 
-                    lemonadeStand.totalEarned >= goal.cost ? 'border-primary/50 hover:border-primary' : 'opacity-60'
-                  }`}
+                  className="p-4 border rounded-lg cursor-pointer hover:bg-muted/50"
                   onClick={() => selectGoal(goal.id)}
                 >
-                  <CardContent className="p-4 text-center">
-                    <div className="text-3xl mb-2">
-                      {goal.item === "New Bike" ? "🚲" : 
-                       goal.item === "Video Game" ? "🎮" : "🎨"}
-                    </div>
-                    <h3 className="font-medium">{goal.item}</h3>
-                    <p className="text-lg font-bold text-primary">${goal.cost}</p>
-                    <p className="text-sm text-muted-foreground">{goal.timeFrame}</p>
-                    
-                    {goal.completed ? (
-                      <Badge variant="outline" className="mt-2 bg-green-100">
-                        Achieved! ✅
-                      </Badge>
-                    ) : lemonadeStand.totalEarned >= goal.cost ? (
-                      <Badge variant="outline" className="mt-2 bg-primary/10">
-                        Can Afford! 💰
-                      </Badge>
-                    ) : (
-                      <Badge variant="outline" className="mt-2">
-                        Keep Saving 📈
-                      </Badge>
-                    )}
-                  </CardContent>
-                </Card>
+                  <h3 className="font-bold">{goal.name}</h3>
+                  <p className="text-sm text-muted-foreground">{goal.description}</p>
+                  <p className="text-lg font-bold text-primary">${goal.cost}</p>
+                  <Badge variant="outline">{goal.reward}</Badge>
+                </div>
               ))}
             </div>
-
-            {goals.some(g => g.completed) && (
-              <div className="mt-6 text-center p-6 bg-gradient-primary/10 rounded-lg">
-                <Trophy className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">🎉 Savings Goal Achieved!</h3>
-                <p className="text-muted-foreground mb-4">
-                  Awesome! You've learned how to earn, budget, and save for goals!
-                </p>
-                <Badge variant="outline" className="text-sm p-2">
-                  Smart Saver! 🍋
-                </Badge>
-              </div>
-            )}
           </CardContent>
         </Card>
       )}
 
-      {/* Learning Summary */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <DollarSign className="h-5 w-5 text-primary" />
-            What You've Learned
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <h4 className="font-semibold">💰 About Budgeting:</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Income = money you earn</li>
-                <li>• Budget = plan for your money</li>
-                <li>• Always save some money first</li>
-                <li>• Track what you spend</li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h4 className="font-semibold">🎯 About Saving:</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Set specific savings goals</li>
-                <li>• Save regularly, even small amounts</li>
-                <li>• Delayed gratification pays off</li>
-                <li>• Plan before you spend</li>
-              </ul>
-            </div>
+      {/* Day Results */}
+      <Dialog open={showDayResults} onOpenChange={setShowDayResults}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>🏆 Epic Day Results!</DialogTitle>
+          </DialogHeader>
+          <div className="text-center space-y-4">
+            <div className="text-6xl">🎉</div>
+            <p>Sold {dayResults.sold} cups for ${dayResults.earned}!</p>
+            <p>Profit: ${(dayResults.earned - dayResults.expenses).toFixed(2)}</p>
           </div>
-        </CardContent>
-      </Card>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

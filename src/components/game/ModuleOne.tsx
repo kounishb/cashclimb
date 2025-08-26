@@ -1,377 +1,396 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { 
-  Coins, 
-  Trophy, 
-  Heart,
-  Star,
-  CheckCircle,
-  XCircle,
-  Hammer,
-  Target,
-  Home,
-  DollarSign
-} from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Coins, Star, Target, CheckCircle, Timer, Award, Zap, Crown, Shield, Swords } from "lucide-react";
 import { toast } from "sonner";
 
+interface GameState {
+  coins: number;
+  score: number;
+  lives: number;
+  level: number;
+  villageProgress: number;
+  achievements: string[];
+  experience: number;
+  badges: string[];
+  skillPoints: number;
+}
+
 interface ModuleOneProps {
-  gameState: any;
-  setGameState: (state: any) => void;
+  gameState: GameState;
+  setGameState: React.Dispatch<React.SetStateAction<GameState>>;
   onModuleComplete: () => void;
 }
 
-const ModuleOne = ({ gameState, setGameState, onModuleComplete }: ModuleOneProps) => {
-  const [showQuestion, setShowQuestion] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [showResult, setShowResult] = useState(false);
+const ModuleOne: React.FC<ModuleOneProps> = ({ gameState, setGameState, onModuleComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showQuestion, setShowQuestion] = useState(false);
+  const [showBossBattle, setShowBossBattle] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [completedTasks, setCompletedTasks] = useState<number[]>([]);
-  const [showEarningActivity, setShowEarningActivity] = useState(false);
-  const [jobsCompleted, setJobsCompleted] = useState<number[]>([]);
+  const [questionsAnswered, setQuestionsAnswered] = useState<number[]>([]);
+  const [currentStoryPhase, setCurrentStoryPhase] = useState(0);
+  const [characterDialogue, setCharacterDialogue] = useState('');
+  const [bossHealth, setBossHealth] = useState(100);
+  const [playerAttack, setPlayerAttack] = useState(0);
 
-  // Village building tasks that teach earning money
-  const tasks = [
-    { 
-      id: 1, 
-      name: "Clean the Village Square", 
-      coins: 10, 
-      description: "Help sweep and organize the town center",
-      timeMinutes: 30
+  // Characters with personalities and backstories
+  const characters = {
+    villageElder: {
+      name: "Elder Maya",
+      avatar: "👵",
+      personality: "Wise village elder who guides young heroes",
+      greeting: "Welcome, young hero! Our village needs your help to rebuild after the Great Storm!"
     },
-    { 
-      id: 2, 
-      name: "Help Build Houses", 
-      coins: 25, 
-      description: "Assist builders by carrying materials",
-      timeMinutes: 60
+    merchant: {
+      name: "Trader Tom", 
+      avatar: "🧔",
+      personality: "Shrewd but fair merchant",
+      greeting: "Ah, a new face! Let me teach you the difference between what you NEED and what you WANT!"
     },
-    { 
-      id: 3, 
-      name: "Plant Flowers in Garden", 
-      coins: 15, 
-      description: "Make the village beautiful with flowers",
-      timeMinutes: 45
-    },
-    { 
-      id: 4, 
-      name: "Deliver Mail", 
-      coins: 20, 
-      description: "Help the postman deliver letters around town",
-      timeMinutes: 40
-    },
-    { 
-      id: 5, 
-      name: "Organize Village Market", 
-      coins: 30, 
-      description: "Set up stalls and help vendors get ready",
-      timeMinutes: 90
+    boss: {
+      name: "Impulse Dragon",
+      avatar: "🐉",
+      personality: "A dragon that tempts people with unnecessary purchases",
+      taunt: "I'll make you spend all your coins on things you don't need! Mwahahaha!"
     }
-  ];
+  };
 
-  // Needs vs Wants questions
-  const questions = [
+  // Epic quest tasks with storylines
+  const tasks = [
     {
       id: 1,
-      question: "Emma's family is at the grocery store. Help them decide if this is a NEED or a WANT:",
-      item: "Fresh vegetables for dinner",
-      image: "🥕",
-      correctAnswer: "need",
-      explanation: "Fresh vegetables are a NEED because our bodies need healthy food to grow strong and stay healthy!"
+      name: "🍞 Help the Baker",
+      description: "The village bakery was destroyed! Help bake bread for hungry families.",
+      coins: 25,
+      experience: 10,
+      time: "30 min",
+      difficulty: "Easy",
+      storyReward: "Families can eat again thanks to your help!"
     },
     {
       id: 2,
-      question: "Tommy sees something cool at the toy store. Is this a NEED or a WANT?",
-      item: "A new video game",
-      image: "🎮",
-      correctAnswer: "want",
-      explanation: "A video game is a WANT because it's fun to play with but not necessary for survival."
+      name: "🌾 Farm Guardian", 
+      description: "Protect the village crops from hungry rabbits and grow new vegetables.",
+      coins: 40,
+      experience: 15,
+      time: "45 min",
+      difficulty: "Medium",
+      storyReward: "The harvest is saved! The village has food for winter!"
     },
     {
       id: 3,
-      question: "Winter is coming and Sarah needs to stay warm. Is this a NEED or a WANT?",
-      item: "A warm winter coat",
-      image: "🧥",
-      correctAnswer: "need",
-      explanation: "A warm coat is a NEED because it protects you from cold weather and keeps you healthy!"
+      name: "⚒️ Blacksmith Hero",
+      description: "Forge magical tools to help rebuild the village faster.",
+      coins: 60,
+      experience: 25,
+      time: "1 hour",
+      difficulty: "Hard",
+      storyReward: "Your magical tools speed up construction by 200%!"
     },
     {
       id: 4,
-      question: "Alex is at the store with his mom. Is this a NEED or a WANT?",
-      item: "Brand new designer sneakers",
-      image: "👟",
-      correctAnswer: "want",
-      explanation: "Designer sneakers are a WANT. Regular shoes for protection are a need, but expensive designer ones are wants!"
+      name: "📨 Village Messenger",
+      description: "Deliver urgent messages between villages to coordinate the rebuilding effort.",
+      coins: 35,
+      experience: 12,
+      time: "40 min", 
+      difficulty: "Medium",
+      storyReward: "Communication restored! Other villages are sending help!"
     },
     {
       id: 5,
-      question: "Maria's family is planning meals for the week. Is this a NEED or a WANT?",
-      item: "Clean drinking water",
-      image: "💧",
-      correctAnswer: "need",
-      explanation: "Clean water is definitely a NEED! Our bodies need water every day to survive and be healthy."
-    },
-    {
-      id: 6,
-      question: "Jake wants to buy something at the candy store. Is this a NEED or a WANT?",
-      item: "A big bag of candy",
-      image: "🍭",
-      correctAnswer: "want",
-      explanation: "Candy is a WANT because it tastes good but isn't necessary for our health or survival."
+      name: "🛡️ Market Guardian",
+      description: "Defend the new marketplace from bandits who want to steal supplies.",
+      coins: 50,
+      experience: 20,
+      time: "1.5 hours",
+      difficulty: "Hard",
+      storyReward: "The marketplace is safe! Trade can flourish again!"
     }
   ];
 
-  const currentQuestion = questions[currentQuestionIndex];
+  // Boss battle questions (scenario-based challenges)
+  const questions = [
+    {
+      id: 1,
+      question: "The Impulse Dragon whispers: 'Buy this shiny sword for 50 coins!' You have 60 coins and need food that costs 30 coins.",
+      item: "Shiny decorative sword",
+      options: ["Buy the sword", "Buy food first"],
+      correct: "Buy food first",
+      explanation: "Food is a NEED for survival! The dragon tried to trick you into spending on a WANT first. Smart heroes prioritize needs!",
+      damage: 25
+    },
+    {
+      id: 2,
+      question: "Dragon's trick: 'Everyone in the village wears these magic boots!' The boots cost 40 coins, but you need 35 coins for shelter repairs.",
+      item: "Magic fashion boots",
+      options: ["Buy trendy boots", "Repair shelter first"], 
+      correct: "Repair shelter first",
+      explanation: "Shelter protects you from danger! Fashion items are wants. The dragon tried to use peer pressure against you!",
+      damage: 30
+    },
+    {
+      id: 3,
+      question: "The dragon roars: 'This magical scroll will make you smarter!' It costs 45 coins, but you need 40 coins for medicine.",
+      item: "Intelligence-boosting scroll",
+      options: ["Buy the scroll", "Buy medicine first"],
+      correct: "Buy medicine first", 
+      explanation: "Health is your most important need! The dragon tried to tempt you with false promises. True wisdom comes from making smart choices!",
+      damage: 35
+    }
+  ];
+
+  // Achievement system
+  const achievements = [
+    { id: 'first_task', name: 'Village Helper', description: 'Complete your first task', icon: '🏆', coins: 10 },
+    { id: 'boss_defeated', name: 'Dragon Slayer', description: 'Defeat the Impulse Dragon', icon: '⚔️', coins: 100 }
+  ];
 
   const completeTask = (taskId: number) => {
+    if (completedTasks.includes(taskId)) return;
+    
     const task = tasks.find(t => t.id === taskId);
-    if (task && !completedTasks.includes(taskId)) {
-      setCompletedTasks([...completedTasks, taskId]);
-      setGameState((prev: any) => ({
-        ...prev,
-        coins: prev.coins + task.coins,
-        villageProgress: Math.min(prev.villageProgress + 20, 100)
-      }));
-      toast.success(`Great job! You earned ${task.coins} coins for ${task.timeMinutes} minutes of work!`);
-      
-      // Start a question after completing a task
+    if (!task) return;
+
+    const newCompletedTasks = [...completedTasks, taskId];
+    setCompletedTasks(newCompletedTasks);
+
+    setGameState(prev => ({
+      ...prev,
+      coins: prev.coins + task.coins,
+      experience: (prev.experience || 0) + task.experience,
+      score: prev.score + 200,
+      villageProgress: Math.min(prev.villageProgress + 20, 100),
+      skillPoints: (prev.skillPoints || 0) + 1
+    }));
+
+    toast.success(`🎉 ${task.storyReward} Earned ${task.coins} coins and ${task.experience} XP!`);
+
+    // Trigger boss battle after completing 3+ tasks
+    if (newCompletedTasks.length >= 3 && questionsAnswered.length === 0) {
       setTimeout(() => {
-        setShowQuestion(true);
-      }, 1500);
+        setShowBossBattle(true);
+        setCurrentQuestionIndex(0);
+        setBossHealth(100);
+        toast.warning("🐉 The Impulse Dragon appears! Prepare for battle!");
+      }, 2000);
     }
   };
 
-  const answerQuestion = (answer: string) => {
+  const answerBossQuestion = (answer: string) => {
+    const currentQuestion = questions[currentQuestionIndex];
+    const isCorrect = answer === currentQuestion.correct;
+    
     setSelectedAnswer(answer);
-    setShowResult(true);
-    
-    const isCorrect = answer === currentQuestion.correctAnswer;
-    
-    setGameState((prev: any) => ({
-      ...prev,
-      totalQuestions: prev.totalQuestions + 1,
-      correctAnswers: isCorrect ? prev.correctAnswers + 1 : prev.correctAnswers,
-      coins: isCorrect ? prev.coins + 5 : prev.coins,
-      score: isCorrect ? prev.score + 10 : prev.score,
-      lives: isCorrect ? prev.lives : Math.max(prev.lives - 1, 0)
-    }));
 
     if (isCorrect) {
-      toast.success("Excellent! +5 coins & +10 points!");
+      const damage = currentQuestion.damage;
+      setBossHealth(prev => Math.max(prev - damage, 0));
+      setPlayerAttack(damage);
+      
+      setGameState(prev => ({
+        ...prev,
+        score: prev.score + 200,
+        coins: prev.coins + 30,
+        experience: (prev.experience || 0) + 20
+      }));
+
+      toast.success(`🗡️ Critical hit! ${damage} damage! ${currentQuestion.explanation}`);
     } else {
-      toast.error("Not quite right, but that's how we learn!");
+      setGameState(prev => ({
+        ...prev,
+        lives: Math.max(prev.lives - 1, 0),
+        score: prev.score + 50
+      }));
+      toast.error(`💥 Dragon attacks! You lose a life! ${currentQuestion.explanation}`);
     }
 
-    // Move to next question after 3 seconds
+    const newQuestionsAnswered = [...questionsAnswered, currentQuestionIndex];
+    setQuestionsAnswered(newQuestionsAnswered);
+
     setTimeout(() => {
-      const nextIndex = (currentQuestionIndex + 1) % questions.length;
-      setCurrentQuestionIndex(nextIndex);
-      setSelectedAnswer(null);
-      setShowResult(false);
-      setShowQuestion(false);
+      if (bossHealth <= currentQuestion.damage && isCorrect) {
+        toast.success("🎉 You defeated the Impulse Dragon! Village saved!");
+        setShowBossBattle(false);
+        onModuleComplete();
+      } else if (newQuestionsAnswered.length < questions.length) {
+        setCurrentQuestionIndex(prev => prev + 1);  
+        setSelectedAnswer('');
+        setPlayerAttack(0);
+      } else {
+        setShowBossBattle(false);
+        onModuleComplete();
+      }
     }, 3000);
   };
 
-  // Check if module is completed
-  useEffect(() => {
-    if (gameState.villageProgress >= 100 && completedTasks.length >= 5) {
-      onModuleComplete();
-    }
-  }, [gameState.villageProgress, completedTasks.length, onModuleComplete]);
-
   return (
     <div className="space-y-6">
-      {/* Learning Objective */}
-      <Card className="border-primary/30 bg-primary/5">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg flex items-center gap-2">
-            <Target className="h-5 w-5 text-primary" />
-            Module 1 Goals: Money Basics
+      {/* Hero Dashboard */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Crown className="h-5 w-5 text-yellow-500" />
+            Hero Dashboard - Module 1: Village Rebuilder
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${gameState.totalQuestions >= 3 ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Learn needs vs wants</span>
+          <div className="grid md:grid-cols-5 gap-4 mb-4">
+            <div className="text-center p-3 bg-primary/10 rounded-lg">
+              <Coins className="h-6 w-6 mx-auto mb-1 text-yellow-500" />
+              <div className="text-2xl font-bold text-primary">{gameState.coins}</div>
+              <div className="text-xs text-muted-foreground">Gold Coins</div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${completedTasks.length >= 3 ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Understand earning money</span>
+            <div className="text-center p-3 bg-secondary/10 rounded-lg">
+              <Zap className="h-6 w-6 mx-auto mb-1 text-purple-500" />
+              <div className="text-2xl font-bold text-secondary">{gameState.experience || 0}</div>
+              <div className="text-xs text-muted-foreground">Experience</div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className={`h-4 w-4 ${gameState.coins >= 50 ? 'text-green-500' : 'text-gray-400'}`} />
-              <span>Earn 50+ coins</span>
+            <div className="text-center p-3 bg-green-100 rounded-lg">
+              <Shield className="h-6 w-6 mx-auto mb-1 text-green-600" />
+              <div className="text-2xl font-bold text-green-600">{gameState.lives}</div>
+              <div className="text-xs text-muted-foreground">Lives</div>
             </div>
+            <div className="text-center p-3 bg-blue-100 rounded-lg">
+              <Star className="h-6 w-6 mx-auto mb-1 text-blue-600" />
+              <div className="text-2xl font-bold text-blue-600">{completedTasks.length}/5</div>
+              <div className="text-xs text-muted-foreground">Quests</div>
+            </div>
+            <div className="text-center p-3 bg-orange-100 rounded-lg">
+              <Target className="h-6 w-6 mx-auto mb-1 text-orange-600" />
+              <div className="text-2xl font-bold text-orange-600">{gameState.villageProgress}%</div>
+              <div className="text-xs text-muted-foreground">Village</div>
+            </div>
+          </div>
+          <Progress value={gameState.villageProgress} className="w-full mb-4" />
+          <div className="flex flex-wrap gap-2">
+            {gameState.badges?.map((badge, index) => (
+              <Badge key={index} variant="secondary" className="flex items-center gap-1">
+                <Award className="h-3 w-3" />
+                {achievements.find(a => a.id === badge)?.name || badge}
+              </Badge>
+            ))}
           </div>
         </CardContent>
       </Card>
 
-      {/* Question Modal */}
-      {showQuestion && (
-        <Card className="border-primary/50 shadow-glow animate-scale-in">
-          <CardHeader className="text-center">
-            <CardTitle className="text-xl">💭 Money Decision Time!</CardTitle>
-            <p className="text-sm text-muted-foreground">
-              Question {currentQuestionIndex + 1} of {questions.length}
-            </p>
-          </CardHeader>
-          <CardContent className="text-center space-y-4">
-            <div className="text-6xl mb-4">{currentQuestion.image}</div>
-            <p className="text-lg">{currentQuestion.question}</p>
-            <div className="text-xl font-bold text-primary bg-primary/10 p-3 rounded-lg">
-              "{currentQuestion.item}"
+      {/* Boss Battle Dialog */}
+      <Dialog open={showBossBattle} onOpenChange={setShowBossBattle}>
+        <DialogContent className="max-w-lg">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-red-600">
+              <Swords className="h-5 w-5" />
+              ⚔️ BOSS BATTLE: Impulse Dragon!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🐉</div>
+              <div className="text-lg font-bold text-red-600">Impulse Dragon</div>
+              <Progress value={bossHealth} className="w-full mt-2" />
+              <div className="text-sm text-muted-foreground">Health: {bossHealth}/100</div>
             </div>
-            
-            {!showResult ? (
-              <div className="flex gap-4 justify-center">
-                <Button
-                  size="lg"
-                  onClick={() => answerQuestion("need")}
-                  className="bg-green-500 hover:bg-green-600 text-white px-8"
-                >
-                  <Target className="h-5 w-5 mr-2" />
-                  NEED
-                  <span className="text-xs block">Must have to live</span>
-                </Button>
-                <Button
-                  size="lg"
-                  onClick={() => answerQuestion("want")}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8"
-                >
-                  <Star className="h-5 w-5 mr-2" />
-                  WANT
-                  <span className="text-xs block">Nice to have</span>
-                </Button>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                <div className="flex items-center justify-center gap-2">
-                  {selectedAnswer === currentQuestion.correctAnswer ? (
-                    <CheckCircle className="h-8 w-8 text-green-500" />
-                  ) : (
-                    <XCircle className="h-8 w-8 text-red-500" />
-                  )}
-                  <span className="text-xl font-bold">
-                    {selectedAnswer === currentQuestion.correctAnswer ? "Correct!" : "Not quite!"}
-                  </span>
-                </div>
-                <div className="bg-muted/50 p-4 rounded-lg">
-                  <p className="text-muted-foreground">{currentQuestion.explanation}</p>
-                </div>
+
+            {playerAttack > 0 && (
+              <div className="text-center">
+                <div className="text-2xl animate-bounce">⚔️ -{playerAttack} damage!</div>
               </div>
             )}
-          </CardContent>
-        </Card>
-      )}
 
-      {/* Village Tasks */}
+            {questions[currentQuestionIndex] && (
+              <>
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-sm font-medium text-red-800">
+                    {questions[currentQuestionIndex].question}
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  {questions[currentQuestionIndex].options.map((option) => (
+                    <Button
+                      key={option}
+                      onClick={() => answerBossQuestion(option)}
+                      variant={selectedAnswer === option ? "destructive" : "outline"}
+                      className="flex-1"
+                      disabled={selectedAnswer !== ''}
+                    >
+                      {option}
+                    </Button>
+                  ))}
+                </div>
+                {selectedAnswer && (
+                  <div className="p-4 border rounded-lg">
+                    <p className="text-sm">
+                      {questions[currentQuestionIndex].explanation}
+                    </p>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Village Quests */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Hammer className="h-5 w-5 text-primary" />
-            Village Jobs - Earn Money by Working!
+            <Award className="h-5 w-5" />
+            🏘️ Village Rebuilding Quests
           </CardTitle>
-          <p className="text-sm text-muted-foreground">
-            Complete tasks to earn coins and learn how work = money! 💪
-          </p>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
-            {tasks.map((task) => (
-              <div
-                key={task.id}
-                className={`p-4 rounded-lg border transition-all ${
-                  completedTasks.includes(task.id)
-                    ? 'bg-green-50 border-green-200'
-                    : 'bg-card border-border hover:border-primary/50'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    {completedTasks.includes(task.id) ? (
-                      <CheckCircle className="h-6 w-6 text-green-500" />
-                    ) : (
-                      <div className="h-6 w-6 rounded-full border-2 border-gray-300" />
-                    )}
-                    <div>
-                      <h3 className="font-medium">{task.name}</h3>
-                      <p className="text-sm text-muted-foreground">{task.description}</p>
-                      <div className="flex items-center gap-4 mt-1">
-                        <div className="flex items-center gap-1 text-sm text-warning">
+            {tasks.map((task) => {
+              const isCompleted = completedTasks.includes(task.id);
+              return (
+                <div key={task.id} className={`p-4 border rounded-lg transition-all ${isCompleted ? 'bg-green-50 border-green-200 shadow-md' : 'hover:bg-muted/50 hover:shadow-sm'}`}>
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <h3 className="font-semibold flex items-center gap-2 text-lg">
+                        {task.name}
+                        {isCompleted && <CheckCircle className="h-5 w-5 text-green-600" />}
+                      </h3>
+                      <p className="text-muted-foreground mb-3">{task.description}</p>
+                      <div className="flex flex-wrap items-center gap-2 text-xs">
+                        <Badge variant="secondary" className="flex items-center gap-1">
                           <Coins className="h-3 w-3" />
                           {task.coins} coins
-                        </div>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Star className="h-3 w-3" />
-                          {task.timeMinutes} minutes of work
-                        </div>
+                        </Badge>
+                        <Badge variant="outline" className="flex items-center gap-1">
+                          <Zap className="h-3 w-3" />
+                          {task.experience} XP
+                        </Badge>
+                        <Badge variant="outline" className="flex items-center gap-1">
+                          <Timer className="h-3 w-3" />
+                          {task.time}
+                        </Badge>
+                        <Badge variant={task.difficulty === 'Easy' ? 'default' : task.difficulty === 'Medium' ? 'secondary' : 'destructive'}>
+                          {task.difficulty}
+                        </Badge>
                       </div>
+                      {isCompleted && (
+                        <div className="mt-2 p-2 bg-green-100 rounded text-xs text-green-800">
+                          🎉 {task.storyReward}
+                        </div>
+                      )}
                     </div>
+                    <Button 
+                      onClick={() => completeTask(task.id)}
+                      disabled={isCompleted}
+                      size="lg"
+                      className="ml-4"
+                    >
+                      {isCompleted ? '✅ Completed' : '🚀 Start Quest'}
+                    </Button>
                   </div>
-                  <Button
-                    onClick={() => completeTask(task.id)}
-                    disabled={completedTasks.includes(task.id)}
-                    variant={completedTasks.includes(task.id) ? "outline" : "gaming"}
-                    size="sm"
-                  >
-                    {completedTasks.includes(task.id) ? "Completed!" : "Work Here"}
-                  </Button>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {completedTasks.length >= 5 && (
-            <div className="mt-6 text-center p-6 bg-gradient-primary/10 rounded-lg">
-              <Trophy className="h-12 w-12 mx-auto mb-4 text-primary" />
-              <h3 className="text-xl font-bold mb-2">🎉 Village Rebuilt!</h3>
-              <p className="text-muted-foreground mb-4">
-                Amazing work! You've learned that we earn money by working and helping others!
-              </p>
-              <div className="flex justify-center gap-2">
-                <Badge variant="outline" className="text-sm p-2">
-                  Village Helper! 🏘️
-                </Badge>
-                <Badge variant="outline" className="text-sm p-2">
-                  Money Basics Master! 💰
-                </Badge>
-              </div>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-
-      {/* Progress Summary */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <DollarSign className="h-5 w-5 text-primary" />
-            What You've Learned
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <h4 className="font-semibold">💼 About Earning Money:</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• We earn money by working and helping others</li>
-                <li>• Different jobs pay different amounts</li>
-                <li>• The more time you work, the more you can earn</li>
-                <li>• Money is earned, not just given to us</li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h4 className="font-semibold">🎯 About Needs vs Wants:</h4>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Needs: Things we must have to live (food, water, shelter)</li>
-                <li>• Wants: Things that are nice to have but not necessary</li>
-                <li>• Smart spending means needs come first</li>
-                <li>• It's okay to want things, but needs are more important</li>
-              </ul>
-            </div>
+              );
+            })}
           </div>
         </CardContent>
       </Card>
