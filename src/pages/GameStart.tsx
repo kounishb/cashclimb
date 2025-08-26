@@ -316,7 +316,6 @@ const GameStart = () => {
                       disabled={!selectedModuleData.isUnlocked}
                       className="w-full"
                       size="lg"
-                      variant="hero"
                     >
                       {selectedModuleData.isUnlocked ? (
                         <>
