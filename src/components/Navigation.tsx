@@ -55,11 +55,16 @@ const Navigation = () => {
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="sm">
-                      <User className="h-4 w-4 mr-2" />
-                      My Profile
+                      <Menu className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+                    <DropdownMenuItem asChild>
+                      <Link to="/profile" className="flex items-center w-full">
+                        <User className="h-4 w-4 mr-2" />
+                        My Profile
+                      </Link>
+                    </DropdownMenuItem>
                     <DropdownMenuItem onClick={logout}>
                       <LogOut className="h-4 w-4 mr-2" />
                       Logout
@@ -110,6 +115,12 @@ const Navigation = () => {
                     <Button variant="outline" size="sm" className="w-full" asChild>
                       <Link to="/game">
                         Dashboard
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="sm" className="w-full" asChild>
+                      <Link to="/profile">
+                        <User className="h-4 w-4 mr-2" />
+                        My Profile
                       </Link>
                     </Button>
                     <Button variant="ghost" size="sm" className="w-full" onClick={() => {logout(); setIsOpen(false);}}>

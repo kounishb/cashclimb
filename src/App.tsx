@@ -36,6 +36,14 @@ const App = () => (
             <Route path="/product" element={<><Navigation /><Product /></>} />
             <Route path="/contact" element={<><Navigation /><Contact /></>} />
             <Route path="/auth" element={<><Navigation /><Auth /></>} />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <><Navigation /><Profile /></>
+                </ProtectedRoute>
+              } 
+            />
             
             {/* Dashboard Routes with Isolated Layout */}
             <Route 
@@ -99,7 +107,7 @@ const App = () => (
               } 
             />
             <Route 
-              path="/profile" 
+              path="/dashboard/profile" 
               element={
                 <ProtectedRoute>
                   <DashboardLayout>

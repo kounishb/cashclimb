@@ -39,7 +39,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="/profile" className="flex items-center w-full">
+                  <a href="/dashboard/profile" className="flex items-center w-full">
                     <User className="h-4 w-4 mr-2" />
                     My Profile
                   </a>
