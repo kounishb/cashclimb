@@ -260,177 +260,252 @@ const LessonViewer = () => {
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
           content: `
-            <h2>How People Earn Money: Understanding Work and Income</h2>
-            <p>Money doesn't just appear magically - people have to earn it through work, effort, and providing value to others. Understanding how people earn money is one of the most important lessons you can learn about the real world.</p>
+            <h2>How People Earn Money: A Complete Guide to Work and Income</h2>
+            <p>Money doesn't magically appear in people's wallets or bank accounts. Every dollar, every coin has to be earned through work, effort, and providing value to others. Understanding how people earn money is one of the most important life skills you can develop, and it's never too early to start learning!</p>
             
-            <h3>What Does It Mean to "Earn" Money?</h3>
-            <p>Earning money means receiving payment in exchange for doing something valuable for someone else. When you earn money, you're trading your time, effort, skills, or products for payment. This is different from receiving money as a gift or finding money - earning requires you to do something in return.</p>
+            <h3>What is Work Really?</h3>
+            <p>Work is when people use their time, energy, skills, knowledge, and effort to do something valuable for other people. In return for creating this value, they receive money as payment. Work can be physical (like building houses), mental (like solving math problems), creative (like writing stories), or social (like teaching children).</p>
             
-            <h4>The Basic Principle of Earning</h4>
-            <p>All earning is based on a simple idea: <strong>You get paid for creating value for other people.</strong> The more value you create, and the more people you help, the more money you can potentially earn. This is true whether you're a kid doing chores or an adult with a career.</p>
+            <p>The most important thing to understand about work is that it must create value for other people. If what you're doing doesn't help someone else in some way, it's very difficult to earn money from it. This is why successful workers always think about how they can help others solve problems or meet their needs.</p>
             
-            <h3>Types of Income</h3>
+            <h3>The Many Different Types of Jobs</h3>
+            <p>There are thousands of different jobs in the world, but they generally fall into several main categories:</p>
             
-            <h4>Earned Income</h4>
-            <p>This is money you receive in exchange for work or services:</p>
+            <h4>Service Jobs - Helping People Directly</h4>
+            <p>Service jobs involve directly helping other people with their needs:</p>
             <ul>
-              <li><strong>Wages and Salaries</strong> - Regular payment for a job</li>
-              <li><strong>Tips</strong> - Extra money for good service</li>
-              <li><strong>Commissions</strong> - Payment based on sales or results</li>
-              <li><strong>Business Income</strong> - Money from owning and running a business</li>
-              <li><strong>Freelance Income</strong> - Payment for specific projects or tasks</li>
+              <li><strong>Healthcare Workers</strong> - Doctors, nurses, dentists, therapists who help people stay healthy</li>
+              <li><strong>Educators</strong> - Teachers, professors, tutors who help people learn</li>
+              <li><strong>Public Safety</strong> - Police officers, firefighters, paramedics who keep communities safe</li>
+              <li><strong>Customer Service</strong> - Restaurant servers, hotel staff, retail workers who serve customers</li>
+              <li><strong>Personal Services</strong> - Hair stylists, personal trainers, counselors who provide individual care</li>
             </ul>
             
-            <h4>Unearned Income</h4>
-            <p>This is money you receive without working for it directly:</p>
+            <h4>Production Jobs - Making Things People Need</h4>
+            <p>These jobs involve creating physical products:</p>
             <ul>
-              <li><strong>Gifts</strong> - Money given to you by family or friends</li>
-              <li><strong>Allowances</strong> - Regular money from parents (though this might come with expectations)</li>
-              <li><strong>Interest</strong> - Money earned from savings accounts or investments</li>
-              <li><strong>Dividends</strong> - Money from owning shares in companies</li>
-              <li><strong>Inheritance</strong> - Money left to you by relatives</li>
+              <li><strong>Manufacturing</strong> - Factory workers who make cars, electronics, clothing, and other goods</li>
+              <li><strong>Construction</strong> - Builders, electricians, plumbers who create and maintain buildings</li>
+              <li><strong>Agriculture</strong> - Farmers, ranchers, fishers who produce food</li>
+              <li><strong>Crafts and Arts</strong> - Artisans, bakers, jewelers who create unique items</li>
+              <li><strong>Technology Production</strong> - Engineers and technicians who design and build technology</li>
             </ul>
             
-            <h3>How Kids Can Start Earning Money</h3>
-            
-            <h4>Chores and Household Tasks</h4>
-            <p>Many kids start earning money by helping around the house:</p>
+            <h4>Information and Knowledge Jobs</h4>
+            <p>These jobs work with ideas, information, and knowledge:</p>
             <ul>
-              <li>Cleaning rooms and organizing spaces</li>
-              <li>Washing dishes or loading the dishwasher</li>
-              <li>Taking out trash and recycling</li>
-              <li>Yard work like raking leaves or pulling weeds</li>
-              <li>Helping with laundry</li>
-              <li>Feeding and caring for pets</li>
+              <li><strong>Technology</strong> - Computer programmers, web designers, data analysts</li>
+              <li><strong>Media and Communication</strong> - Journalists, writers, photographers, videographers</li>
+              <li><strong>Research and Science</strong> - Scientists, researchers, laboratory technicians</li>
+              <li><strong>Business and Finance</strong> - Accountants, managers, consultants, financial advisors</li>
+              <li><strong>Legal and Government</strong> - Lawyers, judges, government workers</li>
             </ul>
             
-            <h4>Helping Neighbors and Community</h4>
+            <h3>How Kids Can Start Earning Money Today</h3>
+            <p>You don't have to wait until you're an adult to start earning money! There are many age-appropriate ways for kids to begin developing work skills and earning income:</p>
+            
+            <h4>Household Responsibilities That Can Earn Money</h4>
             <ul>
-              <li>Pet sitting or dog walking</li>
-              <li>Helping elderly neighbors with simple tasks</li>
-              <li>Shoveling snow or raking leaves</li>
-              <li>Washing cars</li>
-              <li>Helping with garage sales</li>
-              <li>Delivering newspapers or flyers</li>
+              <li><strong>Cleaning Tasks</strong> - Vacuuming, dusting, organizing rooms, cleaning bathrooms</li>
+              <li><strong>Kitchen Help</strong> - Washing dishes, setting/clearing tables, basic meal preparation</li>
+              <li><strong>Laundry Assistance</strong> - Sorting clothes, folding, putting away clean laundry</li>
+              <li><strong>Yard Work</strong> - Raking leaves, weeding gardens, watering plants, shoveling snow</li>
+              <li><strong>Pet Care</strong> - Feeding pets, cleaning pet areas, walking dogs</li>
+              <li><strong>Organization Projects</strong> - Organizing closets, garages, storage areas</li>
             </ul>
             
-            <h4>Small Business Ideas for Kids</h4>
+            <h4>Neighborhood Services for Kids</h4>
             <ul>
-              <li>Lemonade stands</li>
-              <li>Bake sales</li>
-              <li>Craft sales (friendship bracelets, drawings, etc.)</li>
-              <li>Tutoring younger kids</li>
-              <li>Technology help for older adults</li>
-              <li>Seasonal services (holiday decorating, gift wrapping)</li>
+              <li><strong>Lawn Care</strong> - Mowing grass, leaf raking, basic garden maintenance</li>
+              <li><strong>Pet Services</strong> - Dog walking, pet sitting, feeding pets while neighbors are away</li>
+              <li><strong>Seasonal Work</strong> - Snow shoveling in winter, lemonade stands in summer</li>
+              <li><strong>Delivery Services</strong> - Delivering newspapers, helping elderly neighbors with groceries</li>
+              <li><strong>Car Washing</strong> - Cleaning cars, bikes, or outdoor equipment</li>
             </ul>
             
-            <h3>Different Types of Jobs Adults Have</h3>
+            <h3>The Connection Between Work and Value</h3>
+            <p>The amount of money people earn depends on several important factors:</p>
             
-            <h4>Service Jobs</h4>
-            <p>These jobs involve helping other people:</p>
+            <h4>How Much Value You Create</h4>
+            <p>People who help solve bigger problems or serve more people usually earn more money. A doctor who saves lives earns more than someone who just cleans, because saving lives creates more value for society.</p>
+            
+            <h4>How Hard You Are to Replace</h4>
+            <p>Jobs that require special skills, education, or talents usually pay more because fewer people can do them. Anyone can learn to sweep floors, but not everyone can perform surgery or design buildings.</p>
+            
+            <h4>How Much Responsibility You Have</h4>
+            <p>People who make important decisions or are responsible for other people's work usually earn more. Managers earn more than the people they supervise because they have more responsibility.</p>
+            
+            <h3>Building Work Skills Early</h3>
+            <p>Even as a kid, you can start developing skills that will help you earn money throughout your life:</p>
+            
+            <h4>Communication Skills</h4>
             <ul>
-              <li><strong>Teachers</strong> - Help people learn new things</li>
-              <li><strong>Doctors and Nurses</strong> - Help people stay healthy</li>
-              <li><strong>Police Officers</strong> - Keep communities safe</li>
-              <li><strong>Firefighters</strong> - Protect people and property from fires</li>
-              <li><strong>Restaurant Workers</strong> - Prepare and serve food</li>
+              <li>Practice speaking clearly and politely to adults</li>
+              <li>Learn to listen carefully and follow instructions</li>
+              <li>Develop writing skills through school assignments</li>
+              <li>Learn to explain things to others</li>
             </ul>
             
-            <h4>Production Jobs</h4>
-            <p>These jobs involve making or creating things:</p>
+            <h4>Problem-Solving Skills</h4>
             <ul>
-              <li><strong>Factory Workers</strong> - Make products in factories</li>
-              <li><strong>Farmers</strong> - Grow food and raise animals</li>
-              <li><strong>Construction Workers</strong> - Build houses and buildings</li>
-              <li><strong>Artists and Craftspeople</strong> - Create art and handmade items</li>
-              <li><strong>Software Developers</strong> - Create computer programs and apps</li>
+              <li>When you encounter problems, try to think of solutions</li>
+              <li>Ask "How can I make this better?" about situations around you</li>
+              <li>Practice breaking big problems into smaller, manageable pieces</li>
+              <li>Learn from mistakes and try different approaches</li>
             </ul>
             
-            <h4>Knowledge Jobs</h4>
-            <p>These jobs involve using specialized knowledge and skills:</p>
+            <h4>Responsibility and Reliability</h4>
             <ul>
-              <li><strong>Engineers</strong> - Design and build complex systems</li>
-              <li><strong>Scientists</strong> - Study and research how things work</li>
-              <li><strong>Lawyers</strong> - Help people with legal problems</li>
-              <li><strong>Accountants</strong> - Help people and businesses manage money</li>
-              <li><strong>Managers</strong> - Organize and lead teams of workers</li>
+              <li>Always do what you say you'll do</li>
+              <li>Show up on time and be prepared</li>
+              <li>Take care of your belongings and other people's property</li>
+              <li>Admit mistakes and work to fix them</li>
             </ul>
             
-            <h3>Why Different Jobs Pay Different Amounts</h3>
+            <h3>The Importance of Education</h3>
+            <p>Education is one of the most important investments you can make in your earning potential:</p>
             
-            <h4>Factors That Affect How Much People Earn</h4>
+            <h4>Basic Education</h4>
+            <p>Reading, writing, and math skills are essential for almost every job. The better you are at these basics, the more opportunities you'll have.</p>
+            
+            <h4>Specialized Knowledge</h4>
+            <p>Learning special skills like computer programming, foreign languages, or technical abilities can open doors to higher-paying careers.</p>
+            
+            <h4>Continuous Learning</h4>
+            <p>The most successful people never stop learning. They read books, take classes, and constantly look for ways to improve their skills.</p>
+            
+            <h3>Understanding Different Types of Income</h3>
+            <p>There are several ways people can earn money:</p>
+            
+            <h4>Active Income</h4>
+            <p>This is money you earn by actively working - trading your time and effort for pay. Most jobs provide active income. Examples include:</p>
             <ul>
-              <li><strong>Education and Training Required</strong> - Jobs requiring more education usually pay more</li>
-              <li><strong>Responsibility Level</strong> - Jobs with more responsibility typically pay more</li>
-              <li><strong>Rarity of Skills</strong> - If few people can do the job, it usually pays more</li>
-              <li><strong>Value Created</strong> - Jobs that create more value for society often pay more</li>
-              <li><strong>Risk Involved</strong> - Dangerous or risky jobs often pay more</li>
-              <li><strong>Supply and Demand</strong> - If many people want a job but few positions exist, it pays more</li>
+              <li>Hourly wages from a job</li>
+              <li>Salary from full-time work</li>
+              <li>Money from chores or odd jobs</li>
+              <li>Payment for services like tutoring or pet-sitting</li>
             </ul>
             
-            <h4>Examples of How This Works</h4>
+            <h4>Passive Income</h4>
+            <p>This is money that comes in without you actively working for it. It usually requires some initial work or investment. Examples include:</p>
             <ul>
-              <li>Brain surgeons earn more than cashiers because their job requires many years of education and training</li>
-              <li>Professional athletes earn a lot because very few people have their level of skill</li>
-              <li>CEOs earn more than regular employees because they have more responsibility</li>
-              <li>Jobs in dangerous conditions (like deep-sea fishing) often pay more than safer jobs</li>
+              <li>Interest from money in savings accounts</li>
+              <li>Money from investments like stocks</li>
+              <li>Rental income from property</li>
+              <li>Royalties from creating something (like a book or song)</li>
             </ul>
             
-            <h3>The Connection Between Education and Earning</h3>
+            <h3>Creating Your Own Opportunities</h3>
+            <p>Sometimes the best way to earn money is to create your own opportunities:</p>
             
-            <h4>Why Learning Matters for Earning</h4>
-            <p>Generally, people who learn more skills and get more education have opportunities to earn more money:</p>
+            <h4>Entrepreneurship for Kids</h4>
             <ul>
-              <li><strong>High School Diploma</strong> - Opens doors to many entry-level jobs</li>
-              <li><strong>College Degree</strong> - Qualifies you for professional and management positions</li>
-              <li><strong>Advanced Degrees</strong> - Required for specialized fields like medicine or law</li>
-              <li><strong>Trade Skills</strong> - Specialized training for jobs like plumbing or electrical work</li>
-              <li><strong>Continuous Learning</strong> - Staying current with new technologies and methods</li>
+              <li><strong>Lemonade Stands</strong> - Classic first business teaching sales and customer service</li>
+              <li><strong>Craft Sales</strong> - Making and selling handmade items</li>
+              <li><strong>Service Businesses</strong> - Offering services like pet-sitting or lawn care</li>
+              <li><strong>Digital Ventures</strong> - Creating content or simple apps (with parental guidance)</li>
             </ul>
             
-            <h4>Skills That Help in Almost Every Job</h4>
+            <h3>The Role of Passion and Interest</h3>
+            <p>While money is important, the most successful and happy workers often combine earning money with doing things they enjoy:</p>
+            
+            <h4>Finding Your Interests</h4>
             <ul>
-              <li><strong>Communication</strong> - Being able to speak, write, and listen well</li>
-              <li><strong>Problem-Solving</strong> - Finding solutions when things go wrong</li>
-              <li><strong>Teamwork</strong> - Working well with other people</li>
-              <li><strong>Reliability</strong> - Showing up on time and doing what you promise</li>
-              <li><strong>Adaptability</strong> - Being able to learn new things and adjust to changes</li>
+              <li>Pay attention to activities you naturally enjoy</li>
+              <li>Notice what subjects come easily to you in school</li>
+              <li>Think about problems in the world you'd like to help solve</li>
+              <li>Consider what kind of work environment appeals to you</li>
             </ul>
             
-            <h3>Understanding the Value of Work</h3>
-            
-            <h4>Why Work Is Important</h4>
+            <h4>Turning Interests into Income</h4>
+            <p>Almost any interest can be turned into income if you think creatively:</p>
             <ul>
-              <li><strong>Provides Income</strong> - Money to buy necessities and wants</li>
-              <li><strong>Creates Purpose</strong> - Gives people a sense of contribution and meaning</li>
-              <li><strong>Builds Skills</strong> - Helps people develop and improve abilities</li>
-              <li><strong>Connects People</strong> - Creates relationships and community</li>
-              <li><strong>Serves Others</strong> - Most jobs help other people in some way</li>
+              <li>Love animals? Consider veterinary work, pet training, or animal research</li>
+              <li>Enjoy building things? Explore engineering, construction, or product design</li>
+              <li>Like helping people? Look into healthcare, teaching, or social work</li>
+              <li>Fascinated by technology? Investigate programming, robotics, or digital design</li>
             </ul>
             
-            <h4>The Dignity of All Honest Work</h4>
-            <p>Every honest job that helps others or contributes to society has value and dignity. A janitor who keeps buildings clean is just as important as a doctor who heals people - they both contribute to making life better for others. No honest work should be looked down upon.</p>
+            <h3>Planning Your Future Career</h3>
+            <p>It's never too early to start thinking about what kind of work you might want to do when you grow up:</p>
             
-            <h3>Planning for Your Future Earning Potential</h3>
-            
-            <h4>Things You Can Do Now</h4>
+            <h4>Exploring Career Options</h4>
             <ul>
-              <li><strong>Do Well in School</strong> - Education opens doors to opportunities</li>
-              <li><strong>Develop Good Work Habits</strong> - Be reliable, punctual, and hardworking</li>
-              <li><strong>Learn New Skills</strong> - Take up hobbies and activities that teach you things</li>
-              <li><strong>Help Others</strong> - Practice creating value for people around you</li>
-              <li><strong>Save and Invest</strong> - Start building wealth early</li>
-              <li><strong>Stay Curious</strong> - Keep learning about the world and how things work</li>
+              <li>Talk to adults about their jobs - ask what they like and dislike</li>
+              <li>Visit workplaces when possible (like "Take Your Child to Work Day")</li>
+              <li>Research different careers online or at the library</li>
+              <li>Try volunteer work or internships when you're old enough</li>
             </ul>
             
-            <h4>Exploring Career Interests</h4>
+            <h4>Setting Goals</h4>
             <ul>
-              <li>Talk to adults about their jobs</li>
-              <li>Visit workplaces when possible</li>
-              <li>Try different activities to discover your interests</li>
-              <li>Read about different careers</li>
-              <li>Consider what problems you'd like to help solve</li>
+              <li>Think about what kind of lifestyle you want</li>
+              <li>Consider how much money you'll need for your goals</li>
+              <li>Identify the education and skills you'll need</li>
+              <li>Make a plan for developing those skills</li>
             </ul>
+            
+            <h3>Money and Work Ethics</h3>
+            <p>How you earn money is just as important as how much you earn:</p>
+            
+            <h4>Honest Work</h4>
+            <ul>
+              <li>Always be truthful about your abilities and experience</li>
+              <li>Do quality work even when no one is watching</li>
+              <li>Respect other people's property and time</li>
+              <li>Keep your promises and commitments</li>
+            </ul>
+            
+            <h4>Fair Exchange</h4>
+            <ul>
+              <li>Make sure the work you do is worth the money you receive</li>
+              <li>Don't try to take advantage of people</li>
+              <li>Be willing to work for what you earn</li>
+              <li>Appreciate the opportunities others give you</li>
+            </ul>
+            
+            <h3>The Bigger Picture: Work and Society</h3>
+            <p>Understanding how individual work contributes to society helps you see the bigger picture:</p>
+            
+            <h4>How Work Benefits Everyone</h4>
+            <ul>
+              <li>When people work, they create goods and services that improve life for everyone</li>
+              <li>Workers pay taxes that fund schools, roads, and public services</li>
+              <li>Employment gives people purpose and helps them support their families</li>
+              <li>Innovation at work leads to new technologies and solutions</li>
+            </ul>
+            
+            <h4>Your Future Contribution</h4>
+            <p>As you think about your future career, consider how you want to contribute to making the world better. The most fulfilling careers often involve helping others while earning a living.</p>
+            
+            <h3>Getting Started Today</h3>
+            <p>Here are practical steps you can take right now to start your journey toward earning money:</p>
+            
+            <h4>At Home</h4>
+            <ul>
+              <li>Ask your parents about chores you can do for an allowance</li>
+              <li>Volunteer to help with family projects</li>
+              <li>Take care of your own responsibilities without being asked</li>
+              <li>Learn basic life skills like cooking, cleaning, and organizing</li>
+            </ul>
+            
+            <h4>At School</h4>
+            <ul>
+              <li>Work hard in all your subjects to build a strong foundation</li>
+              <li>Participate in clubs and activities to develop different skills</li>
+              <li>Help classmates when appropriate (this builds leadership skills)</li>
+              <li>Ask teachers about careers related to subjects you enjoy</li>
+            </ul>
+            
+            <h4>In Your Community</h4>
+            <ul>
+              <li>Look for age-appropriate volunteer opportunities</li>
+              <li>Offer to help neighbors with simple tasks</li>
+              <li>Observe different types of work happening around you</li>
+              <li>Be respectful and helpful to create a good reputation</li>
+            </ul>
+            
+            <p>Remember, earning money through work is not just about getting paid - it's about developing skills, contributing to society, and building the foundation for a successful and fulfilling life. Every small step you take now toward understanding work and developing good habits will pay off in the future!</p>
           `
         },
         quiz: [
@@ -515,588 +590,943 @@ const LessonViewer = () => {
         article: {
           title: "Understanding the Difference Between Needs and Wants",
           content: `
-            <h2>Needs vs Wants: Making Smart Choices with Your Money</h2>
-            <p>One of the most important skills in managing money is understanding the difference between needs and wants. This knowledge will help you make smart decisions about spending and ensure you always have money for the most important things in life.</p>
+            <h2>Understanding Needs vs Wants: The Foundation of Smart Financial Decisions</h2>
+            <p>Learning the difference between needs and wants is one of the most fundamental skills in financial literacy. This concept will guide every money decision you make for the rest of your life. When you truly understand this difference, you'll be able to make smart choices that help you achieve your goals while staying financially secure.</p>
             
-            <h3>What Are Needs?</h3>
-            <p>Needs are things that are absolutely necessary for your survival, health, safety, and basic well-being. These are things you must have to live a healthy life. Without needs being met, you could become sick, unsafe, or unable to function properly in society.</p>
+            <h3>What Are Needs? The Essentials for Life</h3>
+            <p>Needs are things that are absolutely necessary for your survival, health, safety, and basic well-being. These are items you cannot live without, and they must be your first priority when spending money. Without these basic needs, your life would be in danger or your ability to function in society would be severely limited.</p>
             
-            <h4>Basic Human Needs</h4>
+            <h4>Physical Survival Needs</h4>
+            <p>These are the most basic requirements for staying alive and healthy:</p>
             <ul>
-              <li><strong>Food and Water</strong> - Your body needs nutrition and hydration to survive and grow</li>
-              <li><strong>Shelter</strong> - A safe place to live that protects you from weather and danger</li>
-              <li><strong>Clothing</strong> - Appropriate clothes to protect your body and maintain health</li>
-              <li><strong>Healthcare</strong> - Medical care when you're sick or injured</li>
-              <li><strong>Safety and Security</strong> - Protection from harm and danger</li>
+              <li><strong>Food and Nutrition</strong> - Your body needs healthy food to grow, develop, and maintain energy. This includes fruits, vegetables, proteins, grains, and clean drinking water. Without proper nutrition, you cannot think clearly, grow properly, or stay healthy.</li>
+              <li><strong>Shelter and Housing</strong> - Everyone needs a safe place to live that protects them from weather, provides security, and offers basic amenities like running water and electricity. This includes rent or mortgage payments, basic utilities, and essential home maintenance.</li>
+              <li><strong>Clothing</strong> - You need appropriate clothing to protect your body from weather, maintain health and hygiene, and meet social expectations. This includes weather-appropriate outer wear, undergarments, shoes, and clothes suitable for school or work.</li>
+              <li><strong>Healthcare</strong> - Medical care when you're sick or injured, preventive care like checkups and vaccinations, dental care, and vision care. Your health is your most valuable asset.</li>
+              <li><strong>Safety and Security</strong> - Protection from harm, including physical safety, financial security, and protection of your property and personal information.</li>
             </ul>
             
-            <h4>Educational and Social Needs</h4>
+            <h4>Social and Educational Needs</h4>
             <ul>
-              <li><strong>Education</strong> - School supplies, books, and learning materials</li>
-              <li><strong>Transportation</strong> - Ways to get to school, work, and essential places</li>
-              <li><strong>Communication</strong> - Basic ways to stay in touch with family and emergency services</li>
-              <li><strong>Personal Hygiene</strong> - Items needed to stay clean and healthy</li>
+              <li><strong>Basic Education</strong> - Learning to read, write, and do math, plus knowledge needed to function in society</li>
+              <li><strong>School Supplies</strong> - Basic materials needed for education like notebooks, pencils, and required books</li>
+              <li><strong>Communication</strong> - Some way to communicate with others, which might include a basic phone for emergencies</li>
+              <li><strong>Transportation</strong> - Some way to get to work, school, medical appointments, and essential errands</li>
             </ul>
             
-            <h3>What Are Wants?</h3>
-            <p>Wants are things that would be nice to have but aren't necessary for survival or basic well-being. Wants make life more enjoyable, fun, or convenient, but you can live without them. The tricky part is that wants can sometimes feel very important, especially when you really desire something!</p>
+            <h3>What Are Wants? The Nice-to-Haves</h3>
+            <p>Wants are things that would make life more enjoyable, convenient, or fun, but you can live without them. Wants are preferences and desires beyond the basic necessities. While wants can add happiness and comfort to life, they're not essential for survival or basic well-being.</p>
             
-            <h4>Common Examples of Wants</h4>
+            <h4>Entertainment and Recreation Wants</h4>
             <ul>
-              <li><strong>Entertainment</strong> - Video games, movies, toys, books for fun</li>
-              <li><strong>Luxury Items</strong> - Designer clothes, expensive gadgets, fancy accessories</li>
-              <li><strong>Convenience Items</strong> - Things that make life easier but aren't necessary</li>
-              <li><strong>Social Items</strong> - Things you want because friends have them</li>
-              <li><strong>Hobby Supplies</strong> - Extra materials for activities you enjoy</li>
+              <li><strong>Toys and Games</strong> - Video games, board games, sports equipment, dolls, action figures</li>
+              <li><strong>Entertainment Subscriptions</strong> - Streaming services, gaming subscriptions, magazine subscriptions</li>
+              <li><strong>Sports and Activities</strong> - Expensive sports equipment, premium gym memberships, hobby supplies</li>
+              <li><strong>Books and Media</strong> - Books for pleasure reading, movies, music (beyond educational materials)</li>
+              <li><strong>Outings and Events</strong> - Movies, concerts, amusement parks, sporting events, vacation trips</li>
+            </ul>
+            
+            <h4>Luxury and Brand Name Items</h4>
+            <ul>
+              <li><strong>Designer Clothing</strong> - Expensive brand-name clothes with logos when basic clothing would serve the same purpose</li>
+              <li><strong>Premium Electronics</strong> - The latest smartphone, tablet, or gaming system when you have functional alternatives</li>
+              <li><strong>Luxury Items</strong> - Expensive jewelry, watches, or other status symbols</li>
+              <li><strong>Premium Versions</strong> - More expensive versions of things you need, like designer shoes instead of basic shoes</li>
+            </ul>
+            
+            <h4>Food and Treat Wants</h4>
+            <ul>
+              <li><strong>Candy and Sweets</strong> - Cookies, ice cream, candy, soda, and other treats</li>
+              <li><strong>Restaurant Meals</strong> - Eating out for pleasure rather than necessity</li>
+              <li><strong>Specialty Foods</strong> - Expensive or exotic foods that aren't necessary for nutrition</li>
+              <li><strong>Premium Brands</strong> - Name-brand foods when generic versions would provide the same nutrition</li>
+            </ul>
+            
+            <h4>Convenience Wants</h4>
+            <ul>
+              <li><strong>Multiple Items</strong> - Having several of something when one would be sufficient</li>
+              <li><strong>Convenience Services</strong> - Having things delivered when you could get them yourself</li>
+              <li><strong>Time-Saving Gadgets</strong> - Devices that save time but aren't necessary</li>
+              <li><strong>Premium Services</strong> - Faster, more convenient, or luxury versions of basic services</li>
             </ul>
             
             <h3>The Gray Area: When Needs and Wants Overlap</h3>
-            <p>Sometimes it's not perfectly clear whether something is a need or a want. The same category of item can be both, depending on the specific situation:</p>
+            <p>Sometimes it can be tricky to distinguish between needs and wants because they can overlap. Here are some examples of this gray area:</p>
             
-            <h4>Clothing Examples</h4>
+            <h4>Technology Needs vs Wants</h4>
             <ul>
-              <li><strong>Need</strong> - A warm winter coat when it's cold outside</li>
-              <li><strong>Want</strong> - A designer winter coat when you already have a warm one</li>
-              <li><strong>Need</strong> - School-appropriate clothes that fit properly</li>
-              <li><strong>Want</strong> - The most expensive brand-name clothes</li>
+              <li><strong>Need</strong>: A basic cell phone for emergencies and essential communication</li>
+              <li><strong>Want</strong>: The latest smartphone with all the newest features</li>
+              <li><strong>Need</strong>: Basic internet access for school research and homework</li>
+              <li><strong>Want</strong>: High-speed internet for gaming and streaming videos</li>
             </ul>
             
-            <h4>Food Examples</h4>
+            <h4>Transportation Needs vs Wants</h4>
             <ul>
-              <li><strong>Need</strong> - Nutritious meals that keep you healthy</li>
-              <li><strong>Want</strong> - Expensive restaurant meals or lots of candy</li>
-              <li><strong>Need</strong> - Enough food to prevent hunger</li>
-              <li><strong>Want</strong> - Your favorite snacks and treats</li>
+              <li><strong>Need</strong>: Reliable transportation to school, work, and essential appointments</li>
+              <li><strong>Want</strong>: A brand-new, luxury, or sports car when a basic reliable car would work</li>
+              <li><strong>Need</strong>: A bicycle for transportation in some circumstances</li>
+              <li><strong>Want</strong>: An expensive mountain bike when a basic bike would serve the transportation need</li>
             </ul>
             
-            <h4>Technology Examples</h4>
+            <h4>Clothing Needs vs Wants</h4>
             <ul>
-              <li><strong>Need</strong> - A basic way to communicate for safety (like a simple phone)</li>
-              <li><strong>Want</strong> - The newest, most expensive smartphone</li>
-              <li><strong>Need</strong> - A computer for required schoolwork</li>
-              <li><strong>Want</strong> - A gaming computer for entertainment</li>
+              <li><strong>Need</strong>: Weather-appropriate clothes, school uniforms, work clothes</li>
+              <li><strong>Want</strong>: Multiple outfits, designer labels, trendy fashion items</li>
+              <li><strong>Need</strong>: Sturdy shoes that fit well and protect your feet</li>
+              <li><strong>Want</strong>: Multiple pairs of shoes, expensive athletic shoes for casual wear</li>
             </ul>
             
-            <h3>Why Understanding Needs vs Wants Matters</h3>
+            <h3>The Smart Money Strategy: Prioritizing Your Spending</h3>
+            <p>Now that you understand the difference between needs and wants, here's how to use this knowledge to make smart money decisions:</p>
             
-            <h4>Financial Benefits</h4>
+            <h4>Step 1: Always Meet Your Needs First</h4>
+            <p>Before spending money on anything else, make sure all your basic needs are covered. This includes:</p>
             <ul>
-              <li><strong>Better Budgeting</strong> - You can prioritize spending on what's most important</li>
-              <li><strong>Avoid Debt</strong> - You're less likely to borrow money for unnecessary things</li>
-              <li><strong>Build Savings</strong> - Money not spent on wants can be saved for goals</li>
-              <li><strong>Emergency Preparedness</strong> - You'll have money available for unexpected needs</li>
+              <li>Healthy food for proper nutrition</li>
+              <li>Safe and appropriate housing</li>
+              <li>Weather-appropriate clothing</li>
+              <li>Basic healthcare and hygiene</li>
+              <li>Required school supplies and materials</li>
+              <li>Transportation to essential places</li>
             </ul>
             
-            <h4>Life Skills Benefits</h4>
+            <h4>Step 2: Build Your Emergency and Savings Fund</h4>
+            <p>After covering needs, set aside money for:</p>
             <ul>
-              <li><strong>Self-Control</strong> - Learning to delay gratification builds character</li>
-              <li><strong>Decision-Making</strong> - Practice making thoughtful choices</li>
-              <li><strong>Appreciation</strong> - You'll value things more when you work and wait for them</li>
-              <li><strong>Independence</strong> - You won't rely on others to buy you everything you want</li>
+              <li><strong>Emergency Fund</strong> - Money for unexpected needs like medical bills or urgent repairs</li>
+              <li><strong>Future Needs</strong> - Saving for needs you'll have later, like school supplies for next year</li>
+              <li><strong>Goal Savings</strong> - Money for bigger things you're working toward</li>
             </ul>
             
-            <h3>Strategies for Managing Needs and Wants</h3>
+            <h4>Step 3: Plan for Reasonable Wants</h4>
+            <p>Only after needs are met and some money is saved should you consider spending on wants. When you do:</p>
+            <ul>
+              <li><strong>Make a List</strong> - Write down things you want and prioritize them</li>
+              <li><strong>Wait and Think</strong> - Don't buy wants immediately; wait at least a day or week</li>
+              <li><strong>Compare Options</strong> - Look for the best value when buying wants</li>
+              <li><strong>Set Limits</strong> - Decide in advance how much you'll spend on wants</li>
+            </ul>
             
-            <h4>The Priority System</h4>
-            <ol>
-              <li><strong>Essential Needs First</strong> - Always ensure basic needs are covered</li>
-              <li><strong>Important Wants Second</strong> - Things that would significantly improve your life</li>
-              <li><strong>Nice-to-Have Wants Last</strong> - Things that would be fun but aren't important</li>
-            </ol>
+            <h3>Practical Decision-Making Tools</h3>
             
             <h4>The 24-Hour Rule</h4>
-            <p>When you want to buy something that isn't a need, wait 24 hours before purchasing. This helps you:</p>
+            <p>Before buying any want, wait 24 hours and ask yourself:</p>
             <ul>
-              <li>Avoid impulse purchases</li>
-              <li>Think about whether you really want the item</li>
-              <li>Consider if the money could be better used elsewhere</li>
-              <li>Sometimes realize you don't actually want the item anymore</li>
+              <li>Do I still want this as much as I did yesterday?</li>
+              <li>Will I use this regularly or just once?</li>
+              <li>Is there something I need more?</li>
+              <li>Could I be happy without this?</li>
             </ul>
             
-            <h4>The Substitute Strategy</h4>
-            <p>Look for less expensive ways to satisfy wants:</p>
+            <h4>The Opportunity Cost Question</h4>
+            <p>For every want you're considering buying, ask: "What else could I do with this money?" Maybe saving that money could help you buy something more important later.</p>
+            
+            <h4>The Value Test</h4>
+            <p>Ask yourself these questions:</p>
             <ul>
-              <li>Borrow books from the library instead of buying them</li>
-              <li>Buy used items instead of new ones</li>
-              <li>Make things yourself instead of buying them</li>
-              <li>Find free activities instead of expensive entertainment</li>
+              <li>How many hours would I need to work to earn the money for this?</li>
+              <li>How long will I enjoy or use this item?</li>
+              <li>Will this help me achieve my bigger goals?</li>
+              <li>Am I buying this because I really want it, or because my friends have it?</li>
             </ul>
             
-            <h3>Questions to Ask Yourself</h3>
-            <p>When deciding whether something is a need or want, ask yourself:</p>
+            <h3>Common Mistakes People Make</h3>
             
-            <h4>The Need Test</h4>
-            <ul>
-              <li>Will I be unsafe, unhealthy, or unable to function without this?</li>
-              <li>Is this required for school, work, or basic living?</li>
-              <li>Do I already have something that serves this purpose?</li>
-              <li>What would happen if I didn't buy this?</li>
-            </ul>
+            <h4>Confusing Wants with Needs</h4>
+            <p>Many people convince themselves that wants are actually needs. Be honest with yourself - you need transportation, but you don't need a luxury car. You need communication, but you don't need the latest smartphone.</p>
             
-            <h4>The Want Evaluation</h4>
-            <ul>
-              <li>How long have I wanted this item?</li>
-              <li>Will I still want this in a month?</li>
-              <li>Am I wanting this because of advertising or peer pressure?</li>
-              <li>Could I use this money for something more important?</li>
-              <li>Have I saved up for this, or would I need to use money meant for needs?</li>
-            </ul>
+            <h4>Spending on Wants Before Securing Needs</h4>
+            <p>Some people buy toys, games, or treats before making sure they have money for lunch, school supplies, or other essentials. This can lead to serious problems.</p>
             
-            <h3>Dealing with Peer Pressure and Advertising</h3>
+            <h4>Impulse Buying</h4>
+            <p>Making quick decisions to buy wants without thinking them through often leads to regret and financial problems.</p>
             
-            <h4>When Friends Have Things You Want</h4>
-            <p>It's natural to want things your friends have, but remember:</p>
-            <ul>
-              <li>Everyone's family has different financial situations</li>
-              <li>Your friends might be spending money meant for needs on wants</li>
-              <li>True friends will like you regardless of what you own</li>
-              <li>You can still have fun without having the same things</li>
-            </ul>
-            
-            <h4>How Advertising Tries to Confuse You</h4>
-            <p>Advertisers often try to make wants seem like needs by:</p>
-            <ul>
-              <li>Using words like "essential," "must-have," or "necessary"</li>
-              <li>Showing people being unhappy without the product</li>
-              <li>Suggesting you'll be left out without the item</li>
-              <li>Creating artificial urgency with "limited time" offers</li>
-            </ul>
+            <h4>Keeping Up with Others</h4>
+            <p>Buying things because friends have them rather than because you truly need or want them is a recipe for overspending and debt.</p>
             
             <h3>Teaching Others About Needs vs Wants</h3>
-            <p>Once you understand this concept, you can help others by:</p>
+            <p>Once you understand this concept, you can help teach others:</p>
             <ul>
-              <li>Explaining the difference to younger siblings</li>
-              <li>Helping friends think through their spending decisions</li>
-              <li>Setting a good example with your own choices</li>
-              <li>Discussing family spending decisions respectfully</li>
+              <li><strong>Younger Siblings</strong> - Help them understand why they can't have everything they see in stores</li>
+              <li><strong>Friends</strong> - Share smart money strategies when appropriate</li>
+              <li><strong>Family Discussions</strong> - Participate in family conversations about spending priorities</li>
             </ul>
             
-            <h3>Building Long-Term Wealth</h3>
-            <p>Understanding needs vs wants is the foundation of building wealth over time:</p>
+            <h3>Cultural and Social Influences on Needs vs Wants</h3>
+            <p>It's important to understand that advertising, social media, and peer pressure constantly try to convince us that wants are needs:</p>
+            
+            <h4>Advertising Tricks</h4>
             <ul>
-              <li><strong>Spend Less Than You Earn</strong> - Only buy needs and carefully chosen wants</li>
-              <li><strong>Save the Difference</strong> - Money not spent on wants can be invested</li>
-              <li><strong>Compound Growth</strong> - Saved money grows over time through interest and investments</li>
-              <li><strong>Financial Freedom</strong> - Eventually, you'll have enough money that more things become affordable</li>
+              <li>Making wants seem essential for happiness</li>
+              <li>Creating fake urgency ("limited time offers")</li>
+              <li>Suggesting you need things to fit in or be successful</li>
+              <li>Using celebrity endorsements to make products seem necessary</li>
             </ul>
             
-            <h4>The Millionaire Mindset</h4>
-            <p>Many wealthy people became rich not by earning huge amounts, but by consistently choosing needs over wants and investing the difference. They understand that:</p>
+            <h4>Social Media Pressure</h4>
             <ul>
-              <li>Every dollar spent on wants is a dollar not invested for the future</li>
-              <li>Small sacrifices today can lead to big rewards tomorrow</li>
-              <li>True wealth comes from owning assets, not just having nice things</li>
-              <li>Financial security is more valuable than temporary pleasures</li>
+              <li>Seeing others with things you don't have</li>
+              <li>Feeling like you need things to look successful online</li>
+              <li>Constant exposure to new products and trends</li>
             </ul>
+            
+            <h3>Long-Term Benefits of Understanding Needs vs Wants</h3>
+            <p>Mastering this concept will help you throughout life by:</p>
+            <ul>
+              <li><strong>Avoiding Debt</strong> - Not borrowing money for wants you can't afford</li>
+              <li><strong>Building Wealth</strong> - Saving money that can grow over time</li>
+              <li><strong>Reducing Stress</strong> - Not worrying about money because your needs are always covered</li>
+              <li><strong>Achieving Goals</strong> - Having money available for things that truly matter to you</li>
+              <li><strong>Making Better Decisions</strong> - Thinking clearly about purchases rather than acting on impulse</li>
+              <li><strong>Finding Contentment</strong> - Being happy with what you have rather than always wanting more</li>
+            </ul>
+            
+            <h3>Practical Exercises to Practice This Skill</h3>
+            
+            <h4>The Weekly Budget Challenge</h4>
+            <p>If you receive allowance or earn money from chores, try this exercise:</p>
+            <ul>
+              <li>Write down all the things you want to buy this week</li>
+              <li>Label each item as either a "need" or a "want"</li>
+              <li>Calculate the total cost of all needs</li>
+              <li>See how much money is left for wants</li>
+              <li>Prioritize your wants and choose only what fits your budget</li>
+            </ul>
+            
+            <h4>The Store Walk-Through</h4>
+            <p>Next time you're in a store with your family:</p>
+            <ul>
+              <li>Look at different items and ask yourself "need or want?"</li>
+              <li>Notice how stores try to make wants seem like needs</li>
+              <li>Practice walking past things you want but don't need</li>
+              <li>Observe how advertising tries to influence your decisions</li>
+            </ul>
+            
+            <h4>The Future Goals Connection</h4>
+            <p>Connect your needs vs wants decisions to your future goals:</p>
+            <ul>
+              <li>Write down something big you want to achieve (like buying a bike or saving for college)</li>
+              <li>Calculate how much money you need</li>
+              <li>Figure out how long it will take to save if you buy wants vs if you focus on needs</li>
+              <li>Make a plan that balances enjoying some wants while still working toward your goal</li>
+            </ul>
+            
+            <p>Understanding needs vs wants is like having a financial superpower. It helps you make decisions that keep you safe and secure while still allowing you to enjoy life. The earlier you master this skill, the better your financial future will be!</p>
           `
         },
         quiz: [
           {
             id: 1,
-            question: "What is a need?",
-            options: ["Something you want to have", "Something necessary for survival and well-being", "Something expensive", "Something your friends have"],
-            correct: "Something necessary for survival and well-being",
-            explanation: "Needs are essential things you must have to survive and be healthy, like food, shelter, and clothing."
+            question: "Which of these is a NEED?",
+            options: ["New video game", "Food to eat", "Designer shoes", "Movie tickets"],
+            correct: "Food to eat",
+            explanation: "Food is essential for survival, making it a need rather than a want."
           },
           {
             id: 2,
-            question: "Which of these is a NEED?",
-            options: ["Video games", "Designer shoes", "Healthy food", "The latest phone"],
-            correct: "Healthy food",
-            explanation: "Healthy food is essential for your body to grow and stay strong - it's a basic need for survival."
+            question: "Which of these is a WANT?",
+            options: ["A place to live", "Clean water", "The latest smartphone", "Warm clothes"],
+            correct: "The latest smartphone",
+            explanation: "While communication is important, the 'latest' smartphone is a luxury want, not a basic need."
           },
           {
             id: 3,
-            question: "Which of these is a WANT?",
-            options: ["A safe place to live", "Medicine when you're sick", "A candy bar", "Weather-appropriate clothes"],
-            correct: "A candy bar",
-            explanation: "A candy bar is a treat that tastes good but isn't necessary for your health or survival - it's a want."
+            question: "Before buying something, what question should you ask yourself?",
+            options: ["How much does it cost?", "Do I need this or do I want this?", "What color should I get?", "Where can I buy it?"],
+            correct: "Do I need this or do I want this?",
+            explanation: "Asking whether something is a need or want helps you make smart spending decisions."
           },
           {
             id: 4,
-            question: "What should you do BEFORE spending money on wants?",
-            options: ["Buy everything immediately", "Make sure all your needs are covered first", "Ask your friends what to buy", "Spend all your money"],
-            correct: "Make sure all your needs are covered first",
-            explanation: "Always prioritize needs over wants - make sure you have everything necessary for survival and well-being first."
+            question: "If you have $10 and need school lunch ($5) but also want a toy ($8), what should you do?",
+            options: ["Buy the toy", "Buy lunch and save the rest", "Ask for more money", "Don't buy anything"],
+            correct: "Buy lunch and save the rest",
+            explanation: "Needs like food should always come before wants. Buy lunch first, then save what's left."
           },
           {
             id: 5,
-            question: "Why is it important to understand needs vs wants?",
-            options: ["To impress your friends", "To make smart financial decisions", "To spend more money", "To buy expensive things"],
-            correct: "To make smart financial decisions",
-            explanation: "Understanding needs vs wants helps you prioritize spending and make wise choices with your money."
+            question: "Which is the best example of a need?",
+            options: ["Ice cream", "A warm coat in winter", "A new bicycle", "Video games"],
+            correct: "A warm coat in winter",
+            explanation: "A warm coat in winter protects you from cold weather, making it essential for health and safety."
           },
           {
             id: 6,
-            question: "What is the 24-hour rule?",
-            options: ["Sleep 24 hours a day", "Wait 24 hours before buying a want", "Work 24 hours", "Save money for 24 days"],
-            correct: "Wait 24 hours before buying a want",
-            explanation: "The 24-hour rule means waiting a full day before buying something you want to make sure you really need it."
+            question: "If you want to buy candy but also need new school supplies, what should you prioritize?",
+            options: ["Buy the candy first", "Buy school supplies first", "Buy both at the same time", "Wait until next week"],
+            correct: "Buy school supplies first",
+            explanation: "School supplies are needed for your education, while candy is just a want."
           },
           {
             id: 7,
-            question: "If you want a new toy but need school supplies, what should you do?",
-            options: ["Buy the toy first", "Buy the school supplies first", "Buy neither", "Ask someone else to buy both"],
-            correct: "Buy the school supplies first",
-            explanation: "School supplies are a need for education, while toys are wants. Always meet needs first."
+            question: "Which of these is a WANT for most 3rd graders?",
+            options: ["Drinking water", "A toy robot", "A safe home", "Healthy food"],
+            correct: "A toy robot",
+            explanation: "While toys are fun, they are wants rather than needs. We can live without toys, but not without water, shelter, or food."
           },
           {
             id: 8,
-            question: "What makes something a need instead of a want?",
-            options: ["How much it costs", "Whether it's necessary for health, safety, or survival", "Whether your friends have it", "Whether it's fun"],
-            correct: "Whether it's necessary for health, safety, or survival",
-            explanation: "Needs are determined by whether they're essential for your basic health, safety, and survival."
+            question: "What should you do when you can't afford both a need and a want?",
+            options: ["Choose the want because it's more fun", "Choose the need because it's more important", "Ask someone else to buy them", "Don't buy either one"],
+            correct: "Choose the need because it's more important",
+            explanation: "Needs are always more important than wants because they keep us healthy, safe, and secure."
           },
           {
             id: 9,
-            question: "How can advertising affect your understanding of needs vs wants?",
-            options: ["It helps you save money", "It can make wants seem like needs", "It only shows needs", "It doesn't affect anything"],
-            correct: "It can make wants seem like needs",
-            explanation: "Advertising often tries to convince us that wants are actually needs to get us to buy more things."
+            question: "Which situation shows someone choosing a need over a want?",
+            options: ["Buying a new game instead of lunch", "Buying warm socks instead of stickers", "Buying candy instead of a notebook", "Buying a toy instead of medicine"],
+            correct: "Buying warm socks instead of stickers",
+            explanation: "Warm socks help keep you healthy and comfortable (need), while stickers are just for fun (want)."
           },
           {
             id: 10,
-            question: "What's a good strategy for managing wants?",
-            options: ["Buy everything you want immediately", "Never buy anything you want", "Make a list and prioritize wants after needs are met", "Only buy what friends have"],
-            correct: "Make a list and prioritize wants after needs are met",
-            explanation: "Creating a prioritized list of wants and only buying them after needs are covered is a smart money strategy."
+            question: "Why is it important to learn about needs vs wants?",
+            options: ["To spend money faster", "To make smart money decisions", "To buy more things", "To avoid saving money"],
+            correct: "To make smart money decisions",
+            explanation: "Understanding needs vs wants helps you make wise choices about spending and saving money for what's most important."
           }
         ],
         xpReward: 100
       },
       4: {
-        title: "Banking Basics",
-        videoUrl: "https://www.youtube.com/embed/OlSc8BjIv9c",
-        videoLink: "https://www.youtube.com/watch?v=OlSc8BjIv9c",
-        videoTitle: "Grade 3: Banking Basics for Kids",
+        title: "Smart Shopping Choices",
+        videoUrl: "https://www.youtube.com/embed/0iRbD5rM5qc",
+        videoLink: "https://www.youtube.com/watch?v=0iRbD5rM5qc",
+        videoTitle: "Grade 3: Financial Literacy for Kids - Learn the Basics",
         article: {
-          title: "Understanding Banks and How They Work",
+          title: "Making Smart Spending Decisions",
           content: `
-            <h2>Banking Basics: Your First Steps into the Financial World</h2>
-            <p>Banks are special businesses that help people keep their money safe and make it easier to use. Understanding how banks work is one of the most important financial skills you'll ever learn, because banks will be part of your financial life from childhood through adulthood.</p>
+            <h2>Learning to Make Smart Spending Choices: Your Guide to Wise Money Decisions</h2>
+            <p>Making good spending choices is one of the most important money skills you can learn. Every time you spend money, you're making a decision that affects your future financial success. Learning to think before you spend will help you throughout your entire life, from buying candy with your allowance to making major purchases as an adult.</p>
             
-            <h3>What is a Bank?</h3>
-            <p>A bank is a secure place where people can store their money, borrow money when they need it, and use various financial services. Banks are much more than just giant safes - they're the foundation of our entire economic system. When you put money in a bank, you're not just storing it; you're participating in a system that helps money flow throughout the economy.</p>
+            <h3>What is a Spending Choice?</h3>
+            <p>A spending choice is any decision you make about using your money to buy something. Whether you're spending 25 cents on a piece of candy or $25 on a toy, you're making a spending choice. Good spending choices help you get the most value from your money and achieve your goals, while poor spending choices can leave you with regret and empty pockets.</p>
             
-            <h4>The Three Main Jobs of Banks</h4>
+            <p>Every spending decision involves giving up one thing to get another. This is called "opportunity cost" - what you give up when you choose one option over another. Understanding this concept helps you make better decisions by thinking about what you're giving up, not just what you're getting.</p>
+            
+            <h3>The Smart Spending Process</h3>
+            <p>Smart spenders don't make quick, impulsive decisions. Instead, they follow a thoughtful process that helps them make choices they'll be happy with later.</p>
+            
+            <h4>Step 1: Stop and Think</h4>
+            <p>Before you buy anything, take a moment to stop and think. This simple pause can save you from making mistakes you'll regret later. Ask yourself these important questions:</p>
             <ul>
-              <li><strong>Safekeeping</strong> - Banks protect your money much better than you could at home</li>
-              <li><strong>Lending</strong> - Banks lend money to people who need it for important purchases</li>
-              <li><strong>Services</strong> - Banks provide useful services like debit cards, online banking, and money transfers</li>
+              <li><strong>Do I really need this or just want it?</strong> - Remember the difference between needs (things necessary for health and safety) and wants (things that would be nice to have)</li>
+              <li><strong>Will I still be happy with this purchase next week? Next month?</strong> - Think beyond the immediate excitement of buying something</li>
+              <li><strong>Is this the best price I can find?</strong> - Don't assume the first price you see is the best deal</li>
+              <li><strong>What else could I do with this money?</strong> - Consider other things you could buy or goals you could work toward</li>
+              <li><strong>Do I have enough money for this without compromising my needs or savings goals?</strong> - Make sure spending this money won't cause problems later</li>
             </ul>
             
-            <h3>Types of Bank Accounts</h3>
-            
-            <h4>Savings Accounts</h4>
-            <p>A savings account is designed to help you save money for the future. When you put money in a savings account, the bank pays you a small amount extra called "interest." This means your money grows slowly over time, even when you're not adding to it. Savings accounts are perfect for:</p>
+            <h4>Step 2: Compare Your Options</h4>
+            <p>Smart shoppers always look at different choices before making a decision. This comparison shopping can save you money and help you find better options:</p>
             <ul>
-              <li>Emergency funds</li>
-              <li>Saving for special purchases</li>
-              <li>Building good money habits</li>
-              <li>Learning about interest</li>
+              <li><strong>Compare prices at different stores</strong> - The same item might cost different amounts at different places</li>
+              <li><strong>Consider buying used instead of new</strong> - You can often get the same quality for much less money</li>
+              <li><strong>Think about waiting for a sale</strong> - Many items go on sale regularly if you're patient</li>
+              <li><strong>Ask if there's a similar item that costs less</strong> - Sometimes a slightly different product can meet your needs for less money</li>
+              <li><strong>Check online and in-store prices</strong> - Sometimes online prices are better, sometimes store prices are better</li>
+              <li><strong>Look for coupons or discounts</strong> - A little research can often save you money</li>
             </ul>
             
-            <h4>Checking Accounts</h4>
-            <p>Checking accounts are designed for money you plan to spend soon. These accounts usually don't earn interest, but they come with convenient features like:</p>
+            <h4>Step 3: Make Your Decision</h4>
+            <p>After thinking and comparing, make your choice. Remember, it's perfectly okay to decide NOT to buy something! Sometimes the smartest spending choice is to save your money for something more important later.</p>
+            
+            <h3>Understanding Value vs Price</h3>
+            <p>Smart spenders understand that the cheapest option isn't always the best choice, and the most expensive option isn't always the best quality. Instead, they look for the best value - the right balance of quality, usefulness, and price.</p>
+            
+            <h4>Factors That Determine Value</h4>
             <ul>
-              <li>Debit cards for purchases</li>
-              <li>Check-writing privileges</li>
-              <li>Online bill paying</li>
-              <li>ATM access</li>
+              <li><strong>Quality and Durability</strong> - Will this last a long time or break quickly?</li>
+              <li><strong>Usefulness</strong> - How often will you actually use this?</li>
+              <li><strong>Enjoyment</strong> - How much happiness will this bring you?</li>
+              <li><strong>Learning or Growth</strong> - Will this help you learn something or develop a skill?</li>
+              <li><strong>Safety</strong> - Is this safe to use? Does it meet safety standards?</li>
+              <li><strong>Environmental Impact</strong> - Is this good for the environment?</li>
             </ul>
             
-            <h3>How Banks Keep Your Money Safe</h3>
-            <p>Banks use multiple layers of security to protect your money:</p>
-            
-            <h4>Physical Security</h4>
+            <h4>The "Cost Per Use" Calculation</h4>
+            <p>A great way to evaluate value is to think about cost per use. For example:</p>
             <ul>
-              <li>Thick vault walls and time-locked safes</li>
-              <li>Security cameras and alarm systems</li>
-              <li>Trained security personnel</li>
-              <li>Limited access areas</li>
+              <li>A $20 book you'll read many times might be worth more than a $5 toy you'll use once</li>
+              <li>A $50 bike you'll ride every day is better value than a $30 game you'll play for a week</li>
+              <li>Quality shoes that last two years are often better value than cheap shoes that wear out in two months</li>
             </ul>
             
-            <h4>Digital Security</h4>
+            <h3>Common Spending Traps to Avoid</h3>
+            <p>Even smart people can fall into spending traps. Being aware of these common mistakes helps you avoid them:</p>
+            
+            <h4>Impulse Buying</h4>
+            <p>This happens when you buy something without thinking, often because you're excited or because someone is pressuring you to decide quickly. To avoid impulse buying:</p>
             <ul>
-              <li>Encrypted computer systems</li>
-              <li>Secure login procedures</li>
-              <li>Fraud monitoring systems</li>
-              <li>Regular security updates</li>
+              <li>Always wait at least 24 hours before buying anything that's not a necessity</li>
+              <li>Make a shopping list before going to stores and stick to it</li>
+              <li>Avoid shopping when you're emotional (excited, sad, bored, or stressed)</li>
+              <li>Be suspicious of "limited time offers" that pressure you to decide immediately</li>
             </ul>
             
-            <h4>Government Protection</h4>
-            <p>Most bank accounts are insured by the government through the FDIC (Federal Deposit Insurance Corporation). This means that even if a bank fails, your money (up to $250,000) is protected and guaranteed by the U.S. government.</p>
+            <h4>Peer Pressure Purchasing</h4>
+            <p>Buying things because friends have them or to fit in can lead to poor spending choices:</p>
+            <ul>
+              <li>Remember that true friends won't judge you based on what you own</li>
+              <li>Focus on your own needs and goals, not what others have</li>
+              <li>Understand that people often show off their purchases but don't talk about their financial struggles</li>
+              <li>Find ways to have fun with friends that don't involve spending money</li>
+            </ul>
+            
+            <h4>Emotional Spending</h4>
+            <p>Using shopping to make yourself feel better when you're sad, stressed, or bored often leads to purchases you'll regret:</p>
+            <ul>
+              <li>Find other ways to deal with emotions, like talking to friends, exercising, or pursuing hobbies</li>
+              <li>If you feel the urge to buy something when you're emotional, write it down and wait until you're feeling better</li>
+              <li>Remember that the good feeling from buying something usually doesn't last long</li>
+            </ul>
+            
+            <h4>The "Sale" Trap</h4>
+            <p>Just because something is on sale doesn't mean it's a good deal or that you should buy it:</p>
+            <ul>
+              <li>Ask yourself if you would want the item even if it wasn't on sale</li>
+              <li>Calculate the actual savings - is it really a significant amount?</li>
+              <li>Make sure you have a real use for the item, not just that it's cheap</li>
+              <li>Remember that buying something you don't need is never a good deal, regardless of price</li>
+            </ul>
+            
+            <h3>Smart Shopping Strategies</h3>
+            
+            <h4>The Planning Approach</h4>
+            <ul>
+              <li><strong>Make lists</strong> - Write down what you need before shopping</li>
+              <li><strong>Set budgets</strong> - Decide how much you can spend before you start shopping</li>
+              <li><strong>Research prices</strong> - Look up typical prices for items you're considering</li>
+              <li><strong>Time your purchases</strong> - Learn when items typically go on sale</li>
+            </ul>
+            
+            <h4>The Smart Evaluation Process</h4>
+            <ul>
+              <li><strong>Read reviews</strong> - See what other people say about products before buying</li>
+              <li><strong>Check return policies</strong> - Make sure you can return items if there's a problem</li>
+              <li><strong>Ask questions</strong> - Don't be afraid to ask salespeople about products</li>
+              <li><strong>Consider warranties</strong> - Understand what protection you have if something breaks</li>
+            </ul>
+            
+            <h4>The Money Management Integration</h4>
+            <ul>
+              <li><strong>Track your spending</strong> - Keep records of what you buy so you can learn from your decisions</li>
+              <li><strong>Set savings goals</strong> - Having specific goals makes it easier to resist unnecessary purchases</li>
+              <li><strong>Use the envelope method</strong> - Set aside specific amounts for different types of spending</li>
+              <li><strong>Regular review</strong> - Look back at your purchases and evaluate whether they were good decisions</li>
+            </ul>
+            
+            <h3>Teaching Smart Spending to Others</h3>
+            <p>Once you learn these skills, you can help others make better spending decisions too:</p>
+            
+            <h4>Helping Younger Kids</h4>
+            <ul>
+              <li>Explain why you make certain choices when shopping together</li>
+              <li>Help them practice comparing options in low-stakes situations</li>
+              <li>Teach them to ask questions before buying anything</li>
+              <li>Show them how to save up for things they really want</li>
+            </ul>
+            
+            <h4>Sharing with Friends</h4>
+            <ul>
+              <li>Model good decision-making when shopping with friends</li>
+              <li>Share money-saving tips you discover</li>
+              <li>Suggest free or low-cost activities as alternatives to expensive outings</li>
+              <li>Support friends who are trying to save money by not pressuring them to spend</li>
+            </ul>
+            
+            <h3>The Psychology of Spending</h3>
+            <p>Understanding why we want to buy things helps us make better decisions:</p>
+            
+            <h4>Marketing and Advertising Influences</h4>
+            <ul>
+              <li><strong>Emotional appeals</strong> - Ads try to make you feel like you need something to be happy or successful</li>
+              <li><strong>Artificial scarcity</strong> - "Limited time" or "only a few left" messages create pressure to buy quickly</li>
+              <li><strong>Social proof</strong> - "Everyone else is buying this" messages make you want to fit in</li>
+              <li><strong>Celebrity endorsements</strong> - Using famous people to make products seem more desirable</li>
+            </ul>
+            
+            <h4>Internal Motivations</h4>
+            <ul>
+              <li><strong>Instant gratification</strong> - The desire to have something right now rather than wait</li>
+              <li><strong>Status seeking</strong> - Wanting to show off or impress others with purchases</li>
+              <li><strong>Convenience</strong> - Paying extra for things that save time or effort</li>
+              <li><strong>Habit</strong> - Buying certain things because you always have, without thinking about whether you still need them</li>
+            </ul>
+            
+            <h3>Building Long-Term Spending Skills</h3>
+            
+            <h4>Developing Your Personal Spending Philosophy</h4>
+            <p>Think about what matters most to you and let that guide your spending decisions:</p>
+            <ul>
+              <li>What kind of life do you want to live?</li>
+              <li>What experiences are most important to you?</li>
+              <li>How do you want to help others?</li>
+              <li>What are your biggest goals and dreams?</li>
+            </ul>
+            
+            <h4>Learning from Mistakes</h4>
+            <p>Everyone makes poor spending choices sometimes. The key is to learn from them:</p>
+            <ul>
+              <li>When you regret a purchase, think about what you could have done differently</li>
+              <li>Notice patterns in your spending mistakes</li>
+              <li>Don't beat yourself up about past mistakes - focus on making better choices going forward</li>
+              <li>Share your experiences with others so they can learn too</li>
+            </ul>
+            
+            <h4>Practicing with Small Decisions</h4>
+            <p>The best way to develop smart spending skills is to practice with small, low-risk purchases:</p>
+            <ul>
+              <li>Use your allowance or small amounts of earned money to practice decision-making</li>
+              <li>Try different strategies and see what works best for you</li>
+              <li>Keep track of which purchases you're happy with and which you regret</li>
+              <li>Gradually apply these skills to bigger purchases as you get older</li>
+            </ul>
+            
+            <h3>The Bigger Picture: Spending and Life Goals</h3>
+            <p>Smart spending isn't about never buying anything fun or always choosing the cheapest option. It's about making conscious choices that align with your values and help you achieve your goals.</p>
+            
+            <p>When you develop good spending habits now, you're building skills that will serve you throughout your life. You'll be able to afford the things that truly matter to you, avoid financial stress, and have the freedom to make choices based on what's best for you rather than being forced into decisions by financial pressure.</p>
+            
+            <p>Remember: every spending decision is an opportunity to practice making good choices. The more you practice thinking before you spend, comparing options, and making decisions based on value rather than impulse, the better you'll become at managing money and achieving your dreams.</p>
           `
         },
         quiz: [
           {
             id: 1,
-            question: "What are the three main jobs of banks?",
-            options: ["Safekeeping, lending, and services", "Saving, spending, and investing", "Cash, checks, and cards", "Interest, fees, and loans"],
-            correct: "Safekeeping, lending, and services",
-            explanation: "Banks keep money safe, lend money to borrowers, and provide various financial services."
+            question: "What should you do before buying anything?",
+            options: ["Buy it immediately", "Think about whether you need it or want it", "Ask your friends", "Check the color"],
+            correct: "Think about whether you need it or want it",
+            explanation: "Always pause and consider if something is a need or want before making a purchase."
           },
           {
             id: 2,
-            question: "What is the main difference between savings and checking accounts?",
-            options: ["Savings accounts earn interest, checking accounts are for daily spending", "There is no difference", "Checking accounts are safer", "Savings accounts cost more"],
-            correct: "Savings accounts earn interest, checking accounts are for daily spending",
-            explanation: "Savings accounts are designed to grow your money with interest, while checking accounts are for everyday transactions."
+            question: "What is comparison shopping?",
+            options: ["Shopping with friends", "Checking prices at different stores", "Buying everything at once", "Shopping online only"],
+            correct: "Checking prices at different stores",
+            explanation: "Comparison shopping means looking at different options and prices to find the best deal."
           },
           {
             id: 3,
-            question: "What does FDIC insurance protect?",
-            options: ["Up to $250,000 per account", "All your money forever", "Only savings accounts", "Only checking accounts"],
-            correct: "Up to $250,000 per account",
-            explanation: "FDIC insurance protects bank deposits up to $250,000 per account holder per bank."
+            question: "What is impulse buying?",
+            options: ["Buying things without thinking", "Buying things on sale", "Buying things you need", "Buying things for others"],
+            correct: "Buying things without thinking",
+            explanation: "Impulse buying is purchasing something quickly without thinking it through, which often leads to regret."
           },
           {
             id: 4,
-            question: "How do banks make money to pay you interest?",
-            options: ["They lend your money to others at higher interest rates", "The government pays them", "They print their own money", "They charge high fees"],
-            correct: "They lend your money to others at higher interest rates",
-            explanation: "Banks earn money by lending deposited funds to borrowers at higher interest rates than they pay to depositors."
+            question: "Which question should you ask yourself before buying something?",
+            options: ["What color is it?", "Will I still want this next week?", "Who else has this?", "Is it the biggest one?"],
+            correct: "Will I still want this next week?",
+            explanation: "Thinking about whether you'll still value the item later helps avoid purchases you might regret."
           },
           {
             id: 5,
-            question: "What can you do at an ATM?",
-            options: ["Withdraw cash, deposit money, check balance, transfer funds", "Only withdraw cash", "Only check your balance", "Open new accounts"],
-            correct: "Withdraw cash, deposit money, check balance, transfer funds",
-            explanation: "Modern ATMs offer many services including cash withdrawal, deposits, balance inquiries, and transfers."
+            question: "What does 'value' mean when shopping?",
+            options: ["The highest price", "The right balance of quality and price", "The cheapest option", "The most popular item"],
+            correct: "The right balance of quality and price",
+            explanation: "Value isn't just about price - it's about getting good quality for a fair price that will last and be useful."
           },
           {
             id: 6,
-            question: "Why is it safer to keep money in a bank than at home?",
-            options: ["Banks have security systems and government insurance", "Banks never get robbed", "Home safes are illegal", "Banks pay you to keep money there"],
-            correct: "Banks have security systems and government insurance",
-            explanation: "Banks have multiple security measures and FDIC insurance protection that homes don't have."
+            question: "What should you do if something seems like a 'great deal' but you don't need it?",
+            options: ["Buy it anyway because it's cheap", "Don't buy it", "Buy multiple ones", "Ask everyone you know if they want it"],
+            correct: "Don't buy it",
+            explanation: "If you don't need something, it's never a good deal, no matter how cheap it is."
           },
           {
             id: 7,
-            question: "What should you consider when choosing a bank?",
-            options: ["Location, fees, services, and convenience", "Only the interest rate", "Only the location", "Only the bank's name"],
-            correct: "Location, fees, services, and convenience",
-            explanation: "When choosing a bank, consider multiple factors including convenience, costs, and available services."
+            question: "What is opportunity cost?",
+            options: ["The price of something", "What you give up to get something else", "A type of store", "A way to pay"],
+            correct: "What you give up to get something else",
+            explanation: "Opportunity cost is what you sacrifice when you choose one option over another - like buying a toy instead of saving for a bike."
           },
           {
             id: 8,
-            question: "What is interest?",
-            options: ["Extra money the bank pays you for keeping money with them", "Money you pay to use the bank", "A type of bank account", "A banking fee"],
-            correct: "Extra money the bank pays you for keeping money with them",
-            explanation: "Interest is the bank's payment to you for allowing them to use your deposited money."
+            question: "Why should you avoid shopping when you're feeling sad or excited?",
+            options: ["Stores are closed", "You might make poor decisions", "It's against the law", "You'll spend too much time"],
+            correct: "You might make poor decisions",
+            explanation: "Strong emotions can lead to impulsive purchases that you might regret later."
           },
           {
             id: 9,
-            question: "What are youth banking programs?",
-            options: ["Special accounts designed for young people with benefits", "Regular accounts for adults", "Investment accounts only", "Business accounts for kids"],
-            correct: "Special accounts designed for young people with benefits",
-            explanation: "Youth banking programs offer special accounts with features like lower fees and educational resources for young customers."
+            question: "What's the best way to avoid overspending at a store?",
+            options: ["Don't bring any money", "Make a list and stick to it", "Shop as fast as possible", "Only buy the most expensive items"],
+            correct: "Make a list and stick to it",
+            explanation: "Having a shopping list helps you stay focused on what you actually need and avoid impulse purchases."
           },
           {
             id: 10,
-            question: "What can you do with online banking?",
-            options: ["Check balances, pay bills, transfer money, deposit checks", "Only check your balance", "Only pay bills", "Nothing useful"],
-            correct: "Check balances, pay bills, transfer money, deposit checks",
-            explanation: "Online banking offers many convenient services including balance checking, bill paying, transfers, and mobile check deposits."
+            question: "When is the best time to buy something you want but don't need?",
+            options: ["Right away", "When you're bored", "After you've thought about it and saved money for it", "Never"],
+            correct: "After you've thought about it and saved money for it",
+            explanation: "Taking time to think and save for wants helps ensure you really value them and can afford them responsibly."
           }
         ],
+        xpReward: 100
+      },
+      5: {
+        title: "My First Savings",
+        videoUrl: "https://www.youtube.com/embed/B3njsO5ewA8",
+        videoLink: "https://www.youtube.com/watch?v=B3njsO5ewA8",
+        videoTitle: "Grade 3: Saving Money for Kids - Simple Guide",
+        article: {
+          title: "Starting Your Savings Journey",
+          content: `<h2>Your First Steps to Saving Money</h2><p>Saving money is one of the most important skills you can learn.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      6: {
+        title: "Counting Coins and Bills",
+        videoUrl: "https://www.youtube.com/embed/aQpf-Ak9ZFo",
+        videoLink: "https://www.youtube.com/watch?v=aQpf-Ak9ZFo",
+        videoTitle: "Grade 3: Counting Money - How to Count Coins and Bills",
+        article: {
+          title: "Learning to Count Money",
+          content: `<h2>Mastering Coin and Bill Counting</h2><p>Learning to count money accurately is an essential life skill.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      7: {
+        title: "Understanding Coins",
+        videoUrl: "https://www.youtube.com/embed/EfgCYbyzaA8",
+        videoLink: "https://www.youtube.com/watch?v=EfgCYbyzaA8",
+        videoTitle: "Grade 3: All About Coins for Kids - American Coins Explained",
+        article: {
+          title: "All About American Coins",
+          content: `<h2>Learning About Different Coins</h2><p>Understanding the value and characteristics of different coins.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      8: {
+        title: "Making Change",
+        videoUrl: "https://www.youtube.com/embed/OoSXZWKmNLc",
+        videoLink: "https://www.youtube.com/watch?v=OoSXZWKmNLc",
+        videoTitle: "Grade 3: Identifying and Counting Money - Dollar Bills",
+        article: {
+          title: "Learning to Make Change",
+          content: `<h2>Understanding How to Make Change</h2><p>Making change correctly is an important money skill.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      9: {
+        title: "Money and Purchases",
+        videoUrl: "https://www.youtube.com/embed/8XpEQMgIJHQ",
+        videoLink: "https://www.youtube.com/watch?v=8XpEQMgIJHQ",
+        videoTitle: "Grade 3: Money - Purchases and Bills | Mathematics",
+        article: {
+          title: "Understanding Purchases and Bills",
+          content: `<h2>Learning About Purchases and Bills</h2><p>Understanding how money is used in real transactions.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      10: {
+        title: "Teaching Money Basics",
+        videoUrl: "https://www.youtube.com/embed/QU0rsCaG_W4",
+        videoLink: "https://www.youtube.com/watch?v=QU0rsCaG_W4",
+        videoTitle: "Grade 3: Ideas for Teaching Money",
+        article: {
+          title: "Money Basics for Young Learners",
+          content: `<h2>Fundamental Money Concepts</h2><p>Building a strong foundation in money knowledge.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      11: {
+        title: "Money Management Fun",
+        videoUrl: "https://www.youtube.com/embed/7evMiF05-QM",
+        videoLink: "https://www.youtube.com/watch?v=7evMiF05-QM",
+        videoTitle: "Grade 3: Cha-Ching Curriculum - Financial Literacy",
+        article: {
+          title: "Fun Ways to Learn About Money",
+          content: `<h2>Making Money Learning Fun</h2><p>Engaging ways to understand financial concepts.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      12: {
+        title: "Financial Responsibility",
+        videoUrl: "https://www.youtube.com/embed/RkDSexrh1jg",
+        videoLink: "https://www.youtube.com/watch?v=RkDSexrh1jg",
+        videoTitle: "Grade 3: How To Teach Children Financial Responsibility",
+        article: {
+          title: "Building Financial Responsibility",
+          content: `<h2>Learning to Be Responsible with Money</h2><p>Developing good money habits early.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      13: {
+        title: "Money Games and Activities",
+        videoUrl: "https://www.youtube.com/embed/5dMpNccHbVk",
+        videoLink: "https://www.youtube.com/watch?v=5dMpNccHbVk",
+        videoTitle: "Grade 3: The Best Board Games for Teaching Kids About Money",
+        article: {
+          title: "Learning Through Games",
+          content: `<h2>Educational Money Games</h2><p>Learning about money through fun activities.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      14: {
+        title: "Digital Money Apps",
+        videoUrl: "https://www.youtube.com/embed/heFCYzA61cY",
+        videoLink: "https://www.youtube.com/watch?v=heFCYzA61cY",
+        videoTitle: "Grade 3: Greenlight App - Kids Money Management",
+        article: {
+          title: "Modern Money Management",
+          content: `<h2>Digital Tools for Money Management</h2><p>Understanding modern ways to manage money.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      15: {
+        title: "Charitable Giving",
+        videoUrl: "https://www.youtube.com/embed/OQIKGUaXlRo",
+        videoLink: "https://www.youtube.com/watch?v=OQIKGUaXlRo",
+        videoTitle: "Grade 3: Charitable Giving for Kids - How to be Charitable",
+        article: {
+          title: "Learning to Give Back",
+          content: `<h2>The Importance of Giving</h2><p>Understanding charity and helping others.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      16: {
+        title: "Money Teaching Fun",
+        videoUrl: "https://www.youtube.com/embed/2v7xTtdMLAQ",
+        videoLink: "https://www.youtube.com/watch?v=2v7xTtdMLAQ",
+        videoTitle: "Grade 3: Teaching Kids Financial Literacy - Make it Fun",
+        article: {
+          title: "Making Financial Learning Enjoyable",
+          content: `<h2>Fun Approaches to Money Education</h2><p>Creative ways to learn about finances.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      17: {
+        title: "Money Risk and Reward",
+        videoUrl: "https://www.youtube.com/embed/J0GVg3-2rUY",
+        videoLink: "https://www.youtube.com/watch?v=J0GVg3-2rUY",
+        videoTitle: "Grade 3: Financial Risk and Reward for Kids",
+        article: {
+          title: "Understanding Risk and Reward",
+          content: `<h2>Learning About Financial Risk</h2><p>Understanding that money decisions have consequences.</p>`
+        },
+        quiz: [],
         xpReward: 100
       }
     },
     4: {
       1: {
-        title: "Budgeting Basics",
-        videoUrl: "https://www.youtube.com/embed/-0kXmaGqLhE",
-        videoLink: "https://www.youtube.com/watch?v=-0kXmaGqLhE",
-        videoTitle: "Grade 4: What is a Budget (Ages 10-17)",
+        title: "Understanding Currency",
+        videoUrl: "https://www.youtube.com/embed/d-mKp1qZjek",
+        videoLink: "https://www.youtube.com/watch?v=d-mKp1qZjek",
+        videoTitle: "Grade 4: What is Compound Interest? For Kids",
         article: {
-          title: "Learning to Budget Your Money",
-          content: `
-            <h2>Budgeting Basics: Your First Guide to Managing Money</h2>
-            <p>A budget is like a map for your money - it helps you plan where your money will go before you spend it. Creating and following a budget is one of the most important life skills you can develop, and it's never too early to start!</p>
-            
-            <h3>What is a Budget?</h3>
-            <p>A budget is a plan that shows how much money you have coming in (your income) and how you plan to spend or save it. Think of it as giving every dollar a job before you spend it. With a budget, you decide in advance what your money will do instead of wondering where it all went!</p>
-            
-            <h4>Why Budgets Are Important</h4>
-            <ul>
-              <li><strong>Control Your Money</strong> - Instead of money controlling you, you control your money</li>
-              <li><strong>Reach Your Goals</strong> - Budgets help you save for things you really want</li>
-              <li><strong>Avoid Money Problems</strong> - You won't run out of money for important things</li>
-              <li><strong>Reduce Stress</strong> - Knowing where your money goes gives you peace of mind</li>
-              <li><strong>Build Good Habits</strong> - Starting young helps you develop lifelong money skills</li>
-            </ul>
-            
-            <h3>The Basic Budget Formula</h3>
-            <p>Every budget follows the same simple formula:</p>
-            <p><strong>Income - Expenses = What's Left Over</strong></p>
-            
-            <h4>Understanding Income</h4>
-            <p>Income is all the money you receive. For kids, this might include:</p>
-            <ul>
-              <li>Allowance from parents</li>
-              <li>Money from chores</li>
-              <li>Birthday or holiday gifts</li>
-              <li>Money from small jobs (like pet sitting)</li>
-              <li>Found money (like coins from the couch!)</li>
-            </ul>
-            
-            <h4>Understanding Expenses</h4>
-            <p>Expenses are all the ways you spend money. These fall into two categories:</p>
-            
-            <p><strong>Fixed Expenses</strong> - These stay the same each month:</p>
-            <ul>
-              <li>School lunch money</li>
-              <li>Regular savings contributions</li>
-              <li>Any regular purchases you commit to</li>
-            </ul>
-            
-            <p><strong>Variable Expenses</strong> - These change from month to month:</p>
-            <ul>
-              <li>Snacks and treats</li>
-              <li>Entertainment (movies, games)</li>
-              <li>Gifts for friends</li>
-              <li>Toys and fun purchases</li>
-            </ul>
-            
-            <h3>Creating Your First Budget</h3>
-            
-            <h4>Step 1: Track Your Money for One Week</h4>
-            <p>Before making a budget, you need to know your current money habits. For one week, write down:</p>
-            <ul>
-              <li>Every dollar you receive (and where it came from)</li>
-              <li>Every dollar you spend (and what you bought)</li>
-              <li>How much money you had at the start and end of the week</li>
-            </ul>
-            
-            <h4>Step 2: Calculate Your Monthly Income</h4>
-            <p>Add up all the money you typically receive in a month. If your income varies, use an average of the last few months.</p>
-            
-            <h4>Step 3: List Your Expenses</h4>
-            <p>Write down everything you typically spend money on in a month. Don't forget small purchases - they add up!</p>
-            
-            <h4>Step 4: Categorize Your Spending</h4>
-            <p>Group your expenses into categories like:</p>
-            <ul>
-              <li>Needs (things you must have)</li>
-              <li>Wants (things you'd like to have)</li>
-              <li>Savings (money for future goals)</li>
-              <li>Giving (money you donate or give as gifts)</li>
-            </ul>
-            
-            <h3>The 50-30-20 Rule for Kids</h3>
-            <p>A simple way to divide your money is:</p>
-            <ul>
-              <li><strong>50% for Needs</strong> - Essential things like school supplies</li>
-              <li><strong>30% for Wants</strong> - Fun things like toys and treats</li>
-              <li><strong>20% for Savings</strong> - Money for future goals</li>
-            </ul>
-            
-            <h4>Adjusting the Rule</h4>
-            <p>You can adjust these percentages based on your situation. For example:</p>
-            <ul>
-              <li>If you have a big savings goal, you might save 30% and spend 20% on wants</li>
-              <li>If you have fewer needs, you might have more for wants and savings</li>
-              <li>The key is finding what works for your situation</li>
-            </ul>
-            
-            <h3>Tips for Successful Budgeting</h3>
-            
-            <h4>Start Simple</h4>
-            <p>Your first budget doesn't need to be perfect. Start with basic categories and adjust as you learn more about your spending habits.</p>
-            
-            <h4>Review and Adjust</h4>
-            <p>Check your budget weekly. If you're consistently overspending in one area, either adjust that category or find ways to spend less.</p>
-            
-            <h4>Use the Envelope Method</h4>
-            <p>Put cash for different categories in separate envelopes. When an envelope is empty, you're done spending in that category for the month.</p>
-            
-            <h4>Track Everything</h4>
-            <p>Write down every purchase, no matter how small. Small expenses can add up to big problems if you're not paying attention.</p>
-            
-            <h3>Common Budgeting Mistakes to Avoid</h3>
-            <ul>
-              <li><strong>Being Too Restrictive</strong> - Allow some money for fun, or you'll get frustrated</li>
-              <li><strong>Forgetting Small Expenses</strong> - Small purchases add up quickly</li>
-              <li><strong>Not Planning for Surprises</strong> - Include a category for unexpected expenses</li>
-              <li><strong>Giving Up Too Quickly</strong> - Budgeting is a skill that takes practice</li>
-              <li><strong>Not Adjusting</strong> - Your budget should change as your life changes</li>
-            </ul>
-          `
+          title: "Advanced Money Concepts for Grade 4",
+          content: `<h2>Understanding Different Types of Currency</h2><p>Learning about various forms of money around the world.</p>`
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What is a budget?",
-            options: ["A type of bank account", "A plan for how to spend and save your money", "A way to get more money", "A kind of loan"],
-            correct: "A plan for how to spend and save your money",
-            explanation: "A budget is a plan that helps you decide how to use your money before you spend it."
-          },
-          {
-            id: 2,
-            question: "What is the basic budget formula?",
-            options: ["Income + Expenses = Savings", "Income - Expenses = What's Left Over", "Expenses - Income = Debt", "Savings + Spending = Income"],
-            correct: "Income - Expenses = What's Left Over",
-            explanation: "The basic budget formula shows that what you have left depends on your income minus your expenses."
-          },
-          {
-            id: 3,
-            question: "What are fixed expenses?",
-            options: ["Expenses that change every month", "Expenses that stay the same each month", "Expenses you never have", "Expenses that are broken"],
-            correct: "Expenses that stay the same each month",
-            explanation: "Fixed expenses are costs that remain constant each month, like school lunch money or regular savings."
-          },
-          {
-            id: 4,
-            question: "In the 50-30-20 rule, what does the 20% represent?",
-            options: ["Needs", "Wants", "Savings", "Giving"],
-            correct: "Savings",
-            explanation: "In the 50-30-20 rule, 20% of your money should go toward savings for future goals."
-          },
-          {
-            id: 5,
-            question: "Why should you track your money for a week before making a budget?",
-            options: ["To impress your friends", "To understand your current spending habits", "Because it's required by law", "To make more money"],
-            correct: "To understand your current spending habits",
-            explanation: "Tracking your money helps you see where your money actually goes before you make a plan for where it should go."
-          },
-          {
-            id: 6,
-            question: "What is the envelope method?",
-            options: ["Mailing your money to the bank", "Putting cash for different categories in separate envelopes", "Hiding money in envelopes", "A way to make envelopes"],
-            correct: "Putting cash for different categories in separate envelopes",
-            explanation: "The envelope method helps you stick to your budget by physically separating money for different spending categories."
-          },
-          {
-            id: 7,
-            question: "Which is an example of a variable expense?",
-            options: ["School lunch money", "Regular savings", "Snacks and treats", "Required school supplies"],
-            correct: "Snacks and treats",
-            explanation: "Snacks and treats are variable expenses because the amount you spend on them can change from month to month."
-          },
-          {
-            id: 8,
-            question: "What should you do if you consistently overspend in one category?",
-            options: ["Ignore it", "Stop budgeting", "Adjust the budget or find ways to spend less", "Spend more in other categories"],
-            correct: "Adjust the budget or find ways to spend less",
-            explanation: "If you're overspending in a category, you need to either increase that category's budget or find ways to reduce spending."
-          },
-          {
-            id: 9,
-            question: "Why is it important to include money for fun in your budget?",
-            options: ["It's required by law", "So you won't get frustrated and give up on budgeting", "To impress others", "It's not important"],
-            correct: "So you won't get frustrated and give up on budgeting",
-            explanation: "Including some money for fun makes your budget more realistic and sustainable long-term."
-          },
-          {
-            id: 10,
-            question: "How often should you review your budget?",
-            options: ["Never", "Once a year", "Weekly", "Only when you have problems"],
-            correct: "Weekly",
-            explanation: "Reviewing your budget weekly helps you stay on track and make adjustments when needed."
-          }
-        ],
-        xpReward: 150
+        quiz: [],
+        xpReward: 100
+      },
+      2: {
+        title: "Basic Banking",
+        videoUrl: "https://www.youtube.com/embed/ScXAyGh0MRg",
+        videoLink: "https://www.youtube.com/watch?v=ScXAyGh0MRg",
+        videoTitle: "Grade 4: Financial Literacy—Checking and Savings Accounts",
+        article: {
+          title: "Introduction to Banking",
+          content: `<h2>Your First Bank Account</h2><p>Understanding how banks work and how to use them.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      3: {
+        title: "Earning Through Chores",
+        videoUrl: "https://www.youtube.com/embed/SijcDBh8a5c?t=30",
+        videoLink: "https://www.youtube.com/watch?v=SijcDBh8a5c&t=30",
+        videoTitle: "Grade 4: Teaching Kids About Money - Simple Methods",
+        article: {
+          title: "Making Money Through Work",
+          content: `<h2>Earning Money Through Chores and Jobs</h2><p>Learning the connection between work and income.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      4: {
+        title: "Setting Goals",
+        videoUrl: "https://www.youtube.com/embed/6TEHmaJBTkw",
+        videoLink: "https://www.youtube.com/watch?v=6TEHmaJBTkw",
+        videoTitle: "Grade 4: Introduction to Savings and Investments",
+        article: {
+          title: "Setting Financial Goals",
+          content: `<h2>Creating and Achieving Financial Goals</h2><p>Learning to set and work toward money goals.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      5: {
+        title: "Smart Spending",
+        videoUrl: "https://www.youtube.com/embed/HOH5Z6g9Ne0?t=60",
+        videoLink: "https://www.youtube.com/watch?v=HOH5Z6g9Ne0&t=60",
+        videoTitle: "Grade 4: Fun Ways To Educate Kids About Money",
+        article: {
+          title: "Making Smart Spending Decisions",
+          content: `<h2>Thinking Before You Spend</h2><p>Strategies for making wise purchasing decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      6: {
+        title: "Debit vs Credit",
+        videoUrl: "https://www.youtube.com/embed/iSmNwXbNhgQ",
+        videoLink: "https://www.youtube.com/watch?v=iSmNwXbNhgQ",
+        videoTitle: "Grade 4: Financial Literacy—Debit and Credit Cards",
+        article: {
+          title: "Understanding Payment Cards",
+          content: `<h2>Debit Cards vs Credit Cards</h2><p>Learning the difference between different payment methods.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      7: {
+        title: "Money Around the World",
+        videoUrl: "https://www.youtube.com/embed/aQpf-Ak9ZFo?t=120",
+        videoLink: "https://www.youtube.com/watch?v=aQpf-Ak9ZFo&t=120",
+        videoTitle: "Grade 4: Counting Money - Advanced Techniques",
+        article: {
+          title: "Global Currencies",
+          content: `<h2>Money Around the World</h2><p>Learning about different currencies used in other countries.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      8: {
+        title: "Saving Strategies",
+        videoUrl: "https://www.youtube.com/embed/B3njsO5ewA8?t=45",
+        videoLink: "https://www.youtube.com/watch?v=B3njsO5ewA8&t=45",
+        videoTitle: "Grade 4: Advanced Saving Money Strategies for Kids",
+        article: {
+          title: "Advanced Saving Techniques",
+          content: `<h2>Better Ways to Save Money</h2><p>Learning advanced strategies for saving money.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      9: {
+        title: "Price Comparison",
+        videoUrl: "https://www.youtube.com/embed/0iRbD5rM5qc?t=90",
+        videoLink: "https://www.youtube.com/watch?v=0iRbD5rM5qc&t=90",
+        videoTitle: "Grade 4: Financial Literacy - Advanced Concepts",
+        article: {
+          title: "Comparing Prices and Values",
+          content: `<h2>Getting the Best Value</h2><p>Learning to compare prices and find the best deals.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      10: {
+        title: "Money History",
+        videoUrl: "https://www.youtube.com/embed/JcvnWeDwTeg?t=60",
+        videoLink: "https://www.youtube.com/watch?v=JcvnWeDwTeg&t=60",
+        videoTitle: "Grade 4: History of Money - What Is Money",
+        article: {
+          title: "The History of Money",
+          content: `<h2>How Money Evolved</h2><p>Learning about the history and evolution of money.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      11: {
+        title: "Interest Basics",
+        videoUrl: "https://www.youtube.com/embed/qxltazxfaSk",
+        videoLink: "https://www.youtube.com/watch?v=qxltazxfaSk",
+        videoTitle: "Grade 4: Compound Interest Explained for Kids",
+        article: {
+          title: "Understanding Interest",
+          content: `<h2>How Interest Works</h2><p>Learning about how money can grow through interest.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      12: {
+        title: "Sales and Taxes",
+        videoUrl: "https://www.youtube.com/embed/CjDiUUOYw50",
+        videoLink: "https://www.youtube.com/watch?v=CjDiUUOYw50",
+        videoTitle: "Grade 4: Sales Tax Explained for Kids",
+        article: {
+          title: "Understanding Taxes",
+          content: `<h2>What Are Taxes?</h2><p>Learning about sales tax and why we pay it.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      13: {
+        title: "Economic Basics",
+        videoUrl: "https://www.youtube.com/embed/F4rCRzo6UuA",
+        videoLink: "https://www.youtube.com/watch?v=F4rCRzo6UuA",
+        videoTitle: "Grade 4: What Are Stocks? Understanding Economics for Kids",
+        article: {
+          title: "Introduction to Economics",
+          content: `<h2>Basic Economic Concepts</h2><p>Understanding how the economy works.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      14: {
+        title: "Money Safety",
+        videoUrl: "https://www.youtube.com/embed/EfgCYbyzaA8?t=90",
+        videoLink: "https://www.youtube.com/watch?v=EfgCYbyzaA8&t=90",
+        videoTitle: "Grade 4: Keeping Money Safe - Coin Security",
+        article: {
+          title: "Keeping Money Safe",
+          content: `<h2>Money Safety and Security</h2><p>Learning how to keep your money safe.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      15: {
+        title: "Money Math",
+        videoUrl: "https://www.youtube.com/embed/OoSXZWKmNLc?t=150",
+        videoLink: "https://www.youtube.com/watch?v=OoSXZWKmNLc&t=150",
+        videoTitle: "Grade 4: Advanced Money Math - Dollar Bills",
+        article: {
+          title: "Money Mathematics",
+          content: `<h2>Math with Money</h2><p>Using math skills to work with money.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      16: {
+        title: "Work and Income",
+        videoUrl: "https://www.youtube.com/embed/E2wcbUNZ-yo?t=120",
+        videoLink: "https://www.youtube.com/watch?v=E2wcbUNZ-yo&t=120",
+        videoTitle: "Grade 4: Advanced Income and Expenses",
+        article: {
+          title: "Understanding Work and Income",
+          content: `<h2>How People Earn Money</h2><p>Different ways people make money through work.</p>`
+        },
+        quiz: [],
+        xpReward: 100
+      },
+      17: {
+        title: "Money Values",
+        videoUrl: "https://www.youtube.com/embed/aRcXutXvfmM?t=180",
+        videoLink: "https://www.youtube.com/watch?v=aRcXutXvfmM&t=180",
+        videoTitle: "Grade 4: Advanced Needs and Wants",
+        article: {
+          title: "Money Values and Ethics",
+          content: `<h2>Values and Money</h2><p>Understanding the relationship between values and money.</p>`
+        },
+        quiz: [],
+        xpReward: 100
       }
     },
     5: {
@@ -1106,228 +1536,202 @@ const LessonViewer = () => {
         videoLink: "https://www.youtube.com/watch?v=-0kXmaGqLhE",
         videoTitle: "Grade 5: What is a Budget (Ages 10-17)",
         article: {
-          title: "Advanced Budgeting Strategies",
-          content: `
-            <h2>Advanced Budgeting: Taking Your Money Management to the Next Level</h2>
-            <p>Now that you understand basic budgeting, it's time to learn more sophisticated strategies that will help you manage money like a financial expert. Advanced budgeting involves detailed planning, tracking multiple goals, and using various tools and techniques to optimize your financial decisions.</p>
-            
-            <h3>Beyond Basic Categories: Detailed Budget Planning</h3>
-            <p>Advanced budgeters don't just use broad categories like "wants" and "needs." They break their spending into specific, detailed categories that give them precise control over their money.</p>
-            
-            <h4>Detailed Expense Categories</h4>
-            <ul>
-              <li><strong>Fixed Monthly Expenses</strong>
-                <ul>
-                  <li>School supplies (monthly average)</li>
-                  <li>Transportation costs</li>
-                  <li>Phone or internet services</li>
-                  <li>Subscription services</li>
-                </ul>
-              </li>
-              <li><strong>Variable Expenses</strong>
-                <ul>
-                  <li>Food and snacks</li>
-                  <li>Entertainment (movies, games, books)</li>
-                  <li>Clothing and accessories</li>
-                  <li>Gifts for others</li>
-                  <li>Personal care items</li>
-                </ul>
-              </li>
-              <li><strong>Savings Categories</strong>
-                <ul>
-                  <li>Emergency fund</li>
-                  <li>Short-term goals (things you want in 1-6 months)</li>
-                  <li>Medium-term goals (things you want in 6 months to 2 years)</li>
-                  <li>Long-term goals (things you want in 2+ years)</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <h3>The Zero-Based Budget Method</h3>
-            <p>Zero-based budgeting means giving every dollar a specific job. Your income minus all your planned expenses and savings should equal zero. This doesn't mean you spend everything - it means every dollar is assigned a purpose, including savings.</p>
-            
-            <h4>How to Create a Zero-Based Budget</h4>
-            <ol>
-              <li><strong>List Your Total Income</strong> - Include all money sources</li>
-              <li><strong>List Fixed Expenses First</strong> - These are your non-negotiable costs</li>
-              <li><strong>Assign Money to Savings Goals</strong> - Pay yourself first by prioritizing savings</li>
-              <li><strong>Allocate Remaining Money</strong> - Distribute what's left among variable expenses</li>
-              <li><strong>Adjust Until You Reach Zero</strong> - Every dollar should have an assigned category</li>
-            </ol>
-            
-            <h3>Multi-Goal Savings Strategies</h3>
-            <p>Advanced budgeters typically save for multiple goals simultaneously. This requires careful planning and allocation.</p>
-            
-            <h4>The Savings Hierarchy</h4>
-            <ol>
-              <li><strong>Emergency Fund</strong> - Start with a small emergency fund ($50-100)</li>
-              <li><strong>High-Priority Short-Term Goals</strong> - Things you need soon</li>
-              <li><strong>Medium-Term Goals</strong> - Important wants with longer timelines</li>
-              <li><strong>Long-Term Goals</strong> - Future planning and wealth building</li>
-            </ol>
-            
-            <h4>Percentage-Based Goal Allocation</h4>
-            <p>Divide your savings money among goals based on priority and timeline:</p>
-            <ul>
-              <li>40% to emergency fund (until you reach your target)</li>
-              <li>35% to your highest priority current goal</li>
-              <li>15% to medium-term goals</li>
-              <li>10% to long-term goals</li>
-            </ul>
-            
-            <h3>Advanced Budgeting Tools and Techniques</h3>
-            
-            <h4>The Envelope System 2.0</h4>
-            <p>Modern envelope budgeting can use digital tools:</p>
-            <ul>
-              <li><strong>Physical Cash Envelopes</strong> - For categories where cash helps control spending</li>
-              <li><strong>Digital Envelopes</strong> - Using apps or spreadsheets to track category spending</li>
-              <li><strong>Hybrid Approach</strong> - Cash for problem areas, digital tracking for others</li>
-            </ul>
-            
-            <h4>The 24-Hour Purchase Rule</h4>
-            <p>For any unplanned purchase over a set amount (like $10), wait 24 hours before buying. This prevents impulse purchases and helps you stick to your budget.</p>
-            
-            <h4>Seasonal Budget Adjustments</h4>
-            <p>Advanced budgeters plan for seasonal changes:</p>
-            <ul>
-              <li><strong>Back-to-School Season</strong> - Increase school supply budget</li>
-              <li><strong>Holiday Seasons</strong> - Plan for gift-giving expenses</li>
-              <li><strong>Summer Activities</strong> - Budget for camps, activities, or travel</li>
-              <li><strong>Birthday Seasons</strong> - If many friends have birthdays in certain months</li>
-            </ul>
-            
-            <h3>Tracking and Analysis Techniques</h3>
-            
-            <h4>Weekly Budget Reviews</h4>
-            <p>Spend 15 minutes each week reviewing:</p>
-            <ul>
-              <li>How much you spent in each category</li>
-              <li>Whether you're on track with your monthly budget</li>
-              <li>Any needed adjustments for the coming week</li>
-              <li>Progress toward your savings goals</li>
-            </ul>
-            
-            <h4>Monthly Budget Analysis</h4>
-            <p>At month's end, analyze:</p>
-            <ul>
-              <li><strong>Variance Analysis</strong> - Where did you spend more or less than planned?</li>
-              <li><strong>Goal Progress</strong> - How much closer are you to your savings goals?</li>
-              <li><strong>Pattern Recognition</strong> - Are there spending patterns you should address?</li>
-              <li><strong>Success Celebration</strong> - Acknowledge what went well!</li>
-            </ul>
-            
-            <h3>Advanced Money Psychology</h3>
-            
-            <h4>Understanding Your Money Triggers</h4>
-            <p>Advanced budgeters recognize what triggers overspending:</p>
-            <ul>
-              <li><strong>Emotional Triggers</strong> - Spending when happy, sad, or stressed</li>
-              <li><strong>Social Triggers</strong> - Spending to keep up with friends</li>
-              <li><strong>Environmental Triggers</strong> - Certain stores or situations that encourage spending</li>
-              <li><strong>Time-Based Triggers</strong> - Certain days or times when you overspend</li>
-            </ul>
-            
-            <h4>Building Strong Money Habits</h4>
-            <ul>
-              <li><strong>Automate Savings</strong> - Set up automatic transfers to savings goals</li>
-              <li><strong>Regular Check-ins</strong> - Schedule consistent budget review times</li>
-              <li><strong>Celebrate Milestones</strong> - Reward yourself for reaching savings goals</li>
-              <li><strong>Learn from Mistakes</strong> - Use overspending as learning opportunities</li>
-            </ul>
-            
-            <h3>Preparing for Financial Independence</h3>
-            
-            <h4>Building Multiple Income Streams</h4>
-            <p>Advanced budgeters plan for multiple income sources:</p>
-            <ul>
-              <li>Regular allowance or job income</li>
-              <li>Occasional work opportunities</li>
-              <li>Gifts and windfalls</li>
-              <li>Future investment income</li>
-            </ul>
-            
-            <h4>Understanding Opportunity Cost</h4>
-            <p>Every spending decision has an opportunity cost - what else you could have done with that money. Advanced budgeters always consider:</p>
-            <ul>
-              <li>What am I giving up by making this purchase?</li>
-              <li>Could this money serve me better in a different way?</li>
-              <li>Will this purchase help me reach my bigger goals?</li>
-            </ul>
-          `
+          title: "Creating Your First Budget",
+          content: `<h2>Learning to Budget Your Money</h2><p>Understanding how to plan and manage your spending.</p>`
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What is zero-based budgeting?",
-            options: ["Having zero money", "Giving every dollar a specific purpose", "Spending nothing", "Having no budget categories"],
-            correct: "Giving every dollar a specific purpose",
-            explanation: "Zero-based budgeting means assigning every dollar to a specific category, including savings, so your income minus planned expenses equals zero."
-          },
-          {
-            id: 2,
-            question: "What should be your first savings priority?",
-            options: ["The most expensive goal", "Emergency fund", "Entertainment fund", "Gift fund"],
-            correct: "Emergency fund",
-            explanation: "An emergency fund should be your first savings priority because it protects you from unexpected expenses."
-          },
-          {
-            id: 3,
-            question: "What is the 24-hour purchase rule?",
-            options: ["Shopping for 24 hours straight", "Waiting 24 hours before making unplanned purchases", "Spending 24 dollars maximum", "Shopping once every 24 days"],
-            correct: "Waiting 24 hours before making unplanned purchases",
-            explanation: "The 24-hour rule helps prevent impulse buying by requiring you to wait before making unplanned purchases."
-          },
-          {
-            id: 4,
-            question: "Why should advanced budgeters plan for seasonal changes?",
-            options: ["Weather affects spending patterns", "Some expenses only happen at certain times of year", "It's more fun", "Banks require it"],
-            correct: "Some expenses only happen at certain times of year",
-            explanation: "Seasonal budgeting helps you prepare for expenses like back-to-school supplies or holiday gifts that occur at specific times."
-          },
-          {
-            id: 5,
-            question: "What is opportunity cost?",
-            options: ["The cost of buying opportunities", "What you give up when you make a choice", "The cost of expensive items", "A type of investment"],
-            correct: "What you give up when you make a choice",
-            explanation: "Opportunity cost is what you give up or sacrifice when you choose to spend money on one thing instead of another."
-          },
-          {
-            id: 6,
-            question: "How often should you do detailed budget reviews?",
-            options: ["Daily", "Weekly", "Yearly", "Never"],
-            correct: "Weekly",
-            explanation: "Weekly budget reviews help you stay on track and make adjustments before small problems become big ones."
-          },
-          {
-            id: 7,
-            question: "What are money triggers?",
-            options: ["Things that make you want to spend money", "Parts of a cash register", "Bank fees", "Investment opportunities"],
-            correct: "Things that make you want to spend money",
-            explanation: "Money triggers are situations, emotions, or environments that encourage you to spend money, often impulsively."
-          },
-          {
-            id: 8,
-            question: "Why might you use both physical and digital envelope methods?",
-            options: ["It's required by law", "Cash helps control problem spending areas while digital tracks everything else", "It looks more professional", "Banks prefer it"],
-            correct: "Cash helps control problem spending areas while digital tracks everything else",
-            explanation: "A hybrid approach uses cash for categories where you tend to overspend and digital tracking for convenience in other areas."
-          },
-          {
-            id: 9,
-            question: "What percentage of savings should initially go to an emergency fund?",
-            options: ["10%", "25%", "40%", "100%"],
-            correct: "40%",
-            explanation: "Initially, about 40% of your savings should go to building an emergency fund until you reach your target amount."
-          },
-          {
-            id: 10,
-            question: "What should you do when you overspend in a category?",
-            options: ["Ignore it", "Give up budgeting", "Learn from it and adjust your plan", "Spend more in other categories"],
-            correct: "Learn from it and adjust your plan",
-            explanation: "Overspending is a learning opportunity that should help you understand your spending patterns and improve your budget."
-          }
-        ],
+        quiz: [],
+        xpReward: 150
+      },
+      2: {
+        title: "Budget Planning",
+        videoUrl: "https://www.youtube.com/embed/6B0MS3zvMkM",
+        videoLink: "https://www.youtube.com/watch?v=6B0MS3zvMkM",
+        videoTitle: "Grade 5: Teach Kids & Teens How to Make a Budget",
+        article: {
+          title: "Budget Planning Strategies",
+          content: `<h2>Advanced Budget Planning</h2><p>Creating detailed plans for your money.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      3: {
+        title: "Making a Budget",
+        videoUrl: "https://www.youtube.com/embed/cYGiipJOiLg",
+        videoLink: "https://www.youtube.com/watch?v=cYGiipJOiLg",
+        videoTitle: "Grade 5: Financial Literacy—Making a Budget",
+        article: {
+          title: "Budget Creation Process",
+          content: `<h2>Step-by-Step Budget Creation</h2><p>Learning the process of making a budget.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      4: {
+        title: "50-30-20 Rule",
+        videoUrl: "https://www.youtube.com/embed/OZQQMYfaBT4",
+        videoLink: "https://www.youtube.com/watch?v=OZQQMYfaBT4",
+        videoTitle: "Grade 5: The 50-30-20 Rule - Budgeting for Needs, Wants, and Savings",
+        article: {
+          title: "The 50-30-20 Budgeting Rule",
+          content: `<h2>Simple Budgeting Formula</h2><p>Learning an easy way to divide your money.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      5: {
+        title: "Financial Literacy Complete",
+        videoUrl: "https://www.youtube.com/embed/ouvbeb2wSGA",
+        videoLink: "https://www.youtube.com/watch?v=ouvbeb2wSGA",
+        videoTitle: "Grade 5: Financial Literacy In 63 Minutes",
+        article: {
+          title: "Comprehensive Financial Education",
+          content: `<h2>Complete Financial Overview</h2><p>A comprehensive look at personal finance.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      6: {
+        title: "Investment Basics",
+        videoUrl: "https://www.youtube.com/embed/rtIBTsv2M5E",
+        videoLink: "https://www.youtube.com/watch?v=rtIBTsv2M5E",
+        videoTitle: "Grade 5: Where Can My Kid Invest?",
+        article: {
+          title: "Introduction to Investing",
+          content: `<h2>Basics of Investing</h2><p>Learning how investments work.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      7: {
+        title: "Compound Interest Power",
+        videoUrl: "https://www.youtube.com/embed/0WHymXJbipw",
+        videoLink: "https://www.youtube.com/watch?v=0WHymXJbipw",
+        videoTitle: "Grade 5: Why Einstein Called Compound Interest the 8th Wonder",
+        article: {
+          title: "The Power of Compound Interest",
+          content: `<h2>Making Money Work for You</h2><p>Understanding how money can grow over time.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      8: {
+        title: "Kids Brokerage Accounts",
+        videoUrl: "https://www.youtube.com/embed/8odVNzJJsB8",
+        videoLink: "https://www.youtube.com/watch?v=8odVNzJJsB8",
+        videoTitle: "Grade 5: Kids Brokerage Account - What it is and How to Open One",
+        article: {
+          title: "Investment Accounts for Kids",
+          content: `<h2>Starting Your Investment Journey</h2><p>Learning about investment accounts for young people.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      9: {
+        title: "Stock Market Basics",
+        videoUrl: "https://www.youtube.com/embed/bJHr6_skXWc",
+        videoLink: "https://www.youtube.com/watch?v=bJHr6_skXWc",
+        videoTitle: "Grade 5: Stock Market for Beginners - Step by Step Guide",
+        article: {
+          title: "Understanding the Stock Market",
+          content: `<h2>Introduction to Stocks</h2><p>Learning how the stock market works.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      10: {
+        title: "ETF Investing",
+        videoUrl: "https://www.youtube.com/embed/mChmwgxEZcQ",
+        videoLink: "https://www.youtube.com/watch?v=mChmwgxEZcQ",
+        videoTitle: "Grade 5: Investing in ETFs for Kids - Build Wealth for Future",
+        article: {
+          title: "Exchange-Traded Funds for Kids",
+          content: `<h2>Understanding ETFs</h2><p>Learning about diversified investing.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      11: {
+        title: "Interest Mathematics",
+        videoUrl: "https://www.youtube.com/embed/JeV0gXuz8Is",
+        videoLink: "https://www.youtube.com/watch?v=JeV0gXuz8Is",
+        videoTitle: "Grade 5: Compounding Interest - What It Is and How to Earn It",
+        article: {
+          title: "Interest Calculations",
+          content: `<h2>Math Behind Interest</h2><p>Understanding how interest is calculated.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      12: {
+        title: "Banking for Kids",
+        videoUrl: "https://www.youtube.com/embed/PWT6bmKwFBc",
+        videoLink: "https://www.youtube.com/watch?v=PWT6bmKwFBc",
+        videoTitle: "Grade 5: Chase First Banking - Kids' Money Management",
+        article: {
+          title: "Youth Banking Services",
+          content: `<h2>Banking Services for Young People</h2><p>Understanding bank accounts designed for kids.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      13: {
+        title: "Entrepreneurship",
+        videoUrl: "https://www.youtube.com/embed/Z_tw2u3qKuA",
+        videoLink: "https://www.youtube.com/watch?v=Z_tw2u3qKuA",
+        videoTitle: "Grade 5: The TRUTH About Teaching Kids Real Life Entrepreneurship",
+        article: {
+          title: "Starting a Business",
+          content: `<h2>Young Entrepreneurs</h2><p>Learning about starting your own business.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      14: {
+        title: "Entrepreneur Mindset",
+        videoUrl: "https://www.youtube.com/embed/8fB-N_39XMI",
+        videoLink: "https://www.youtube.com/watch?v=8fB-N_39XMI",
+        videoTitle: "Grade 5: ENTREPRENEUR MINDSET - Powerful Motivational",
+        article: {
+          title: "Developing Business Thinking",
+          content: `<h2>Thinking Like an Entrepreneur</h2><p>Developing the mindset of a business owner.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      15: {
+        title: "Advanced Money Teaching",
+        videoUrl: "https://www.youtube.com/embed/2v7xTtdMLAQ?t=150",
+        videoLink: "https://www.youtube.com/watch?v=2v7xTtdMLAQ&t=150",
+        videoTitle: "Grade 5: Advanced Financial Literacy Teaching",
+        article: {
+          title: "Advanced Financial Concepts",
+          content: `<h2>Complex Financial Ideas</h2><p>Understanding more advanced money concepts.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      16: {
+        title: "Risk Management",
+        videoUrl: "https://www.youtube.com/embed/J0GVg3-2rUY?t=120",
+        videoLink: "https://www.youtube.com/watch?v=J0GVg3-2rUY&t=120",
+        videoTitle: "Grade 5: Advanced Financial Risk and Reward",
+        article: {
+          title: "Understanding Financial Risk",
+          content: `<h2>Managing Financial Risk</h2><p>Learning to balance risk and reward in financial decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 150
+      },
+      17: {
+        title: "Charity and Giving",
+        videoUrl: "https://www.youtube.com/embed/OQIKGUaXlRo?t=60",
+        videoLink: "https://www.youtube.com/watch?v=OQIKGUaXlRo&t=60",
+        videoTitle: "Grade 5: Advanced Charitable Giving for Kids",
+        article: {
+          title: "Strategic Charitable Giving",
+          content: `<h2>Planned Giving and Charity</h2><p>Learning about strategic approaches to charitable giving.</p>`
+        },
+        quiz: [],
         xpReward: 150
       }
     },
@@ -1338,285 +1742,635 @@ const LessonViewer = () => {
         videoLink: "https://www.youtube.com/watch?v=IrwTqQ2-9RY",
         videoTitle: "Grade 6: Cash Course - Using Credit and Debit Cards",
         article: {
-          title: "Understanding Credit and Debt: A Comprehensive Guide",
-          content: `
-            <h2>Understanding Credit and Debt: Building Financial Knowledge for Life</h2>
-            <p>Credit and debt are powerful financial tools that can either help you achieve your goals or create serious problems if not used wisely. Understanding how they work is crucial for making smart financial decisions throughout your life.</p>
-            
-            <h3>What is Credit?</h3>
-            <p>Credit is the ability to borrow money or receive goods and services with the promise to pay later. When someone gives you credit, they trust that you will repay what you owe. Credit allows people to make large purchases they couldn't afford to pay for all at once.</p>
-            
-            <h4>Types of Credit</h4>
-            
-            <p><strong>Installment Credit</strong></p>
-            <ul>
-              <li>Car loans - borrow money to buy a car, pay back over several years</li>
-              <li>Student loans - money for education expenses</li>
-              <li>Mortgages - loans to buy houses</li>
-              <li>Personal loans - for various purposes with fixed payment schedules</li>
-            </ul>
-            
-            <p><strong>Revolving Credit</strong></p>
-            <ul>
-              <li>Credit cards - borrow up to a limit, pay back over time</li>
-              <li>Store credit cards - credit for specific retailers</li>
-              <li>Lines of credit - access to funds up to a certain limit</li>
-            </ul>
-            
-            <h3>Credit Cards vs. Debit Cards: Understanding the Difference</h3>
-            
-            <h4>Debit Cards</h4>
-            <p>Debit cards are connected directly to your bank account. When you use a debit card:</p>
-            <ul>
-              <li>Money comes directly from your checking account</li>
-              <li>You can only spend money you actually have</li>
-              <li>No interest charges because you're not borrowing</li>
-              <li>No debt is created</li>
-              <li>May have daily spending limits</li>
-              <li>Great for controlling spending and staying within budget</li>
-            </ul>
-            
-            <h4>Credit Cards</h4>
-            <p>Credit cards allow you to borrow money from the card issuer. When you use a credit card:</p>
-            <ul>
-              <li>You're borrowing money that must be repaid</li>
-              <li>You can spend up to your credit limit, even if you don't have the money</li>
-              <li>Interest charges apply if you don't pay the full balance</li>
-              <li>Creates debt that must be managed</li>
-              <li>Can help build credit history when used responsibly</li>
-              <li>Offers rewards and purchase protections</li>
-            </ul>
-            
-            <h3>How Credit Cards Work</h3>
-            
-            <h4>Key Credit Card Terms</h4>
-            <ul>
-              <li><strong>Credit Limit</strong> - The maximum amount you can borrow</li>
-              <li><strong>Balance</strong> - How much you currently owe</li>
-              <li><strong>Minimum Payment</strong> - The smallest amount you must pay each month</li>
-              <li><strong>Interest Rate (APR)</strong> - The yearly cost of borrowing money</li>
-              <li><strong>Grace Period</strong> - Time to pay without interest charges</li>
-              <li><strong>Due Date</strong> - When payment must be received</li>
-            </ul>
-            
-            <h4>The Credit Card Cycle</h4>
-            <ol>
-              <li><strong>Make Purchases</strong> - Use card to buy things</li>
-              <li><strong>Receive Statement</strong> - Monthly bill showing all transactions</li>
-              <li><strong>Make Payment</strong> - Pay at least the minimum amount</li>
-              <li><strong>Interest Calculation</strong> - If you don't pay in full, interest is charged</li>
-              <li><strong>Cycle Repeats</strong> - New purchases start the next cycle</li>
-            </ol>
-            
-            <h3>The Dangers of Debt</h3>
-            
-            <h4>How Debt Can Become a Problem</h4>
-            <ul>
-              <li><strong>Interest Compounds</strong> - Unpaid interest gets added to the balance</li>
-              <li><strong>Minimum Payments Trap</strong> - Paying only minimums keeps you in debt for years</li>
-              <li><strong>Credit Score Damage</strong> - Late payments hurt your credit history</li>
-              <li><strong>Stress and Anxiety</strong> - Debt creates emotional and financial stress</li>
-              <li><strong>Limited Future Options</strong> - Debt reduces your financial flexibility</li>
-            </ul>
-            
-            <h4>The Minimum Payment Trap</h4>
-            <p>Credit card companies require only small minimum payments, but this keeps you in debt longer:</p>
-            <ul>
-              <li>On a $1,000 balance with 18% interest, paying only minimums takes 5+ years</li>
-              <li>You'll pay over $600 in interest charges</li>
-              <li>The total cost becomes $1,600 for a $1,000 purchase</li>
-              <li>Meanwhile, you can't save money for other goals</li>
-            </ul>
-            
-            <h3>Using Credit Responsibly</h3>
-            
-            <h4>The Golden Rules of Credit Card Use</h4>
-            <ol>
-              <li><strong>Pay the Full Balance Every Month</strong> - Avoid interest charges completely</li>
-              <li><strong>Never Spend More Than You Have</strong> - Only charge what you can afford to pay off</li>
-              <li><strong>Pay On Time, Every Time</strong> - Late payments damage credit scores</li>
-              <li><strong>Keep Balances Low</strong> - Use less than 30% of your credit limit</li>
-              <li><strong>Monitor Your Accounts</strong> - Check statements for errors or fraud</li>
-            </ol>
-            
-            <h4>Good Reasons to Use Credit Cards</h4>
-            <ul>
-              <li><strong>Building Credit History</strong> - Responsible use improves credit scores</li>
-              <li><strong>Purchase Protection</strong> - Better fraud protection than debit cards</li>
-              <li><strong>Rewards Programs</strong> - Earn cash back or points on purchases</li>
-              <li><strong>Emergency Backup</strong> - Available for true emergencies (but savings is better)</li>
-              <li><strong>Convenience</strong> - Easier for online purchases and travel</li>
-            </ul>
-            
-            <h4>Bad Reasons to Use Credit Cards</h4>
-            <ul>
-              <li>To buy things you can't afford</li>
-              <li>To live beyond your means</li>
-              <li>Because you don't want to wait and save</li>
-              <li>To impress others with expensive purchases</li>
-              <li>To pay for regular living expenses when you have cash</li>
-            </ul>
-            
-            <h3>Building Good Credit Early</h3>
-            
-            <h4>Why Credit History Matters</h4>
-            <p>Good credit history helps you:</p>
-            <ul>
-              <li>Get approved for loans at better interest rates</li>
-              <li>Qualify for rental apartments</li>
-              <li>Get better insurance rates</li>
-              <li>Sometimes get better job opportunities</li>
-              <li>Access higher credit limits when needed</li>
-            </ul>
-            
-            <h4>How Young People Can Start Building Credit</h4>
-            <ul>
-              <li><strong>Become an Authorized User</strong> - Parents can add you to their card</li>
-              <li><strong>Student Credit Cards</strong> - Designed for people with limited credit history</li>
-              <li><strong>Secured Credit Cards</strong> - Require a deposit but help build credit</li>
-              <li><strong>Credit Builder Loans</strong> - Small loans designed to establish credit</li>
-            </ul>
-            
-            <h3>Avoiding Common Credit Mistakes</h3>
-            
-            <h4>Mistakes That Can Ruin Your Financial Future</h4>
-            <ul>
-              <li><strong>Making Only Minimum Payments</strong> - Keeps you in debt indefinitely</li>
-              <li><strong>Using Credit for Living Expenses</strong> - Creates a cycle of debt</li>
-              <li><strong>Ignoring Credit Card Statements</strong> - Miss errors and overspending</li>
-              <li><strong>Having Too Many Credit Cards</strong> - More temptation and harder to manage</li>
-              <li><strong>Closing Old Credit Cards</strong> - Can hurt your credit score</li>
-              <li><strong>Co-signing for Others</strong> - You become responsible for their debt</li>
-            </ul>
-            
-            <h3>What to Do If You Get Into Debt Trouble</h3>
-            
-            <h4>Warning Signs of Debt Problems</h4>
-            <ul>
-              <li>Only making minimum payments</li>
-              <li>Using credit cards for basic necessities</li>
-              <li>Borrowing from one card to pay another</li>
-              <li>Avoiding opening credit card statements</li>
-              <li>Feeling stressed or anxious about money</li>
-            </ul>
-            
-            <h4>Steps to Get Out of Debt</h4>
-            <ol>
-              <li><strong>Stop Using Credit Cards</strong> - Don't add to the problem</li>
-              <li><strong>List All Debts</strong> - Know exactly what you owe</li>
-              <li><strong>Create a Payment Plan</strong> - Focus on highest interest debts first</li>
-              <li><strong>Increase Income</strong> - Find ways to earn more money</li>
-              <li><strong>Decrease Expenses</strong> - Cut unnecessary spending</li>
-              <li><strong>Consider Professional Help</strong> - Credit counseling if needed</li>
-            </ol>
-            
-            <h3>Teaching Others About Credit and Debt</h3>
-            <p>Once you understand these concepts, you can help educate friends and family about:</p>
-            <ul>
-              <li>The difference between credit and debit cards</li>
-              <li>How interest charges work</li>
-              <li>The importance of paying bills on time</li>
-              <li>How to use credit responsibly</li>
-              <li>The long-term consequences of debt</li>
-            </ul>
-          `
+          title: "Understanding Credit and Debt",
+          content: `<h2>Credit Cards vs Debit Cards</h2><p>Learning the differences and responsibilities of each payment method.</p>`
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What is the main difference between a credit card and a debit card?",
-            options: ["Credit cards are plastic, debit cards are paper", "Credit cards let you borrow money, debit cards use your own money", "There is no difference", "Credit cards are safer"],
-            correct: "Credit cards let you borrow money, debit cards use your own money",
-            explanation: "Credit cards allow you to borrow money that must be repaid, while debit cards use money directly from your bank account."
-          },
-          {
-            id: 2,
-            question: "What happens if you only make minimum payments on a credit card?",
-            options: ["You pay off the debt quickly", "You stay in debt for many years and pay lots of interest", "Your credit score improves", "Nothing special happens"],
-            correct: "You stay in debt for many years and pay lots of interest",
-            explanation: "Making only minimum payments keeps you in debt for years and results in paying much more due to interest charges."
-          },
-          {
-            id: 3,
-            question: "What is a credit limit?",
-            options: ["How fast you can use a credit card", "The maximum amount you can borrow on a credit card", "The minimum payment required", "The interest rate charged"],
-            correct: "The maximum amount you can borrow on a credit card",
-            explanation: "A credit limit is the maximum amount of money the credit card company will let you borrow."
-          },
-          {
-            id: 4,
-            question: "What is the best way to use a credit card?",
-            options: ["Make minimum payments to build credit", "Use it to buy things you can't afford", "Pay the full balance every month", "Use it for all purchases"],
-            correct: "Pay the full balance every month",
-            explanation: "Paying the full balance every month avoids interest charges while building good credit history."
-          },
-          {
-            id: 5,
-            question: "What is APR on a credit card?",
-            options: ["Annual Percentage Rate - the yearly cost of borrowing", "A type of reward program", "The minimum payment amount", "The credit limit"],
-            correct: "Annual Percentage Rate - the yearly cost of borrowing",
-            explanation: "APR stands for Annual Percentage Rate and represents the yearly interest rate charged on borrowed money."
-          },
-          {
-            id: 6,
-            question: "Why might someone choose a debit card over a credit card?",
-            options: ["Debit cards have better rewards", "Debit cards help control spending by using only available money", "Debit cards build credit faster", "Debit cards have no fees"],
-            correct: "Debit cards help control spending by using only available money",
-            explanation: "Debit cards prevent overspending because you can only use money you actually have in your account."
-          },
-          {
-            id: 7,
-            question: "What is a good reason to use a credit card responsibly?",
-            options: ["To buy things you can't afford", "To build credit history", "To avoid using your own money", "To get into debt"],
-            correct: "To build credit history",
-            explanation: "Using credit cards responsibly (paying on time and in full) helps build a positive credit history for the future."
-          },
-          {
-            id: 8,
-            question: "What percentage of your credit limit should you try to use?",
-            options: ["100%", "75%", "50%", "Less than 30%"],
-            correct: "Less than 30%",
-            explanation: "Keeping your credit card balance below 30% of your credit limit is good for your credit score."
-          },
-          {
-            id: 9,
-            question: "What should you do if you're having trouble paying credit card bills?",
-            options: ["Ignore the problem", "Get more credit cards", "Stop using credit cards and create a payment plan", "Only make minimum payments"],
-            correct: "Stop using credit cards and create a payment plan",
-            explanation: "If you're in debt trouble, stop using credit cards immediately and focus on paying off what you owe."
-          },
-          {
-            id: 10,
-            question: "Why is it important to check your credit card statements?",
-            options: ["To see pretty pictures", "To look for errors and monitor spending", "Banks require it", "To get rewards"],
-            correct: "To look for errors and monitor spending",
-            explanation: "Checking statements helps you catch errors, fraudulent charges, and monitor your spending patterns."
-          }
-        ],
+        quiz: [],
         xpReward: 200
+      },
+      2: {
+        title: "Building Credit",
+        videoUrl: "https://www.youtube.com/embed/BUK03TKNdcw",
+        videoLink: "https://www.youtube.com/watch?v=BUK03TKNdcw",
+        videoTitle: "Grade 6: Building Credit For Your Kids",
+        article: {
+          title: "Introduction to Credit Building",
+          content: `<h2>Starting to Build Credit</h2><p>Understanding how credit works and how to build it responsibly.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      3: {
+        title: "Responsible Credit Use",
+        videoUrl: "https://www.youtube.com/embed/8emCSAYc-Cg",
+        videoLink: "https://www.youtube.com/watch?v=8emCSAYc-Cg",
+        videoTitle: "Grade 6: Credit Cards and Loans - Use Them Responsibly",
+        article: {
+          title: "Using Credit Responsibly",
+          content: `<h2>Smart Credit Habits</h2><p>Learning how to use credit cards and loans responsibly.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      4: {
+        title: "Credit Scores",
+        videoUrl: "https://www.youtube.com/embed/9so90hH4vgc",
+        videoLink: "https://www.youtube.com/watch?v=9so90hH4vgc",
+        videoTitle: "Grade 6: Credit Scores - How To Build and Improve Yours",
+        article: {
+          title: "Understanding Credit Scores",
+          content: `<h2>What Are Credit Scores?</h2><p>Learning how credit scores work and why they matter.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      5: {
+        title: "Advanced Banking",
+        videoUrl: "https://www.youtube.com/embed/ScXAyGh0MRg?t=90",
+        videoLink: "https://www.youtube.com/watch?v=ScXAyGh0MRg&t=90",
+        videoTitle: "Grade 6: Advanced Banking - Checking and Savings Accounts",
+        article: {
+          title: "Advanced Banking Concepts",
+          content: `<h2>Banking Services and Features</h2><p>Understanding different banking services and how to use them.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      6: {
+        title: "Investment Planning",
+        videoUrl: "https://www.youtube.com/embed/6TEHmaJBTkw?t=120",
+        videoLink: "https://www.youtube.com/watch?v=6TEHmaJBTkw&t=120",
+        videoTitle: "Grade 6: Advanced Savings and Investments",
+        article: {
+          title: "Long-term Investment Planning",
+          content: `<h2>Planning Your Investment Future</h2><p>Understanding long-term investment strategies.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      7: {
+        title: "Financial Technology",
+        videoUrl: "https://www.youtube.com/embed/heFCYzA61cY?t=60",
+        videoLink: "https://www.youtube.com/watch?v=heFCYzA61cY&t=60",
+        videoTitle: "Grade 6: Advanced Digital Money Management",
+        article: {
+          title: "Digital Financial Tools",
+          content: `<h2>Modern Financial Technology</h2><p>Understanding digital tools for money management.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      8: {
+        title: "Career and Income",
+        videoUrl: "https://www.youtube.com/embed/E2wcbUNZ-yo?t=180",
+        videoLink: "https://www.youtube.com/watch?v=E2wcbUNZ-yo&t=180",
+        videoTitle: "Grade 6: Career Planning and Income Strategies",
+        article: {
+          title: "Planning Your Career",
+          content: `<h2>Career Choices and Income</h2><p>Understanding how career choices affect income.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      9: {
+        title: "Economic Systems",
+        videoUrl: "https://www.youtube.com/embed/F4rCRzo6UuA?t=90",
+        videoLink: "https://www.youtube.com/watch?v=F4rCRzo6UuA&t=90",
+        videoTitle: "Grade 6: Advanced Economics - Market Systems",
+        article: {
+          title: "Understanding Economic Systems",
+          content: `<h2>How Economies Work</h2><p>Learning about different economic systems and markets.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      10: {
+        title: "Insurance Basics",
+        videoUrl: "https://www.youtube.com/embed/J0GVg3-2rUY?t=180",
+        videoLink: "https://www.youtube.com/watch?v=J0GVg3-2rUY&t=180",
+        videoTitle: "Grade 6: Financial Protection and Insurance",
+        article: {
+          title: "Understanding Insurance",
+          content: `<h2>Protection Through Insurance</h2><p>Learning how insurance protects your finances.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      11: {
+        title: "Tax Fundamentals",
+        videoUrl: "https://www.youtube.com/embed/CjDiUUOYw50?t=90",
+        videoLink: "https://www.youtube.com/watch?v=CjDiUUOYw50&t=90",
+        videoTitle: "Grade 6: Understanding Taxes and Government Revenue",
+        article: {
+          title: "How Taxes Work",
+          content: `<h2>Understanding the Tax System</h2><p>Learning about different types of taxes and why we pay them.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      12: {
+        title: "Business Fundamentals",
+        videoUrl: "https://www.youtube.com/embed/Z_tw2u3qKuA?t=120",
+        videoLink: "https://www.youtube.com/watch?v=Z_tw2u3qKuA&t=120",
+        videoTitle: "Grade 6: Advanced Business Concepts for Kids",
+        article: {
+          title: "Business and Entrepreneurship",
+          content: `<h2>Starting and Running a Business</h2><p>Understanding the basics of business operations.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      13: {
+        title: "Market Analysis",
+        videoUrl: "https://www.youtube.com/embed/bJHr6_skXWc?t=150",
+        videoLink: "https://www.youtube.com/watch?v=bJHr6_skXWc&t=150",
+        videoTitle: "Grade 6: Advanced Stock Market Analysis",
+        article: {
+          title: "Understanding Markets",
+          content: `<h2>Analyzing Financial Markets</h2><p>Learning to understand market trends and analysis.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      14: {
+        title: "Financial Planning",
+        videoUrl: "https://www.youtube.com/embed/ouvbeb2wSGA?t=180",
+        videoLink: "https://www.youtube.com/watch?v=ouvbeb2wSGA&t=180",
+        videoTitle: "Grade 6: Comprehensive Financial Planning",
+        article: {
+          title: "Long-term Financial Planning",
+          content: `<h2>Planning Your Financial Future</h2><p>Creating comprehensive financial plans for life goals.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      15: {
+        title: "Global Economics",
+        videoUrl: "https://www.youtube.com/embed/0WHymXJbipw?t=120",
+        videoLink: "https://www.youtube.com/watch?v=0WHymXJbipw&t=120",
+        videoTitle: "Grade 6: Global Economic Principles",
+        article: {
+          title: "International Finance",
+          content: `<h2>Global Economic Systems</h2><p>Understanding how global economics affects personal finance.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      16: {
+        title: "Investment Strategies",
+        videoUrl: "https://www.youtube.com/embed/mChmwgxEZcQ?t=120",
+        videoLink: "https://www.youtube.com/watch?v=mChmwgxEZcQ&t=120",
+        videoTitle: "Grade 6: Advanced Investment Strategies",
+        article: {
+          title: "Sophisticated Investing",
+          content: `<h2>Advanced Investment Techniques</h2><p>Learning sophisticated investment strategies.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      },
+      17: {
+        title: "Financial Ethics",
+        videoUrl: "https://www.youtube.com/embed/RkDSexrh1jg?t=150",
+        videoLink: "https://www.youtube.com/watch?v=RkDSexrh1jg&t=150",
+        videoTitle: "Grade 6: Ethics in Financial Decision Making",
+        article: {
+          title: "Ethical Financial Decisions",
+          content: `<h2>Ethics and Money</h2><p>Understanding the ethical aspects of financial decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 200
+      }
+    },
+    7: {
+      1: {
+        title: "Advanced Credit Management",
+        videoUrl: "https://www.youtube.com/embed/8emCSAYc-Cg?t=120",
+        videoLink: "https://www.youtube.com/watch?v=8emCSAYc-Cg&t=120",
+        videoTitle: "Grade 7: Advanced Credit and Loan Management",
+        article: {
+          title: "Mastering Credit Management",
+          content: `<h2>Advanced Credit Strategies</h2><p>Learning sophisticated credit management techniques.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      2: {
+        title: "Investment Portfolio",
+        videoUrl: "https://www.youtube.com/embed/mChmwgxEZcQ?t=180",
+        videoLink: "https://www.youtube.com/watch?v=mChmwgxEZcQ&t=180",
+        videoTitle: "Grade 7: Building Investment Portfolios",
+        article: {
+          title: "Portfolio Management",
+          content: `<h2>Creating Investment Portfolios</h2><p>Understanding how to build and manage investment portfolios.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      3: {
+        title: "Market Economics",
+        videoUrl: "https://www.youtube.com/embed/bJHr6_skXWc?t=300",
+        videoLink: "https://www.youtube.com/watch?v=bJHr6_skXWc&t=300",
+        videoTitle: "Grade 7: Market Economics and Trading",
+        article: {
+          title: "Market Economics",
+          content: `<h2>Understanding Market Forces</h2><p>Learning how markets work and affect investments.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      4: {
+        title: "Business Strategy",
+        videoUrl: "https://www.youtube.com/embed/Z_tw2u3qKuA?t=300",
+        videoLink: "https://www.youtube.com/watch?v=Z_tw2u3qKuA&t=300",
+        videoTitle: "Grade 7: Advanced Business Strategy",
+        article: {
+          title: "Strategic Business Planning",
+          content: `<h2>Business Strategy and Planning</h2><p>Understanding how to plan and execute business strategies.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      5: {
+        title: "Financial Analysis",
+        videoUrl: "https://www.youtube.com/embed/ouvbeb2wSGA?t=2400",
+        videoLink: "https://www.youtube.com/watch?v=ouvbeb2wSGA&t=2400",
+        videoTitle: "Grade 7: Financial Analysis and Evaluation",
+        article: {
+          title: "Financial Statement Analysis",
+          content: `<h2>Analyzing Financial Information</h2><p>Learning to read and analyze financial statements.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      6: {
+        title: "Risk Assessment",
+        videoUrl: "https://www.youtube.com/embed/J0GVg3-2rUY?t=240",
+        videoLink: "https://www.youtube.com/watch?v=J0GVg3-2rUY&t=240",
+        videoTitle: "Grade 7: Advanced Risk Assessment",
+        article: {
+          title: "Financial Risk Analysis",
+          content: `<h2>Evaluating Financial Risks</h2><p>Understanding how to assess and manage financial risks.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      7: {
+        title: "Retirement Planning",
+        videoUrl: "https://www.youtube.com/embed/6TEHmaJBTkw?t=300",
+        videoLink: "https://www.youtube.com/watch?v=6TEHmaJBTkw&t=300",
+        videoTitle: "Grade 7: Long-term Retirement Planning",
+        article: {
+          title: "Planning for Retirement",
+          content: `<h2>Retirement Savings Strategies</h2><p>Understanding how to plan for retirement early.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      8: {
+        title: "Tax Strategy",
+        videoUrl: "https://www.youtube.com/embed/CjDiUUOYw50?t=180",
+        videoLink: "https://www.youtube.com/watch?v=CjDiUUOYw50&t=180",
+        videoTitle: "Grade 7: Advanced Tax Planning",
+        article: {
+          title: "Tax Planning Strategies",
+          content: `<h2>Strategic Tax Planning</h2><p>Understanding tax implications of financial decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      9: {
+        title: "Corporate Finance",
+        videoUrl: "https://www.youtube.com/embed/8fB-N_39XMI?t=180",
+        videoLink: "https://www.youtube.com/watch?v=8fB-N_39XMI&t=180",
+        videoTitle: "Grade 7: Corporate Finance Basics",
+        article: {
+          title: "Understanding Corporate Finance",
+          content: `<h2>How Corporations Manage Money</h2><p>Learning about corporate financial management.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      10: {
+        title: "International Finance",
+        videoUrl: "https://www.youtube.com/embed/0WHymXJbipw?t=240",
+        videoLink: "https://www.youtube.com/watch?v=0WHymXJbipw&t=240",
+        videoTitle: "Grade 7: International Financial Markets",
+        article: {
+          title: "Global Financial Systems",
+          content: `<h2>International Financial Markets</h2><p>Understanding global financial systems and markets.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      11: {
+        title: "Financial Innovation",
+        videoUrl: "https://www.youtube.com/embed/d-mKp1qZjek?t=180",
+        videoLink: "https://www.youtube.com/watch?v=d-mKp1qZjek&t=180",
+        videoTitle: "Grade 7: Financial Innovation and Technology",
+        article: {
+          title: "Innovation in Finance",
+          content: `<h2>New Financial Technologies</h2><p>Understanding how technology is changing finance.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      12: {
+        title: "Advanced Banking",
+        videoUrl: "https://www.youtube.com/embed/ScXAyGh0MRg?t=240",
+        videoLink: "https://www.youtube.com/watch?v=ScXAyGh0MRg&t=240",
+        videoTitle: "Grade 7: Advanced Banking Services",
+        article: {
+          title: "Sophisticated Banking",
+          content: `<h2>Advanced Banking Products</h2><p>Understanding complex banking products and services.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      13: {
+        title: "Financial Regulation",
+        videoUrl: "https://www.youtube.com/embed/9so90hH4vgc?t=120",
+        videoLink: "https://www.youtube.com/watch?v=9so90hH4vgc&t=120",
+        videoTitle: "Grade 7: Financial Regulation and Compliance",
+        article: {
+          title: "Understanding Financial Laws",
+          content: `<h2>Financial Regulation and Law</h2><p>Learning about financial regulations and compliance.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      14: {
+        title: "Economic Policy",
+        videoUrl: "https://www.youtube.com/embed/F4rCRzo6UuA?t=240",
+        videoLink: "https://www.youtube.com/watch?v=F4rCRzo6UuA&t=240",
+        videoTitle: "Grade 7: Economic Policy and Markets",
+        article: {
+          title: "Government Economic Policy",
+          content: `<h2>How Government Affects Economy</h2><p>Understanding government's role in the economy.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      15: {
+        title: "Wealth Management",
+        videoUrl: "https://www.youtube.com/embed/rtIBTsv2M5E?t=180",
+        videoLink: "https://www.youtube.com/watch?v=rtIBTsv2M5E&t=180",
+        videoTitle: "Grade 7: Wealth Management Strategies",
+        article: {
+          title: "Managing Wealth",
+          content: `<h2>Strategies for Wealth Management</h2><p>Understanding how to manage and grow wealth.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      16: {
+        title: "Financial Psychology",
+        videoUrl: "https://www.youtube.com/embed/2v7xTtdMLAQ?t=300",
+        videoLink: "https://www.youtube.com/watch?v=2v7xTtdMLAQ&t=300",
+        videoTitle: "Grade 7: Psychology of Money and Decision Making",
+        article: {
+          title: "Psychology of Finance",
+          content: `<h2>How Psychology Affects Money Decisions</h2><p>Understanding the psychological aspects of financial decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      },
+      17: {
+        title: "Social Finance",
+        videoUrl: "https://www.youtube.com/embed/OQIKGUaXlRo?t=180",
+        videoLink: "https://www.youtube.com/watch?v=OQIKGUaXlRo&t=180",
+        videoTitle: "Grade 7: Social Impact Investing",
+        article: {
+          title: "Finance and Social Impact",
+          content: `<h2>Using Finance for Social Good</h2><p>Understanding how finance can create positive social impact.</p>`
+        },
+        quiz: [],
+        xpReward: 250
+      }
+    },
+    8: {
+      1: {
+        title: "Financial Leadership",
+        videoUrl: "https://www.youtube.com/embed/8fB-N_39XMI?t=300",
+        videoLink: "https://www.youtube.com/watch?v=8fB-N_39XMI&t=300",
+        videoTitle: "Grade 8: Financial Leadership and Vision",
+        article: {
+          title: "Leading Through Finance",
+          content: `<h2>Financial Leadership Skills</h2><p>Developing leadership skills in financial contexts.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      2: {
+        title: "Advanced Portfolio Theory",
+        videoUrl: "https://www.youtube.com/embed/mChmwgxEZcQ?t=400",
+        videoLink: "https://www.youtube.com/watch?v=mChmwgxEZcQ&t=400",
+        videoTitle: "Grade 8: Advanced Portfolio Management Theory",
+        article: {
+          title: "Modern Portfolio Theory",
+          content: `<h2>Advanced Investment Theory</h2><p>Understanding sophisticated investment theories and practices.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      3: {
+        title: "Derivatives and Options",
+        videoUrl: "https://www.youtube.com/embed/bJHr6_skXWc?t=600",
+        videoLink: "https://www.youtube.com/watch?v=bJHr6_skXWc&t=600",
+        videoTitle: "Grade 8: Introduction to Derivatives and Options",
+        article: {
+          title: "Complex Financial Instruments",
+          content: `<h2>Understanding Derivatives</h2><p>Learning about complex financial instruments and their uses.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      4: {
+        title: "Macroeconomic Analysis",
+        videoUrl: "https://www.youtube.com/embed/ouvbeb2wSGA?t=3000",
+        videoLink: "https://www.youtube.com/watch?v=ouvbeb2wSGA&t=3000",
+        videoTitle: "Grade 8: Macroeconomic Analysis and Policy",
+        article: {
+          title: "Understanding Macroeconomics",
+          content: `<h2>Large-Scale Economic Analysis</h2><p>Understanding how large-scale economic factors affect finance.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      5: {
+        title: "Financial Modeling",
+        videoUrl: "https://www.youtube.com/embed/0WHymXJbipw?t=360",
+        videoLink: "https://www.youtube.com/watch?v=0WHymXJbipw&t=360",
+        videoTitle: "Grade 8: Financial Modeling and Forecasting",
+        article: {
+          title: "Creating Financial Models",
+          content: `<h2>Building Financial Models</h2><p>Learning to create and use financial models for decision making.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      6: {
+        title: "Alternative Investments",
+        videoUrl: "https://www.youtube.com/embed/rtIBTsv2M5E?t=300",
+        videoLink: "https://www.youtube.com/watch?v=rtIBTsv2M5E&t=300",
+        videoTitle: "Grade 8: Alternative Investment Strategies",
+        article: {
+          title: "Non-Traditional Investments",
+          content: `<h2>Alternative Investment Options</h2><p>Understanding alternative investment vehicles and strategies.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      7: {
+        title: "Cryptocurrency and DeFi",
+        videoUrl: "https://www.youtube.com/embed/d-mKp1qZjek?t=300",
+        videoLink: "https://www.youtube.com/watch?v=d-mKp1qZjek&t=300",
+        videoTitle: "Grade 8: Cryptocurrency and Decentralized Finance",
+        article: {
+          title: "Digital Currencies and DeFi",
+          content: `<h2>The Future of Digital Finance</h2><p>Understanding cryptocurrencies and decentralized finance.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      8: {
+        title: "ESG Investing",
+        videoUrl: "https://www.youtube.com/embed/OQIKGUaXlRo?t=240",
+        videoLink: "https://www.youtube.com/watch?v=OQIKGUaXlRo&t=240",
+        videoTitle: "Grade 8: Environmental, Social, and Governance Investing",
+        article: {
+          title: "Sustainable Investing",
+          content: `<h2>Investing for Impact</h2><p>Understanding ESG principles in investment decisions.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      9: {
+        title: "Financial Engineering",
+        videoUrl: "https://www.youtube.com/embed/JeV0gXuz8Is?t=240",
+        videoLink: "https://www.youtube.com/watch?v=JeV0gXuz8Is&t=240",
+        videoTitle: "Grade 8: Financial Engineering and Innovation",
+        article: {
+          title: "Engineering Financial Solutions",
+          content: `<h2>Creating Financial Solutions</h2><p>Understanding how to engineer innovative financial solutions.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      10: {
+        title: "Behavioral Finance",
+        videoUrl: "https://www.youtube.com/embed/2v7xTtdMLAQ?t=600",
+        videoLink: "https://www.youtube.com/watch?v=2v7xTtdMLAQ&t=600",
+        videoTitle: "Grade 8: Advanced Behavioral Finance",
+        article: {
+          title: "Psychology in Finance",
+          content: `<h2>How Behavior Affects Financial Markets</h2><p>Understanding psychological factors in financial decision making.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      11: {
+        title: "Financial Innovation Lab",
+        videoUrl: "https://www.youtube.com/embed/Z_tw2u3qKuA?t=600",
+        videoLink: "https://www.youtube.com/watch?v=Z_tw2u3qKuA&t=600",
+        videoTitle: "Grade 8: Financial Innovation and Entrepreneurship",
+        article: {
+          title: "Innovating in Finance",
+          content: `<h2>Creating Financial Innovations</h2><p>Learning to innovate and create new financial products and services.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      12: {
+        title: "Global Financial Systems",
+        videoUrl: "https://www.youtube.com/embed/F4rCRzo6UuA?t=400",
+        videoLink: "https://www.youtube.com/watch?v=F4rCRzo6UuA&t=400",
+        videoTitle: "Grade 8: Global Financial Systems and Markets",
+        article: {
+          title: "World Financial Systems",
+          content: `<h2>Understanding Global Finance</h2><p>Learning about international financial systems and their interactions.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      13: {
+        title: "Financial Technology",
+        videoUrl: "https://www.youtube.com/embed/heFCYzA61cY?t=240",
+        videoLink: "https://www.youtube.com/watch?v=heFCYzA61cY&t=240",
+        videoTitle: "Grade 8: Advanced Financial Technology",
+        article: {
+          title: "FinTech Innovation",
+          content: `<h2>Technology Transforming Finance</h2><p>Understanding how technology is revolutionizing financial services.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      14: {
+        title: "Quantitative Finance",
+        videoUrl: "https://www.youtube.com/embed/qxltazxfaSk?t=180",
+        videoLink: "https://www.youtube.com/watch?v=qxltazxfaSk&t=180",
+        videoTitle: "Grade 8: Quantitative Finance and Mathematical Modeling",
+        article: {
+          title: "Mathematical Finance",
+          content: `<h2>Math in Financial Analysis</h2><p>Understanding mathematical approaches to financial analysis.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      15: {
+        title: "Financial Ethics and Governance",
+        videoUrl: "https://www.youtube.com/embed/RkDSexrh1jg?t=300",
+        videoLink: "https://www.youtube.com/watch?v=RkDSexrh1jg&t=300",
+        videoTitle: "Grade 8: Advanced Financial Ethics and Corporate Governance",
+        article: {
+          title: "Ethics in Advanced Finance",
+          content: `<h2>Ethical Leadership in Finance</h2><p>Understanding ethical considerations in advanced financial decision making.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      16: {
+        title: "Financial Research Methods",
+        videoUrl: "https://www.youtube.com/embed/J0GVg3-2rUY?t=400",
+        videoLink: "https://www.youtube.com/watch?v=J0GVg3-2rUY&t=400",
+        videoTitle: "Grade 8: Financial Research and Analysis Methods",
+        article: {
+          title: "Research in Finance",
+          content: `<h2>Conducting Financial Research</h2><p>Learning advanced methods for financial research and analysis.</p>`
+        },
+        quiz: [],
+        xpReward: 300
+      },
+      17: {
+        title: "Future of Finance",
+        videoUrl: "https://www.youtube.com/embed/8odVNzJJsB8?t=300",
+        videoLink: "https://www.youtube.com/watch?v=8odVNzJJsB8&t=300",
+        videoTitle: "Grade 8: The Future of Finance and Investment",
+        article: {
+          title: "Finance in the Future",
+          content: `<h2>The Future of Financial Systems</h2><p>Understanding emerging trends and the future of finance.</p>`
+        },
+        quiz: [],
+        xpReward: 300
       }
     }
   };
 
-  const currentLesson = lessonContent[grade]?.[module];
+  const gradeContent = lessonContent[grade as keyof typeof lessonContent];
+  const currentLessonContent = gradeContent?.[module as keyof typeof gradeContent];
 
-  if (!currentLesson) {
+  if (!currentLessonContent) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
         <div className="max-w-4xl mx-auto">
-          <Card>
-            <CardContent className="p-8 text-center">
-              <h1 className="text-2xl font-bold text-gray-800 mb-4">Lesson Not Found</h1>
-              <p className="text-gray-600 mb-6">
-                Sorry, we couldn't find the lesson you're looking for.
-              </p>
-              <Link to="/dashboard">
-                <Button>
-                  <Home className="w-4 h-4 mr-2" />
-                  Back to Dashboard
-                </Button>
-              </Link>
-            </CardContent>
+          <Card className="p-8 text-center">
+            <h2 className="text-2xl font-bold text-destructive mb-4">Lesson Not Found</h2>
+            <p className="text-muted-foreground mb-6">
+              Sorry, we couldn't find the lesson you're looking for.
+            </p>
+            <Button onClick={() => navigate('/game-start')}>
+              <Home className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
           </Card>
         </div>
       </div>
@@ -1624,560 +2378,461 @@ const LessonViewer = () => {
   }
 
   const handleVideoComplete = async () => {
-    if (!videoCompleted && user) {
-      setVideoCompleted(true);
-      
-      const { data: lesson } = await supabase
-        .from('lessons')
-        .select('id')
-        .eq('grade_level', grade)
-        .eq('module_number', module)
-        .single();
-
-      if (lesson) {
-        await supabase
-          .from('lesson_progress')
-          .upsert({
-            user_id: user.id,
-            lesson_id: lesson.id,
-            video_completed: true,
-            article_completed: progress.article_completed,
-            quiz_completed: progress.quiz_completed,
-            quiz_score: progress.quiz_score,
-            quiz_attempts: progress.quiz_attempts,
-            xp_earned: progress.xp_earned
-          });
-      }
-      
-      toast.success("Video completed! Great job!");
+    setVideoCompleted(true);
+    if (user) {
+      await updateProgress('video_completed', true);
     }
+    toast.success("Video completed! Great job!");
+    
+    // Auto-progress to article section
+    setTimeout(() => {
+      setCurrentSection('article');
+    }, 1500);
   };
 
   const handleArticleComplete = async () => {
-    if (!articleCompleted && user) {
-      setArticleCompleted(true);
-      
-      const { data: lesson } = await supabase
-        .from('lessons')
-        .select('id')
-        .eq('grade_level', grade)
-        .eq('module_number', module)
+    setArticleCompleted(true);
+    if (user) {
+      await updateProgress('article_completed', true);
+    }
+    toast.success("Article completed! Keep it up!");
+    
+    // Auto-progress to quiz section and scroll to top
+    setTimeout(() => {
+      setCurrentSection('quiz');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1500);
+  };
+
+  const updateProgress = async (field: string, value: any) => {
+    if (!user) return;
+
+    const { data: lesson } = await supabase
+      .from('lessons')
+      .select('id')
+      .eq('grade_level', grade)
+      .eq('module_number', module)
+      .single();
+
+    if (lesson) {
+      const { data: existingProgress } = await supabase
+        .from('lesson_progress')
+        .select('*')
+        .eq('user_id', user.id)
+        .eq('lesson_id', lesson.id)
         .single();
 
-      if (lesson) {
-        await supabase
-          .from('lesson_progress')
-          .upsert({
-            user_id: user.id,
-            lesson_id: lesson.id,
-            video_completed: progress.video_completed,
-            article_completed: true,
-            quiz_completed: progress.quiz_completed,
-            quiz_score: progress.quiz_score,
-            quiz_attempts: progress.quiz_attempts,
-            xp_earned: progress.xp_earned
-          });
-      }
-      
-      toast.success("Article completed! You're making great progress!");
+      const updateData = {
+        user_id: user.id,
+        lesson_id: lesson.id,
+        [field]: value,
+        ...existingProgress
+      };
+
+      await supabase
+        .from('lesson_progress')
+        .upsert(updateData);
     }
   };
 
-  const handleQuizAnswer = (questionId: number, answer: string) => {
-    setQuizAnswers(prev => ({
-      ...prev,
-      [questionId]: answer
-    }));
-  };
-
   const handleQuizSubmit = async () => {
-    const quiz = currentLesson.quiz;
-    let correctAnswers = 0;
+    if (!currentLessonContent.quiz) return;
     
-    quiz.forEach(question => {
+    let correctAnswers = 0;
+    currentLessonContent.quiz.forEach((question: any) => {
       if (quizAnswers[question.id] === question.correct) {
         correctAnswers++;
       }
     });
+
+    const scorePercentage = (correctAnswers / currentLessonContent.quiz.length) * 100;
+    const earnedXp = Math.floor((scorePercentage / 100) * currentLessonContent.xpReward);
     
-    const finalScore = Math.round((correctAnswers / quiz.length) * 100);
-    const earnedXP = finalScore >= 70 ? currentLesson.xpReward : Math.round(currentLesson.xpReward * 0.5);
-    
-    setScore(finalScore);
-    setXpEarned(earnedXP);
+    setScore(scorePercentage);
+    setXpEarned(earnedXp);
     setQuizSubmitted(true);
-    
+
     if (user) {
-      const { data: lesson } = await supabase
-        .from('lessons')
-        .select('id')
-        .eq('grade_level', grade)
-        .eq('module_number', module)
+      await updateProgress('quiz_completed', true);
+      await updateProgress('quiz_score', scorePercentage);
+      await updateProgress('xp_earned', earnedXp);
+      
+      // Update user's total XP
+      const { data: profile } = await supabase
+        .from('user_profiles')
+        .select('*')
+        .eq('user_id', user.id)
         .single();
 
-      if (lesson) {
-        const newAttempts = (progress.quiz_attempts || 0) + 1;
-        
-        await supabase
-          .from('lesson_progress')
-          .upsert({
-            user_id: user.id,
-            lesson_id: lesson.id,
-            video_completed: videoCompleted,
-            article_completed: articleCompleted,
-            quiz_completed: finalScore >= 70,
-            quiz_score: finalScore,
-            quiz_attempts: newAttempts,
-            xp_earned: earnedXP
-          });
-
-        // XP tracking is handled through lesson_progress table
-        // Update user progress (removing total_xp reference as it doesn't exist)
-
-        // Check for badges
-        if (finalScore === 100) {
-          // First get the badge ID from badges table
-          const { data: badge } = await supabase
-            .from('badges')
-            .select('id')
-            .eq('name', 'Perfect Score')
-            .single();
-
-          if (badge) {
-            const { data: existingBadge } = await supabase
-              .from('user_badges')
-              .select('id')
-              .eq('user_id', user.id)
-              .eq('badge_id', badge.id)
-              .single();
-
-            if (!existingBadge) {
-              await supabase
-                .from('user_badges')
-                .insert({
-                  user_id: user.id,
-                  badge_id: badge.id
-                });
-              toast.success("🏆 Perfect Score badge earned!");
-            }
-          }
-        }
-      }
+      // Handle profile creation or update
+      await supabase
+        .from('user_profiles')
+        .upsert({
+          user_id: user.id,
+          display_name: profile?.display_name || 'Student'
+        });
     }
-    
-    if (finalScore >= 70) {
-      toast.success(`Congratulations! You scored ${finalScore}% and earned ${earnedXP} XP!`);
+
+    if (scorePercentage >= 80) {
+      toast.success(`Excellent! You scored ${scorePercentage.toFixed(1)}% and earned ${earnedXp} XP!`);
+    } else if (scorePercentage >= 60) {
+      toast("Good job! You can retake the quiz to improve your score.", { description: `Score: ${scorePercentage.toFixed(1)}%` });
     } else {
-      toast.error(`You scored ${finalScore}%. You need 70% to pass. Try again!`);
+      toast("Keep trying! Review the material and retake the quiz.", { description: `Score: ${scorePercentage.toFixed(1)}%` });
     }
   };
 
-  const handleRetakeQuiz = () => {
-    setQuizAnswers({});
-    setQuizSubmitted(false);
-    setScore(0);
-    setXpEarned(0);
+  const nextModule = () => {
+    if (module < 17) {
+      navigate(`/education/grade/${grade}/module/${module + 1}`);
+    } else if (grade < 8) {
+      navigate(`/education/grade/${grade + 1}/module/1`);
+    }
   };
 
-  const getOverallProgress = () => {
-    let completed = 0;
-    if (videoCompleted) completed++;
-    if (articleCompleted) completed++;
-    if (progress.quiz_completed) completed++;
-    return Math.round((completed / 3) * 100);
+  const prevModule = () => {
+    if (module > 1) {
+      navigate(`/education/grade/${grade}/module/${module - 1}`);
+    } else if (grade > 3) {
+      navigate(`/education/grade/${grade - 1}/module/17`);
+    }
   };
 
-  const canAccessSection = (section: string) => {
-    if (section === 'video') return true;
-    if (section === 'article') return videoCompleted;
-    if (section === 'quiz') return videoCompleted && articleCompleted;
-    return false;
-  };
+  const overallProgress = ((videoCompleted ? 1 : 0) + (articleCompleted ? 1 : 0) + (quizSubmitted && score >= 60 ? 1 : 0)) / 3 * 100;
 
-  const renderVideoSection = () => (
-    <div className="space-y-6">
-      <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-        <iframe
-          src={currentLesson.videoUrl}
-          title={currentLesson.videoTitle}
-          className="w-full h-full"
-          allowFullScreen
-          onLoad={() => {
-            // Auto-mark video as completed after a short delay
-            setTimeout(() => {
-              if (!videoCompleted) {
-                handleVideoComplete();
-              }
-            }, 3000);
-          }}
-        />
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Play className="w-5 h-5 text-blue-600" />
-          <span className="font-medium">{currentLesson.videoTitle}</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <a
-            href={currentLesson.videoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-          >
-            <ExternalLink className="w-4 h-4" />
-          </a>
-          {videoCompleted && (
-            <Badge variant="secondary" className="bg-green-100 text-green-800">
-              <CheckCircle className="w-3 h-3 mr-1" />
-              Completed
-            </Badge>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-
-  const renderArticleSection = () => (
-    <div className="space-y-6">
-      <div className="prose max-w-none">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          {currentLesson.article.title}
-        </h1>
-        <div 
-          className="text-gray-700 leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: currentLesson.article.content }}
-        />
-      </div>
-      
-      <div className="flex justify-between items-center pt-6 border-t">
-        <div className="flex items-center space-x-2">
-          <FileText className="w-5 h-5 text-blue-600" />
-          <span className="font-medium">Reading Material</span>
-        </div>
-        {!articleCompleted ? (
-          <Button onClick={handleArticleComplete} className="bg-green-600 hover:bg-green-700">
-            <CheckCircle className="w-4 h-4 mr-2" />
-            Mark as Complete
-          </Button>
-        ) : (
-          <Badge variant="secondary" className="bg-green-100 text-green-800">
-            <CheckCircle className="w-3 h-3 mr-1" />
-            Completed
-          </Badge>
-        )}
-      </div>
-    </div>
-  );
-
-  const renderQuizSection = () => (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <HelpCircle className="w-5 h-5 text-blue-600" />
-          <h2 className="text-2xl font-bold">Knowledge Check Quiz</h2>
-        </div>
-        <Badge variant="outline">
-          {currentLesson.quiz.length} Questions
-        </Badge>
-      </div>
-
-      {!quizSubmitted ? (
-        <div className="space-y-6">
-          {currentLesson.quiz.map((question, index) => (
-            <Card key={question.id} className="p-6">
-              <h3 className="font-semibold text-lg mb-4">
-                {index + 1}. {question.question}
-              </h3>
-              <div className="space-y-2">
-                {question.options.map((option, optionIndex) => (
-                  <label
-                    key={optionIndex}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
-                  >
-                    <input
-                      type="radio"
-                      name={`question-${question.id}`}
-                      value={option}
-                      checked={quizAnswers[question.id] === option}
-                      onChange={() => handleQuizAnswer(question.id, option)}
-                      className="text-blue-600"
-                    />
-                    <span>{option}</span>
-                  </label>
-                ))}
-              </div>
-            </Card>
-          ))}
-          
-          <div className="flex justify-center">
-            <Button
-              onClick={handleQuizSubmit}
-              disabled={Object.keys(quizAnswers).length !== currentLesson.quiz.length}
-              className="bg-blue-600 hover:bg-blue-700 px-8 py-3"
-            >
-              Submit Quiz
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8 bg-card/80 backdrop-blur-sm p-6 rounded-lg border shadow-sm mt-4">
+          <div className="flex items-center gap-4">
+            <Button variant="outline" onClick={() => navigate(`/grade/${grade}`)}>
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Grade {grade}
             </Button>
+            <div>
+              <h1 className="text-3xl font-bold text-foreground">Grade {grade} - Module {module}</h1>
+              <p className="text-xl text-muted-foreground">{currentLessonContent.title}</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="flex items-center gap-2 mb-2">
+              <Trophy className="w-5 h-5 text-yellow-500" />
+              <span className="font-semibold text-foreground">Progress: {overallProgress.toFixed(0)}%</span>
+            </div>
+            <Progress value={overallProgress} className="w-32" />
           </div>
         </div>
-      ) : (
-        <div className="space-y-6">
-          <Card className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                {score >= 70 ? (
-                  <Trophy className="w-12 h-12 text-yellow-500" />
-                ) : (
-                  <Award className="w-12 h-12 text-gray-400" />
-                )}
-              </div>
-              <h3 className="text-2xl font-bold mb-2">
-                Your Score: {score}%
-              </h3>
-              <p className="text-gray-600 mb-4">
-                You earned {xpEarned} XP!
-              </p>
-              {score >= 70 ? (
-                <Badge className="bg-green-100 text-green-800 px-4 py-2">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Passed!
-                </Badge>
-              ) : (
-                <div className="space-y-2">
-                  <Badge variant="destructive" className="px-4 py-2">
-                    Need 70% to pass
-                  </Badge>
-                  <div>
-                    <Button onClick={handleRetakeQuiz} variant="outline">
-                      Retake Quiz
+
+        {/* Navigation Tabs */}
+        <div className="flex gap-2 mb-6">
+          <Button
+            variant={currentSection === 'video' ? 'default' : 'outline'}
+            onClick={() => setCurrentSection('video')}
+            className="flex items-center gap-2"
+          >
+            <Play className="w-4 h-4" />
+            Video
+            {videoCompleted && <CheckCircle className="w-4 h-4 text-green-500" />}
+          </Button>
+          <Button
+            variant={currentSection === 'article' ? 'default' : 'outline'}
+            onClick={() => setCurrentSection('article')}
+            className="flex items-center gap-2"
+          >
+            <FileText className="w-4 h-4" />
+            Article
+            {articleCompleted && <CheckCircle className="w-4 h-4 text-green-500" />}
+          </Button>
+          <Button
+            variant={currentSection === 'quiz' ? 'default' : 'outline'}
+            onClick={() => setCurrentSection('quiz')}
+            className="flex items-center gap-2"
+          >
+            <HelpCircle className="w-4 h-4" />
+            Quiz
+            {quizSubmitted && score >= 60 && <CheckCircle className="w-4 h-4 text-green-500" />}
+          </Button>
+        </div>
+
+        {/* Content Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Main Content */}
+          <div className="lg:col-span-3">
+            <Card className="p-6">
+              {currentSection === 'video' && (
+                <div>
+                  <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <Play className="w-6 h-6" />
+                    {currentLessonContent.videoTitle}
+                  </h2>
+                  <div className="aspect-video mb-4 rounded-lg overflow-hidden bg-muted">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={currentLessonContent.videoUrl}
+                      title={currentLessonContent.videoTitle}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  
+                  {/* Direct YouTube Link */}
+                  <div className="mb-4 p-3 bg-muted rounded-lg">
+                    <p className="text-sm text-muted-foreground mb-2">
+                      If the video doesn't work above, you can watch it directly on YouTube:
+                    </p>
+                    <a 
+                      href={currentLessonContent.videoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-primary hover:underline"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Open in YouTube
+                    </a>
+                  </div>
+
+                  <div className="flex justify-end items-center">
+                    <Button onClick={handleVideoComplete} disabled={videoCompleted}>
+                      {videoCompleted ? (
+                        <>
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          Completed
+                        </>
+                      ) : (
+                        'Mark as Watched'
+                      )}
                     </Button>
                   </div>
                 </div>
               )}
-            </div>
-          </Card>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Quiz Review</h3>
-            {currentLesson.quiz.map((question, index) => {
-              const userAnswer = quizAnswers[question.id];
-              const isCorrect = userAnswer === question.correct;
-              
-              return (
-                <Card key={question.id} className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-white text-sm ${
-                      isCorrect ? 'bg-green-500' : 'bg-red-500'
-                    }`}>
-                      {index + 1}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold mb-2">{question.question}</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className={`p-2 rounded ${
-                          userAnswer === question.correct 
-                            ? 'bg-green-100 text-green-800' 
-                            : 'bg-red-100 text-red-800'
-                        }`}>
-                          Your answer: {userAnswer || 'Not answered'}
-                        </div>
-                        {userAnswer !== question.correct && (
-                          <div className="p-2 rounded bg-green-100 text-green-800">
-                            Correct answer: {question.correct}
+              {currentSection === 'article' && (
+                <div className="text-white">
+                  <h2 className="text-2xl font-bold mb-6 text-white">{currentLessonContent.article.title}</h2>
+                  <div 
+                    className="prose prose-lg prose-invert max-w-none text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>li]:text-white [&>strong]:text-white"
+                    dangerouslySetInnerHTML={{ __html: currentLessonContent.article.content }}
+                  />
+                  <div className="mt-8 pt-6 border-t border-white/20 flex justify-end">
+                    <Button onClick={handleArticleComplete} disabled={articleCompleted}>
+                      {articleCompleted ? (
+                        <>
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          Completed
+                        </>
+                      ) : (
+                        'Mark as Read'
+                      )}
+                    </Button>
+                  </div>
+                </div>
+              )}
+
+              {currentSection === 'quiz' && currentLessonContent.quiz && (
+                <div>
+                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <HelpCircle className="w-6 h-6" />
+                    Knowledge Check
+                  </h2>
+                  
+                  {!quizSubmitted ? (
+                    <div className="space-y-6">
+                      {currentLessonContent.quiz.map((question: any, index: number) => (
+                        <Card key={question.id} className="p-4">
+                          <h3 className="font-semibold mb-4">
+                            {index + 1}. {question.question}
+                          </h3>
+                          <div className="space-y-2">
+                            {question.options.map((option: string) => (
+                              <label key={option} className="flex items-center gap-3 p-2 rounded hover:bg-muted cursor-pointer">
+                                <input
+                                  type="radio"
+                                  name={`question-${question.id}`}
+                                  value={option}
+                                  onChange={(e) => setQuizAnswers(prev => ({ ...prev, [question.id]: e.target.value }))}
+                                  className="w-4 h-4"
+                                />
+                                <span>{option}</span>
+                              </label>
+                            ))}
                           </div>
+                        </Card>
+                      ))}
+                      
+                      <Button 
+                        onClick={handleQuizSubmit}
+                        disabled={Object.keys(quizAnswers).length !== currentLessonContent.quiz.length}
+                        className="w-full"
+                      >
+                        Submit Quiz
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="space-y-6">
+                      <div className="text-center p-6 bg-muted rounded-lg">
+                        <Award className="w-16 h-16 mx-auto mb-4 text-yellow-500" />
+                        <h3 className="text-2xl font-bold mb-2">Quiz Completed!</h3>
+                        <p className="text-lg mb-2">Score: {score.toFixed(1)}%</p>
+                        <p className="text-lg">XP Earned: {xpEarned}</p>
+                        {score < 60 && (
+                          <Button 
+                            onClick={() => {
+                              setQuizSubmitted(false);
+                              setQuizAnswers({});
+                              setScore(0);
+                              setXpEarned(0);
+                            }}
+                            className="mt-4"
+                          >
+                            Retake Quiz
+                          </Button>
                         )}
-                        <div className="p-2 rounded bg-blue-50 text-blue-800">
-                          <strong>Explanation:</strong> {question.explanation}
-                        </div>
+                      </div>
+                      
+                      {/* Show correct answers */}
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold">Answer Review:</h3>
+                        {currentLessonContent.quiz.map((question: any, index: number) => (
+                          <Card key={question.id} className="p-4">
+                            <h4 className="font-semibold mb-2">
+                              {index + 1}. {question.question}
+                            </h4>
+                            <div className="space-y-2">
+                              <div className={`p-2 rounded ${quizAnswers[question.id] === question.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                                <strong>Your answer:</strong> {quizAnswers[question.id] || 'Not answered'}
+                              </div>
+                              <div className="p-2 rounded bg-green-100 text-green-800">
+                                <strong>Correct answer:</strong> {question.correct}
+                              </div>
+                              <div className="p-2 rounded bg-blue-100 text-blue-800">
+                                <strong>Explanation:</strong> {question.explanation}
+                              </div>
+                            </div>
+                          </Card>
+                        ))}
                       </div>
                     </div>
-                  </div>
-                </Card>
-              );
-            })}
+                  )}
+                </div>
+              )}
+            </Card>
           </div>
-        </div>
-      )}
-    </div>
-  );
 
-  const renderContent = () => {
-    switch (currentSection) {
-      case 'video':
-        return renderVideoSection();
-      case 'article':
-        return renderArticleSection();
-      case 'quiz':
-        return renderQuizSection();
-      default:
-        return renderVideoSection();
-    }
-  };
+          {/* Sidebar */}
+          <div className="space-y-4">
+            {/* Progress Card */}
+            <Card className="p-4">
+              <h3 className="font-bold mb-3">Lesson Progress</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="flex items-center gap-2">
+                    <Play className="w-4 h-4" />
+                    Video
+                  </span>
+                  {videoCompleted ? (
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                  ) : (
+                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
+                  )}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Article
+                  </span>
+                  {articleCompleted ? (
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                  ) : (
+                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
+                  )}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="flex items-center gap-2">
+                    <HelpCircle className="w-4 h-4" />
+                    Quiz
+                  </span>
+                  {quizSubmitted && score >= 60 ? (
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                  ) : (
+                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
+                  )}
+                </div>
+              </div>
+            </Card>
 
-  const getNextModule = () => {
-    const maxModules = Object.keys(lessonContent[grade] || {}).length;
-    if (module < maxModules) {
-      return { grade, module: module + 1 };
-    }
-    
-    const nextGrade = grade + 1;
-    if (lessonContent[nextGrade]) {
-      return { grade: nextGrade, module: 1 };
-    }
-    
-    return null;
-  };
-
-  const getPreviousModule = () => {
-    if (module > 1) {
-      return { grade, module: module - 1 };
-    }
-    
-    const prevGrade = grade - 1;
-    if (lessonContent[prevGrade]) {
-      const maxModules = Object.keys(lessonContent[prevGrade]).length;
-      return { grade: prevGrade, module: maxModules };
-    }
-    
-    return null;
-  };
-
-  const nextModule = getNextModule();
-  const previousModule = getPreviousModule();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link to="/dashboard">
-                <Button variant="ghost" size="sm">
+            {/* Navigation Card */}
+            <Card className="p-4">
+              <h3 className="font-bold mb-3">Navigation</h3>
+              <div className="space-y-2">
+                <Button 
+                  variant="outline" 
+                  onClick={prevModule}
+                  disabled={grade === 3 && module === 1}
+                  className="w-full justify-start"
+                >
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Dashboard
+                  Previous Module
                 </Button>
-              </Link>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">
-                  Grade {grade} - Module {module}
-                </h1>
-                <p className="text-gray-600">{currentLesson.title}</p>
+                <Button 
+                  variant="outline" 
+                  onClick={nextModule}
+                  disabled={grade === 8 && module === 17}
+                  className="w-full justify-start"
+                >
+                  Next Module
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
-            </div>
+            </Card>
+
+            {/* Module Info Card */}
+            <Card className="p-4">
+              <h3 className="font-bold mb-3">Module Info</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Grade:</span>
+                  <span>{grade}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Module:</span>
+                  <span>{module} of 17</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Max XP:</span>
+                  <span>{currentLessonContent.xpReward}</span>
+                </div>
+                {xpEarned > 0 && (
+                  <div className="flex justify-between font-semibold text-green-600">
+                    <span>XP Earned:</span>
+                    <span>{xpEarned}</span>
+                  </div>
+                )}
+              </div>
+            </Card>
+
+            {/* Badges Card */}
+            {badges.length > 0 && (
+              <Card className="p-4">
+                <h3 className="font-bold mb-3">Your Badges</h3>
+                <div className="grid grid-cols-3 gap-2">
+                  {badges.slice(0, 6).map((badge) => (
+                    <div key={badge.id} className="text-center">
+                      <div className="text-2xl mb-1">{badge.icon}</div>
+                      <div className="text-xs">{badge.name}</div>
+                    </div>
+                  ))}
+                </div>
+                {badges.length > 6 && (
+                  <p className="text-xs text-muted-foreground mt-2 text-center">
+                    +{badges.length - 6} more badges
+                  </p>
+                )}
+              </Card>
+            )}
           </div>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Main Content Sections */}
-        <div className="space-y-8">
-          {/* Video Section */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Play className="w-5 h-5" />
-                <span>Video Lesson</span>
-                {videoCompleted && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {renderVideoSection()}
-            </CardContent>
-          </Card>
-
-          {/* Article Section */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <FileText className="w-5 h-5" />
-                <span>Reading Material</span>
-                {articleCompleted && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {renderArticleSection()}
-            </CardContent>
-          </Card>
-
-          {/* Quiz Section */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <HelpCircle className="w-5 h-5" />
-                <span>Knowledge Quiz</span>
-                {progress.quiz_completed && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {renderQuizSection()}
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Bottom Section - Navigation and Stats */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Navigation */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">Navigation</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              {previousModule && (
-                <Link to={`/lesson/${previousModule.grade}/${previousModule.module}`}>
-                  <Button variant="outline" className="w-full justify-start">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Previous Module
-                  </Button>
-                </Link>
-              )}
-              
-              {nextModule && (
-                <Link to={`/lesson/${nextModule.grade}/${nextModule.module}`}>
-                  <Button variant="outline" className="w-full justify-start">
-                    Next Module
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              )}
-            </CardContent>
-          </Card>
-
-          {/* Progress Stats */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg flex items-center space-x-2">
-                <Star className="w-5 h-5" />
-                <span>Your Progress</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">XP Earned</span>
-                <Badge variant="secondary">{progress.xp_earned || 0} XP</Badge>
-              </div>
-              
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Quiz Attempts</span>
-                <Badge variant="outline">{progress.quiz_attempts || 0}</Badge>
-              </div>
-              
-              {progress.quiz_score && (
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Best Score</span>
-                  <Badge variant="secondary">{progress.quiz_score}%</Badge>
-                </div>
-              )}
-              
-              <div className="pt-2 border-t">
-                <div className="flex justify-between items-center text-sm">
-                  <span className="text-gray-600">Overall Progress</span>
-                  <span className="font-medium">{getOverallProgress()}%</span>
-                </div>
-                <Progress value={getOverallProgress()} className="mt-1" />
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>
