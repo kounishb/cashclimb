@@ -1731,37 +1731,69 @@ const LessonViewer = () => {
             xp_earned: earnedXP
           });
 
-        // Update user XP
-        const { data: userData } = await supabase
-          .from('profiles')
-          .select('total_xp')
-          .eq('id', user.id)
-          .single();
+        // Calculate total XP from lesson progress
+        const { data: totalXpData } = await supabase
+          .from('lesson_progress')
+          .select('xp_earned')
+          .eq('user_id', user.id);
 
-        if (userData) {
-          await supabase
-            .from('profiles')
-            .update({ total_xp: (userData.total_xp || 0) + earnedXP })
-            .eq('id', user.id);
+        const totalXP = totalXpData?.reduce((sum, record) => sum + (record.xp_earned || 0), 0) || 0;
+
+        // Check for badges based on total XP
+        if (finalScore === 100) {
+          // Get the perfect score badge (assuming there's one for perfect scores)
+          const { data: perfectScoreBadge } = await supabase
+            .from('badges')
+            .select('id')
+            .eq('name', 'Perfect Score')
+            .maybeSingle();
+
+          if (perfectScoreBadge) {
+            const { data: existingBadge } = await supabase
+              .from('user_badges')
+              .select('id')
+              .eq('user_id', user.id)
+              .eq('badge_id', perfectScoreBadge.id)
+              .maybeSingle();
+
+            if (!existingBadge) {
+              await supabase
+                .from('user_badges')
+                .insert({
+                  user_id: user.id,
+                  badge_id: perfectScoreBadge.id
+                });
+              toast.success("🏆 Perfect Score badge earned!");
+            }
+          }
         }
 
-        // Check for badges
-        if (finalScore === 100) {
-          const { data: existingBadge } = await supabase
-            .from('user_badges')
-            .select('id')
-            .eq('user_id', user.id)
-            .eq('badge_id', 1)
-            .single();
+        // Check for XP milestone badges
+        const { data: xpBadges } = await supabase
+          .from('badges')
+          .select('*')
+          .lte('xp_required', totalXP)
+          .order('xp_required', { ascending: false });
 
-          if (!existingBadge) {
-            await supabase
+        if (xpBadges) {
+          for (const badge of xpBadges) {
+            const { data: existingBadge } = await supabase
               .from('user_badges')
-              .insert({
-                user_id: user.id,
-                badge_id: 1
-              });
-            toast.success("🏆 Perfect Score badge earned!");
+              .select('id')
+              .eq('user_id', user.id)
+              .eq('badge_id', badge.id)
+              .maybeSingle();
+
+            if (!existingBadge) {
+              await supabase
+                .from('user_badges')
+                .insert({
+                  user_id: user.id,
+                  badge_id: badge.id
+                });
+              toast.success(`🏆 ${badge.name} badge earned!`);
+              break; // Only award one badge per quiz completion
+            }
           }
         }
       }
