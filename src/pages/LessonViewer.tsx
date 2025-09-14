@@ -2498,8 +2498,29 @@ const LessonViewer = () => {
         console.error('Error saving progress:', error);
       } else {
         setProgress(prev => ({ ...prev, ...progressUpdate }));
+        
+        // Also update localStorage for consistency with other pages
+        if (progressUpdate.quiz_completed) {
+          updateLocalStorageProgress(grade, module, progressUpdate.xp_earned || 0);
+        }
       }
     }
+  };
+
+  const updateLocalStorageProgress = (grade: number, module: number, xpEarned: number) => {
+    const savedProgress = localStorage.getItem('financialEducationProgress');
+    let progress = savedProgress ? JSON.parse(savedProgress) : {};
+    
+    if (!progress[grade]) {
+      progress[grade] = { completedModules: [], totalXP: 0 };
+    }
+    
+    if (!progress[grade].completedModules.includes(module)) {
+      progress[grade].completedModules.push(module);
+      progress[grade].totalXP += xpEarned;
+    }
+    
+    localStorage.setItem('financialEducationProgress', JSON.stringify(progress));
   };
 
   const submitQuiz = async () => {

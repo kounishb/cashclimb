@@ -17,20 +17,83 @@ import {
   Calendar
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const GameStart = () => {
   const navigate = useNavigate();
   const [selectedGrade, setSelectedGrade] = useState(3);
   const [userProgress, setUserProgress] = useState<{[key: number]: {completedModules: number[], totalXP: number}}>({});
+  const [user, setUser] = useState<any>(null);
 
-  // Load progress from localStorage on component mount
+  // Load progress from Supabase if authenticated, otherwise localStorage
   useEffect(() => {
+    const getUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+      if (user) {
+        await loadProgressFromSupabase(user.id);
+      } else {
+        loadProgressFromLocalStorage();
+      }
+    };
+    getUser();
+  }, []);
+
+  const loadProgressFromSupabase = async (userId: string) => {
+    try {
+      const progress: {[key: number]: {completedModules: number[], totalXP: number}} = {};
+      
+      // Load progress for each grade
+      for (let grade = 3; grade <= 8; grade++) {
+        const { data: lessons } = await supabase
+          .from('lessons')
+          .select('id, module_number')
+          .eq('grade_level', grade);
+
+        if (lessons) {
+          const lessonIds = lessons.map(l => l.id);
+          const { data: progressData } = await supabase
+            .from('lesson_progress')
+            .select('lesson_id, quiz_completed, xp_earned')
+            .eq('user_id', userId)
+            .in('lesson_id', lessonIds);
+
+          if (progressData) {
+            const completedLessons = progressData.filter(p => p.quiz_completed);
+            const completedModuleNumbers = completedLessons.map(p => {
+              const lesson = lessons.find(l => l.id === p.lesson_id);
+              return lesson?.module_number;
+            }).filter(Boolean);
+
+            const totalXpEarned = progressData.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
+            
+            progress[grade] = {
+              completedModules: completedModuleNumbers,
+              totalXP: totalXpEarned
+            };
+          } else {
+            progress[grade] = { completedModules: [], totalXP: 0 };
+          }
+        }
+      }
+      
+      setUserProgress(progress);
+      // Also update localStorage for consistency
+      localStorage.setItem('financialEducationProgress', JSON.stringify(progress));
+    } catch (error) {
+      console.error('Error loading progress from Supabase:', error);
+      // Fallback to localStorage
+      loadProgressFromLocalStorage();
+    }
+  };
+
+  const loadProgressFromLocalStorage = () => {
     const savedProgress = localStorage.getItem('financialEducationProgress');
     if (savedProgress) {
       const progress = JSON.parse(savedProgress);
       setUserProgress(progress);
     }
-  }, []);
+  };
 
   // Generate grade levels with their curriculum
   const grades = [

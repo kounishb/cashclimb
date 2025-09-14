@@ -68,6 +68,9 @@ const GradeModules = () => {
           // Calculate total XP
           const totalXpEarned = progress.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
           setTotalXP(totalXpEarned);
+          
+          // Update localStorage for consistency
+          updateLocalStorageProgress(grade, completedModuleNumbers, totalXpEarned);
         }
       }
     } catch (error) {
@@ -81,6 +84,14 @@ const GradeModules = () => {
         setTotalXP(gradeProgress.totalXP);
       }
     }
+  };
+
+  const updateLocalStorageProgress = (grade: number, completedModules: number[], totalXP: number) => {
+    const savedProgress = localStorage.getItem('financialEducationProgress');
+    let progress = savedProgress ? JSON.parse(savedProgress) : {};
+    
+    progress[grade] = { completedModules, totalXP };
+    localStorage.setItem('financialEducationProgress', JSON.stringify(progress));
   };
 
   const gradeData = {
@@ -220,11 +231,17 @@ const GradeModules = () => {
 
   const currentGrade = gradeData[grade as keyof typeof gradeData];
   
-  const modulesWithStatus = currentGrade.modules.map(module => ({
-    ...module,
-    isCompleted: completedModules.includes(module.id),
-    isUnlocked: module.id === 1 || completedModules.includes(module.id - 1)
-  }));
+  const modulesWithStatus = currentGrade.modules.map(module => {
+    const isCompleted = completedModules.includes(module.id);
+    const isNextUnlocked = completedModules.length + 1 === module.id;
+    const isUnlocked = module.id === 1 || completedModules.includes(module.id - 1) || isNextUnlocked;
+    
+    return {
+      ...module,
+      isCompleted,
+      isUnlocked
+    };
+  });
 
   const startModule = (moduleId: number) => {
     navigate(`/education/grade/${grade}/module/${moduleId}`);
@@ -314,7 +331,7 @@ const GradeModules = () => {
                       {module.isUnlocked && (
                         <Button size="sm" className="bg-primary hover:bg-primary/90">
                           <Play className="h-4 w-4 mr-2" />
-                          Start
+                          {module.isCompleted ? 'Completed' : 'Start'}
                         </Button>
                       )}
                     </div>
