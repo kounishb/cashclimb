@@ -68,36 +68,39 @@ const GameStart = () => {
       
       // Load progress for each grade
       for (let grade = 3; grade <= 8; grade++) {
+        // Get completed modules from game_progress table
+        const { data: gameProgress } = await supabase
+          .from('game_progress')
+          .select('module_id, completed')
+          .eq('user_id', userId)
+          .eq('completed', true);
+
+        // Get XP from lesson_progress table
         const { data: lessons } = await supabase
           .from('lessons')
           .select('id, module_number')
           .eq('grade_level', grade);
 
+        let totalXpEarned = 0;
         if (lessons) {
           const lessonIds = lessons.map(l => l.id);
           const { data: progressData } = await supabase
             .from('lesson_progress')
-            .select('lesson_id, quiz_completed, xp_earned')
+            .select('xp_earned')
             .eq('user_id', userId)
             .in('lesson_id', lessonIds);
 
           if (progressData) {
-            const completedLessons = progressData.filter(p => p.quiz_completed);
-            const completedModuleNumbers = completedLessons.map(p => {
-              const lesson = lessons.find(l => l.id === p.lesson_id);
-              return lesson?.module_number;
-            }).filter(Boolean);
-
-            const totalXpEarned = progressData.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
-            
-            progress[grade] = {
-              completedModules: completedModuleNumbers,
-              totalXP: totalXpEarned
-            };
-          } else {
-            progress[grade] = { completedModules: [], totalXP: 0 };
+            totalXpEarned = progressData.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
           }
         }
+
+        const completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
+        
+        progress[grade] = {
+          completedModules: completedModuleNumbers,
+          totalXP: totalXpEarned
+        };
       }
       
       setUserProgress(progress);

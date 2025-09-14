@@ -63,39 +63,39 @@ const GradeModules = () => {
 
   const loadCompletedModules = async (userId: string) => {
     try {
-      // Get all lessons for this grade
+      // Get completed modules from game_progress table
+      const { data: gameProgress } = await supabase
+        .from('game_progress')
+        .select('module_id, completed')
+        .eq('user_id', userId)
+        .eq('completed', true);
+
+      // Get XP from lesson_progress table
       const { data: lessons } = await supabase
         .from('lessons')
         .select('id, module_number')
         .eq('grade_level', grade);
 
+      let totalXpEarned = 0;
       if (lessons) {
-        // Get lesson progress for each lesson
         const lessonIds = lessons.map(l => l.id);
         const { data: progress } = await supabase
           .from('lesson_progress')
-          .select('lesson_id, quiz_completed, xp_earned')
+          .select('xp_earned')
           .eq('user_id', userId)
           .in('lesson_id', lessonIds);
 
         if (progress) {
-          // Map completed lessons to module numbers
-          const completedLessons = progress.filter(p => p.quiz_completed);
-          const completedModuleNumbers = completedLessons.map(p => {
-            const lesson = lessons.find(l => l.id === p.lesson_id);
-            return lesson?.module_number;
-          }).filter(Boolean);
-
-          setCompletedModules(completedModuleNumbers);
-          
-          // Calculate total XP
-          const totalXpEarned = progress.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
-          setTotalXP(totalXpEarned);
-          
-          // Update localStorage for consistency
-          updateLocalStorageProgress(grade, completedModuleNumbers, totalXpEarned);
+          totalXpEarned = progress.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
         }
       }
+
+      const completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
+      setCompletedModules(completedModuleNumbers);
+      setTotalXP(totalXpEarned);
+      
+      // Update localStorage for consistency
+      updateLocalStorageProgress(grade, completedModuleNumbers, totalXpEarned);
     } catch (error) {
       console.error('Error loading module progress:', error);
       // Fallback to localStorage if database fails
