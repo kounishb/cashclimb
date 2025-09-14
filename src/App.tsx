@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import GameStart from "./pages/GameStart";
 import GradeModules from "./pages/GradeModules";
 import LessonViewer from "./pages/LessonViewer";
+import Curriculum from "./pages/Curriculum";
 import Game from "./pages/Game";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -45,6 +46,22 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <GameStart />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/grade/:gradeId" 
+              element={
+                <ProtectedRoute>
+                  <GradeModules />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/curriculum/:gradeId" 
+              element={
+                <ProtectedRoute>
+                  <Curriculum />
                 </ProtectedRoute>
               } 
             />

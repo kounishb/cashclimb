@@ -37,7 +37,6 @@ const GradeModules = () => {
 
   const gradeData = {
     3: {
-      description: "Discover what money is and why we need it",
       color: "bg-green-500",
       modules: [
         { id: 1, title: "What is Money?", topics: ["Coins and bills", "Money's purpose", "Different currencies"], duration: "20 min", xp: 50 },
@@ -55,7 +54,6 @@ const GradeModules = () => {
       ]
     },
     4: {
-      description: "Learn to make smart spending decisions",
       color: "bg-blue-500",
       modules: [
         { id: 1, title: "Money Review", topics: ["Reviewing basics", "Advanced counting", "Money confidence"], duration: "25 min", xp: 60 },
@@ -75,7 +73,6 @@ const GradeModules = () => {
       ]
     },
     5: {
-      description: "Start planning for your financial future",
       color: "bg-purple-500",
       modules: [
         { id: 1, title: "Financial Foundation Review", topics: ["Grade 4 concepts", "Advanced applications", "Real-world examples"], duration: "30 min", xp: 70 },
@@ -97,7 +94,6 @@ const GradeModules = () => {
       ]
     },
     6: {
-      description: "Manage money like a pro", 
       color: "bg-orange-500",
       modules: [
         { id: 1, title: "Financial Literacy Foundation", topics: ["Grade 5 review", "Advanced concepts preview", "Goal setting"], duration: "35 min", xp: 80 },
@@ -121,8 +117,7 @@ const GradeModules = () => {
       ]
     },
     7: {
-      description: "Develop sophisticated financial strategies",
-      color: "bg-red-500", 
+      color: "bg-red-500",
       modules: [
         { id: 1, title: "Advanced Financial Review", topics: ["Grade 6 mastery check", "Complex scenarios", "Strategic thinking"], duration: "40 min", xp: 90 },
         { id: 2, title: "College Financial Planning", topics: ["College costs", "Financial aid", "Student loans"], duration: "45 min", xp: 100 },
@@ -147,7 +142,6 @@ const GradeModules = () => {
       ]
     },
     8: {
-      description: "Master advanced financial concepts",
       color: "bg-indigo-500",
       modules: [
         { id: 1, title: "Financial Mastery Foundation", topics: ["Advanced review", "Professional concepts", "Leadership preparation"], duration: "45 min", xp: 100 },
@@ -209,9 +203,11 @@ const GradeModules = () => {
               Grade {grade}
             </span>
           </h1>
-          <p className="text-lg text-muted-foreground">
-            {currentGrade.description}
-          </p>
+          <div className="flex gap-4 mt-4">
+            <Button variant="outline" asChild>
+              <Link to={`/curriculum/${grade}`}>View Curriculum</Link>
+            </Button>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -303,14 +299,11 @@ const GradeModules = () => {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <div className={`w-20 h-20 rounded-full flex items-center justify-center text-white mx-auto mb-4 ${currentGrade.color}`}>
-                    <span className="text-2xl font-bold">{grade}</span>
+                    <span className="text-2xl font-bold">{Math.round((completedModules.length / currentGrade.modules.length) * 100)}%</span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">
-                    Grade {grade}
+                    Grade {grade} Progress
                   </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {currentGrade.description}
-                  </p>
                 </div>
 
                 <div className="space-y-4">
@@ -334,15 +327,14 @@ const GradeModules = () => {
 
                   <div className="p-4 bg-secondary/10 rounded-lg">
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <Users className="h-4 w-4" />
-                      Curriculum Overview
+                      <Trophy className="h-4 w-4" />
+                      Your Badges
                     </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>📹 Educational videos</li>
-                      <li>📄 Interactive articles</li>
-                      <li>🧠 Knowledge quizzes</li>
-                      <li>🏆 Progress tracking</li>
-                    </ul>
+                    <div className="text-center py-4">
+                      <div className="text-muted-foreground text-sm">
+                        {completedModules.length > 0 ? "Badges will appear here as you earn them!" : "Complete modules to start earning badges!"}
+                      </div>
+                    </div>
                   </div>
                 </div>
 

@@ -36,7 +36,6 @@ const GameStart = () => {
   const grades = [
     {
       grade: 3,
-      description: "Discover what money is and why we need it",
       color: "bg-green-500",
       moduleCount: 12,
       topics: ["What is money?", "Coins and bills", "Earning money", "Needs vs wants", "Spending choices"],
@@ -44,7 +43,6 @@ const GameStart = () => {
     },
     {
       grade: 4,
-      description: "Learn to make smart spending decisions",
       color: "bg-blue-500", 
       moduleCount: 14,
       topics: ["Saving money", "Making a budget", "Comparing prices", "Money goals", "Bank basics"],
@@ -52,7 +50,6 @@ const GameStart = () => {
     },
     {
       grade: 5,
-      description: "Start planning for your financial future",
       color: "bg-purple-500",
       moduleCount: 16,
       topics: ["Long-term saving", "Interest basics", "Job types", "Banking", "Financial goals"],
@@ -60,7 +57,6 @@ const GameStart = () => {
     },
     {
       grade: 6,
-      description: "Manage money like a pro",
       color: "bg-orange-500",
       moduleCount: 18,
       topics: ["Credit basics", "Debt understanding", "Investment intro", "Entrepreneurship", "Digital money"],
@@ -68,7 +64,6 @@ const GameStart = () => {
     },
     {
       grade: 7,
-      description: "Develop sophisticated financial strategies",
       color: "bg-red-500",
       moduleCount: 20,
       topics: ["Advanced budgeting", "Tax basics", "Insurance", "Scam protection", "Economic concepts"],
@@ -76,7 +71,6 @@ const GameStart = () => {
     },
     {
       grade: 8,
-      description: "Master advanced financial concepts",
       color: "bg-indigo-500",
       moduleCount: 22,
       topics: ["Investment strategies", "College planning", "Career prep", "Advanced economics", "Global finance"],
@@ -139,7 +133,6 @@ const GameStart = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold">Grade {grade.grade}</h3>
-                          <p className="text-muted-foreground">{grade.description}</p>
                         </div>
                       </div>
                       <div className="text-right">

@@ -98,12 +98,12 @@ const Home = () => {
               <div className="text-sm text-muted-foreground">Grade Levels</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-4xl font-bold text-primary mb-2">25+</div>
               <div className="text-sm text-muted-foreground">Achievements</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">8-14</div>
-              <div className="text-sm text-muted-foreground">Ages (Grades 3-8)</div>
+              <div className="text-4xl font-bold text-primary mb-2">3-8</div>
+              <div className="text-sm text-muted-foreground">Grades</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
