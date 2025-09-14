@@ -40,8 +40,18 @@ const LessonViewer = () => {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    // Always start with video section when navigating to a new module
+    // Reset all progress states when navigating to a new module
     setCurrentSection('video');
+    setQuizAnswers({});
+    setQuizSubmitted(false);
+    setScore(0);
+    setXpEarned(0);
+    setVideoCompleted(false);
+    setArticleCompleted(false);
+    setProgress({ video_completed: false, article_completed: false, quiz_completed: false, quiz_attempts: 0 });
+    
+    // Scroll to top when navigating to new module
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     
     const getUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
@@ -99,7 +109,7 @@ const LessonViewer = () => {
     3: {
       1: {
         title: "What is Money?",
-        videoUrl: "https://www.youtube.com/embed/mPBgz8ejWoU",
+        videoUrl: "https://www.youtube.com/embed/JcvnWeDwTeg",
         videoTitle: "What is Money? - Financial Literacy for Kids",
         article: {
           title: "Understanding Money: The Complete Guide for Young Learners",
@@ -297,7 +307,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Earning Money",
-        videoUrl: "https://www.youtube.com/embed/XvvneFKE4G0",
+        videoUrl: "https://www.youtube.com/embed/sd0r9GuOflo",
         videoTitle: "How Kids Can Earn Money - Jobs and Chores",
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
@@ -558,7 +568,7 @@ const LessonViewer = () => {
       },
       3: {
         title: "Needs vs Wants",
-        videoUrl: "https://www.youtube.com/embed/s6V_ag7GsN0",
+        videoUrl: "https://www.youtube.com/embed/2PX4-Y1zu2g",
         videoTitle: "Needs vs Wants - Smart Money Decisions for Kids",
         article: {
           title: "Making Smart Choices: Understanding Needs vs Wants",
@@ -836,12 +846,113 @@ const LessonViewer = () => {
           }
         ],
         xpReward: 100
+      },
+      4: {
+        title: "Spending Choices",
+        videoUrl: "https://www.youtube.com/embed/GwAIu-RA_WA",
+        videoTitle: "Smart Spending Choices for Kids",
+        article: {
+          title: "Making Smart Spending Decisions",
+          content: `
+            <h2>Learning to Make Smart Spending Choices</h2>
+            <p>Making good spending choices is one of the most important money skills you can learn. Every time you spend money, you're making a decision that affects your future financial success. Learning to think before you spend will help you throughout your entire life!</p>
+            
+            <h3>What is a Spending Choice?</h3>
+            <p>A spending choice is any decision you make about using your money to buy something. Whether you're spending 25 cents on a piece of candy or $25 on a toy, you're making a spending choice. Good spending choices help you get the most value from your money and achieve your goals.</p>
+            
+            <h3>The Smart Spending Process</h3>
+            <h4>Step 1: Stop and Think</h4>
+            <p>Before you buy anything, take a moment to stop and think. Ask yourself:</p>
+            <ul>
+              <li>Do I really need this or just want it?</li>
+              <li>Will I still be happy with this purchase next week?</li>
+              <li>Is this the best price I can find?</li>
+              <li>What else could I do with this money?</li>
+            </ul>
+            
+            <h4>Step 2: Compare Your Options</h4>
+            <p>Look at different choices before deciding:</p>
+            <ul>
+              <li>Compare prices at different stores</li>
+              <li>Consider buying used instead of new</li>
+              <li>Think about waiting for a sale</li>
+              <li>Ask if there's a similar item that costs less</li>
+            </ul>
+            
+            <h4>Step 3: Make Your Decision</h4>
+            <p>After thinking and comparing, make your choice. Remember, it's okay to decide NOT to buy something!</p>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What should you do before making any purchase?",
+            options: ["Buy it immediately", "Stop and think about it", "Ask friends what to do", "Always buy the most expensive option"],
+            correct: "Stop and think about it",
+            explanation: "Taking time to think before spending helps you make better decisions and avoid regrets!"
+          },
+          {
+            id: 2,
+            question: "Which question is most important when making a spending choice?",
+            options: ["Is this trendy?", "Do I need this or just want it?", "What will my friends think?", "Is it the biggest one?"],
+            correct: "Do I need this or just want it?",
+            explanation: "Understanding whether something is a need or want is the foundation of good spending decisions!"
+          }
+        ],
+        xpReward: 100
+      },
+      5: {
+        title: "Saving Basics",
+        videoUrl: "https://www.youtube.com/embed/6B0MS3zvMkM",
+        videoTitle: "Saving Money Basics for Kids",
+        article: {
+          title: "The Power of Saving Money",
+          content: `
+            <h2>Why Saving Money is Super Important</h2>
+            <p>Saving money means keeping some of your money instead of spending it all right away. It's like planting seeds that will grow into bigger amounts of money later. Learning to save is one of the most powerful money skills you can develop!</p>
+            
+            <h3>Why Should You Save Money?</h3>
+            <ul>
+              <li><strong>For Emergencies</strong> - Unexpected things happen, and having money saved helps you handle them</li>
+              <li><strong>For Big Goals</strong> - Some things cost more than your weekly allowance, so saving helps you buy them</li>
+              <li><strong>For Opportunities</strong> - Sometimes great deals come up, and saved money lets you take advantage of them</li>
+              <li><strong>For Peace of Mind</strong> - Having money saved makes you feel more secure and confident</li>
+            </ul>
+            
+            <h3>Easy Ways to Start Saving</h3>
+            <h4>The Piggy Bank Method</h4>
+            <p>Get a piggy bank, jar, or special box just for savings. Every time you get money, put some in your savings container before spending any.</p>
+            
+            <h4>The 10% Rule</h4>
+            <p>Try to save at least 10% of any money you receive. If you get $10, save $1. If you get $5, save 50 cents.</p>
+            
+            <h4>The Goal Setting Method</h4>
+            <p>Pick something specific you want to save for, like a toy or game. Figure out how much you need to save each week to reach your goal.</p>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What does it mean to save money?",
+            options: ["Spend it all quickly", "Keep some instead of spending it all", "Give it all away", "Hide it where you'll forget it"],
+            correct: "Keep some instead of spending it all",
+            explanation: "Saving means setting aside money for later instead of spending everything right away!"
+          },
+          {
+            id: 2,
+            question: "What's a good rule for how much to save?",
+            options: ["Save 100% of your money", "Save at least 10%", "Never save anything", "Only save coins, not bills"],
+            correct: "Save at least 10%",
+            explanation: "Saving at least 10% of your money is a great starting point for building good money habits!"
+          }
+        ],
+        xpReward: 100
       }
     },
     4: {
       1: {
         title: "Money Review",
-        videoUrl: "https://www.youtube.com/embed/Lys4EVugJmk",
+        videoUrl: "https://www.youtube.com/embed/WO3REcunyr0",
         videoTitle: "Money Fundamentals Review - Building Strong Foundations",
         article: {
           title: "Advanced Money Concepts for Grade 4",
@@ -1232,8 +1343,8 @@ const LessonViewer = () => {
       },
       2: {
         title: "Making a Budget",
-        videoUrl: "https://www.youtube.com/embed/EQc_2Ad8hQI",
-        videoTitle: "Budgeting for Kids - How to Plan Your Spending",
+        videoUrl: "https://www.youtube.com/embed/J8P3sCooGg0",
+        videoTitle: "Budgeting Basics - How to Plan Your Spending",
         article: {
           title: "Creating Your First Budget: A Step-by-Step Guide",
           content: `
@@ -1439,7 +1550,9 @@ const LessonViewer = () => {
   };
 
   const nextModule = () => {
-    navigate(`/education/grade/${grade}/module/${module + 1}#video`);
+    // Scroll to top and navigate to next module's video section
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate(`/education/grade/${grade}/module/${module + 1}`);
   };
 
   return (
