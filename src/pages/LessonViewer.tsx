@@ -702,7 +702,36 @@ const LessonViewer = () => {
             <p>Understanding needs vs wants is like having a financial superpower. It helps you make decisions that keep you safe and secure while still allowing you to enjoy life. The earlier you master this skill, the better your financial future will be!</p>
           `
         },
-        quiz: [],
+        quiz: [
+          {
+            id: 1,
+            question: "Which of these is a NEED?",
+            options: ["New video game", "Food to eat", "Designer shoes", "Movie tickets"],
+            correct: "Food to eat",
+            explanation: "Food is essential for survival, making it a need rather than a want."
+          },
+          {
+            id: 2,
+            question: "Which of these is a WANT?",
+            options: ["A place to live", "Clean water", "The latest smartphone", "Warm clothes"],
+            correct: "The latest smartphone",
+            explanation: "While communication is important, the 'latest' smartphone is a luxury want, not a basic need."
+          },
+          {
+            id: 3,
+            question: "Before buying something, what question should you ask yourself?",
+            options: ["How much does it cost?", "Do I need this or do I want this?", "What color should I get?", "Where can I buy it?"],
+            correct: "Do I need this or do I want this?",
+            explanation: "Asking whether something is a need or want helps you make smart spending decisions."
+          },
+          {
+            id: 4,
+            question: "If you have $10 and need school lunch ($5) but also want a toy ($8), what should you do?",
+            options: ["Buy the toy", "Buy lunch and save the rest", "Ask for more money", "Don't buy anything"],
+            correct: "Buy lunch and save the rest",
+            explanation: "Needs like food should always come before wants. Buy lunch first, then save what's left."
+          }
+        ],
         xpReward: 100
       },
       4: {
@@ -2247,22 +2276,22 @@ const LessonViewer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+         {/* Header */}
+        <div className="flex items-center justify-between mb-6 bg-card p-4 rounded-lg border">
           <div className="flex items-center gap-4">
-            <Button variant="outline" onClick={() => navigate(`/grade-modules/${grade}`)}>
+            <Button variant="outline" onClick={() => navigate(`/grade/${grade}`)}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Grade {grade}
             </Button>
             <div>
-              <h1 className="text-3xl font-bold">Grade {grade} - Module {module}</h1>
+              <h1 className="text-3xl font-bold text-foreground">Grade {grade} - Module {module}</h1>
               <p className="text-xl text-muted-foreground">{currentLessonContent.title}</p>
             </div>
           </div>
           <div className="text-right">
             <div className="flex items-center gap-2 mb-2">
               <Trophy className="w-5 h-5 text-yellow-500" />
-              <span className="font-semibold">Progress: {overallProgress.toFixed(0)}%</span>
+              <span className="font-semibold text-foreground">Progress: {overallProgress.toFixed(0)}%</span>
             </div>
             <Progress value={overallProgress} className="w-32" />
           </div>
