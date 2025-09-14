@@ -730,6 +730,48 @@ const LessonViewer = () => {
             options: ["Buy the toy", "Buy lunch and save the rest", "Ask for more money", "Don't buy anything"],
             correct: "Buy lunch and save the rest",
             explanation: "Needs like food should always come before wants. Buy lunch first, then save what's left."
+          },
+          {
+            id: 5,
+            question: "Which is the best example of a need?",
+            options: ["Ice cream", "A warm coat in winter", "A new bicycle", "Video games"],
+            correct: "A warm coat in winter",
+            explanation: "A warm coat in winter protects you from cold weather, making it essential for health and safety."
+          },
+          {
+            id: 6,
+            question: "If you want to buy candy but also need new school supplies, what should you prioritize?",
+            options: ["Buy the candy first", "Buy school supplies first", "Buy both at the same time", "Wait until next week"],
+            correct: "Buy school supplies first",
+            explanation: "School supplies are needed for your education, while candy is just a want."
+          },
+          {
+            id: 7,
+            question: "Which of these is a WANT for most 3rd graders?",
+            options: ["Drinking water", "A toy robot", "A safe home", "Healthy food"],
+            correct: "A toy robot",
+            explanation: "While toys are fun, they are wants rather than needs. We can live without toys, but not without water, shelter, or food."
+          },
+          {
+            id: 8,
+            question: "What should you do when you can't afford both a need and a want?",
+            options: ["Choose the want because it's more fun", "Choose the need because it's more important", "Ask someone else to buy them", "Don't buy either one"],
+            correct: "Choose the need because it's more important",
+            explanation: "Needs are always more important than wants because they keep us healthy, safe, and secure."
+          },
+          {
+            id: 9,
+            question: "Which situation shows someone choosing a need over a want?",
+            options: ["Buying a new game instead of lunch", "Buying warm socks instead of stickers", "Buying candy instead of a notebook", "Buying a toy instead of medicine"],
+            correct: "Buying warm socks instead of stickers",
+            explanation: "Warm socks help keep you healthy and comfortable (need), while stickers are just for fun (want)."
+          },
+          {
+            id: 10,
+            question: "Why is it important to learn about needs vs wants?",
+            options: ["To spend money faster", "To make smart money decisions", "To buy more things", "To avoid saving money"],
+            correct: "To make smart money decisions",
+            explanation: "Understanding needs vs wants helps you make wise choices about spending and saving money for what's most important."
           }
         ],
         xpReward: 100
@@ -2276,8 +2318,8 @@ const LessonViewer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
       <div className="max-w-6xl mx-auto">
-         {/* Header */}
-        <div className="flex items-center justify-between mb-6 bg-card p-4 rounded-lg border">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8 bg-card/80 backdrop-blur-sm p-6 rounded-lg border shadow-sm mt-4">
           <div className="flex items-center gap-4">
             <Button variant="outline" onClick={() => navigate(`/grade/${grade}`)}>
               <ArrowLeft className="w-4 h-4 mr-2" />
