@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navigation from "./components/Navigation";
-import DashboardLayout from "./components/DashboardLayout";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -45,14 +45,12 @@ const App = () => (
               } 
             />
             
-            {/* Dashboard Routes with Isolated Layout */}
+            {/* Dashboard Routes */}
             <Route 
               path="/game" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <GameStart />
-                  </DashboardLayout>
+                  <><Navigation /><GameStart /></>
                 </ProtectedRoute>
               } 
             />
@@ -60,9 +58,7 @@ const App = () => (
               path="/game-start" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <GameStart />
-                  </DashboardLayout>
+                  <><Navigation /><GameStart /></>
                 </ProtectedRoute>
               } 
             />
@@ -70,9 +66,7 @@ const App = () => (
               path="/grade/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <GradeModules />
-                  </DashboardLayout>
+                  <><Navigation /><GradeModules /></>
                 </ProtectedRoute>
               } 
             />
@@ -80,9 +74,7 @@ const App = () => (
               path="/curriculum/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <Curriculum />
-                  </DashboardLayout>
+                  <><Navigation /><Curriculum /></>
                 </ProtectedRoute>
               } 
             />
@@ -90,9 +82,7 @@ const App = () => (
               path="/education/grade/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <GradeModules />
-                  </DashboardLayout>
+                  <><Navigation /><GradeModules /></>
                 </ProtectedRoute>
               } 
             />
@@ -100,19 +90,7 @@ const App = () => (
               path="/education/grade/:gradeId/module/:moduleId" 
               element={
                 <ProtectedRoute>
-                  <DashboardLayout>
-                    <LessonViewer />
-                  </DashboardLayout>
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/dashboard/profile" 
-              element={
-                <ProtectedRoute>
-                  <DashboardLayout>
-                    <Profile />
-                  </DashboardLayout>
+                  <><Navigation /><LessonViewer /></>
                 </ProtectedRoute>
               } 
             />
