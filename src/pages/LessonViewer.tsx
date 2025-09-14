@@ -109,8 +109,8 @@ const LessonViewer = () => {
     3: {
       1: {
         title: "What is Money?",
-        videoUrl: "https://www.youtube.com/embed/JcvnWeDwTeg",
-        videoTitle: "What is Money? - Financial Literacy for Kids",
+        videoUrl: "https://www.youtube.com/embed/Muf4OTH3YAA",
+        videoTitle: "Grade 3: What is Money? - Introduction to Currency",
         article: {
           title: "Understanding Money: The Complete Guide for Young Learners",
           content: `
@@ -306,9 +306,9 @@ const LessonViewer = () => {
         xpReward: 100
       },
       2: {
-        title: "Earning Money",
-        videoUrl: "https://www.youtube.com/embed/BYW6C44zo24",
-        videoTitle: "Grade 3: How Kids Earn Money - Chores and Simple Jobs",
+        title: "How Do People Earn Money?",
+        videoUrl: "https://www.youtube.com/embed/8h6IMYRWcUw",
+        videoTitle: "Grade 3: Simple Jobs and Earning Money for Kids",
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
           content: `
@@ -567,9 +567,9 @@ const LessonViewer = () => {
         xpReward: 100
       },
       3: {
-        title: "Needs vs Wants",
-        videoUrl: "https://www.youtube.com/embed/qTp-nKCOvT0",
-        videoTitle: "Grade 3: Understanding Needs vs Wants for Kids",
+        title: "My Needs and Wants",
+        videoUrl: "https://www.youtube.com/embed/oDtYCiCYKB4",
+        videoTitle: "Grade 3: Needs vs Wants - Making Smart Choices",
         article: {
           title: "Making Smart Choices: Understanding Needs vs Wants",
           content: `
@@ -848,9 +848,9 @@ const LessonViewer = () => {
         xpReward: 100
       },
       4: {
-        title: "Spending Choices",
-        videoUrl: "https://www.youtube.com/embed/kA3z_JghRAg",
-        videoTitle: "Grade 3: Making Smart Spending Choices",
+        title: "Smart Shopping Choices",
+        videoUrl: "https://www.youtube.com/embed/SYmguOUdKOo",
+        videoTitle: "Grade 3: Making Smart Shopping and Spending Decisions",
         article: {
           title: "Making Smart Spending Decisions",
           content: `
@@ -902,9 +902,9 @@ const LessonViewer = () => {
         xpReward: 100
       },
       5: {
-        title: "Saving Basics",
-        videoUrl: "https://www.youtube.com/embed/hjLZRqdsF5A",
-        videoTitle: "Grade 3: Introduction to Saving Money for Kids",
+        title: "My First Savings",
+        videoUrl: "https://www.youtube.com/embed/NgvFjojPY8k",
+        videoTitle: "Grade 3: Learning to Save Money - Piggy Bank Basics",
         article: {
           title: "The Power of Saving Money",
           content: `
@@ -951,9 +951,9 @@ const LessonViewer = () => {
     },
     4: {
       1: {
-        title: "Money Review",
-        videoUrl: "https://www.youtube.com/embed/rO9iPPawedc",
-        videoTitle: "Grade 4: Advanced Money Concepts Review",
+        title: "Understanding Currency",
+        videoUrl: "https://www.youtube.com/embed/Lhq-jXyCF7Y",
+        videoTitle: "Grade 4: Understanding Different Types of Currency and Money",
         article: {
           title: "Advanced Money Concepts for Grade 4",
           content: `
@@ -1342,9 +1342,9 @@ const LessonViewer = () => {
         xpReward: 120
       },
       2: {
-        title: "Making a Budget",
-        videoUrl: "https://www.youtube.com/embed/sVhAvPj-iAg",
-        videoTitle: "Grade 4: Budgeting Basics for Kids",
+        title: "Planning My Budget",
+        videoUrl: "https://www.youtube.com/embed/ZtMaJnVZGc8",
+        videoTitle: "Grade 4: How to Create Your First Budget - Step by Step",
         article: {
           title: "Creating Your First Budget: A Step-by-Step Guide",
           content: `
@@ -1455,9 +1455,9 @@ const LessonViewer = () => {
         xpReward: 120
       },
       3: {
-        title: "Digital Money & Technology",
-        videoUrl: "https://www.youtube.com/embed/iJNc46n3aqc",
-        videoTitle: "Grade 4: Digital Money and Online Payment Safety",
+        title: "Electronic Payments",
+        videoUrl: "https://www.youtube.com/embed/bnJoF3TQVCw",
+        videoTitle: "Grade 4: Understanding Digital Money and Payment Cards",
         article: {
           title: "Understanding Digital Money and Modern Payment Systems",
           content: `
@@ -1669,9 +1669,9 @@ const LessonViewer = () => {
     },
     5: {
       1: {
-        title: "Banking Basics",
-        videoUrl: "https://www.youtube.com/embed/N762x-Ki1-o",
-        videoTitle: "Grade 5: How Banks Work and Help Your Money",
+        title: "How Banks Help Us",
+        videoUrl: "https://www.youtube.com/embed/Muf4OTH3YAA",
+        videoTitle: "Grade 5: How Banks Work - Managing Your Money Safely",
         article: {
           title: "Understanding Banks and How They Help Us",
           content: `
@@ -1908,9 +1908,9 @@ const LessonViewer = () => {
         xpReward: 130
       },
       2: {
-        title: "Credit and Loans", 
-        videoUrl: "https://www.youtube.com/embed/KgwCsHr8xxQ",
-        videoTitle: "Grade 5: Understanding Credit and Loans for Students",
+        title: "Understanding Credit", 
+        videoUrl: "https://www.youtube.com/embed/ApDyWL1sdHo",
+        videoTitle: "Grade 5: Credit Basics - What Every Student Should Know",
         article: {
           title: "Credit, Loans, and Building Financial Responsibility",
           content: `
@@ -2165,9 +2165,9 @@ const LessonViewer = () => {
     },
     6: {
       1: {
-        title: "Advanced Budgeting",
-        videoUrl: "https://www.youtube.com/embed/czT1drz38GE",
-        videoTitle: "Grade 6: Advanced Budgeting and Financial Planning",
+        title: "Smart Budget Planning",
+        videoUrl: "https://www.youtube.com/embed/sJFCr7clF5Y",
+        videoTitle: "Grade 6: Advanced Budgeting Skills and Money Management",
         article: {
           title: "Mastering Advanced Budgeting Techniques",
           content: `
@@ -2448,9 +2448,9 @@ const LessonViewer = () => {
     },
     7: {
       1: {
-        title: "Introduction to Credit",
-        videoUrl: "https://www.youtube.com/embed/zWs5m4F7NYM",
-        videoTitle: "Grade 7: Understanding Credit and Credit Scores",
+        title: "Building Credit Scores",
+        videoUrl: "https://www.youtube.com/embed/oDQhOjz7nxQ",
+        videoTitle: "Grade 7: How to Build and Maintain Good Credit",
         article: {
           title: "Credit Fundamentals: Building Your Financial Future",
           content: `
@@ -2516,9 +2516,9 @@ const LessonViewer = () => {
         xpReward: 120
       },
       2: {
-        title: "Debt Management",
-        videoUrl: "https://www.youtube.com/embed/3VIzj-aU-d4",
-        videoTitle: "Grade 7: Understanding and Managing Debt Wisely",
+        title: "Managing Debt Safely",
+        videoUrl: "https://www.youtube.com/embed/yc82lXlHBYI",
+        videoTitle: "Grade 7: Smart Strategies for Avoiding and Managing Debt",
         article: {
           title: "Smart Debt Management: Avoiding Financial Pitfalls",
           content: `
@@ -2595,9 +2595,9 @@ const LessonViewer = () => {
     },
     8: {
       1: {
-        title: "Investment Fundamentals",
-        videoUrl: "https://www.youtube.com/embed/LIm_m-nGJM4",
-        videoTitle: "Grade 8: Introduction to Investing and Building Wealth",
+        title: "Growing Money Through Investing",
+        videoUrl: "https://www.youtube.com/embed/8h6IMYRWcUw",
+        videoTitle: "Grade 8: Smart Investing for Beginners - Building Future Wealth",
         article: {
           title: "Investment Basics: Growing Your Money Over Time",
           content: `
@@ -2666,9 +2666,9 @@ const LessonViewer = () => {
         xpReward: 140
       },
       2: {
-        title: "Financial Planning & Goals",
-        videoUrl: "https://www.youtube.com/embed/8JJ-v66l-HM",
-        videoTitle: "Grade 8: Long-term Financial Planning and Goal Setting",
+        title: "Creating My Financial Future",
+        videoUrl: "https://www.youtube.com/embed/HTqX-jtdOeA",
+        videoTitle: "Grade 8: Advanced Financial Planning for Young Adults",
         article: {
           title: "Creating Your Financial Future: Planning and Goal Setting",
           content: `
