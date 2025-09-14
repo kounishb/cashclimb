@@ -1731,37 +1731,35 @@ const LessonViewer = () => {
             xp_earned: earnedXP
           });
 
-        // Update user XP
-        const { data: userData } = await supabase
-          .from('profiles')
-          .select('total_xp')
-          .eq('id', user.id)
-          .single();
-
-        if (userData) {
-          await supabase
-            .from('profiles')
-            .update({ total_xp: (userData.total_xp || 0) + earnedXP })
-            .eq('id', user.id);
-        }
+        // XP tracking is handled through lesson_progress table
+        // Update user progress (removing total_xp reference as it doesn't exist)
 
         // Check for badges
         if (finalScore === 100) {
-          const { data: existingBadge } = await supabase
-            .from('user_badges')
+          // First get the badge ID from badges table
+          const { data: badge } = await supabase
+            .from('badges')
             .select('id')
-            .eq('user_id', user.id)
-            .eq('badge_id', 1)
+            .eq('name', 'Perfect Score')
             .single();
 
-          if (!existingBadge) {
-            await supabase
+          if (badge) {
+            const { data: existingBadge } = await supabase
               .from('user_badges')
-              .insert({
-                user_id: user.id,
-                badge_id: 1
-              });
-            toast.success("🏆 Perfect Score badge earned!");
+              .select('id')
+              .eq('user_id', user.id)
+              .eq('badge_id', badge.id)
+              .single();
+
+            if (!existingBadge) {
+              await supabase
+                .from('user_badges')
+                .insert({
+                  user_id: user.id,
+                  badge_id: badge.id
+                });
+              toast.success("🏆 Perfect Score badge earned!");
+            }
           }
         }
       }
