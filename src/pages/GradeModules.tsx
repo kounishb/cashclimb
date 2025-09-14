@@ -38,6 +38,29 @@ const GradeModules = () => {
     getUser();
   }, [grade]);
 
+  // Refresh progress when page becomes visible (user returns from completing modules)
+  useEffect(() => {
+    const handleVisibilityChange = async () => {
+      if (!document.hidden && user) {
+        await loadCompletedModules(user.id);
+      }
+    };
+
+    const handleFocus = async () => {
+      if (user) {
+        await loadCompletedModules(user.id);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [user]);
+
   const loadCompletedModules = async (userId: string) => {
     try {
       // Get all lessons for this grade
