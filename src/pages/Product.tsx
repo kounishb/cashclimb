@@ -59,20 +59,25 @@ const Product = () => {
   ];
 
   const gameFeatures = [
-    "Level-based progression system",
-    "Daily challenges and quests",
-    "Virtual currency rewards",
-    "Customizable avatars",
-    "Multiplayer competitions",
-    "Boss battles (financial scenarios)",
-    "Skill trees for different topics",
-    "Seasonal events and tournaments"
+    "Interactive video lessons",
+    "Comprehensive articles",
+    "10-question quizzes",
+    "XP-based progress tracking",
+    "Achievement badges",
+    "Teacher dashboard",
+    "Classroom management",
+    "Progress reporting"
   ];
 
   const gameModules = [
     { 
       title: "Money Basics", 
       description: "Understanding money, needs vs wants, and simple budgeting",
+      grades: "3"
+    },
+    { 
+      title: "Smart Spending", 
+      description: "Making wise spending decisions and comparison shopping",
       grades: "4"
     },
     { 
@@ -91,8 +96,8 @@ const Product = () => {
       grades: "7"
     },
     { 
-      title: "Spending Wisely", 
-      description: "Comparison shopping, unit prices, and avoiding impulse buying",
+      title: "Investment Basics", 
+      description: "Introduction to investing, risk, and building wealth",
       grades: "8"
     }
   ];
@@ -116,7 +121,7 @@ const Product = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="animate-glow" asChild>
-                  <Link to="/education">
+                  <Link to="/game">
                     Start Learning Free
                     <Play className="ml-2 h-5 w-5" />
                   </Link>
@@ -130,15 +135,15 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Game Modules Section */}
+      {/* Grade Levels Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete <span className="bg-gradient-primary bg-clip-text text-transparent">5 Learning Modules</span>
+              Complete <span className="bg-gradient-primary bg-clip-text text-transparent">6 Grade Level Courses</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              One engaging game with 5 comprehensive modules covering all essential financial skills - one module per grade level (4-8).
+              Comprehensive financial education curriculum covering grades 3-8 with age-appropriate content for each level.
             </p>
           </div>
 
@@ -148,9 +153,6 @@ const Product = () => {
                 <CardContent className="p-6">
                   <div className="mb-4">
                     <Badge variant="secondary" className="mb-2">
-                      Module {index + 1}
-                    </Badge>
-                    <Badge variant="outline" className="mb-2 ml-2">
                       Grade {module.grades}
                     </Badge>
                     <h3 className="text-lg font-semibold">{module.title}</h3>
@@ -159,8 +161,8 @@ const Product = () => {
                   <p className="text-muted-foreground text-sm mb-4">{module.description}</p>
                   
                   <Button variant="outline" size="sm" className="w-full mt-4" asChild>
-                    <Link to="/game-start">
-                      Play Module
+                    <Link to="/game">
+                      Start Course
                     </Link>
                   </Button>
                 </CardContent>
@@ -207,10 +209,10 @@ const Product = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Real <span className="bg-gradient-gold bg-clip-text text-transparent">Gaming</span> Elements
+              Educational <span className="bg-gradient-gold bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              One comprehensive game with 5 progressive modules. Cash Climb is built from the ground up as a game that happens to teach finance.
+              Cash Climb provides comprehensive educational tools designed specifically for classroom and individual learning.
             </p>
           </div>
           
@@ -229,10 +231,10 @@ const Product = () => {
       <section className="py-20 px-4 bg-gradient-hero">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Level Up Your <span className="bg-gradient-gold bg-clip-text text-transparent">Financial Game</span>?
+            Ready to Level Up Your <span className="bg-gradient-gold bg-clip-text text-transparent">Financial Education</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Start your journey to financial success today! Master essential money skills through our engaging game-based platform.
+            Start your journey to financial literacy today! Master essential money skills through our comprehensive educational platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="animate-glow" asChild>

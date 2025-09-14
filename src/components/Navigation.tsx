@@ -24,9 +24,6 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-            <div className="bg-gradient-primary p-2 rounded-lg shadow-glow">
-              <TrendingUp className="h-6 w-6 text-primary-foreground" />
-            </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Cash Climb
             </span>

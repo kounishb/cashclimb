@@ -14,8 +14,8 @@ const Home = () => {
     description: "Earn badges, unlock levels, and climb the leaderboard as you master financial concepts."
   }, {
     icon: <Trophy className="h-8 w-8" />,
-    title: "Gamified Experience",
-    description: "Turn learning into an adventure with points, levels, badges, and challenges that make financial education fun and engaging."
+    title: "Interactive Learning",
+    description: "Engage with educational content through videos, articles, and quizzes that make financial education effective and engaging."
   }];
   return <div className="min-h-screen">
       {/* Hero Section */}
@@ -35,7 +35,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Master personal finance through gamified learning. Build wealth, achieve goals, and unlock your financial potential with Cash Climb.
+              Master personal finance through interactive education. Build wealth, achieve goals, and unlock your financial potential with Cash Climb.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="animate-float" asChild>
@@ -88,22 +88,22 @@ const Home = () => {
               Making <span className="bg-gradient-primary bg-clip-text text-transparent">Financial Education</span> Accessible
             </h2>
             <p className="text-xl text-muted-foreground">
-              Empowering young learners with essential financial skills through gamified learning.
+              Empowering young learners with essential financial skills through interactive education.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5</div>
-              <div className="text-sm text-muted-foreground">Learning Modules</div>
+              <div className="text-4xl font-bold text-primary mb-2">6</div>
+              <div className="text-sm text-muted-foreground">Grade Levels</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">50+</div>
               <div className="text-sm text-muted-foreground">Achievements</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">9-14</div>
-              <div className="text-sm text-muted-foreground">Age Range</div>
+              <div className="text-4xl font-bold text-primary mb-2">8-14</div>
+              <div className="text-sm text-muted-foreground">Ages (Grades 3-8)</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
@@ -121,7 +121,7 @@ const Home = () => {
               How <span className="bg-gradient-primary bg-clip-text text-transparent">Cash Climb</span> Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Simple steps to start your financial education journey through our gamified learning platform.
+              Simple steps to start your financial education journey through our interactive learning platform.
             </p>
           </div>
 
@@ -131,9 +131,9 @@ const Home = () => {
                 <div className="bg-gradient-primary p-4 rounded-full inline-flex mb-6">
                   <Gamepad2 className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">1. Start Playing</h3>
+                <h3 className="text-xl font-semibold mb-4">1. Start Learning</h3>
                 <p className="text-muted-foreground">
-                  Create your account and jump into our interactive financial education game designed specifically for grades 4-8.
+                  Create your account and jump into our interactive financial education platform designed specifically for grades 3-8.
                 </p>
               </CardContent>
             </Card>
@@ -145,7 +145,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">2. Learn & Progress</h3>
                 <p className="text-muted-foreground">
-                  Complete 5 progressive modules covering money basics, banking, budgeting, credit, and smart spending habits.
+                  Complete comprehensive courses for each grade level covering money basics, banking, budgeting, credit, and smart spending habits.
                 </p>
               </CardContent>
             </Card>
@@ -232,7 +232,7 @@ const Home = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Learning Progress</span>
-                    <span className="text-primary font-semibold">Grade 4-8</span>
+                    <span className="text-primary font-semibold">Grades 3-8</span>
                   </div>
                   <div className="w-full bg-border rounded-full h-3">
                     <div className="bg-gradient-primary h-3 rounded-full w-[75%]"></div>

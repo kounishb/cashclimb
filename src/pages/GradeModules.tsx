@@ -37,7 +37,6 @@ const GradeModules = () => {
 
   const gradeData = {
     3: {
-      title: "Money Explorers",
       description: "Discover what money is and why we need it",
       color: "bg-green-500",
       modules: [
@@ -56,7 +55,6 @@ const GradeModules = () => {
       ]
     },
     4: {
-      title: "Smart Spenders",
       description: "Learn to make smart spending decisions",
       color: "bg-blue-500",
       modules: [
@@ -77,7 +75,6 @@ const GradeModules = () => {
       ]
     },
     5: {
-      title: "Future Planners", 
       description: "Start planning for your financial future",
       color: "bg-purple-500",
       modules: [
@@ -100,7 +97,6 @@ const GradeModules = () => {
       ]
     },
     6: {
-      title: "Money Managers",
       description: "Manage money like a pro", 
       color: "bg-orange-500",
       modules: [
@@ -125,7 +121,6 @@ const GradeModules = () => {
       ]
     },
     7: {
-      title: "Financial Strategists",
       description: "Develop sophisticated financial strategies",
       color: "bg-red-500", 
       modules: [
@@ -152,7 +147,6 @@ const GradeModules = () => {
       ]
     },
     8: {
-      title: "Finance Masters",
       description: "Master advanced financial concepts",
       color: "bg-indigo-500",
       modules: [
@@ -208,17 +202,11 @@ const GradeModules = () => {
               <ArrowLeft className="h-4 w-4 mr-2" />
               All Grades
             </Button>
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/">
-                <Home className="h-4 w-4 mr-2" />
-                Home
-              </Link>
-            </Button>
             <Badge variant="outline">Grade {grade}</Badge>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Grade {grade}: {currentGrade.title}
+              Grade {grade}
             </span>
           </h1>
           <p className="text-lg text-muted-foreground">
@@ -318,10 +306,10 @@ const GradeModules = () => {
                     <span className="text-2xl font-bold">{grade}</span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">
-                    {currentGrade.title}
+                    Grade {grade}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Grade {grade} Financial Curriculum
+                    {currentGrade.description}
                   </p>
                 </div>
 
@@ -347,7 +335,7 @@ const GradeModules = () => {
                   <div className="p-4 bg-secondary/10 rounded-lg">
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
                       <Users className="h-4 w-4" />
-                      Class Features
+                      Curriculum Overview
                     </h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>📹 Educational videos</li>

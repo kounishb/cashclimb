@@ -747,7 +747,7 @@ const LessonViewer = () => {
                                       onChange={() => handleQuizAnswer(question.id, option)}
                                       className="text-primary w-4 h-4"
                                     />
-                                    <span className="text-sm">{option}</span>
+                                    <span className="text-foreground">{option}</span>
                                   </label>
                                 ))}
                               </div>

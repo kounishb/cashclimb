@@ -36,7 +36,6 @@ const GameStart = () => {
   const grades = [
     {
       grade: 3,
-      title: "Money Explorers",
       description: "Discover what money is and why we need it",
       color: "bg-green-500",
       moduleCount: 12,
@@ -45,7 +44,6 @@ const GameStart = () => {
     },
     {
       grade: 4,
-      title: "Smart Spenders",
       description: "Learn to make smart spending decisions",
       color: "bg-blue-500", 
       moduleCount: 14,
@@ -54,7 +52,6 @@ const GameStart = () => {
     },
     {
       grade: 5,
-      title: "Future Planners",
       description: "Start planning for your financial future",
       color: "bg-purple-500",
       moduleCount: 16,
@@ -63,7 +60,6 @@ const GameStart = () => {
     },
     {
       grade: 6,
-      title: "Money Managers",
       description: "Manage money like a pro",
       color: "bg-orange-500",
       moduleCount: 18,
@@ -72,7 +68,6 @@ const GameStart = () => {
     },
     {
       grade: 7,
-      title: "Financial Strategists",
       description: "Develop sophisticated financial strategies",
       color: "bg-red-500",
       moduleCount: 20,
@@ -81,7 +76,6 @@ const GameStart = () => {
     },
     {
       grade: 8,
-      title: "Finance Masters",
       description: "Master advanced financial concepts",
       color: "bg-indigo-500",
       moduleCount: 22,
@@ -109,12 +103,6 @@ const GameStart = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/">
-                <Home className="h-4 w-4 mr-2" />
-                Home
-              </Link>
-            </Button>
             <h1 className="text-3xl md:text-4xl font-bold">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Financial Literacy Academy
@@ -151,7 +139,6 @@ const GameStart = () => {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold">Grade {grade.grade}</h3>
-                          <h4 className="text-lg font-semibold text-primary">{grade.title}</h4>
                           <p className="text-muted-foreground">{grade.description}</p>
                         </div>
                       </div>
@@ -201,10 +188,9 @@ const GameStart = () => {
                           <Trophy className="h-4 w-4 text-primary" />
                           <span className="text-sm font-medium">{grade.totalXP} XP Earned</span>
                         </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4 text-secondary" />
-                          <span className="text-sm">Full School Year</span>
-                        </div>
+                        <Button variant="outline" size="sm">
+                          View Curriculum
+                        </Button>
                       </div>
                       <Progress 
                         value={(grade.completedModules / grade.moduleCount) * 100} 
@@ -220,53 +206,24 @@ const GameStart = () => {
           {/* Information Panel */}
           <div className="lg:col-span-1">
             <Card className="sticky top-24">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BookOpen className="h-5 w-5 text-primary" />
-                  About Our Program
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 p-6">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🎓</div>
                   <h3 className="text-lg font-bold mb-2">
-                    Comprehensive Financial Education
+                    Teacher Dashboard
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Age-appropriate curriculum designed for classroom use
+                    Create classrooms and track student progress
                   </p>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="p-4 bg-primary/10 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <Users className="h-4 w-4" />
-                      For Educators
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Standards-aligned lessons with assessment tools and progress tracking
-                    </p>
-                  </div>
-
-                  <div className="p-4 bg-secondary/10 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <Star className="h-4 w-4" />
-                      For Students
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Interactive videos, articles, and quizzes that make learning fun
-                    </p>
-                  </div>
-
-                  <div className="p-4 bg-accent/10 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center gap-2">
-                      <Trophy className="h-4 w-4" />
-                      Track Progress
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Earn XP for correct answers and track completion rates
-                    </p>
-                  </div>
+                  <Button variant="outline" size="sm" className="w-full" asChild>
+                    <Link to="/teacher-dashboard">
+                      <Users className="h-4 w-4 mr-2" />
+                      Teacher Dashboard
+                    </Link>
+                  </Button>
                 </div>
 
                 {/* Overall Stats */}
@@ -282,12 +239,6 @@ const GameStart = () => {
                     <div className="flex justify-between">
                       <span className="text-sm">Grade Levels:</span>
                       <span className="text-sm font-bold">6 (3rd-8th)</span>
-                    </div>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center gap-1 text-primary">
-                        <GraduationCap className="h-4 w-4" />
-                        <span className="font-bold">Full School Year Curriculum</span>
-                      </div>
                     </div>
                   </div>
                 </div>

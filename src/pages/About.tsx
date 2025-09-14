@@ -13,12 +13,12 @@ const About = () => {
     {
       icon: <Users className="h-8 w-8" />,
       title: "Engagement-First",
-      description: "We make financial learning irresistibly fun through interactive gaming that keeps students motivated and excited to learn."
+      description: "We make financial learning irresistibly engaging through interactive content that keeps students motivated and excited to learn."
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
       title: "Innovation-Led",
-      description: "We constantly evolve our platform with cutting-edge gamification and educational methodologies."
+      description: "We constantly evolve our platform with cutting-edge interactive content and educational methodologies."
     },
     {
       icon: <Heart className="h-8 w-8" />,
@@ -63,7 +63,7 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Cash Climb</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're on a mission to revolutionize financial education by making it engaging, accessible, and effective through the power of gamification.
+            We're on a mission to revolutionize financial education by making it engaging, accessible, and effective through interactive learning.
           </p>
         </div>
       </section>
@@ -80,7 +80,7 @@ const About = () => {
                 Traditional financial education fails young people. It's boring, intimidating, and often disconnected from their digital-first world and real-life challenges.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Cash Climb transforms learning about money into an engaging adventure specifically designed for young students. Through gamification and interactive challenges, we make complex financial concepts simple, fun, and memorable.
+                Cash Climb transforms learning about money into an engaging educational experience specifically designed for young students. Through interactive content and comprehensive curriculum, we make complex financial concepts simple, accessible, and memorable.
               </p>
               <p className="text-lg text-muted-foreground">
                 Our goal is to empower the next generation with essential financial literacy skills, helping young students build wealth, make informed decisions, and achieve their dreams from an early age.
@@ -139,7 +139,7 @@ const About = () => {
             Ready to Join Our <span className="bg-gradient-primary bg-clip-text text-transparent">Mission</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Start your journey to financial literacy today with our gamified learning platform.
+            Start your journey to financial literacy today with our interactive learning platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
