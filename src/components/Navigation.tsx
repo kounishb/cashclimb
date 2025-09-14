@@ -48,7 +48,7 @@ const Navigation = () => {
             {isAuthenticated ? (
               <div className="flex items-center space-x-4">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/game" target="_blank" rel="noopener noreferrer">
+                  <Link to="/game">
                     Dashboard
                   </Link>
                 </Button>
@@ -108,7 +108,7 @@ const Navigation = () => {
                 {isAuthenticated ? (
                   <div className="space-y-2">
                     <Button variant="outline" size="sm" className="w-full" asChild>
-                      <Link to="/game" target="_blank" rel="noopener noreferrer">
+                      <Link to="/game">
                         Dashboard
                       </Link>
                     </Button>

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navigation from "./components/Navigation";
+import DashboardLayout from "./components/DashboardLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -27,17 +28,22 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Navigation />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/product" element={<Product />} />
-            <Route path="/contact" element={<Contact />} />
+            {/* Public Routes with Navigation */}
+            <Route path="/" element={<><Navigation /><Home /></>} />
+            <Route path="/about" element={<><Navigation /><About /></>} />
+            <Route path="/product" element={<><Navigation /><Product /></>} />
+            <Route path="/contact" element={<><Navigation /><Contact /></>} />
+            <Route path="/auth" element={<><Navigation /><Auth /></>} />
+            
+            {/* Dashboard Routes with Isolated Layout */}
             <Route 
               path="/game" 
               element={
                 <ProtectedRoute>
-                  <GameStart />
+                  <DashboardLayout>
+                    <GameStart />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
@@ -45,7 +51,9 @@ const App = () => (
               path="/game-start" 
               element={
                 <ProtectedRoute>
-                  <GameStart />
+                  <DashboardLayout>
+                    <GameStart />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
@@ -53,7 +61,9 @@ const App = () => (
               path="/grade/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <GradeModules />
+                  <DashboardLayout>
+                    <GradeModules />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
@@ -61,7 +71,9 @@ const App = () => (
               path="/curriculum/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <Curriculum />
+                  <DashboardLayout>
+                    <Curriculum />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
@@ -69,7 +81,9 @@ const App = () => (
               path="/education/grade/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <GradeModules />
+                  <DashboardLayout>
+                    <GradeModules />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
@@ -77,13 +91,15 @@ const App = () => (
               path="/education/grade/:gradeId/module/:moduleId" 
               element={
                 <ProtectedRoute>
-                  <LessonViewer />
+                  <DashboardLayout>
+                    <LessonViewer />
+                  </DashboardLayout>
                 </ProtectedRoute>
               } 
             />
-            <Route path="/auth" element={<Auth />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            
+            {/* 404 Route */}
+            <Route path="*" element={<><Navigation /><NotFound /></>} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

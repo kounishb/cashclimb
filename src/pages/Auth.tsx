@@ -24,7 +24,7 @@ const Auth = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/game');
+      navigate('/');
     }
   }, [isAuthenticated, navigate]);
 
@@ -43,9 +43,9 @@ const Auth = () => {
     } else {
       toast({
         title: "Welcome back!",
-        description: "Successfully logged in."
+        description: "Successfully logged in. You can now access your dashboard."
       });
-      navigate('/game');
+      navigate('/');
     }
     
     setLoading(false);
@@ -87,7 +87,7 @@ const Auth = () => {
         title: "Account Created!",
         description: "Welcome to Cash Climb! Please check your email to verify your account."
       });
-      navigate('/game');
+      navigate('/');
     }
     
     setLoading(false);

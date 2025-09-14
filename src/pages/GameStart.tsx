@@ -97,15 +97,10 @@ const GameStart = () => {
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
-            <h1 className="text-3xl md:text-4xl font-bold">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Financial Literacy Academy
-              </span>
+            <h1 className="text-3xl md:text-4xl font-bold text-primary">
+              Cash Climb
             </h1>
           </div>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive financial education curriculum for grades 3-8 📚
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -200,24 +195,6 @@ const GameStart = () => {
           <div className="lg:col-span-1">
             <Card className="sticky top-24">
               <CardContent className="space-y-6 p-6">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🎓</div>
-                  <h3 className="text-lg font-bold mb-2">
-                    Teacher Dashboard
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Create classrooms and track student progress
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <Button variant="outline" size="sm" className="w-full" asChild>
-                    <Link to="/teacher-dashboard">
-                      <Users className="h-4 w-4 mr-2" />
-                      Teacher Dashboard
-                    </Link>
-                  </Button>
-                </div>
 
                 {/* Overall Stats */}
                 <div className="border-t pt-4">
