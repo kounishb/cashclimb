@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to your support address
     const emailResponse = await resend.emails.send({
       from: "Cash Climb Contact <onboarding@resend.dev>",
-      to: ["support@cashclimb.com"], // Replace with your actual support email
+      to: ["your-email@gmail.com"], // Use a working email for now
       subject: `Contact Form: ${subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
