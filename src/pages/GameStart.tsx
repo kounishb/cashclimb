@@ -4,156 +4,104 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { 
-  Play,
+  BookOpen,
   Home,
   Star,
   Trophy,
   Users,
-  BookOpen,
+  GraduationCap,
   Target,
   Coins,
   Lock,
   CheckCircle,
-  Clock
+  Calendar
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const GameStart = () => {
   const navigate = useNavigate();
-  const [selectedModule, setSelectedModule] = useState(1);
-  const [completedModules, setCompletedModules] = useState<number[]>([]);
-  const [totalXP, setTotalXP] = useState(0);
+  const [selectedGrade, setSelectedGrade] = useState(3);
+  const [userProgress, setUserProgress] = useState<{[key: number]: {completedModules: number[], totalXP: number}}>({});
 
   // Load progress from localStorage on component mount
   useEffect(() => {
-    const savedProgress = localStorage.getItem('cashClimbProgress');
+    const savedProgress = localStorage.getItem('financialEducationProgress');
     if (savedProgress) {
       const progress = JSON.parse(savedProgress);
-      setCompletedModules(progress.completedModules || []);
-      setTotalXP(progress.totalXP || 0);
+      setUserProgress(progress);
     }
   }, []);
 
-  // Generate modules with dynamic unlock/completion status
-  const modules = [
+  // Generate grade levels with their curriculum
+  const grades = [
     {
-      id: 1,
-      title: "Money Basics",
-      subtitle: "What is money and how do we earn it?",
-      targetGrades: "3-4",
-      description: "Help villagers rebuild their town while learning about earning money and the difference between needs and wants.",
-      topics: ["What is money?", "Earning money through work", "Needs vs. wants"],
-      gameScenario: "Village Rebuild Adventure",
-      estimatedTime: "15-20 minutes",
-      xpReward: 100,
-      badge: "Village Helper"
+      grade: 3,
+      title: "Money Explorers",
+      description: "Discover what money is and why we need it",
+      color: "bg-green-500",
+      moduleCount: 12,
+      topics: ["What is money?", "Coins and bills", "Earning money", "Needs vs wants", "Spending choices"],
+      skills: ["Basic money recognition", "Simple counting", "Making choices"]
     },
     {
-      id: 2,
-      title: "Saving & Budgeting",
-      subtitle: "Planning for your financial future",
-      targetGrades: "4-5",
-      description: "Run a lemonade stand and learn to budget your earnings for ingredients, savings, and that new bike you want!",
-      topics: ["Why save money?", "Short vs. long-term goals", "Creating budgets"],
-      gameScenario: "Lemonade Stand Business",
-      estimatedTime: "20-25 minutes",
-      xpReward: 150,
-      badge: "Smart Saver"
+      grade: 4,
+      title: "Smart Spenders",
+      description: "Learn to make smart spending decisions",
+      color: "bg-blue-500", 
+      moduleCount: 14,
+      topics: ["Saving money", "Making a budget", "Comparing prices", "Money goals", "Bank basics"],
+      skills: ["Basic budgeting", "Goal setting", "Price comparison"]
     },
     {
-      id: 3,
-      title: "Banks & Interest",
-      subtitle: "Making your money grow",
-      targetGrades: "5-6",
-      description: "Discover how banks work and watch your money grow with interest. Choose between jars and bank accounts!",
-      topics: ["What banks do", "Earning interest", "Types of accounts"],
-      gameScenario: "Bank Explorer Quest",
-      estimatedTime: "20-25 minutes",
-      xpReward: 200,
-      badge: "Bank Explorer"
+      grade: 5,
+      title: "Future Planners",
+      description: "Start planning for your financial future",
+      color: "bg-purple-500",
+      moduleCount: 16,
+      topics: ["Long-term saving", "Interest basics", "Job types", "Banking", "Financial goals"],
+      skills: ["Saving strategies", "Understanding interest", "Career awareness"]
     },
     {
-      id: 4,
-      title: "Credit & Debt",
-      subtitle: "Borrowing money responsibly",
-      targetGrades: "6-7",
-      description: "Manage a shop where you'll learn about borrowing money, paying it back on time, and building good credit.",
-      topics: ["What is credit?", "Borrowing responsibly", "Credit scores"],
-      gameScenario: "Shop Owner Challenge",
-      estimatedTime: "25-30 minutes",
-      xpReward: 250,
-      badge: "Credit Master"
+      grade: 6,
+      title: "Money Managers",
+      description: "Manage money like a pro",
+      color: "bg-orange-500",
+      moduleCount: 18,
+      topics: ["Credit basics", "Debt understanding", "Investment intro", "Entrepreneurship", "Digital money"],
+      skills: ["Credit awareness", "Risk assessment", "Basic investing"]
     },
     {
-      id: 5,
-      title: "Spending Wisely",
-      subtitle: "Making smart purchase decisions",
-      targetGrades: "6-8",
-      description: "Plan a school fundraiser and shop for supplies within budget while learning about comparison shopping and avoiding impulse buys.",
-      topics: ["Comparison shopping", "Unit prices & discounts", "Impulse vs. planned spending"],
-      gameScenario: "School Fundraiser Planner",
-      estimatedTime: "25-30 minutes",
-      xpReward: 300,
-      badge: "Smart Shopper"
+      grade: 7,
+      title: "Financial Strategists",
+      description: "Develop sophisticated financial strategies",
+      color: "bg-red-500",
+      moduleCount: 20,
+      topics: ["Advanced budgeting", "Tax basics", "Insurance", "Scam protection", "Economic concepts"],
+      skills: ["Strategic planning", "Risk management", "Economic thinking"]
     },
     {
-      id: 6,
-      title: "Earning & Careers",
-      subtitle: "Exploring the world of work",
-      targetGrades: "6-8",
-      description: "Try out different career paths and learn about jobs vs careers, hourly wages vs salaries, and how paychecks work.",
-      topics: ["Jobs vs. careers", "Hourly wage vs. salary", "Paychecks and taxes"],
-      gameScenario: "Career Exploration Quest",
-      estimatedTime: "30-35 minutes",
-      xpReward: 350,
-      badge: "Career Explorer"
-    },
-    {
-      id: 7,
-      title: "Digital Money & Scams",
-      subtitle: "Staying safe in the digital world",
-      targetGrades: "7-8",
-      description: "Navigate online payments and digital wallets while learning to spot and avoid scams and phishing attempts.",
-      topics: ["Online payments & apps", "Digital wallets", "Spotting scams & phishing"],
-      gameScenario: "Digital Detective Mission",
-      estimatedTime: "30-35 minutes",
-      xpReward: 400,
-      badge: "Digital Detective"
-    },
-    {
-      id: 8,
-      title: "Financial Decision-Making",
-      subtitle: "Making smart long-term choices",
-      targetGrades: "7-8", 
-      description: "Help plan a family vacation and learn about opportunity cost, risk vs reward, and making smart long-term financial decisions.",
-      topics: ["Opportunity cost", "Risk vs. reward", "Smart long-term choices"],
-      gameScenario: "Family Vacation Planner",
-      estimatedTime: "35-40 minutes",
-      xpReward: 500,
-      badge: "Decision Master"
+      grade: 8,
+      title: "Finance Masters",
+      description: "Master advanced financial concepts",
+      color: "bg-indigo-500",
+      moduleCount: 22,
+      topics: ["Investment strategies", "College planning", "Career prep", "Advanced economics", "Global finance"],
+      skills: ["Investment analysis", "Long-term planning", "Global awareness"]
     }
-  ].map(module => ({
-    ...module,
-    isCompleted: completedModules.includes(module.id),
-    isUnlocked: module.id === 1 || completedModules.includes(module.id - 1)
-  }));
+  ].map(grade => {
+    const progress = userProgress[grade.grade] || { completedModules: [], totalXP: 0 };
+    return {
+      ...grade,
+      completedModules: progress.completedModules.length,
+      totalXP: progress.totalXP
+    };
+  });
 
-  const startGame = () => {
-    navigate(`/game/module/${selectedModule}`);
+  const selectGrade = (grade: number) => {
+    navigate(`/education/grade/${grade}`);
   };
 
-  const selectModule = (moduleId: number) => {
-    const module = modules.find(m => m.id === moduleId);
-    console.log('Clicking module:', moduleId, 'Module data:', module);
-    if (module && module.isUnlocked) {
-      setSelectedModule(moduleId);
-      console.log('Module selected:', moduleId);
-    } else {
-      console.log('Module not unlocked or not found');
-    }
-  };
-
-  const selectedModuleData = modules.find(m => m.id === selectedModule);
+  const selectedGradeData = grades.find(g => g.grade === selectedGrade);
 
   return (
     <div className="min-h-screen pt-20 pb-8">
@@ -169,200 +117,176 @@ const GameStart = () => {
             </Button>
             <h1 className="text-3xl md:text-4xl font-bold">
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Cash Climb Academy
+                Financial Literacy Academy
               </span>
             </h1>
           </div>
           <p className="text-lg text-muted-foreground">
-            Master financial literacy through fun, interactive games and challenges! 🎯
+            Comprehensive financial education curriculum for grades 3-8 📚
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Module Selection */}
+          {/* Grade Selection */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2">Choose Your Learning Module</h2>
+              <h2 className="text-2xl font-bold mb-2">Select Your Grade Level</h2>
               <p className="text-muted-foreground">
-                Progress through each module to unlock the next adventure!
+                Choose your grade to access age-appropriate financial curriculum
               </p>
             </div>
 
-            <div className="grid gap-4 mb-8">
-              {modules.map((module) => (
+            <div className="grid gap-6 mb-8">
+              {grades.map((grade) => (
                 <Card
-                  key={module.id}
-                  className={`cursor-pointer transition-all duration-300 border-2 ${
-                    selectedModule === module.id
-                      ? 'border-primary shadow-lg bg-primary/5'
-                      : 'border-gray-200 hover:border-primary/50 hover:shadow-md'
-                  } ${
-                    !module.isUnlocked ? 'opacity-60 cursor-not-allowed' : ''
-                  }`}
-                  onClick={() => {
-                    console.log('Card clicked for module:', module.id);
-                    selectModule(module.id);
-                  }}
+                  key={grade.grade}
+                  className={`cursor-pointer transition-all duration-300 border-2 hover:border-primary/50 hover:shadow-lg`}
+                  onClick={() => selectGrade(grade.grade)}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                          module.isCompleted
-                            ? 'bg-green-500 text-white'
-                            : module.isUnlocked
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-gray-300 text-gray-500'
-                        }`}>
-                          {module.isCompleted ? (
-                            <CheckCircle className="h-5 w-5" />
-                          ) : module.isUnlocked ? (
-                            <BookOpen className="h-5 w-5" />
-                          ) : (
-                            <Lock className="h-5 w-5" />
-                          )}
+                      <div className="flex items-center gap-4">
+                        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white ${grade.color}`}>
+                          <GraduationCap className="h-8 w-8" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold">Module {module.id}: {module.title}</h3>
-                          <p className="text-muted-foreground">{module.subtitle}</p>
+                          <h3 className="text-2xl font-bold">Grade {grade.grade}</h3>
+                          <h4 className="text-lg font-semibold text-primary">{grade.title}</h4>
+                          <p className="text-muted-foreground">{grade.description}</p>
                         </div>
                       </div>
-                      <Badge variant="outline">Grades {module.targetGrades}</Badge>
+                      <div className="text-right">
+                        <Badge variant="outline" className="mb-2">
+                          {grade.moduleCount} Modules
+                        </Badge>
+                        <div className="text-sm text-muted-foreground">
+                          {grade.completedModules}/{grade.moduleCount} Complete
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
-                        <h4 className="font-semibold mb-2">What You'll Learn:</h4>
+                        <h4 className="font-semibold mb-2">Key Topics:</h4>
                         <ul className="text-sm text-muted-foreground space-y-1">
-                          {module.topics.map((topic, index) => (
+                          {grade.topics.slice(0, 3).map((topic, index) => (
                             <li key={index} className="flex items-center gap-2">
                               <Star className="h-3 w-3 text-primary" />
                               {topic}
                             </li>
                           ))}
+                          {grade.topics.length > 3 && (
+                            <li className="text-xs text-muted-foreground">
+                              +{grade.topics.length - 3} more topics
+                            </li>
+                          )}
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-2">Game Details:</h4>
-                        <div className="text-sm text-muted-foreground space-y-1">
-                          <div className="flex items-center gap-2">
-                            <Target className="h-3 w-3" />
-                            {module.gameScenario}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="h-3 w-3" />
-                            {module.estimatedTime}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Trophy className="h-3 w-3" />
-                            {module.xpReward} XP + {module.badge} badge
-                          </div>
-                        </div>
+                        <h4 className="font-semibold mb-2">Skills Developed:</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          {grade.skills.map((skill, index) => (
+                            <li key={index} className="flex items-center gap-2">
+                              <Target className="h-3 w-3 text-secondary" />
+                              {skill}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
 
-                    <p className="text-sm text-muted-foreground mt-4">
-                      {module.description}
-                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1">
+                          <Trophy className="h-4 w-4 text-primary" />
+                          <span className="text-sm font-medium">{grade.totalXP} XP Earned</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4 text-secondary" />
+                          <span className="text-sm">Full School Year</span>
+                        </div>
+                      </div>
+                      <Progress 
+                        value={(grade.completedModules / grade.moduleCount) * 100} 
+                        className="w-32 h-2" 
+                      />
+                    </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
 
-          {/* Game Start Panel */}
+          {/* Information Panel */}
           <div className="lg:col-span-1">
             <Card className="sticky top-24">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Play className="h-5 w-5 text-primary" />
-                  Ready to Start?
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  About Our Program
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {selectedModuleData && (
-                  <>
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">
-                        {selectedModuleData.id === 1 ? "🏘️" : 
-                         selectedModuleData.id === 2 ? "🍋" :
-                         selectedModuleData.id === 3 ? "🏦" : 
-                         selectedModuleData.id === 4 ? "🏪" :
-                         selectedModuleData.id === 5 ? "🛒" :
-                         selectedModuleData.id === 6 ? "💼" :
-                         selectedModuleData.id === 7 ? "🔒" : "✈️"}
-                      </div>
-                      <h3 className="text-lg font-bold mb-2">
-                        {selectedModuleData.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {selectedModuleData.gameScenario}
-                      </p>
-                    </div>
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🎓</div>
+                  <h3 className="text-lg font-bold mb-2">
+                    Comprehensive Financial Education
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Age-appropriate curriculum designed for classroom use
+                  </p>
+                </div>
 
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">Estimated Time:</span>
-                        <Badge variant="outline">{selectedModuleData.estimatedTime}</Badge>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">XP Reward:</span>
-                        <div className="flex items-center gap-1 text-primary">
-                          <Trophy className="h-3 w-3" />
-                          {selectedModuleData.xpReward}
-                        </div>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">Badge:</span>
-                        <Badge variant="outline">{selectedModuleData.badge}</Badge>
-                      </div>
-                    </div>
+                <div className="space-y-4">
+                  <div className="p-4 bg-primary/10 rounded-lg">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Users className="h-4 w-4" />
+                      For Educators
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Standards-aligned lessons with assessment tools and progress tracking
+                    </p>
+                  </div>
 
-                    <Button
-                      onClick={startGame}
-                      disabled={!selectedModuleData.isUnlocked}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3"
-                      size="lg"
-                    >
-                      {selectedModuleData.isUnlocked ? (
-                        <>
-                          <Play className="h-5 w-5 mr-2" />
-                          Start Module {selectedModuleData.id}
-                        </>
-                      ) : (
-                        <>
-                          <Lock className="h-5 w-5 mr-2" />
-                          Complete Previous Module
-                        </>
-                      )}
-                    </Button>
+                  <div className="p-4 bg-secondary/10 rounded-lg">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Star className="h-4 w-4" />
+                      For Students
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Interactive videos, articles, and quizzes that make learning fun
+                    </p>
+                  </div>
 
-                    {!selectedModuleData.isUnlocked && (
-                      <p className="text-xs text-center text-muted-foreground">
-                        Complete the previous modules to unlock this adventure!
-                      </p>
-                    )}
-                  </>
-                )}
+                  <div className="p-4 bg-accent/10 rounded-lg">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Trophy className="h-4 w-4" />
+                      Track Progress
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Earn XP for correct answers and track completion rates
+                    </p>
+                  </div>
+                </div>
 
-                {/* Player Progress Summary */}
+                {/* Overall Stats */}
                 <div className="border-t pt-4">
-                  <h4 className="font-semibold mb-3">Your Progress</h4>
+                  <h4 className="font-semibold mb-3">Platform Overview</h4>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-sm">Modules Completed:</span>
+                      <span className="text-sm">Total Modules:</span>
                       <span className="text-sm font-bold">
-                        {completedModules.length}/{modules.length}
+                        {grades.reduce((sum, grade) => sum + grade.moduleCount, 0)}
                       </span>
                     </div>
-                    <Progress 
-                      value={(completedModules.length / modules.length) * 100} 
-                      className="h-2"
-                    />
+                    <div className="flex justify-between">
+                      <span className="text-sm">Grade Levels:</span>
+                      <span className="text-sm font-bold">6 (3rd-8th)</span>
+                    </div>
                     <div className="text-center">
                       <div className="flex items-center justify-center gap-1 text-primary">
-                        <Coins className="h-4 w-4" />
-                        <span className="font-bold">{totalXP} Total XP</span>
+                        <GraduationCap className="h-4 w-4" />
+                        <span className="font-bold">Full School Year Curriculum</span>
                       </div>
                     </div>
                   </div>

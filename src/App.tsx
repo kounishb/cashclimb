@@ -11,6 +11,8 @@ import About from "./pages/About";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 import GameStart from "./pages/GameStart";
+import GradeModules from "./pages/GradeModules";
+import LessonViewer from "./pages/LessonViewer";
 import Game from "./pages/Game";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -47,10 +49,18 @@ const App = () => (
               } 
             />
             <Route 
-              path="/game/module/:moduleId" 
+              path="/education/grade/:gradeId" 
               element={
                 <ProtectedRoute>
-                  <Game />
+                  <GradeModules />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/education/grade/:gradeId/module/:moduleId" 
+              element={
+                <ProtectedRoute>
+                  <LessonViewer />
                 </ProtectedRoute>
               } 
             />
