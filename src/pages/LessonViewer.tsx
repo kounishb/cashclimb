@@ -91,27 +91,18 @@ const LessonViewer = () => {
     }
   };
 
-  // Real educational content with working videos and comprehensive articles
+  // Comprehensive educational content for all grades and modules
   const lessonContent = {
     3: {
       1: {
         title: "What is Money?",
-        videoUrl: "https://www.youtube.com/embed/0iRbD5rM5qc", // Financial Literacy for Kids
-        videoTitle: "Introduction to Money for Kids",
+        videoUrl: "https://www.youtube.com/embed/0iRbD5rM5qc",
+        videoTitle: "What is Money? - Financial Literacy for Kids",
         article: {
           title: "Understanding Money: The Complete Guide for Young Learners",
           content: `
             <h2>What is Money?</h2>
             <p>Money is a special tool that helps people trade and buy things they need and want. Before money existed, people had to trade items directly with each other. Imagine trying to trade your bicycle for groceries - it would be very difficult!</p>
-            
-            <h3>The History of Money</h3>
-            <p>Long ago, people used many different things as money:</p>
-            <ul>
-              <li><strong>Shells and stones</strong> - Easy to carry and count</li>
-              <li><strong>Metal pieces</strong> - Valuable and long-lasting</li>
-              <li><strong>Paper certificates</strong> - Representing valuable items stored elsewhere</li>
-              <li><strong>Digital numbers</strong> - Modern electronic money we use today</li>
-            </ul>
             
             <h3>Types of Money Today</h3>
             <p>In our modern world, we use several types of money:</p>
@@ -130,33 +121,6 @@ const LessonViewer = () => {
               <li>Pay for services like haircuts, medical care, and education</li>
               <li>Save for future goals and dreams</li>
               <li>Help others through donations and gifts</li>
-              <li>Measure and compare the value of different things</li>
-            </ul>
-            
-            <h3>Money Around the World</h3>
-            <p>Different countries use different types of money called "currencies":</p>
-            <ul>
-              <li>United States: Dollars ($)</li>
-              <li>Europe: Euros (€)</li>
-              <li>Japan: Yen (¥)</li>
-              <li>United Kingdom: Pounds (£)</li>
-            </ul>
-            
-            <h3>Fun Facts About Money!</h3>
-            <ul>
-              <li>The first coins were made over 2,500 years ago in ancient Turkey</li>
-              <li>Paper money was first used in China over 1,000 years ago</li>
-              <li>The largest bill ever printed in the US was worth $100,000!</li>
-              <li>Some cultures used cocoa beans, salt, or cattle as money</li>
-            </ul>
-            
-            <h3>Taking Care of Money</h3>
-            <p>It's important to treat money with respect:</p>
-            <ul>
-              <li>Keep bills flat and clean - don't write on them</li>
-              <li>Store coins and bills in a safe place</li>
-              <li>Count your money carefully</li>
-              <li>Ask adults for help when handling large amounts</li>
             </ul>
           `
         },
@@ -170,10 +134,10 @@ const LessonViewer = () => {
           },
           {
             id: 2,
-            question: "Before money existed, how did people get things they needed?",
-            options: ["They traded items directly", "They used credit cards", "They asked the government", "They made everything themselves"],
-            correct: "They traded items directly",
-            explanation: "Before money, people had to trade items directly with each other, which was much more difficult than using money!"
+            question: "How much is a quarter worth?",
+            options: ["1 cent", "5 cents", "10 cents", "25 cents"],
+            correct: "25 cents",
+            explanation: "A quarter is worth 25 cents, which is the same as 5 nickels or 25 pennies!"
           },
           {
             id: 3,
@@ -184,52 +148,271 @@ const LessonViewer = () => {
           },
           {
             id: 4,
-            question: "How much is a quarter worth?",
-            options: ["1 cent", "5 cents", "10 cents", "25 cents"],
-            correct: "25 cents",
-            explanation: "A quarter is worth 25 cents, which is the same as 5 nickels or 25 pennies!"
-          },
-          {
-            id: 5,
-            question: "What currency is used in Japan?",
-            options: ["Dollars", "Euros", "Yen", "Pounds"],
-            correct: "Yen",
-            explanation: "Japan uses Yen (¥) as their currency, just like the United States uses Dollars ($)!"
-          },
-          {
-            id: 6,
-            question: "Where was paper money first used?",
-            options: ["United States", "China", "Europe", "Africa"],
-            correct: "China",
-            explanation: "Paper money was first used in China over 1,000 years ago, making it a very old invention!"
-          },
-          {
-            id: 7,
             question: "What should you do to take care of paper money?",
             options: ["Write your name on it", "Fold it many times", "Keep it flat and clean", "Use it as paper for drawing"],
             correct: "Keep it flat and clean",
             explanation: "To take care of money, we should keep bills flat and clean, and never write on them or damage them!"
           },
           {
-            id: 8,
+            id: 5,
             question: "Money helps us do all of these EXCEPT:",
             options: ["Buy food and clothes", "Save for the future", "Help others", "Control the weather"],
             correct: "Control the weather",
             explanation: "Money can help us buy things, save, and help others, but it cannot control natural things like the weather!"
           },
           {
-            id: 9,
+            id: 6,
             question: "What makes money useful compared to trading items directly?",
             options: ["It's more colorful", "It's easier to carry and use", "It makes noise", "It never gets lost"],
             correct: "It's easier to carry and use",
             explanation: "Money is much easier to carry and use than trading heavy or awkward items directly with other people!"
           },
           {
-            id: 10,
+            id: 7,
             question: "If you wanted to help others with your money, what could you do?",
             options: ["Hide it under your bed", "Spend it all on toys", "Donate to charity", "Throw it away"],
             correct: "Donate to charity",
             explanation: "One wonderful way to use money to help others is to donate some of it to charities that help people in need!"
+          },
+          {
+            id: 8,
+            question: "What currency is used in Japan?",
+            options: ["Dollars", "Euros", "Yen", "Pounds"],
+            correct: "Yen",
+            explanation: "Japan uses Yen (¥) as their currency, just like the United States uses Dollars ($)!"
+          },
+          {
+            id: 9,
+            question: "Before money existed, how did people get things they needed?",
+            options: ["They traded items directly", "They used credit cards", "They asked the government", "They made everything themselves"],
+            correct: "They traded items directly",
+            explanation: "Before money, people had to trade items directly with each other, which was much more difficult than using money!"
+          },
+          {
+            id: 10,
+            question: "Where was paper money first used?",
+            options: ["United States", "China", "Europe", "Africa"],
+            correct: "China",
+            explanation: "Paper money was first used in China over 1,000 years ago, making it a very old invention!"
+          }
+        ],
+        xpReward: 100
+      },
+      2: {
+        title: "Earning Money",
+        videoUrl: "https://www.youtube.com/embed/XvvneFKE4G0",
+        videoTitle: "How Kids Can Earn Money - Jobs and Chores",
+        article: {
+          title: "How People Earn Money: Jobs, Chores, and Hard Work",
+          content: `
+            <h2>How People Earn Money</h2>
+            <p>Money doesn't just appear - people work to earn it! Understanding how earning money works is one of the most important lessons you can learn.</p>
+            
+            <h3>What is Work?</h3>
+            <p>Work is when people use their time, skills, and effort to do something valuable for others. In return, they get paid money!</p>
+            
+            <h3>Different Types of Jobs</h3>
+            <ul>
+              <li><strong>Service Jobs</strong> - Helping people (teachers, doctors, police officers)</li>
+              <li><strong>Making Things</strong> - Creating products people need (builders, bakers, toy makers)</li>
+              <li><strong>Selling Things</strong> - Helping people buy what they need (store clerks, salespeople)</li>
+              <li><strong>Information Jobs</strong> - Working with ideas and computers (writers, programmers)</li>
+            </ul>
+            
+            <h3>How Kids Can Earn Money</h3>
+            <p>Even kids can start earning money through age-appropriate work:</p>
+            <ul>
+              <li><strong>Household Chores</strong> - Cleaning, organizing, helping with yard work</li>
+              <li><strong>Helping Neighbors</strong> - Walking dogs, collecting mail, simple yard tasks</li>
+              <li><strong>Creative Work</strong> - Making and selling crafts, artwork, or baked goods</li>
+              <li><strong>Academic Help</strong> - Tutoring younger kids in subjects you're good at</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is work?",
+            options: ["Playing games", "Using time and skills to do something valuable for others", "Watching TV", "Sleeping"],
+            correct: "Using time and skills to do something valuable for others",
+            explanation: "Work means using your time, skills, and effort to create value for others, and getting paid in return!"
+          },
+          {
+            id: 2,
+            question: "Which is NOT a way kids can earn money?",
+            options: ["Doing chores", "Walking neighbors' dogs", "Operating heavy machinery", "Making crafts to sell"],
+            correct: "Operating heavy machinery",
+            explanation: "Kids should only do age-appropriate work that is safe and legal for their age!"
+          },
+          {
+            id: 3,
+            question: "Why do people with more education often earn more money?",
+            options: ["They are luckier", "They can do more complex and valuable work", "They work fewer hours", "Money appears automatically"],
+            correct: "They can do more complex and valuable work",
+            explanation: "Education and skills training help people do more valuable work, which usually pays better!"
+          },
+          {
+            id: 4,
+            question: "What type of job involves helping people directly?",
+            options: ["Service jobs", "Manufacturing jobs", "Mining jobs", "Entertainment jobs"],
+            correct: "Service jobs",
+            explanation: "Service jobs like teaching, healthcare, and public safety involve directly helping and serving people!"
+          },
+          {
+            id: 5,
+            question: "If you wanted to earn money by making something, what could you do?",
+            options: ["Sleep more", "Make crafts to sell", "Watch movies", "Play video games"],
+            correct: "Make crafts to sell",
+            explanation: "Making things like crafts, artwork, or food items that people want to buy is a great way to earn money!"
+          },
+          {
+            id: 6,
+            question: "What's the most important thing about any job?",
+            options: ["It should be easy", "It should create value for others", "It should be fun", "It should be quick"],
+            correct: "It should create value for others",
+            explanation: "All good jobs create value for other people - that's why people are willing to pay for them!"
+          },
+          {
+            id: 7,
+            question: "Which household chore could help you earn money?",
+            options: ["Watching TV", "Organizing and cleaning", "Taking naps", "Playing games"],
+            correct: "Organizing and cleaning",
+            explanation: "Helping keep the house clean and organized is valuable work that many families will pay kids to do!"
+          },
+          {
+            id: 8,
+            question: "What should you always ask before doing work for neighbors?",
+            options: ["How much they'll pay", "Permission from your parents", "If it's easy", "If you can do it quickly"],
+            correct: "Permission from your parents",
+            explanation: "Always get your parents' permission before doing any work for neighbors to make sure it's safe and appropriate!"
+          },
+          {
+            id: 9,
+            question: "Why is it important to do good work?",
+            options: ["So people will hire you again", "To learn valuable skills", "To build a good reputation", "All of the above"],
+            correct: "All of the above",
+            explanation: "Doing good work helps you get hired again, teaches you skills, and builds a reputation as someone reliable!"
+          },
+          {
+            id: 10,
+            question: "What's the best attitude to have toward work?",
+            options: ["Work is boring", "Work is punishment", "Work is a way to help others and earn money", "Work should be avoided"],
+            correct: "Work is a way to help others and earn money",
+            explanation: "Having a positive attitude about work as a way to help others while earning money will serve you well throughout life!"
+          }
+        ],
+        xpReward: 100
+      },
+      3: {
+        title: "Needs vs Wants",
+        videoUrl: "https://www.youtube.com/embed/s6V_ag7GsN0",
+        videoTitle: "Needs vs Wants - Smart Money Decisions for Kids",
+        article: {
+          title: "Making Smart Choices: Understanding Needs vs Wants",
+          content: `
+            <h2>Needs vs Wants: Making Smart Money Decisions</h2>
+            <p>One of the most important money skills is learning the difference between things you need and things you want. This helps you make smart spending decisions!</p>
+            
+            <h3>What Are Needs?</h3>
+            <p>Needs are things you must have to live, be healthy, and be safe:</p>
+            <ul>
+              <li><strong>Food</strong> - Healthy meals to keep your body strong</li>
+              <li><strong>Shelter</strong> - A safe place to live like a house or apartment</li>
+              <li><strong>Clothing</strong> - Clothes to keep you warm and protected</li>
+              <li><strong>Healthcare</strong> - Medicine and doctor visits when you're sick</li>
+              <li><strong>Education</strong> - School supplies and learning materials</li>
+            </ul>
+            
+            <h3>What Are Wants?</h3>
+            <p>Wants are things that would be nice to have but you can live without:</p>
+            <ul>
+              <li><strong>Toys and Games</strong> - Fun things to play with</li>
+              <li><strong>Brand Name Items</strong> - Expensive clothes with logos</li>
+              <li><strong>Entertainment</strong> - Movies, concerts, and amusement parks</li>
+              <li><strong>Candy and Treats</strong> - Sweet snacks and special foods</li>
+              <li><strong>Latest Technology</strong> - The newest phone or video game</li>
+            </ul>
+            
+            <h3>The Smart Money Strategy</h3>
+            <p>Here's how to make good choices:</p>
+            <ol>
+              <li><strong>Take care of needs first</strong> - Always make sure you have what you need to be healthy and safe</li>
+              <li><strong>Save some money</strong> - Put some aside for future needs and goals</li>
+              <li><strong>Then consider wants</strong> - Use leftover money for things you'd like to have</li>
+              <li><strong>Wait and think</strong> - Don't buy wants immediately; think about it for a day or week</li>
+            </ol>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "Which of these is a NEED?",
+            options: ["Video games", "Healthy food", "Expensive sneakers", "Candy"],
+            correct: "Healthy food",
+            explanation: "Healthy food is a need because your body requires nutrition to grow and stay healthy!"
+          },
+          {
+            id: 2,
+            question: "Which of these is a WANT?",
+            options: ["A safe place to sleep", "Medicine when sick", "The latest smartphone", "School supplies"],
+            correct: "The latest smartphone",
+            explanation: "While phones can be useful, the latest model is a want, not a need. A basic phone for safety might be a need."
+          },
+          {
+            id: 3,
+            question: "What should you do FIRST with your money?",
+            options: ["Buy toys", "Buy what you want", "Take care of your needs", "Give it all away"],
+            correct: "Take care of your needs",
+            explanation: "Always take care of your needs first to make sure you have what's necessary for health and safety!"
+          },
+          {
+            id: 4,
+            question: "If you want something expensive, what should you do?",
+            options: ["Buy it immediately", "Wait and think about it", "Borrow money to buy it", "Forget about it forever"],
+            correct: "Wait and think about it",
+            explanation: "Waiting helps you decide if you really want something or if it was just a temporary desire!"
+          },
+          {
+            id: 5,
+            question: "Which is the smartest approach to spending?",
+            options: ["Needs first, save some, then wants", "Wants first, then needs", "Only buy needs", "Only buy wants"],
+            correct: "Needs first, save some, then wants",
+            explanation: "The smart approach is: needs first (stay healthy), save some (for the future), then wants (if money is left)!"
+          },
+          {
+            id: 6,
+            question: "Why is it important to save some money?",
+            options: ["To show off", "For future needs and emergencies", "To make banks happy", "Money gets lonely"],
+            correct: "For future needs and emergencies",
+            explanation: "Saving money prepares you for unexpected expenses and helps you reach bigger goals in the future!"
+          },
+          {
+            id: 7,
+            question: "What makes something a need vs a want?",
+            options: ["How much it costs", "Whether you can live without it", "Whether friends have it", "Whether it's on sale"],
+            correct: "Whether you can live without it",
+            explanation: "Needs are things required for health and safety. Wants are nice to have but not necessary for living!"
+          },
+          {
+            id: 8,
+            question: "Which scenario shows good needs vs wants thinking?",
+            options: ["Buying candy instead of lunch", "Buying school supplies before toys", "Buying expensive shoes instead of any shoes", "Never saving money"],
+            correct: "Buying school supplies before toys",
+            explanation: "School supplies are a need for education, while toys are wants. Good thinking puts needs first!"
+          },
+          {
+            id: 9,
+            question: "If you have $20, what's the smartest plan?",
+            options: ["Spend it all on candy", "$10 for needs, $5 to save, $5 for wants", "Hide it all", "Give it all away"],
+            correct: "$10 for needs, $5 to save, $5 for wants",
+            explanation: "This plan takes care of needs first, saves for the future, and allows some money for wants!"
+          },
+          {
+            id: 10,
+            question: "What's a good question to ask before buying something?",
+            options: ["Do my friends have this?", "Is this the cheapest option?", "Do I need this or just want it?", "Will this make me popular?"],
+            correct: "Do I need this or just want it?",
+            explanation: "Always ask yourself if something is a need or want before spending money. This helps you make smart choices!"
           }
         ],
         xpReward: 100
@@ -237,9 +420,9 @@ const LessonViewer = () => {
     },
     4: {
       1: {
-        title: "Money Basics Review",
-        videoUrl: "https://www.youtube.com/embed/Lys4EVugJmk", // Khan Academy Financial Literacy
-        videoTitle: "Building on Money Fundamentals",
+        title: "Money Review",
+        videoUrl: "https://www.youtube.com/embed/Lys4EVugJmk",
+        videoTitle: "Money Fundamentals Review - Building Strong Foundations",
         article: {
           title: "Advanced Money Concepts for Grade 4",
           content: `
@@ -263,45 +446,6 @@ const LessonViewer = () => {
               <li><strong>Credit Cards</strong> - Cards that let you borrow money to pay (you must pay it back later)</li>
               <li><strong>Digital Payments</strong> - Using apps on phones or computers to send money</li>
             </ul>
-            
-            <h3>Making Smart Money Decisions</h3>
-            <p>Good money management involves thinking before spending:</p>
-            <ul>
-              <li><strong>Needs vs. Wants</strong> - Needs are things you must have (food, shelter). Wants are things you'd like to have (toys, candy).</li>
-              <li><strong>Comparison Shopping</strong> - Looking at prices in different stores to find the best deal</li>
-              <li><strong>Quality vs. Price</strong> - Sometimes paying more gets you something that lasts longer</li>
-              <li><strong>Opportunity Cost</strong> - When you buy one thing, you give up the chance to buy something else</li>
-            </ul>
-            
-            <h3>Money and Math Skills</h3>
-            <p>Understanding money helps improve your math:</p>
-            <ul>
-              <li>Adding prices: $2.50 + $3.75 = $6.25</li>
-              <li>Calculating change: If something costs $7 and you pay with $10, you get $3 back</li>
-              <li>Finding percentages: 10% off $20 = $2 discount</li>
-              <li>Comparing unit prices: Which is cheaper - 3 apples for $1.50 or 5 apples for $2.00?</li>
-            </ul>
-            
-            <h3>Banking Basics</h3>
-            <p>Banks are safe places to keep money:</p>
-            <ul>
-              <li><strong>Savings Account</strong> - A safe place to store money and earn a little extra (interest)</li>
-              <li><strong>Checking Account</strong> - An account for money you use regularly</li>
-              <li><strong>ATM</strong> - Automatic Teller Machine - a computer that lets you get your money</li>
-              <li><strong>Interest</strong> - Extra money the bank pays you for keeping your money there</li>
-            </ul>
-            
-            <h3>The Importance of Saving</h3>
-            <p>Saving money is one of the most important financial skills:</p>
-            <ul>
-              <li>Helps you buy bigger things you really want</li>
-              <li>Prepares you for emergencies</li>
-              <li>Teaches patience and planning</li>
-              <li>Grows over time with interest</li>
-            </ul>
-            
-            <h3>Money Around the World</h3>
-            <p>Different countries have different economic systems, but they all use money to help people trade goods and services. Learning about money prepares you to be a smart consumer anywhere in the world!</p>
           `
         },
         quiz: [
@@ -357,30 +501,6 @@ const LessonViewer = () => {
           },
           {
             id: 6,
-            question: "What is interest in banking?",
-            options: [
-              "How much you like the bank",
-              "Extra money the bank pays you for saving",
-              "The cost to use the bank",
-              "Questions you ask the bank"
-            ],
-            correct: "Extra money the bank pays you for saving",
-            explanation: "Interest is extra money the bank gives you as a reward for keeping your money saved there!"
-          },
-          {
-            id: 7,
-            question: "What does ATM stand for?",
-            options: [
-              "Always Take Money",
-              "Automatic Teller Machine", 
-              "All Time Money",
-              "Ask The Manager"
-            ],
-            correct: "Automatic Teller Machine",
-            explanation: "ATM stands for Automatic Teller Machine - it's a computer that helps you access your bank account!"
-          },
-          {
-            id: 8,
             question: "Why is comparison shopping important?",
             options: [
               "To make friends with store owners",
@@ -392,7 +512,7 @@ const LessonViewer = () => {
             explanation: "Comparison shopping helps you find the best prices so you can save money and get more value!"
           },
           {
-            id: 9,
+            id: 7,
             question: "Which is better: 3 apples for $1.50 or 5 apples for $2.00?",
             options: [
               "3 apples for $1.50",
@@ -404,16 +524,153 @@ const LessonViewer = () => {
             explanation: "5 apples for $2.00 = 40¢ per apple. 3 apples for $1.50 = 50¢ per apple. The first deal is better!"
           },
           {
-            id: 10,
-            question: "What's the most important reason to save money?",
+            id: 8,
+            question: "What does 'store of value' mean?",
             options: [
-              "To show off to friends",
-              "To prepare for future needs and wants",
-              "To make banks happy",
-              "To have heavy pockets"
+              "A place where money is kept",
+              "Money keeps its worth over time",
+              "A valuable store",
+              "Storing things in a bank"
             ],
-            correct: "To prepare for future needs and wants",
-            explanation: "Saving money helps you be prepared for future expenses and allows you to buy bigger things you really want!"
+            correct: "Money keeps its worth over time",
+            explanation: "Store of value means money keeps its worth over time, so you can save it today and use it later!"
+          },
+          {
+            id: 9,
+            question: "What is a credit card?",
+            options: [
+              "Money you already own",
+              "A card that lets you borrow money that you must pay back",
+              "Free money",
+              "A gift card"
+            ],
+            correct: "A card that lets you borrow money that you must pay back",
+            explanation: "Credit cards let you borrow money to make purchases, but you must pay it back later, often with extra fees!"
+          },
+          {
+            id: 10,
+            question: "When making a purchase decision, what should you consider?",
+            options: [
+              "Only the price",
+              "Only what you want",
+              "Needs vs wants, price, and opportunity cost",
+              "What your friends think"
+            ],
+            correct: "Needs vs wants, price, and opportunity cost",
+            explanation: "Smart money decisions consider whether it's a need or want, the price, and what you're giving up to buy it!"
+          }
+        ],
+        xpReward: 120
+      },
+      2: {
+        title: "Making a Budget",
+        videoUrl: "https://www.youtube.com/embed/EQc_2Ad8hQI",
+        videoTitle: "Budgeting for Kids - How to Plan Your Spending",
+        article: {
+          title: "Creating Your First Budget: A Step-by-Step Guide",
+          content: `
+            <h2>What is a Budget?</h2>
+            <p>A budget is a plan that shows how much money you have and how you want to spend it. It's like a map that helps you reach your money goals!</p>
+            
+            <h3>Why Make a Budget?</h3>
+            <p>Budgets help you:</p>
+            <ul>
+              <li>Know exactly how much money you have</li>
+              <li>Make sure you have money for needs</li>
+              <li>Save money for things you really want</li>
+              <li>Avoid spending more money than you have</li>
+              <li>Reach your financial goals faster</li>
+            </ul>
+            
+            <h3>The Simple Budget Formula</h3>
+            <p>Every good budget follows this basic rule:</p>
+            <p><strong>Income = Needs + Savings + Wants</strong></p>
+            <ul>
+              <li><strong>Income</strong> - Money you receive (allowance, gifts, earnings)</li>
+              <li><strong>Needs</strong> - Things you must have</li>
+              <li><strong>Savings</strong> - Money you set aside for the future</li>
+              <li><strong>Wants</strong> - Things you'd like to have</li>
+            </ul>
+            
+            <h3>The 50-30-20 Budget for Kids</h3>
+            <p>Here's a simple way to divide your money:</p>
+            <ul>
+              <li><strong>50% for Needs</strong> - School supplies, lunch money, required items</li>
+              <li><strong>30% for Wants</strong> - Toys, games, treats, entertainment</li>
+              <li><strong>20% for Savings</strong> - Money for future goals and emergencies</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is a budget?",
+            options: ["A type of bank", "A plan for how to spend your money", "A way to get free money", "A kind of allowance"],
+            correct: "A plan for how to spend your money",
+            explanation: "A budget is a plan that shows how much money you have and how you want to spend it to reach your goals!"
+          },
+          {
+            id: 2,
+            question: "What's the basic budget formula?",
+            options: ["Income = Expenses", "Income = Needs + Savings + Wants", "Income = Spending", "Income = Fun"],
+            correct: "Income = Needs + Savings + Wants",
+            explanation: "The basic budget formula shows that all your income should be divided between needs, savings, and wants!"
+          },
+          {
+            id: 3,
+            question: "In the 50-30-20 budget, what gets 50%?",
+            options: ["Wants", "Savings", "Needs", "Fun money"],
+            correct: "Needs",
+            explanation: "In the 50-30-20 budget, 50% goes to needs because they're the most important for your health and safety!"
+          },
+          {
+            id: 4,
+            question: "How much should you save according to the 50-30-20 rule?",
+            options: ["10%", "20%", "30%", "50%"],
+            correct: "20%",
+            explanation: "The 50-30-20 rule suggests saving 20% of your money for future goals and emergencies!"
+          },
+          {
+            id: 5,
+            question: "If you get $10 allowance, how much should go to savings using the 50-30-20 rule?",
+            options: ["$1", "$2", "$3", "$5"],
+            correct: "$2",
+            explanation: "20% of $10 is $2. So $2 should go to savings, $5 to needs, and $3 to wants!"
+          },
+          {
+            id: 6,
+            question: "Why is it important to include savings in your budget?",
+            options: ["To impress friends", "To prepare for future goals and emergencies", "Banks require it", "It's not important"],
+            correct: "To prepare for future goals and emergencies",
+            explanation: "Saving money helps you be prepared for unexpected expenses and reach bigger goals you're working toward!"
+          },
+          {
+            id: 7,
+            question: "What should you do if you want something that costs more than your 'wants' budget?",
+            options: ["Buy it anyway", "Save up over several budget periods", "Take money from needs", "Forget about it"],
+            correct: "Save up over several budget periods",
+            explanation: "If something costs more than your wants budget, you can save your wants money over time until you have enough!"
+          },
+          {
+            id: 8,
+            question: "What counts as 'income' for a kid's budget?",
+            options: ["Only allowance", "Allowance, gifts, and money earned from chores", "Only birthday money", "Only money from parents"],
+            correct: "Allowance, gifts, and money earned from chores",
+            explanation: "Income includes all money you receive: allowance, gift money, earnings from chores, and any other money you get!"
+          },
+          {
+            id: 9,
+            question: "What's the biggest benefit of following a budget?",
+            options: ["You can spend more money", "It helps you reach your money goals", "Adults will be impressed", "You never have to think about money"],
+            correct: "It helps you reach your money goals",
+            explanation: "The biggest benefit of a budget is that it helps you reach your money goals by planning your spending wisely!"
+          },
+          {
+            id: 10,
+            question: "If your budget shows you'll spend more than you have, what should you do?",
+            options: ["Ignore the budget", "Reduce your wants spending", "Borrow money", "Stop saving"],
+            correct: "Reduce your wants spending",
+            explanation: "If you're spending more than you have, reduce wants spending first, since needs and savings are more important!"
           }
         ],
         xpReward: 120
@@ -421,7 +678,7 @@ const LessonViewer = () => {
     }
   };
 
-  const currentLesson = lessonContent[grade as keyof typeof lessonContent]?.[module as keyof typeof lessonContent[3]] || lessonContent[3][1];
+  const currentLesson = lessonContent[grade as keyof typeof lessonContent]?.[module as keyof (typeof lessonContent)[3]] || lessonContent[3][1];
 
   const handleQuizAnswer = (questionId: number, answer: string) => {
     setQuizAnswers(prev => ({
@@ -653,7 +910,7 @@ const LessonViewer = () => {
                       <div 
                         className="prose prose-lg dark:prose-invert max-w-none"
                         style={{
-                          color: 'hsl(var(--foreground))',
+                          color: '#ffffff',
                         } as React.CSSProperties}
                         dangerouslySetInnerHTML={{ __html: currentLesson.article.content }}
                       />
