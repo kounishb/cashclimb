@@ -24,27 +24,27 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Money Fundamentals (Weeks 1-6)",
+          title: "Unit 1: Money Fundamentals",
           modules: ["What is Money?", "Earning Money"],
           skills: ["Money identification", "Understanding value", "Basic earning concepts"]
         },
         {
-          title: "Unit 2: Smart Decision Making (Weeks 7-12)",
+          title: "Unit 2: Smart Decision Making",
           modules: ["Needs vs Wants", "Spending Choices"],
           skills: ["Decision making", "Priority setting", "Impulse control"]
         },
         {
-          title: "Unit 3: Saving & Counting (Weeks 13-21)",
+          title: "Unit 3: Saving & Counting",
           modules: ["Saving Basics", "Counting Money", "Shopping Smart"],
           skills: ["Basic math skills", "Goal setting", "Comparison shopping"]
         },
         {
-          title: "Unit 4: Money in Our World (Weeks 22-30)",
+          title: "Unit 4: Money in Our World",
           modules: ["Money Safety", "Sharing Money", "Money Around the World"],
           skills: ["Safety awareness", "Social responsibility", "Cultural awareness"]
         },
         {
-          title: "Unit 5: Planning & Review (Weeks 31-36)",
+          title: "Unit 5: Planning & Review",
           modules: ["Future Money Goals", "Money Review"],
           skills: ["Future planning", "Review and synthesis", "Goal achievement"]
         }
@@ -64,27 +64,27 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Financial Foundation (Weeks 1-4)",
+          title: "Unit 1: Financial Foundation",
           modules: ["Money Review", "Making a Budget"],
           skills: ["Reinforcement", "Budget creation", "Income tracking"]
         },
         {
-          title: "Unit 2: Banking & Savings (Weeks 5-12)",
+          title: "Unit 2: Banking & Savings",
           modules: ["Saving Strategies", "Bank Basics", "Interest Introduction"],
           skills: ["Advanced saving", "Banking systems", "Interest concepts"]
         },
         {
-          title: "Unit 3: Smart Consumer Skills (Weeks 13-20)",
+          title: "Unit 3: Smart Consumer Skills",
           modules: ["Comparing Prices", "Goal Setting", "Consumer Awareness"],
           skills: ["Price analysis", "SMART goals", "Consumer protection"]
         },
         {
-          title: "Unit 4: Entrepreneurship & Ethics (Weeks 21-28)",
+          title: "Unit 4: Entrepreneurship & Ethics",
           modules: ["Entrepreneurship Basics", "Digital Money", "Money Ethics"],
           skills: ["Business thinking", "Digital literacy", "Ethical behavior"]
         },
         {
-          title: "Unit 5: Advanced Concepts (Weeks 29-36)",
+          title: "Unit 5: Advanced Concepts",
           modules: ["Money Mistakes", "Advanced Saving", "Grade 4 Mastery"],
           skills: ["Problem solving", "Advanced planning", "Comprehensive review"]
         }
@@ -104,27 +104,27 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Career & Budget Planning (Weeks 1-7)",
+          title: "Unit 1: Career & Budget Planning",
           modules: ["Financial Foundation Review", "Career Exploration", "Advanced Budgeting"],
           skills: ["Career awareness", "Complex budgeting", "Future planning"]
         },
         {
-          title: "Unit 2: Banking & Credit Systems (Weeks 8-14)",
+          title: "Unit 2: Banking & Credit Systems",
           modules: ["Banking Services", "Interest and Growth", "Credit Introduction"],
           skills: ["Banking mastery", "Compound interest", "Credit awareness"]
         },
         {
-          title: "Unit 3: Investment & Business (Weeks 15-21)",
+          title: "Unit 3: Investment & Business",
           modules: ["Debt Awareness", "Investment Basics", "Business Fundamentals"],
           skills: ["Risk assessment", "Investment principles", "Business understanding"]
         },
         {
-          title: "Unit 4: Economic Understanding (Weeks 22-28)",
+          title: "Unit 4: Economic Understanding",
           modules: ["Economic Systems", "Financial Planning", "Consumer Protection"],
           skills: ["Economic literacy", "Long-term planning", "Consumer rights"]
         },
         {
-          title: "Unit 5: Global & Future Finance (Weeks 29-36)",
+          title: "Unit 5: Global & Future Finance",
           modules: ["Global Finance", "Technology and Money", "Money Psychology", "Grade 5 Mastery Test"],
           skills: ["Global awareness", "Tech literacy", "Behavioral understanding"]
         }
@@ -144,32 +144,32 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Advanced Foundations (Weeks 1-5)",
+          title: "Unit 1: Advanced Foundations",
           modules: ["Financial Literacy Foundation", "Advanced Career Planning", "Complex Budgeting"],
           skills: ["Advanced review", "Career ROI analysis", "Sophisticated budgeting"]
         },
         {
-          title: "Unit 2: Credit & Banking Mastery (Weeks 6-11)",
+          title: "Unit 2: Credit & Banking Mastery",
           modules: ["Banking Mastery", "Credit Systems", "Debt Management"],
           skills: ["Banking expertise", "Credit building", "Debt strategies"]
         },
         {
-          title: "Unit 3: Investment & Business (Weeks 12-18)",
+          title: "Unit 3: Investment & Business",
           modules: ["Investment Strategies", "Entrepreneurship", "Insurance Basics"],
           skills: ["Portfolio management", "Business startup", "Risk protection"]
         },
         {
-          title: "Unit 4: Advanced Financial Systems (Weeks 19-25)",
+          title: "Unit 4: Advanced Financial Systems",
           modules: ["Tax Introduction", "Economic Analysis", "Digital Finance"],
           skills: ["Tax understanding", "Market analysis", "Digital security"]
         },
         {
-          title: "Unit 5: Ethics & Global Finance (Weeks 26-32)",
+          title: "Unit 5: Ethics & Global Finance",
           modules: ["Financial Ethics", "Global Economics", "Future Finance"],
           skills: ["Ethical investing", "Global markets", "Future trends"]
         },
         {
-          title: "Unit 6: Capstone & Communication (Weeks 33-36)",
+          title: "Unit 6: Capstone & Communication",
           modules: ["Real World Application", "Financial Communication", "Grade 6 Capstone"],
           skills: ["Practical application", "Communication skills", "Comprehensive mastery"]
         }
@@ -189,32 +189,32 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Advanced Foundation & College Planning (Weeks 1-5)",
+          title: "Unit 1: Advanced Foundation & College Planning",
           modules: ["Advanced Financial Review", "College Financial Planning", "Advanced Investment"],
           skills: ["Complex scenarios", "College cost analysis", "Advanced investing"]
         },
         {
-          title: "Unit 2: Tax & Insurance Strategy (Weeks 6-11)",
+          title: "Unit 2: Tax & Insurance Strategy",
           modules: ["Tax Strategy", "Insurance Strategy", "Advanced Credit"],
           skills: ["Tax optimization", "Risk portfolio", "Credit mastery"]
         },
         {
-          title: "Unit 3: Business & Real Estate (Weeks 12-17)",
+          title: "Unit 3: Business & Real Estate",
           modules: ["Business Finance", "Real Estate Basics", "Retirement Planning"],
           skills: ["Business analysis", "Property investment", "Retirement strategy"]
         },
         {
-          title: "Unit 4: Economic & Global Systems (Weeks 18-23)",
+          title: "Unit 4: Economic & Global Systems",
           modules: ["Economic Policy", "International Finance", "Financial Technology"],
           skills: ["Policy analysis", "Global investing", "Fintech understanding"]
         },
         {
-          title: "Unit 5: Psychology & Risk Management (Weeks 24-29)",
+          title: "Unit 5: Psychology & Risk Management",
           modules: ["Behavioral Finance", "Risk Management", "Financial Planning Process"],
           skills: ["Behavioral awareness", "Risk modeling", "Comprehensive planning"]
         },
         {
-          title: "Unit 6: Advanced Economics & Leadership (Weeks 30-36)",
+          title: "Unit 6: Advanced Economics & Leadership",
           modules: ["Advanced Economics", "Ethical Finance", "Financial Communication", "Case Study Analysis", "Grade 7 Mastery Portfolio"],
           skills: ["Economic forecasting", "ESG principles", "Professional communication", "Leadership skills"]
         }
@@ -234,37 +234,37 @@ const Curriculum = () => {
       ],
       units: [
         {
-          title: "Unit 1: Mastery Foundation (Weeks 1-4)",
+          title: "Unit 1: Mastery Foundation",
           modules: ["Financial Mastery Foundation", "Advanced Portfolio Management", "Financial Markets"],
           skills: ["Professional concepts", "Portfolio theory", "Market structure"]
         },
         {
-          title: "Unit 2: Corporate & Alternative Finance (Weeks 5-10)",
+          title: "Unit 2: Corporate & Alternative Finance",
           modules: ["Corporate Finance", "Advanced Tax Planning", "Alternative Investments"],
           skills: ["Corporate analysis", "Tax strategies", "Alternative assets"]
         },
         {
-          title: "Unit 3: Derivatives & International Markets (Weeks 11-16)",
+          title: "Unit 3: Derivatives & International Markets",
           modules: ["Financial Derivatives", "International Finance", "Advanced Real Estate"],
           skills: ["Risk hedging", "Currency markets", "Real estate analysis"]
         },
         {
-          title: "Unit 4: Technology & Quantitative Analysis (Weeks 17-22)",
+          title: "Unit 4: Technology & Quantitative Analysis",
           modules: ["Retirement Strategies", "Financial Technology Innovation", "Quantitative Finance"],
           skills: ["Advanced planning", "Fintech innovation", "Statistical modeling"]
         },
         {
-          title: "Unit 5: Behavioral & Regulatory Finance (Weeks 23-28)",
+          title: "Unit 5: Behavioral & Regulatory Finance",
           modules: ["Behavioral Economics", "Regulatory Environment", "Advanced Economic Theory"],
           skills: ["Psychology application", "Compliance understanding", "Economic modeling"]
         },
         {
-          title: "Unit 6: Innovation & Leadership (Weeks 29-34)",
+          title: "Unit 6: Innovation & Leadership",
           modules: ["Financial Innovation", "Professional Ethics", "Financial Leadership"],
           skills: ["Innovation analysis", "Professional standards", "Leadership development"]
         },
         {
-          title: "Unit 7: Capstone & Certification (Weeks 35-36)",
+          title: "Unit 7: Capstone & Certification",
           modules: ["Industry Analysis", "Capstone Consulting Project", "Peer Teaching Workshop", "Master's Certification"],
           skills: ["Industry expertise", "Professional presentation", "Teaching ability", "Comprehensive mastery"]
         }
@@ -275,7 +275,7 @@ const Curriculum = () => {
   const currentCurriculum = curriculumData[grade as keyof typeof curriculumData];
 
   const goBack = () => {
-    navigate(`/grade/${grade}`);
+    navigate('/game');
   };
 
   return (
@@ -286,7 +286,7 @@ const Curriculum = () => {
           <div className="flex items-center gap-4 mb-4">
             <Button variant="outline" size="sm" onClick={goBack}>
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Grade {grade}
+              Back to Dashboard
             </Button>
             <Badge variant="outline">Curriculum Overview</Badge>
           </div>
