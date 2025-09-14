@@ -206,6 +206,48 @@ const LessonViewer = () => {
             options: ["Write your name on it", "Fold it many times", "Keep it flat and clean", "Use it as paper for drawing"],
             correct: "Keep it flat and clean",
             explanation: "To take care of money, we should keep bills flat and clean, and never write on them or damage them!"
+          },
+          {
+            id: 5,
+            question: "Before money was invented, how did people trade?",
+            options: ["They used rocks", "They used a barter system", "They didn't trade", "They used leaves"],
+            correct: "They used a barter system",
+            explanation: "Before money, people traded goods directly with each other using the barter system."
+          },
+          {
+            id: 6,
+            question: "What are coins made of?",
+            options: ["Paper", "Plastic", "Metal", "Wood"],
+            correct: "Metal",
+            explanation: "Coins are made of metal, like copper, nickel, and zinc, which makes them durable."
+          },
+          {
+            id: 7,
+            question: "Which president is on the $1 bill?",
+            options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Benjamin Franklin"],
+            correct: "George Washington",
+            explanation: "George Washington, the first U.S. President, is featured on the $1 bill."
+          },
+          {
+            id: 8,
+            question: "What is digital money?",
+            options: ["Money on a computer screen", "Money stored electronically", "Fake money", "Money made of digits"],
+            correct: "Money stored electronically",
+            explanation: "Digital money exists as electronic records in computers rather than physical coins and bills."
+          },
+          {
+            id: 9,
+            question: "Why is money better than bartering?",
+            options: ["It's prettier", "It makes trading easier", "It's heavier", "It's more fun"],
+            correct: "It makes trading easier",
+            explanation: "Money makes trading much easier because everyone accepts it, unlike bartering where you need to find someone who wants exactly what you have."
+          },
+          {
+            id: 10,
+            question: "What does money help us do?",
+            options: ["Store value for the future", "Measure the value of things", "Trade easily with others", "All of the above"],
+            correct: "All of the above",
+            explanation: "Money serves as a medium of exchange, a unit of account, and a store of value - helping us with all these important functions!"
           }
         ],
         xpReward: 100
@@ -466,7 +508,78 @@ const LessonViewer = () => {
             <p>Remember, earning money through work is not just about getting paid - it's about developing skills, contributing to society, and building the foundation for a successful and fulfilling life. Every small step you take now toward understanding work and developing good habits will pay off in the future!</p>
           `
         },
-        quiz: [],
+        quiz: [
+          {
+            id: 1,
+            question: "What are the two main types of income people earn?",
+            options: ["Cash and credit", "Earned and unearned income", "Big and small", "Daily and monthly"],
+            correct: "Earned and unearned income",
+            explanation: "Earned income comes from working (like wages), while unearned income comes from investments or gifts."
+          },
+          {
+            id: 2,
+            question: "Which is an example of earned income?",
+            options: ["Birthday money", "Money from a lemonade stand", "Finding money on the ground", "Interest from a bank"],
+            correct: "Money from a lemonade stand",
+            explanation: "Money from a lemonade stand is earned because you worked to make and sell the lemonade."
+          },
+          {
+            id: 3,
+            question: "What should you do first when you earn money?",
+            options: ["Spend it immediately", "Think about your goals", "Give it away", "Hide it"],
+            correct: "Think about your goals",
+            explanation: "Before spending money, it's smart to think about what you want to accomplish with it."
+          },
+          {
+            id: 4,
+            question: "Which job would likely earn more money?",
+            options: ["A job requiring special training", "A job anyone can do", "A job you do for fun", "A job that's very easy"],
+            correct: "A job requiring special training",
+            explanation: "Jobs that require special skills or training usually pay more because fewer people can do them."
+          },
+          {
+            id: 5,
+            question: "What is the best way for a kid to start earning money?",
+            options: ["Asking for handouts", "Doing chores and helping others", "Finding money", "Borrowing from friends"],
+            correct: "Doing chores and helping others",
+            explanation: "The best way to earn money is by providing value to others through work and helpful actions."
+          },
+          {
+            id: 6,
+            question: "Why do different jobs pay different amounts?",
+            options: ["It's random", "Based on how much value they create", "Based on age only", "All jobs pay the same"],
+            correct: "Based on how much value they create",
+            explanation: "Jobs that create more value for people and society typically earn higher wages."
+          },
+          {
+            id: 7,
+            question: "What skill is important for almost every job?",
+            options: ["Being tall", "Good communication", "Having lots of money", "Being the youngest"],
+            correct: "Good communication",
+            explanation: "Good communication skills help in almost every job because you need to work with other people."
+          },
+          {
+            id: 8,
+            question: "If you want to earn more money in the future, what should you do now?",
+            options: ["Stop going to school", "Learn new skills and study", "Only play games", "Avoid work completely"],
+            correct: "Learn new skills and study",
+            explanation: "Learning and developing skills now will help you qualify for better-paying jobs in the future."
+          },
+          {
+            id: 9,
+            question: "What's the connection between helping others and earning money?",
+            options: ["There is no connection", "Helping others is how you create value and earn money", "You should never help others", "Helping others costs money"],
+            correct: "Helping others is how you create value and earn money",
+            explanation: "Most jobs involve helping other people solve problems or meet their needs, which is why we get paid."
+          },
+          {
+            id: 10,
+            question: "What's the most important thing to remember about earning money?",
+            options: ["Money appears magically", "All work is the same", "Money must be earned through effort and value creation", "Only adults can earn money"],
+            correct: "Money must be earned through effort and value creation",
+            explanation: "Understanding that money is earned through hard work and creating value for others is a fundamental life lesson."
+          }
+        ],
         xpReward: 100
       },
       3: {
@@ -979,7 +1092,78 @@ const LessonViewer = () => {
             <p>Remember: every spending decision is an opportunity to practice making good choices. The more you practice thinking before you spend, comparing options, and making decisions based on value rather than impulse, the better you'll become at managing money and achieving your dreams.</p>
           `
         },
-        quiz: [],
+        quiz: [
+          {
+            id: 1,
+            question: "What should you do before buying anything?",
+            options: ["Buy it immediately", "Think about whether you need it or want it", "Ask your friends", "Check the color"],
+            correct: "Think about whether you need it or want it",
+            explanation: "Always pause and consider if something is a need or want before making a purchase."
+          },
+          {
+            id: 2,
+            question: "What is comparison shopping?",
+            options: ["Shopping with friends", "Checking prices at different stores", "Buying everything at once", "Shopping online only"],
+            correct: "Checking prices at different stores",
+            explanation: "Comparison shopping means looking at different options and prices to find the best deal."
+          },
+          {
+            id: 3,
+            question: "What is impulse buying?",
+            options: ["Buying things without thinking", "Buying things on sale", "Buying things you need", "Buying things for others"],
+            correct: "Buying things without thinking",
+            explanation: "Impulse buying is purchasing something quickly without thinking it through, which often leads to regret."
+          },
+          {
+            id: 4,
+            question: "Which question should you ask yourself before buying something?",
+            options: ["What color is it?", "Will I still want this next week?", "Who else has this?", "Is it the biggest one?"],
+            correct: "Will I still want this next week?",
+            explanation: "Thinking about whether you'll still value the item later helps avoid purchases you might regret."
+          },
+          {
+            id: 5,
+            question: "What does 'value' mean when shopping?",
+            options: ["The highest price", "The right balance of quality and price", "The cheapest option", "The most popular item"],
+            correct: "The right balance of quality and price",
+            explanation: "Value isn't just about price - it's about getting good quality for a fair price that will last and be useful."
+          },
+          {
+            id: 6,
+            question: "What should you do if something seems like a 'great deal' but you don't need it?",
+            options: ["Buy it anyway because it's cheap", "Don't buy it", "Buy multiple ones", "Ask everyone you know if they want it"],
+            correct: "Don't buy it",
+            explanation: "If you don't need something, it's never a good deal, no matter how cheap it is."
+          },
+          {
+            id: 7,
+            question: "What is opportunity cost?",
+            options: ["The price of something", "What you give up to get something else", "A type of store", "A way to pay"],
+            correct: "What you give up to get something else",
+            explanation: "Opportunity cost is what you sacrifice when you choose one option over another - like buying a toy instead of saving for a bike."
+          },
+          {
+            id: 8,
+            question: "Why should you avoid shopping when you're feeling sad or excited?",
+            options: ["Stores are closed", "You might make poor decisions", "It's against the law", "You'll spend too much time"],
+            correct: "You might make poor decisions",
+            explanation: "Strong emotions can lead to impulsive purchases that you might regret later."
+          },
+          {
+            id: 9,
+            question: "What's the best way to avoid overspending at a store?",
+            options: ["Don't bring any money", "Make a list and stick to it", "Shop as fast as possible", "Only buy the most expensive items"],
+            correct: "Make a list and stick to it",
+            explanation: "Having a shopping list helps you stay focused on what you actually need and avoid impulse purchases."
+          },
+          {
+            id: 10,
+            question: "When is the best time to buy something you want but don't need?",
+            options: ["Right away", "When you're bored", "After you've thought about it and saved money for it", "Never"],
+            correct: "After you've thought about it and saved money for it",
+            explanation: "Taking time to think and save for wants helps ensure you really value them and can afford them responsibly."
+          }
+        ],
         xpReward: 100
       },
       5: {
@@ -2213,9 +2397,10 @@ const LessonViewer = () => {
     }
     toast.success("Article completed! Keep it up!");
     
-    // Auto-progress to quiz section
+    // Auto-progress to quiz section and scroll to top
     setTimeout(() => {
       setCurrentSection('quiz');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1500);
   };
 
@@ -2431,7 +2616,7 @@ const LessonViewer = () => {
                     className="prose prose-lg prose-invert max-w-none text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>li]:text-white [&>strong]:text-white"
                     dangerouslySetInnerHTML={{ __html: currentLessonContent.article.content }}
                   />
-                  <div className="mt-8 pt-6 border-t border-white/20">
+                  <div className="mt-8 pt-6 border-t border-white/20 flex justify-end">
                     <Button onClick={handleArticleComplete} disabled={articleCompleted}>
                       {articleCompleted ? (
                         <>
