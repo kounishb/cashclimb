@@ -17,6 +17,7 @@ import {
   Users
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const GradeModules = () => {
   const { gradeId } = useParams();
@@ -24,16 +25,63 @@ const GradeModules = () => {
   const grade = parseInt(gradeId || "3");
   const [completedModules, setCompletedModules] = useState<number[]>([]);
   const [totalXP, setTotalXP] = useState(0);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const savedProgress = localStorage.getItem('financialEducationProgress');
-    if (savedProgress) {
-      const progress = JSON.parse(savedProgress);
-      const gradeProgress = progress[grade] || { completedModules: [], totalXP: 0 };
-      setCompletedModules(gradeProgress.completedModules);
-      setTotalXP(gradeProgress.totalXP);
-    }
+    const getUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+      if (user) {
+        loadCompletedModules(user.id);
+      }
+    };
+    getUser();
   }, [grade]);
+
+  const loadCompletedModules = async (userId: string) => {
+    try {
+      // Get all lessons for this grade
+      const { data: lessons } = await supabase
+        .from('lessons')
+        .select('id, module_number')
+        .eq('grade_level', grade);
+
+      if (lessons) {
+        // Get lesson progress for each lesson
+        const lessonIds = lessons.map(l => l.id);
+        const { data: progress } = await supabase
+          .from('lesson_progress')
+          .select('lesson_id, quiz_completed, xp_earned')
+          .eq('user_id', userId)
+          .in('lesson_id', lessonIds);
+
+        if (progress) {
+          // Map completed lessons to module numbers
+          const completedLessons = progress.filter(p => p.quiz_completed);
+          const completedModuleNumbers = completedLessons.map(p => {
+            const lesson = lessons.find(l => l.id === p.lesson_id);
+            return lesson?.module_number;
+          }).filter(Boolean);
+
+          setCompletedModules(completedModuleNumbers);
+          
+          // Calculate total XP
+          const totalXpEarned = progress.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
+          setTotalXP(totalXpEarned);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading module progress:', error);
+      // Fallback to localStorage if database fails
+      const savedProgress = localStorage.getItem('financialEducationProgress');
+      if (savedProgress) {
+        const progress = JSON.parse(savedProgress);
+        const gradeProgress = progress[grade] || { completedModules: [], totalXP: 0 };
+        setCompletedModules(gradeProgress.completedModules);
+        setTotalXP(gradeProgress.totalXP);
+      }
+    }
+  };
 
   const gradeData = {
     3: {

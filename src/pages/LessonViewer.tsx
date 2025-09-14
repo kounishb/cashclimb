@@ -40,6 +40,9 @@ const LessonViewer = () => {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
+    // Always start with video section when navigating to a new module
+    setCurrentSection('video');
+    
     const getUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
@@ -96,7 +99,7 @@ const LessonViewer = () => {
     3: {
       1: {
         title: "What is Money?",
-        videoUrl: "https://www.youtube.com/embed/dFEhmAPE_2I",
+        videoUrl: "https://www.youtube.com/embed/mPBgz8ejWoU",
         videoTitle: "What is Money? - Financial Literacy for Kids",
         article: {
           title: "Understanding Money: The Complete Guide for Young Learners",
@@ -294,7 +297,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Earning Money",
-        videoUrl: "https://www.youtube.com/embed/hT5U0llU5is",
+        videoUrl: "https://www.youtube.com/embed/XvvneFKE4G0",
         videoTitle: "How Kids Can Earn Money - Jobs and Chores",
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
@@ -555,7 +558,7 @@ const LessonViewer = () => {
       },
       3: {
         title: "Needs vs Wants",
-        videoUrl: "https://www.youtube.com/embed/JZWsE2gpcjk",
+        videoUrl: "https://www.youtube.com/embed/s6V_ag7GsN0",
         videoTitle: "Needs vs Wants - Smart Money Decisions for Kids",
         article: {
           title: "Making Smart Choices: Understanding Needs vs Wants",
@@ -838,7 +841,7 @@ const LessonViewer = () => {
     4: {
       1: {
         title: "Money Review",
-        videoUrl: "https://www.youtube.com/embed/Ly_fiS0QZYc",
+        videoUrl: "https://www.youtube.com/embed/Lys4EVugJmk",
         videoTitle: "Money Fundamentals Review - Building Strong Foundations",
         article: {
           title: "Advanced Money Concepts for Grade 4",
@@ -1229,7 +1232,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Making a Budget",
-        videoUrl: "https://www.youtube.com/embed/d4_dDJWQq5s",
+        videoUrl: "https://www.youtube.com/embed/EQc_2Ad8hQI",
         videoTitle: "Budgeting for Kids - How to Plan Your Spending",
         article: {
           title: "Creating Your First Budget: A Step-by-Step Guide",
@@ -1436,7 +1439,7 @@ const LessonViewer = () => {
   };
 
   const nextModule = () => {
-    navigate(`/education/grade/${grade}/module/${module + 1}`);
+    navigate(`/education/grade/${grade}/module/${module + 1}#video`);
   };
 
   return (
