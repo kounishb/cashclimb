@@ -1438,7 +1438,8 @@ const LessonViewer = () => {
     }
   };
 
-  const currentLessonContent = lessonContent[grade as keyof typeof lessonContent]?.[module as keyof (typeof lessonContent)[typeof grade]];
+  const gradeContent = lessonContent[grade as keyof typeof lessonContent];
+  const currentLessonContent = gradeContent?.[module as keyof typeof gradeContent];
 
   if (!currentLessonContent) {
     return (
