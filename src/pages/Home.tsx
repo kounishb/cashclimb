@@ -101,8 +101,8 @@ const Home = () => {
               <div className="text-sm text-muted-foreground">Users</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">15k</div>
-              <div className="text-sm text-muted-foreground">Students Learning</div>
+              <div className="text-4xl font-bold text-primary mb-2">Grades</div>
+              <div className="text-sm text-muted-foreground">3-8</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
