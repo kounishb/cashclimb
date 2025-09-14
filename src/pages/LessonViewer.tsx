@@ -952,7 +952,7 @@ const LessonViewer = () => {
     4: {
       1: {
         title: "Money Review",
-        videoUrl: "https://www.youtube.com/embed/WO3REcunyr0",
+        videoUrl: "https://www.youtube.com/embed/ulKvddvZQzQ",
         videoTitle: "Money Fundamentals Review - Building Strong Foundations",
         article: {
           title: "Advanced Money Concepts for Grade 4",
@@ -1453,6 +1453,997 @@ const LessonViewer = () => {
           }
         ],
         xpReward: 120
+      },
+      3: {
+        title: "Digital Money & Technology",
+        videoUrl: "https://www.youtube.com/embed/5tA5qAm3mgI",
+        videoTitle: "Digital Money and Payment Technology for Kids",
+        article: {
+          title: "Understanding Digital Money and Modern Payment Systems",
+          content: `
+            <h2>Digital Money and Technology: The Future of Finance</h2>
+            <p>Today's world uses digital money more than ever before! From credit cards to mobile apps, understanding digital payment systems is essential for modern financial literacy. Let's explore how technology has changed the way we handle money.</p>
+            
+            <h3>What is Digital Money?</h3>
+            <p>Digital money is money that exists electronically rather than as physical cash. Instead of carrying coins and bills, your money is stored as numbers in computer systems. This makes transactions faster, safer, and more convenient.</p>
+            
+            <h4>Types of Digital Money</h4>
+            <ul>
+              <li><strong>Bank Account Money</strong> - Money stored electronically in bank accounts</li>
+              <li><strong>Credit Cards</strong> - Allow you to borrow money temporarily to make purchases</li>
+              <li><strong>Debit Cards</strong> - Use money directly from your bank account</li>
+              <li><strong>Mobile Payment Apps</strong> - Apps like Apple Pay, Google Pay, or Venmo</li>
+              <li><strong>Online Banking</strong> - Managing money through websites and apps</li>
+              <li><strong>Digital Wallets</strong> - Electronic versions of physical wallets</li>
+            </ul>
+            
+            <h3>How Credit and Debit Cards Work</h3>
+            <h4>Debit Cards</h4>
+            <p>Debit cards are connected directly to your bank account. When you use a debit card:</p>
+            <ul>
+              <li>Money is taken immediately from your account</li>
+              <li>You can only spend money you actually have</li>
+              <li>It's like using electronic cash</li>
+              <li>No interest charges because you're using your own money</li>
+            </ul>
+            
+            <h4>Credit Cards</h4>
+            <p>Credit cards let you borrow money temporarily:</p>
+            <ul>
+              <li>The credit card company pays for your purchase</li>
+              <li>You must pay the company back later</li>
+              <li>If you don't pay back quickly, you owe extra money called interest</li>
+              <li>You have a spending limit called a credit limit</li>
+              <li>Using credit cards responsibly helps build a good credit score</li>
+            </ul>
+            
+            <h3>Mobile Payment Technology</h3>
+            <p>Mobile payments use your smartphone to make purchases:</p>
+            
+            <h4>How Mobile Payments Work</h4>
+            <ul>
+              <li><strong>NFC Technology</strong> - Near Field Communication lets you tap your phone to pay</li>
+              <li><strong>QR Codes</strong> - Scan a code with your camera to pay</li>
+              <li><strong>App-to-App</strong> - Send money through apps like Venmo or Cash App</li>
+              <li><strong>Biometric Security</strong> - Use fingerprints or face recognition for security</li>
+            </ul>
+            
+            <h4>Popular Mobile Payment Apps</h4>
+            <ul>
+              <li><strong>Apple Pay</strong> - For iPhone users, secure and convenient</li>
+              <li><strong>Google Pay</strong> - For Android users, widely accepted</li>
+              <li><strong>Samsung Pay</strong> - Works with many different payment terminals</li>
+              <li><strong>PayPal</strong> - One of the oldest and most trusted digital payment systems</li>
+            </ul>
+            
+            <h3>Online Banking and Digital Accounts</h3>
+            <p>Online banking lets you manage your money through websites and apps:</p>
+            
+            <h4>What You Can Do with Online Banking</h4>
+            <ul>
+              <li>Check your account balance anytime</li>
+              <li>Transfer money between accounts</li>
+              <li>Pay bills electronically</li>
+              <li>Deposit checks by taking photos</li>
+              <li>Set up automatic savings</li>
+              <li>Track your spending with digital tools</li>
+            </ul>
+            
+            <h3>Safety and Security in Digital Money</h3>
+            <p>Digital money is generally very safe, but you need to follow important security rules:</p>
+            
+            <h4>Security Features</h4>
+            <ul>
+              <li><strong>Encryption</strong> - Scrambles your information so criminals can't read it</li>
+              <li><strong>Two-Factor Authentication</strong> - Requires two forms of identification</li>
+              <li><strong>Fraud Monitoring</strong> - Banks watch for suspicious activity</li>
+              <li><strong>FDIC Insurance</strong> - Government protection for money in banks</li>
+            </ul>
+            
+            <h4>Digital Safety Rules</h4>
+            <ul>
+              <li>Never share passwords or PINs with anyone</li>
+              <li>Always log out of banking apps and websites</li>
+              <li>Use strong, unique passwords for each account</li>
+              <li>Never do banking on public Wi-Fi</li>
+              <li>Check your accounts regularly for unauthorized transactions</li>
+              <li>Report lost or stolen cards immediately</li>
+            </ul>
+            
+            <h3>Advantages of Digital Money</h3>
+            <ul>
+              <li><strong>Convenience</strong> - No need to carry cash or count exact change</li>
+              <li><strong>Speed</strong> - Transactions happen instantly</li>
+              <li><strong>Record Keeping</strong> - Automatic tracking of all purchases</li>
+              <li><strong>Security</strong> - Better than carrying large amounts of cash</li>
+              <li><strong>Global Access</strong> - Use money anywhere in the world</li>
+              <li><strong>Rewards</strong> - Many cards offer cash back or points</li>
+            </ul>
+            
+            <h3>Disadvantages and Challenges</h3>
+            <ul>
+              <li><strong>Technical Problems</strong> - Apps and systems can crash or malfunction</li>
+              <li><strong>Internet Dependency</strong> - Need internet connection for most digital payments</li>
+              <li><strong>Privacy Concerns</strong> - Companies track your spending habits</li>
+              <li><strong>Overspending Risk</strong> - Easier to spend when money doesn't feel "real"</li>
+              <li><strong>Learning Curve</strong> - Requires understanding of technology</li>
+            </ul>
+            
+            <h3>The Future of Digital Money</h3>
+            <p>Digital money continues to evolve with exciting new technologies:</p>
+            
+            <h4>Emerging Technologies</h4>
+            <ul>
+              <li><strong>Cryptocurrency</strong> - Digital money secured by complex computer codes</li>
+              <li><strong>Blockchain</strong> - A secure way to record and verify transactions</li>
+              <li><strong>Central Bank Digital Currencies (CBDCs)</strong> - Government-issued digital money</li>
+              <li><strong>AI-Powered Banking</strong> - Smart systems that help manage your money</li>
+              <li><strong>Voice Payments</strong> - Using voice commands to make payments</li>
+            </ul>
+            
+            <h3>Teaching Digital Financial Literacy</h3>
+            <p>As digital money becomes more common, it's important to:</p>
+            <ul>
+              <li>Understand how each type of payment works</li>
+              <li>Know the costs and benefits of different payment methods</li>
+              <li>Practice good digital security habits</li>
+              <li>Keep track of spending even when using digital payments</li>
+              <li>Understand your rights and protections as a consumer</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is the main difference between a debit card and a credit card?",
+            options: ["Debit cards are newer technology", "Debit uses your own money, credit borrows money", "Credit cards are safer", "There is no difference"],
+            correct: "Debit uses your own money, credit borrows money",
+            explanation: "Debit cards use money directly from your bank account, while credit cards let you borrow money that you must pay back later!"
+          },
+          {
+            id: 2,
+            question: "Which of these is a mobile payment app?",
+            options: ["Apple Pay", "Piggy Bank", "Cash Register", "ATM"],
+            correct: "Apple Pay",
+            explanation: "Apple Pay is a popular mobile payment app that lets you pay using your smartphone or smartwatch!"
+          },
+          {
+            id: 3,
+            question: "What should you NEVER do with your banking passwords?",
+            options: ["Write them down somewhere safe", "Share them with friends", "Use a mix of letters and numbers", "Change them regularly"],
+            correct: "Share them with friends",
+            explanation: "Never share your banking passwords with anyone! Keep them secret to protect your money and personal information."
+          },
+          {
+            id: 4,
+            question: "What does NFC stand for in mobile payments?",
+            options: ["Never Forget Cash", "Near Field Communication", "New Financial Card", "Next Future Currency"],
+            correct: "Near Field Communication",
+            explanation: "NFC stands for Near Field Communication - it's the technology that lets you tap your phone to make payments!"
+          },
+          {
+            id: 5,
+            question: "What is one advantage of digital money over cash?",
+            options: ["It's always free to use", "It automatically tracks your spending", "You never lose it", "It works without electricity"],
+            correct: "It automatically tracks your spending",
+            explanation: "Digital payments automatically create records of your spending, making it easier to track where your money goes!"
+          },
+          {
+            id: 6,
+            question: "What should you do if your phone with payment apps is stolen?",
+            options: ["Wait and see if someone uses it", "Report it immediately to your bank", "Buy a new phone first", "Nothing, it's perfectly safe"],
+            correct: "Report it immediately to your bank",
+            explanation: "If your phone with payment apps is stolen, report it immediately to protect your accounts from unauthorized use!"
+          },
+          {
+            id: 7,
+            question: "What makes digital payments secure?",
+            options: ["They use simple passwords", "They have encryption and fraud monitoring", "They're stored on your phone only", "Nothing makes them secure"],
+            correct: "They have encryption and fraud monitoring",
+            explanation: "Digital payments use encryption to scramble information and fraud monitoring to watch for suspicious activity!"
+          },
+          {
+            id: 8,
+            question: "Which is true about online banking?",
+            options: ["It's only for adults", "You can check your balance anytime", "It requires going to the bank", "It's less secure than cash"],
+            correct: "You can check your balance anytime",
+            explanation: "Online banking lets you check your account balance and manage money 24/7 from anywhere with internet!"
+          },
+          {
+            id: 9,
+            question: "What is a potential problem with digital payments?",
+            options: ["They're always slower than cash", "It can be easier to overspend", "They don't work anywhere", "They're illegal for kids"],
+            correct: "It can be easier to overspend",
+            explanation: "With digital payments, money can feel less 'real' which sometimes makes it easier to spend more than intended!"
+          },
+          {
+            id: 10,
+            question: "What is cryptocurrency?",
+            options: ["Hidden cash", "Digital money secured by computer codes", "Fake money", "Money that disappears"],
+            correct: "Digital money secured by computer codes",
+            explanation: "Cryptocurrency is a type of digital money that uses complex computer codes (cryptography) to secure transactions!"
+          }
+        ],
+        xpReward: 120
+      }
+    },
+    5: {
+      1: {
+        title: "Banking Basics",
+        videoUrl: "https://www.youtube.com/embed/F_3cfnD7qb0",
+        videoTitle: "How Banks Work - Banking for Kids",
+        article: {
+          title: "Understanding Banks and How They Help Us",
+          content: `
+            <h2>Banking Basics: How Banks Work and Help Us Manage Money</h2>
+            <p>Banks are special businesses that help people store, save, and use their money safely. Understanding how banks work is essential for managing your finances throughout life. Let's explore everything you need to know about banking!</p>
+            
+            <h3>What Are Banks?</h3>
+            <p>Banks are financial institutions that provide various money-related services to individuals, families, and businesses. They act as safe places to store money and offer tools to help people manage their finances effectively.</p>
+            
+            <h4>Main Services Banks Provide</h4>
+            <ul>
+              <li><strong>Safe Storage</strong> - Keep your money secure in accounts</li>
+              <li><strong>Lending</strong> - Loan money to people who need it</li>
+              <li><strong>Payment Processing</strong> - Help transfer money between people</li>
+              <li><strong>Financial Advice</strong> - Provide guidance on money management</li>
+              <li><strong>Investment Services</strong> - Help people grow their money over time</li>
+            </ul>
+            
+            <h3>Types of Bank Accounts</h3>
+            
+            <h4>Checking Accounts</h4>
+            <p>Checking accounts are designed for everyday money management:</p>
+            <ul>
+              <li>Easy access to your money through ATMs and debit cards</li>
+              <li>Ability to write checks to pay bills</li>
+              <li>Online and mobile banking access</li>
+              <li>Usually earn little or no interest</li>
+              <li>Perfect for day-to-day expenses</li>
+            </ul>
+            
+            <h4>Savings Accounts</h4>
+            <p>Savings accounts are designed to help your money grow:</p>
+            <ul>
+              <li>Earn interest on the money you deposit</li>
+              <li>Encourage saving by limiting withdrawals</li>
+              <li>FDIC insured up to $250,000</li>
+              <li>Higher interest rates than checking accounts</li>
+              <li>Perfect for emergency funds and goals</li>
+            </ul>
+            
+            <h4>Youth and Student Accounts</h4>
+            <p>Special accounts designed for young people:</p>
+            <ul>
+              <li>Lower or no minimum balance requirements</li>
+              <li>Educational resources about money management</li>
+              <li>Parental oversight and controls</li>
+              <li>Often no monthly fees</li>
+              <li>Debit cards with spending limits</li>
+            </ul>
+            
+            <h3>How Banks Make Money</h3>
+            <p>Understanding how banks make money helps you understand their services:</p>
+            
+            <h4>Interest Spread</h4>
+            <ul>
+              <li>Banks pay you a small amount of interest on your deposits</li>
+              <li>They lend that money to others at higher interest rates</li>
+              <li>The difference between what they pay and charge is their profit</li>
+            </ul>
+            
+            <h4>Fees and Services</h4>
+            <ul>
+              <li>Monthly account maintenance fees</li>
+              <li>ATM fees for using other banks' machines</li>
+              <li>Overdraft fees when you spend more than you have</li>
+              <li>Wire transfer and check processing fees</li>
+            </ul>
+            
+            <h3>Banking Safety and Protection</h3>
+            
+            <h4>FDIC Insurance</h4>
+            <p>The Federal Deposit Insurance Corporation (FDIC) protects your money:</p>
+            <ul>
+              <li>Insures deposits up to $250,000 per account</li>
+              <li>Covers you if the bank fails or closes</li>
+              <li>Automatic protection - no need to apply</li>
+              <li>Has been protecting deposits since 1933</li>
+            </ul>
+            
+            <h4>Security Measures</h4>
+            <ul>
+              <li><strong>Encryption</strong> - Protects your information online</li>
+              <li><strong>Multi-Factor Authentication</strong> - Extra login security</li>
+              <li><strong>Fraud Monitoring</strong> - Watches for suspicious activity</li>
+              <li><strong>Physical Security</strong> - Vaults, alarms, and cameras</li>
+            </ul>
+            
+            <h3>Choosing the Right Bank</h3>
+            
+            <h4>Factors to Consider</h4>
+            <ul>
+              <li><strong>Location</strong> - Branches and ATMs near you</li>
+              <li><strong>Fees</strong> - Monthly costs and transaction fees</li>
+              <li><strong>Interest Rates</strong> - How much you earn on deposits</li>
+              <li><strong>Technology</strong> - Quality of online and mobile banking</li>
+              <li><strong>Customer Service</strong> - Helpfulness and availability</li>
+              <li><strong>Account Requirements</strong> - Minimum balances and age limits</li>
+            </ul>
+            
+            <h4>Types of Banks</h4>
+            <ul>
+              <li><strong>National Banks</strong> - Large banks with locations nationwide</li>
+              <li><strong>Regional Banks</strong> - Smaller banks serving specific areas</li>
+              <li><strong>Credit Unions</strong> - Member-owned financial cooperatives</li>
+              <li><strong>Online Banks</strong> - Banks that operate primarily online</li>
+              <li><strong>Community Banks</strong> - Small, locally-focused banks</li>
+            </ul>
+            
+            <h3>Banking Technology and Innovation</h3>
+            
+            <h4>Online Banking Features</h4>
+            <ul>
+              <li>Check account balances and transaction history</li>
+              <li>Transfer money between accounts</li>
+              <li>Pay bills electronically</li>
+              <li>Deposit checks by taking photos</li>
+              <li>Set up automatic transfers and payments</li>
+              <li>Receive account alerts and notifications</li>
+            </ul>
+            
+            <h4>ATM Technology</h4>
+            <ul>
+              <li>24/7 access to cash and account information</li>
+              <li>Deposit cash and checks</li>
+              <li>Transfer money between accounts</li>
+              <li>Check balances and print statements</li>
+              <li>Some ATMs offer cardless transactions</li>
+            </ul>
+            
+            <h3>Building a Relationship with Your Bank</h3>
+            
+            <h4>Benefits of a Good Banking Relationship</h4>
+            <ul>
+              <li>Better customer service and support</li>
+              <li>Potential fee waivers for good customers</li>
+              <li>Easier approval for loans in the future</li>
+              <li>Access to financial education resources</li>
+              <li>Personalized financial advice</li>
+            </ul>
+            
+            <h4>How to Be a Good Bank Customer</h4>
+            <ul>
+              <li>Keep accurate records of your transactions</li>
+              <li>Maintain minimum account balances</li>
+              <li>Use your bank's ATMs to avoid fees</li>
+              <li>Read and understand account terms</li>
+              <li>Report problems or fraud immediately</li>
+              <li>Ask questions when you don't understand something</li>
+            </ul>
+            
+            <h3>Common Banking Mistakes to Avoid</h3>
+            <ul>
+              <li><strong>Not reading account terms</strong> - Understanding fees and requirements</li>
+              <li><strong>Overdrafting accounts</strong> - Spending more money than you have</li>
+              <li><strong>Ignoring statements</strong> - Not checking for errors or fraud</li>
+              <li><strong>Using out-of-network ATMs</strong> - Paying unnecessary fees</li>
+              <li><strong>Not building an emergency fund</strong> - Having money for unexpected expenses</li>
+              <li><strong>Choosing based on location alone</strong> - Not comparing services and rates</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is the main purpose of a bank?",
+            options: ["To make money disappear", "To help people store and manage money safely", "To give away free money", "To collect coins"],
+            correct: "To help people store and manage money safely",
+            explanation: "Banks are financial institutions that help people safely store, save, and manage their money while providing various financial services!"
+          },
+          {
+            id: 2,
+            question: "What is the difference between checking and savings accounts?",
+            options: ["No difference", "Checking is for daily use, savings earns interest", "Savings is for daily use, checking earns interest", "Checking accounts are newer"],
+            correct: "Checking is for daily use, savings earns interest",
+            explanation: "Checking accounts are designed for everyday transactions, while savings accounts are designed to help your money grow by earning interest!"
+          },
+          {
+            id: 3,
+            question: "What does FDIC insurance protect?",
+            options: ["Your house", "Your deposits up to $250,000", "Your car", "Your phone"],
+            correct: "Your deposits up to $250,000",
+            explanation: "FDIC insurance protects your bank deposits up to $250,000 per account, keeping your money safe even if the bank fails!"
+          },
+          {
+            id: 4,
+            question: "How do banks make money?",
+            options: ["By stealing from customers", "By charging higher interest on loans than they pay on deposits", "By printing money", "By finding money on the street"],
+            correct: "By charging higher interest on loans than they pay on deposits",
+            explanation: "Banks make money by paying you a small amount of interest on deposits, then lending that money to others at higher interest rates!"
+          },
+          {
+            id: 5,
+            question: "What should you consider when choosing a bank?",
+            options: ["Only the closest location", "Fees, interest rates, services, and convenience", "Only the biggest bank", "The bank with the most commercials"],
+            correct: "Fees, interest rates, services, and convenience",
+            explanation: "When choosing a bank, consider multiple factors like fees, interest rates, services offered, location, and technology to find the best fit!"
+          },
+          {
+            id: 6,
+            question: "What can you do with online banking?",
+            options: ["Only check your balance", "Check balances, transfer money, pay bills, and deposit checks", "Only withdraw money", "Nothing useful"],
+            correct: "Check balances, transfer money, pay bills, and deposit checks",
+            explanation: "Online banking offers many convenient features including checking balances, transferring money, paying bills, and even depositing checks by photo!"
+          },
+          {
+            id: 7,
+            question: "What is an overdraft fee?",
+            options: ["A reward for saving money", "A charge when you spend more than you have in your account", "Free money from the bank", "Interest earned on savings"],
+            correct: "A charge when you spend more than you have in your account",
+            explanation: "An overdraft fee is charged when you spend more money than you have in your account - it's important to track your spending to avoid these fees!"
+          },
+          {
+            id: 8,
+            question: "What type of account is best for emergency savings?",
+            options: ["Checking account", "Savings account", "Neither", "Both are the same"],
+            correct: "Savings account",
+            explanation: "Savings accounts are better for emergency funds because they earn interest, encourage saving, and are designed for money you don't need immediately!"
+          },
+          {
+            id: 9,
+            question: "What is a credit union?",
+            options: ["A type of store", "A member-owned financial cooperative", "A government agency", "A type of loan"],
+            correct: "A member-owned financial cooperative",
+            explanation: "Credit unions are member-owned financial cooperatives that often offer better rates and lower fees than traditional banks!"
+          },
+          {
+            id: 10,
+            question: "Why is it important to read your bank statements?",
+            options: ["They're fun to read", "To check for errors and track spending", "Banks require it", "It's not important"],
+            correct: "To check for errors and track spending",
+            explanation: "Reading bank statements helps you catch errors, detect fraud, and track your spending patterns to manage your money better!"
+          }
+        ],
+        xpReward: 130
+      },
+      2: {
+        title: "Credit and Loans", 
+        videoUrl: "https://www.youtube.com/embed/q8u0ECTlGlE",
+        videoTitle: "Understanding Credit and Loans for Young People",
+        article: {
+          title: "Credit, Loans, and Building Financial Responsibility",
+          content: `
+            <h2>Understanding Credit and Loans: Building Your Financial Future</h2>
+            <p>Credit and loans are important financial tools that can help you achieve goals and handle emergencies, but they must be used responsibly. Understanding how credit works is crucial for your financial success as you grow older.</p>
+            
+            <h3>What is Credit?</h3>
+            <p>Credit is the ability to borrow money with the promise to pay it back later. When someone gives you credit, they trust that you will repay the borrowed money, usually with additional fees called interest.</p>
+            
+            <h4>How Credit Works</h4>
+            <ul>
+              <li><strong>Borrowing</strong> - You receive money or goods now</li>
+              <li><strong>Promise</strong> - You promise to pay back later</li>
+              <li><strong>Interest</strong> - You pay extra for the privilege of borrowing</li>
+              <li><strong>Terms</strong> - Specific rules about when and how to repay</li>
+            </ul>
+            
+            <h3>Types of Credit and Loans</h3>
+            
+            <h4>Credit Cards</h4>
+            <p>Credit cards allow you to borrow money up to a certain limit:</p>
+            <ul>
+              <li><strong>Credit Limit</strong> - Maximum amount you can borrow</li>
+              <li><strong>Minimum Payment</strong> - Smallest amount you must pay each month</li>
+              <li><strong>Interest Rate (APR)</strong> - Cost of borrowing, expressed as yearly percentage</li>
+              <li><strong>Grace Period</strong> - Time to pay without interest charges</li>
+            </ul>
+            
+            <h4>Personal Loans</h4>
+            <p>Personal loans provide a lump sum of money that you repay over time:</p>
+            <ul>
+              <li>Fixed amount borrowed</li>
+              <li>Set repayment schedule</li>
+              <li>Fixed or variable interest rates</li>
+              <li>Used for specific purposes like education or large purchases</li>
+            </ul>
+            
+            <h4>Auto Loans</h4>
+            <p>Loans specifically for buying vehicles:</p>
+            <ul>
+              <li>The car serves as collateral for the loan</li>
+              <li>Lower interest rates than unsecured loans</li>
+              <li>Typical loan terms of 3-7 years</li>
+              <li>Monthly payments include principal and interest</li>
+            </ul>
+            
+            <h4>Student Loans</h4>
+            <p>Loans to help pay for education expenses:</p>
+            <ul>
+              <li>Federal and private student loan options</li>
+              <li>Often have lower interest rates</li>
+              <li>May have deferment options while in school</li>
+              <li>Important investment in your future earning potential</li>
+            </ul>
+            
+            <h3>Credit Scores and Credit Reports</h3>
+            
+            <h4>What is a Credit Score?</h4>
+            <p>A credit score is a number (usually 300-850) that represents your creditworthiness:</p>
+            <ul>
+              <li><strong>Excellent Credit</strong> - 750-850: Best rates and terms</li>
+              <li><strong>Good Credit</strong> - 700-749: Good rates and terms</li>
+              <li><strong>Fair Credit</strong> - 650-699: Average rates and terms</li>
+              <li><strong>Poor Credit</strong> - 300-649: Higher rates, limited options</li>
+            </ul>
+            
+            <h4>Factors That Affect Your Credit Score</h4>
+            <ul>
+              <li><strong>Payment History (35%)</strong> - Whether you pay bills on time</li>
+              <li><strong>Credit Utilization (30%)</strong> - How much credit you use vs. available</li>
+              <li><strong>Length of Credit History (15%)</strong> - How long you've had credit</li>
+              <li><strong>Types of Credit (10%)</strong> - Mix of credit cards, loans, etc.</li>
+              <li><strong>New Credit (10%)</strong> - Recent credit applications and accounts</li>
+            </ul>
+            
+            <h3>Building Good Credit</h3>
+            
+            <h4>Strategies for Young People</h4>
+            <ul>
+              <li><strong>Become an Authorized User</strong> - Parents can add you to their credit card</li>
+              <li><strong>Get a Student Credit Card</strong> - Designed for people with limited credit history</li>
+              <li><strong>Start with a Secured Credit Card</strong> - Requires a deposit but helps build credit</li>
+              <li><strong>Pay All Bills on Time</strong> - Even non-credit bills can affect your credit</li>
+              <li><strong>Keep Balances Low</strong> - Use less than 30% of available credit</li>
+            </ul>
+            
+            <h4>Good Credit Habits</h4>
+            <ul>
+              <li>Always pay at least the minimum payment on time</li>
+              <li>Pay off credit card balances in full when possible</li>
+              <li>Don't apply for too many credit accounts at once</li>
+              <li>Monitor your credit report regularly for errors</li>
+              <li>Keep old accounts open to maintain credit history length</li>
+            </ul>
+            
+            <h3>The Dangers of Credit Misuse</h3>
+            
+            <h4>Common Credit Mistakes</h4>
+            <ul>
+              <li><strong>Making Only Minimum Payments</strong> - Leads to long-term debt and high interest costs</li>
+              <li><strong>Maxing Out Credit Cards</strong> - Hurts credit score and creates financial stress</li>
+              <li><strong>Late Payments</strong> - Damages credit score and incurs fees</li>
+              <li><strong>Applying for Too Much Credit</strong> - Can lower credit score</li>
+              <li><strong>Using Credit for Daily Expenses</strong> - Can lead to overspending and debt</li>
+            </ul>
+            
+            <h4>Warning Signs of Credit Problems</h4>
+            <ul>
+              <li>Only making minimum payments on credit cards</li>
+              <li>Using credit cards for basic necessities</li>
+              <li>Borrowing money to pay other debts</li>
+              <li>Being denied for new credit</li>
+              <li>Credit card balances that never decrease</li>
+              <li>Feeling stressed about money constantly</li>
+            </ul>
+            
+            <h3>Interest and Fees</h3>
+            
+            <h4>Understanding Interest</h4>
+            <p>Interest is the cost of borrowing money:</p>
+            <ul>
+              <li><strong>APR (Annual Percentage Rate)</strong> - The yearly cost of credit</li>
+              <li><strong>Compound Interest</strong> - Interest charged on both principal and previously charged interest</li>
+              <li><strong>Grace Period</strong> - Time to pay without interest (credit cards)</li>
+              <li><strong>Variable vs. Fixed Rates</strong> - Rates that change vs. stay the same</li>
+            </ul>
+            
+            <h4>Common Fees</h4>
+            <ul>
+              <li><strong>Annual Fees</strong> - Yearly cost for having a credit card</li>
+              <li><strong>Late Payment Fees</strong> - Charges for missing payment deadlines</li>
+              <li><strong>Over-Limit Fees</strong> - Charges for exceeding credit limit</li>
+              <li><strong>Cash Advance Fees</strong> - Extra charges for borrowing cash</li>
+              <li><strong>Balance Transfer Fees</strong> - Costs for moving debt between cards</li>
+            </ul>
+            
+            <h3>Making Smart Credit Decisions</h3>
+            
+            <h4>Before Applying for Credit</h4>
+            <ul>
+              <li>Understand your income and expenses</li>
+              <li>Research different credit options</li>
+              <li>Compare interest rates and fees</li>
+              <li>Read all terms and conditions</li>
+              <li>Make sure you can afford the payments</li>
+            </ul>
+            
+            <h4>Using Credit Responsibly</h4>
+            <ul>
+              <li>Only borrow what you can afford to repay</li>
+              <li>Pay off balances quickly to minimize interest</li>
+              <li>Use credit for planned purchases, not impulse buys</li>
+              <li>Keep track of all credit accounts and balances</li>
+              <li>Contact lenders if you're having trouble making payments</li>
+            </ul>
+            
+            <h3>Credit and Your Future</h3>
+            
+            <h4>How Good Credit Helps</h4>
+            <ul>
+              <li><strong>Lower Interest Rates</strong> - Save money on loans and credit cards</li>
+              <li><strong>Better Housing Options</strong> - Easier to rent apartments or buy homes</li>
+              <li><strong>Employment Opportunities</strong> - Some employers check credit for certain jobs</li>
+              <li><strong>Insurance Rates</strong> - Better credit can mean lower insurance premiums</li>
+              <li><strong>Financial Flexibility</strong> - Access to credit when needed</li>
+            </ul>
+            
+            <h4>Planning for the Future</h4>
+            <ul>
+              <li>Start building credit early but responsibly</li>
+              <li>Understand that credit decisions have long-term consequences</li>
+              <li>Learn to distinguish between needs and wants when using credit</li>
+              <li>Develop a budget that includes debt repayment</li>
+              <li>View credit as a tool, not free money</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is credit?",
+            options: ["Free money", "The ability to borrow money with a promise to pay it back", "Money you find", "A type of bank account"],
+            correct: "The ability to borrow money with a promise to pay it back",
+            explanation: "Credit is the ability to borrow money now with the promise and responsibility to pay it back later, usually with interest!"
+          },
+          {
+            id: 2,
+            question: "What is a credit score?",
+            options: ["How much money you have", "A number that shows how trustworthy you are with credit", "Your age", "How many credit cards you have"],
+            correct: "A number that shows how trustworthy you are with credit",
+            explanation: "A credit score is a number (usually 300-850) that shows lenders how likely you are to repay borrowed money based on your credit history!"
+          },
+          {
+            id: 3,
+            question: "What is the most important factor in your credit score?",
+            options: ["How much money you make", "Payment history - paying bills on time", "How old you are", "What kind of car you drive"],
+            correct: "Payment history - paying bills on time",
+            explanation: "Payment history makes up 35% of your credit score - consistently paying bills on time is the most important factor for good credit!"
+          },
+          {
+            id: 4,
+            question: "What does APR stand for?",
+            options: ["Annual Payment Rate", "Annual Percentage Rate", "Always Pay Responsibly", "Average Price Range"],
+            correct: "Annual Percentage Rate",
+            explanation: "APR stands for Annual Percentage Rate - it tells you the yearly cost of borrowing money, including interest and fees!"
+          },
+          {
+            id: 5,
+            question: "What is a good way for young people to start building credit?",
+            options: ["Get as many credit cards as possible", "Become an authorized user on a parent's card", "Never use any credit", "Only use cash forever"],
+            correct: "Become an authorized user on a parent's card",
+            explanation: "Becoming an authorized user on a parent's card with good credit habits can help young people start building their own credit history!"
+          },
+          {
+            id: 6,
+            question: "What is credit utilization?",
+            options: ["How long you've had credit", "How much of your available credit you're using", "How many credit cards you have", "How often you use credit"],
+            correct: "How much of your available credit you're using",
+            explanation: "Credit utilization is the percentage of your available credit that you're currently using - keeping it below 30% helps your credit score!"
+          },
+          {
+            id: 7,
+            question: "What should you do if you can't make a credit card payment on time?",
+            options: ["Ignore it and hope it goes away", "Contact the credit card company to discuss options", "Apply for another credit card", "Stop using all credit forever"],
+            correct: "Contact the credit card company to discuss options",
+            explanation: "If you can't make a payment, contact your credit card company immediately - they may offer payment plans or other options to help!"
+          },
+          {
+            id: 8,
+            question: "What is compound interest?",
+            options: ["Interest that never changes", "Interest charged on both the original amount and previous interest", "Interest that only applies to savings", "Free interest"],
+            correct: "Interest charged on both the original amount and previous interest",
+            explanation: "Compound interest means you pay interest on your original debt PLUS interest on any previously unpaid interest - it can make debt grow quickly!"
+          },
+          {
+            id: 9,
+            question: "Which credit score range is considered 'good'?",
+            options: ["300-500", "500-650", "700-749", "850-900"],
+            correct: "700-749",
+            explanation: "A credit score of 700-749 is considered 'good' and will qualify you for good interest rates and terms on most loans and credit cards!"
+          },
+          {
+            id: 10,
+            question: "Why is having good credit important for your future?",
+            options: ["It makes you popular", "It helps you get better rates on loans and more opportunities", "It guarantees you'll be rich", "It doesn't matter"],
+            correct: "It helps you get better rates on loans and more opportunities",
+            explanation: "Good credit helps you get lower interest rates on loans, better housing options, and can even affect job opportunities in some fields!"
+          }
+        ],
+        xpReward: 140
+      }
+    },
+    6: {
+      1: {
+        title: "Advanced Budgeting",
+        videoUrl: "https://www.youtube.com/embed/sVKQn2I4HDM",
+        videoTitle: "Advanced Budgeting Strategies and Financial Planning",
+        article: {
+          title: "Mastering Advanced Budgeting Techniques",
+          content: `
+            <h2>Advanced Budgeting: Taking Control of Your Financial Future</h2>
+            <p>As your financial knowledge grows, it's time to learn more sophisticated budgeting techniques that successful adults use to manage their money effectively. These advanced strategies will help you make the most of every dollar and achieve your financial goals faster.</p>
+            
+            <h3>Beyond Basic Budgeting</h3>
+            <p>While basic budgeting focuses on needs, wants, and savings, advanced budgeting involves detailed planning, forecasting, and optimization of your money management strategies.</p>
+            
+            <h4>The Zero-Based Budget</h4>
+            <p>In zero-based budgeting, every dollar gets assigned a specific purpose:</p>
+            <ul>
+              <li><strong>Income minus expenses equals zero</strong> - Every dollar is allocated</li>
+              <li><strong>No money left unassigned</strong> - Prevents wasteful spending</li>
+              <li><strong>Intentional allocation</strong> - Every dollar has a job</li>
+              <li><strong>Regular review</strong> - Adjust categories as needed</li>
+            </ul>
+            
+            <h4>The Envelope Method (Digital Version)</h4>
+            <p>Allocate specific amounts for different spending categories:</p>
+            <ul>
+              <li>Set spending limits for each category</li>
+              <li>Use apps or separate accounts to track limits</li>
+              <li>Stop spending when category limit is reached</li>
+              <li>Helps prevent overspending in any area</li>
+            </ul>
+            
+            <h3>Advanced Savings Strategies</h3>
+            
+            <h4>The 50/30/20 Rule Variations</h4>
+            <p>Modify the basic rule based on your goals:</p>
+            <ul>
+              <li><strong>Aggressive Savings (50/20/30)</strong> - 30% to savings for faster goal achievement</li>
+              <li><strong>Debt Payoff (50/20/30)</strong> - 30% to debt elimination</li>
+              <li><strong>Balanced Growth (40/30/30)</strong> - Equal focus on needs, wants, and savings</li>
+            </ul>
+            
+            <h4>Multiple Savings Goals</h4>
+            <p>Organize savings into specific categories:</p>
+            <ul>
+              <li><strong>Emergency Fund</strong> - 3-6 months of expenses</li>
+              <li><strong>Short-term Goals</strong> - Things you want within a year</li>
+              <li><strong>Medium-term Goals</strong> - Goals for 1-5 years</li>
+              <li><strong>Long-term Goals</strong> - College, car, house down payment</li>
+            </ul>
+            
+            <h3>Income Optimization</h3>
+            
+            <h4>Maximizing Current Income</h4>
+            <ul>
+              <li><strong>Track all income sources</strong> - Allowance, gifts, jobs, side hustles</li>
+              <li><strong>Negotiate increases</strong> - Ask for allowance raises based on increased responsibilities</li>
+              <li><strong>Earn through skills</strong> - Tutoring, pet sitting, yard work</li>
+              <li><strong>Sell unused items</strong> - Convert clutter to cash</li>
+            </ul>
+            
+            <h4>Creating Multiple Income Streams</h4>
+            <ul>
+              <li>Regular allowance or part-time job</li>
+              <li>Seasonal work (lawn care, snow removal)</li>
+              <li>Creative work (art, crafts, writing)</li>
+              <li>Digital services (social media help, basic tech support)</li>
+            </ul>
+            
+            <h3>Expense Optimization</h3>
+            
+            <h4>Fixed vs. Variable Expenses</h4>
+            <p><strong>Fixed Expenses</strong> - Same amount each month:</p>
+            <ul>
+              <li>Phone bills, subscriptions, insurance</li>
+              <li>Harder to change but worth reviewing annually</li>
+              <li>Look for better deals or alternatives</li>
+            </ul>
+            
+            <p><strong>Variable Expenses</strong> - Change each month:</p>
+            <ul>
+              <li>Food, entertainment, clothing, gas</li>
+              <li>Easier to adjust for savings</li>
+              <li>Great opportunities for optimization</li>
+            </ul>
+            
+            <h4>Smart Spending Strategies</h4>
+            <ul>
+              <li><strong>Price Comparison</strong> - Always check multiple sources</li>
+              <li><strong>Timing Purchases</strong> - Buy during sales and off-seasons</li>
+              <li><strong>Quality vs. Price</strong> - Sometimes paying more saves money long-term</li>             
+              <li><strong>Bulk Buying</strong> - Purchase frequently used items in larger quantities</li>
+              <li><strong>Generic Brands</strong> - Often 20-40% cheaper than name brands</li>
+            </ul>
+            
+            <h3>Financial Tracking and Analysis</h3>
+            
+            <h4>Advanced Tracking Methods</h4>
+            <ul>
+              <li><strong>Spreadsheet Budgets</strong> - Customizable and detailed tracking</li>
+              <li><strong>Budgeting Apps</strong> - Automated categorization and alerts</li>
+              <li><strong>Receipt Scanning</strong> - Digital record keeping</li>
+              <li><strong>Bank Account Integration</strong> - Automatic transaction import</li>
+            </ul>
+            
+            <h4>Key Metrics to Track</h4>
+            <ul>
+              <li><strong>Savings Rate</strong> - Percentage of income saved each month</li>
+              <li><strong>Expense Ratios</strong> - How much goes to each category</li>
+              <li><strong>Goal Progress</strong> - How close you are to financial targets</li>
+              <li><strong>Income Growth</strong> - How your earning power changes over time</li>
+            </ul>
+            
+            <h3>Goal-Based Budgeting</h3>
+            
+            <h4>SMART Financial Goals</h4>
+            <p>Make goals Specific, Measurable, Achievable, Relevant, and Time-bound:</p>
+            <ul>
+              <li><strong>Specific</strong> - "Save for a laptop" not "save money"</li>
+              <li><strong>Measurable</strong> - "$800 for the laptop"</li>
+              <li><strong>Achievable</strong> - Realistic based on your income</li>
+              <li><strong>Relevant</strong> - Important to your life and values</li>
+              <li><strong>Time-bound</strong> - "By next December"</li>
+            </ul>
+            
+            <h4>Backward Planning</h4>
+            <p>Start with your goal and work backward:</p>
+            <ul>
+              <li>Goal: $1,200 for a computer in 12 months</li>
+              <li>Monthly savings needed: $100</li>
+              <li>Weekly savings needed: $25</li>
+              <li>Daily savings needed: $3.33</li>
+            </ul>
+            
+            <h3>Emergency Planning</h3>
+            
+            <h4>Building an Emergency Fund</h4>
+            <ul>
+              <li><strong>Start Small</strong> - Even $25 is better than nothing</li>
+              <li><strong>Automate Savings</strong> - Set up automatic transfers</li>
+              <li><strong>Separate Account</strong> - Keep emergency money separate</li>
+              <li><strong>Easy Access</strong> - But not too easy to avoid temptation</li>
+            </ul>
+            
+            <h4>What Counts as an Emergency</h4>
+            <ul>
+              <li>Unexpected medical expenses</li>
+              <li>Essential item replacement (broken phone, etc.)</li>
+              <li>Transportation emergencies</li>
+              <li>NOT: sales, wants, or non-urgent repairs</li>
+            </ul>
+            
+            <h3>Advanced Money Psychology</h3>
+            
+            <h4>Understanding Your Money Mindset</h4>
+            <ul>
+              <li><strong>Scarcity vs. Abundance</strong> - How you view money availability</li>
+              <li><strong>Risk Tolerance</strong> - Comfort with uncertainty</li>
+              <li><strong>Time Preference</strong> - Present vs. future focus</li>
+              <li><strong>Values Alignment</strong> - Spending that matches your priorities</li>
+            </ul>
+            
+            <h4>Behavioral Budgeting Tricks</h4>
+            <ul>
+              <li><strong>Pay Yourself First</strong> - Save before spending</li>
+              <li><strong>Automate Good Habits</strong> - Reduce decision fatigue</li>
+              <li><strong>Visual Progress Tracking</strong> - Charts and graphs for motivation</li>
+              <li><strong>Reward Systems</strong> - Celebrate milestones appropriately</li>
+            </ul>
+            
+            <h3>Planning for Major Life Events</h3>
+            
+            <h4>College Planning</h4>
+            <ul>
+              <li>Estimate total costs including living expenses</li>
+              <li>Research financial aid and scholarship opportunities</li>
+              <li>Consider community college for first two years</li>
+              <li>Plan for textbooks, supplies, and equipment</li>
+            </ul>
+            
+            <h4>First Car Planning</h4>
+            <ul>
+              <li>Total cost includes insurance, maintenance, and gas</li>
+              <li>Consider reliable used cars over new ones</li>
+              <li>Budget for emergency repairs</li>
+              <li>Factor in registration and inspection costs</li>
+            </ul>
+            
+            <h3>Review and Adjustment Strategies</h3>
+            
+            <h4>Regular Budget Reviews</h4>
+            <ul>
+              <li><strong>Weekly</strong> - Check spending against budget</li>
+              <li><strong>Monthly</strong> - Analyze patterns and adjust categories</li>
+              <li><strong>Quarterly</strong> - Review goals and major spending</li>
+              <li><strong>Annually</strong> - Complete budget overhaul and goal setting</li>
+            </ul>
+            
+            <h4>When to Adjust Your Budget</h4>
+            <ul>
+              <li>Income changes (new job, raise, less allowance)</li>
+              <li>Major life changes (moving, new school)</li>
+              <li>Goal achievement or changes</li>
+              <li>Consistent overspending in categories</li>
+              <li>Emergency situations</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is zero-based budgeting?",
+            options: ["Having zero money", "Every dollar gets assigned a specific purpose", "Never spending money", "Budgeting with no goals"],
+            correct: "Every dollar gets assigned a specific purpose",
+            explanation: "In zero-based budgeting, you assign every dollar of income to specific categories so income minus expenses equals zero - no money is left unassigned!"
+          },
+          {
+            id: 2,
+            question: "What is an appropriate emergency fund goal?",
+            options: ["$10 total", "3-6 months of expenses", "All your money", "One week of expenses"],
+            correct: "3-6 months of expenses",
+            explanation: "A good emergency fund should cover 3-6 months of your regular expenses to help you handle unexpected situations without going into debt!"
+          },
+          {
+            id: 3,
+            question: "In aggressive savings mode, how might you modify the 50/30/20 rule?",
+            options: ["50/20/30 - more to savings", "60/30/10 - less to savings", "100/0/0 - only needs", "33/33/34 - equal amounts"],
+            correct: "50/20/30 - more to savings",
+            explanation: "Aggressive savings might use 50/20/30, putting 30% toward savings goals while reducing wants to 20% to achieve financial goals faster!"
+          },
+          {
+            id: 4,
+            question: "What makes a goal 'SMART'?",
+            options: ["It's about money", "Specific, Measurable, Achievable, Relevant, Time-bound", "It's easy to achieve", "It's expensive"],
+            correct: "Specific, Measurable, Achievable, Relevant, Time-bound",
+            explanation: "SMART goals are Specific, Measurable, Achievable, Relevant, and Time-bound - this framework helps you create clear, actionable financial goals!"
+          },
+          {
+            id: 5,
+            question: "What is 'backward planning' for financial goals?",
+            options: ["Planning to go backward", "Starting with your goal and calculating what you need to save", "Making bad financial decisions", "Planning without thinking"],
+            correct: "Starting with your goal and calculating what you need to save",
+            explanation: "Backward planning means starting with your end goal and working backward to determine how much you need to save daily, weekly, or monthly to reach it!"
+          },
+          {
+            id: 6,
+            question: "Which expense type is easier to adjust for savings?",
+            options: ["Fixed expenses", "Variable expenses", "Both are the same", "Neither can be adjusted"],
+            correct: "Variable expenses",
+            explanation: "Variable expenses like food, entertainment, and clothing change each month and are generally easier to adjust than fixed expenses like subscriptions!"
+          },
+          {
+            id: 7,
+            question: "What is NOT typically considered a true emergency?",
+            options: ["Broken phone you need for safety", "Unexpected medical expense", "A great sale on something you want", "Car repair for transportation to work"],
+            correct: "A great sale on something you want",
+            explanation: "Sales on wants are not emergencies! True emergencies are unexpected expenses for things you actually need for health, safety, or essential activities!"
+          },
+          {
+            id: 8,
+            question: "How often should you do a complete budget review?",
+            options: ["Never", "Daily", "Monthly", "Annually"],
+            correct: "Annually",
+            explanation: "While you should check your budget weekly and analyze it monthly, a complete budget overhaul and major goal setting should happen annually!"
+          },
+          {
+            id: 9,
+            question: "What does 'pay yourself first' mean?",
+            options: ["Give yourself an allowance", "Save money before spending on other things", "Always buy what you want first", "Pay your own bills"],
+            correct: "Save money before spending on other things",
+            explanation: "'Pay yourself first' means setting aside money for savings and goals before spending on other things - it prioritizes your financial future!"
+          },
+          {
+            id: 10,
+            question: "Why is it important to have multiple savings goals?",
+            options: ["It's more complicated", "Different goals have different timeframes and priorities", "Banks require it", "It's not important"],
+            correct: "Different goals have different timeframes and priorities",
+            explanation: "Multiple savings goals help you organize your money for different purposes - emergency funds, short-term wants, and long-term goals like college all need different strategies!"
+          }
+        ],
+        xpReward: 150
       }
     }
   };
@@ -1482,6 +2473,8 @@ const LessonViewer = () => {
     await saveProgress(user.id, { article_completed: true, article_completed_at: new Date().toISOString() });
     toast.success("Article completed! You can now take the quiz.");
     setCurrentSection('quiz');
+    // Scroll to top of the quiz section
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const saveProgress = async (userId: string, progressUpdate: any) => {
