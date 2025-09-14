@@ -2500,8 +2500,23 @@ const LessonViewer = () => {
         setProgress(prev => ({ ...prev, ...progressUpdate }));
         
         // Also update localStorage for consistency with other pages
-        if (progressUpdate.quiz_completed) {
+        if (progressUpdate.quiz_completed && progressUpdate.quiz_score >= 70) {
           updateLocalStorageProgress(grade, module, progressUpdate.xp_earned || 0);
+          
+          // Save module completion to game_progress table when quiz is completed with passing score
+          const { error: gameProgressError } = await supabase
+            .from('game_progress')
+            .upsert({
+              user_id: userId,
+              module_id: module,
+              completed: true,
+              score: progressUpdate.quiz_score,
+              completed_at: progressUpdate.completed_at
+            });
+
+          if (gameProgressError) {
+            console.error('Error saving game progress:', gameProgressError);
+          }
         }
       }
     }
@@ -2563,7 +2578,28 @@ const LessonViewer = () => {
     navigate(`/education/grade/${grade}`);
   };
 
-  const nextModule = () => {
+  const nextModule = async () => {
+    if (!user) return;
+    
+    // Save module completion to game_progress table
+    const { error: gameProgressError } = await supabase
+      .from('game_progress')
+      .upsert({
+        user_id: user.id,
+        module_id: module,
+        completed: true,
+        score: score,
+        completed_at: new Date().toISOString()
+      });
+
+    if (gameProgressError) {
+      console.error('Error saving game progress:', gameProgressError);
+    } else {
+      // Update localStorage for consistency
+      updateLocalStorageProgress(grade, module, xpEarned || 0);
+      toast.success(`Module ${module} completed! Moving to Module ${module + 1}`);
+    }
+    
     // Scroll to top and navigate to next module's video section
     window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate(`/education/grade/${grade}/module/${module + 1}`);
