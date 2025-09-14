@@ -14,6 +14,113 @@ export type Database = {
   }
   public: {
     Tables: {
+      badges: {
+        Row: {
+          created_at: string
+          description: string | null
+          grade_level: number | null
+          icon: string | null
+          id: string
+          name: string
+          xp_required: number
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          grade_level?: number | null
+          icon?: string | null
+          id?: string
+          name: string
+          xp_required: number
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          grade_level?: number | null
+          icon?: string | null
+          id?: string
+          name?: string
+          xp_required?: number
+        }
+        Relationships: []
+      }
+      classroom_memberships: {
+        Row: {
+          classroom_id: string
+          id: string
+          joined_at: string
+          student_id: string
+        }
+        Insert: {
+          classroom_id: string
+          id?: string
+          joined_at?: string
+          student_id: string
+        }
+        Update: {
+          classroom_id?: string
+          id?: string
+          joined_at?: string
+          student_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "classroom_memberships_classroom_id_fkey"
+            columns: ["classroom_id"]
+            isOneToOne: false
+            referencedRelation: "classrooms"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "classroom_memberships_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["user_id"]
+          },
+        ]
+      }
+      classrooms: {
+        Row: {
+          classroom_code: string
+          created_at: string
+          description: string | null
+          grade_level: number
+          id: string
+          name: string
+          teacher_id: string
+          updated_at: string
+        }
+        Insert: {
+          classroom_code: string
+          created_at?: string
+          description?: string | null
+          grade_level: number
+          id?: string
+          name: string
+          teacher_id: string
+          updated_at?: string
+        }
+        Update: {
+          classroom_code?: string
+          created_at?: string
+          description?: string | null
+          grade_level?: number
+          id?: string
+          name?: string
+          teacher_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "classrooms_teacher_id_fkey"
+            columns: ["teacher_id"]
+            isOneToOne: false
+            referencedRelation: "user_profiles"
+            referencedColumns: ["user_id"]
+          },
+        ]
+      }
       game_progress: {
         Row: {
           completed: boolean
@@ -47,6 +154,110 @@ export type Database = {
         }
         Relationships: []
       }
+      lesson_progress: {
+        Row: {
+          article_completed: boolean
+          article_completed_at: string | null
+          completed_at: string | null
+          created_at: string
+          id: string
+          lesson_id: string
+          quiz_attempts: number
+          quiz_completed: boolean
+          quiz_score: number | null
+          updated_at: string
+          user_id: string
+          video_completed: boolean
+          video_completed_at: string | null
+          xp_earned: number
+        }
+        Insert: {
+          article_completed?: boolean
+          article_completed_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          lesson_id: string
+          quiz_attempts?: number
+          quiz_completed?: boolean
+          quiz_score?: number | null
+          updated_at?: string
+          user_id: string
+          video_completed?: boolean
+          video_completed_at?: string | null
+          xp_earned?: number
+        }
+        Update: {
+          article_completed?: boolean
+          article_completed_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          lesson_id?: string
+          quiz_attempts?: number
+          quiz_completed?: boolean
+          quiz_score?: number | null
+          updated_at?: string
+          user_id?: string
+          video_completed?: boolean
+          video_completed_at?: string | null
+          xp_earned?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_progress_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lessons: {
+        Row: {
+          article_content: string | null
+          created_at: string
+          description: string | null
+          duration_minutes: number
+          grade_level: number
+          id: string
+          module_number: number
+          quiz_questions: Json
+          title: string
+          updated_at: string
+          video_url: string | null
+          xp_reward: number
+        }
+        Insert: {
+          article_content?: string | null
+          created_at?: string
+          description?: string | null
+          duration_minutes?: number
+          grade_level: number
+          id?: string
+          module_number: number
+          quiz_questions?: Json
+          title: string
+          updated_at?: string
+          video_url?: string | null
+          xp_reward?: number
+        }
+        Update: {
+          article_content?: string | null
+          created_at?: string
+          description?: string | null
+          duration_minutes?: number
+          grade_level?: number
+          id?: string
+          module_number?: number
+          quiz_questions?: Json
+          title?: string
+          updated_at?: string
+          video_url?: string | null
+          xp_reward?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -71,12 +282,83 @@ export type Database = {
         }
         Relationships: []
       }
+      user_badges: {
+        Row: {
+          badge_id: string
+          earned_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          badge_id: string
+          earned_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          badge_id?: string
+          earned_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_badges_badge_id_fkey"
+            columns: ["badge_id"]
+            isOneToOne: false
+            referencedRelation: "badges"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          email: string | null
+          grade_level: number | null
+          id: string
+          role: string
+          school_name: string | null
+          teacher_code: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          grade_level?: number | null
+          id?: string
+          role?: string
+          school_name?: string | null
+          teacher_code?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          grade_level?: number | null
+          id?: string
+          role?: string
+          school_name?: string | null
+          teacher_code?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_classroom_code: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never

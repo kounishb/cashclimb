@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Gamepad2, 
+  BookOpen, 
   Trophy, 
   Target, 
   Users, 
@@ -11,17 +11,20 @@ import {
   Smartphone, 
   Zap,
   CheckCircle,
-  Star
+  Star,
+  GraduationCap,
+  ChevronRight,
+  Play
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Product = () => {
   const features = [
     {
-      icon: <Gamepad2 className="h-8 w-8" />,
+      icon: <BookOpen className="h-8 w-8" />,
       title: "Interactive Learning Modules",
-      description: "Engage with financial concepts through story-driven scenarios, mini-games, and practical simulations that make learning stick.",
-      highlight: "90% retention rate"
+      description: "Engage with educational content through videos, articles, and quizzes designed for grades 3-8.",
+      highlight: "Comprehensive curriculum"
     },
     {
       icon: <Trophy className="h-8 w-8" />,
@@ -102,20 +105,20 @@ const Product = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center">
               <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
-                🎮 Gamified Learning Platform
+                🎓 Educational Learning Platform
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Learn Finance Through 
-                <span className="bg-gradient-primary bg-clip-text text-transparent"> Gaming</span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent"> Education</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Master personal finance with our interactive platform that combines education with entertainment. Level up your money skills while having fun!
+                Master personal finance with our comprehensive educational platform designed for grades 3-8. Build real-world money skills through structured learning!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="animate-glow" asChild>
-                  <Link to="/game">
-                    Start Playing Free
-                    <Gamepad2 className="ml-2 h-5 w-5" />
+                  <Link to="/education">
+                    Start Learning Free
+                    <Play className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg">
@@ -234,8 +237,8 @@ const Product = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="animate-glow" asChild>
               <Link to="/auth">
-                Play Now - It's Free!
-                <Gamepad2 className="ml-2 h-5 w-5" />
+                Start Learning Today!
+                <GraduationCap className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
