@@ -2509,6 +2509,7 @@ const LessonViewer = () => {
             .upsert({
               user_id: userId,
               module_id: module,
+              grade_level: grade,
               completed: true,
               score: progressUpdate.quiz_score,
               completed_at: progressUpdate.completed_at
@@ -2587,6 +2588,7 @@ const LessonViewer = () => {
       .upsert({
         user_id: user.id,
         module_id: module,
+        grade_level: grade,
         completed: true,
         score: score,
         completed_at: new Date().toISOString()

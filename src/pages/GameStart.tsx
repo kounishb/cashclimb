@@ -91,14 +91,13 @@ const GameStart = () => {
             totalXpEarned = progressData.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
           }
 
-          // Get completed modules for this specific grade by getting unique module numbers
-          const gradeModuleNumbers = [...new Set(lessons.map(l => l.module_number))];
-          const { data: gameProgress } = await supabase
-            .from('game_progress')
-            .select('module_id, completed')
-            .eq('user_id', userId)
-            .eq('completed', true)
-            .in('module_id', gradeModuleNumbers);
+        // Get completed modules for this specific grade
+        const { data: gameProgress } = await supabase
+          .from('game_progress')
+          .select('module_id, completed')
+          .eq('user_id', userId)
+          .eq('grade_level', grade)
+          .eq('completed', true);
 
           completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
         }

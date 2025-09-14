@@ -126,6 +126,7 @@ export type Database = {
           completed: boolean
           completed_at: string | null
           created_at: string
+          grade_level: number
           id: string
           module_id: number
           score: number | null
@@ -136,6 +137,7 @@ export type Database = {
           completed?: boolean
           completed_at?: string | null
           created_at?: string
+          grade_level?: number
           id?: string
           module_id: number
           score?: number | null
@@ -146,6 +148,7 @@ export type Database = {
           completed?: boolean
           completed_at?: string | null
           created_at?: string
+          grade_level?: number
           id?: string
           module_id?: number
           score?: number | null
