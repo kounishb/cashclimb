@@ -220,6 +220,250 @@ const LessonViewer = () => {
           content: `
             <h2>How People Earn Money: A Complete Guide to Work and Income</h2>
             <p>Money doesn't magically appear in people's wallets or bank accounts. Every dollar, every coin has to be earned through work, effort, and providing value to others. Understanding how people earn money is one of the most important life skills you can develop, and it's never too early to start learning!</p>
+            
+            <h3>What is Work Really?</h3>
+            <p>Work is when people use their time, energy, skills, knowledge, and effort to do something valuable for other people. In return for creating this value, they receive money as payment. Work can be physical (like building houses), mental (like solving math problems), creative (like writing stories), or social (like teaching children).</p>
+            
+            <p>The most important thing to understand about work is that it must create value for other people. If what you're doing doesn't help someone else in some way, it's very difficult to earn money from it. This is why successful workers always think about how they can help others solve problems or meet their needs.</p>
+            
+            <h3>The Many Different Types of Jobs</h3>
+            <p>There are thousands of different jobs in the world, but they generally fall into several main categories:</p>
+            
+            <h4>Service Jobs - Helping People Directly</h4>
+            <p>Service jobs involve directly helping other people with their needs:</p>
+            <ul>
+              <li><strong>Healthcare Workers</strong> - Doctors, nurses, dentists, therapists who help people stay healthy</li>
+              <li><strong>Educators</strong> - Teachers, professors, tutors who help people learn</li>
+              <li><strong>Public Safety</strong> - Police officers, firefighters, paramedics who keep communities safe</li>
+              <li><strong>Customer Service</strong> - Restaurant servers, hotel staff, retail workers who serve customers</li>
+              <li><strong>Personal Services</strong> - Hair stylists, personal trainers, counselors who provide individual care</li>
+            </ul>
+            
+            <h4>Production Jobs - Making Things People Need</h4>
+            <p>These jobs involve creating physical products:</p>
+            <ul>
+              <li><strong>Manufacturing</strong> - Factory workers who make cars, electronics, clothing, and other goods</li>
+              <li><strong>Construction</strong> - Builders, electricians, plumbers who create and maintain buildings</li>
+              <li><strong>Agriculture</strong> - Farmers, ranchers, fishers who produce food</li>
+              <li><strong>Crafts and Arts</strong> - Artisans, bakers, jewelers who create unique items</li>
+              <li><strong>Technology Production</strong> - Engineers and technicians who design and build technology</li>
+            </ul>
+            
+            <h4>Information and Knowledge Jobs</h4>
+            <p>These jobs work with ideas, information, and knowledge:</p>
+            <ul>
+              <li><strong>Technology</strong> - Computer programmers, web designers, data analysts</li>
+              <li><strong>Media and Communication</strong> - Journalists, writers, photographers, videographers</li>
+              <li><strong>Research and Science</strong> - Scientists, researchers, laboratory technicians</li>
+              <li><strong>Business and Finance</strong> - Accountants, managers, consultants, financial advisors</li>
+              <li><strong>Legal and Government</strong> - Lawyers, judges, government workers</li>
+            </ul>
+            
+            <h3>How Kids Can Start Earning Money Today</h3>
+            <p>You don't have to wait until you're an adult to start earning money! There are many age-appropriate ways for kids to begin developing work skills and earning income:</p>
+            
+            <h4>Household Responsibilities That Can Earn Money</h4>
+            <ul>
+              <li><strong>Cleaning Tasks</strong> - Vacuuming, dusting, organizing rooms, cleaning bathrooms</li>
+              <li><strong>Kitchen Help</strong> - Washing dishes, setting/clearing tables, basic meal preparation</li>
+              <li><strong>Laundry Assistance</strong> - Sorting clothes, folding, putting away clean laundry</li>
+              <li><strong>Yard Work</strong> - Raking leaves, weeding gardens, watering plants, shoveling snow</li>
+              <li><strong>Pet Care</strong> - Feeding pets, cleaning pet areas, walking dogs</li>
+              <li><strong>Organization Projects</strong> - Organizing closets, garages, storage areas</li>
+            </ul>
+            
+            <h4>Neighborhood Services for Kids</h4>
+            <ul>
+              <li><strong>Lawn Care</strong> - Mowing grass, leaf raking, basic garden maintenance</li>
+              <li><strong>Pet Services</strong> - Dog walking, pet sitting, feeding pets while neighbors are away</li>
+              <li><strong>Seasonal Work</strong> - Snow shoveling in winter, lemonade stands in summer</li>
+              <li><strong>Delivery Services</strong> - Delivering newspapers, helping elderly neighbors with groceries</li>
+              <li><strong>Car Washing</strong> - Cleaning cars, bikes, or outdoor equipment</li>
+            </ul>
+            
+            <h3>The Connection Between Work and Value</h3>
+            <p>The amount of money people earn depends on several important factors:</p>
+            
+            <h4>How Much Value You Create</h4>
+            <p>People who help solve bigger problems or serve more people usually earn more money. A doctor who saves lives earns more than someone who just cleans, because saving lives creates more value for society.</p>
+            
+            <h4>How Hard You Are to Replace</h4>
+            <p>Jobs that require special skills, education, or talents usually pay more because fewer people can do them. Anyone can learn to sweep floors, but not everyone can perform surgery or design buildings.</p>
+            
+            <h4>How Much Responsibility You Have</h4>
+            <p>People who make important decisions or are responsible for other people's work usually earn more. Managers earn more than the people they supervise because they have more responsibility.</p>
+            
+            <h3>Building Work Skills Early</h3>
+            <p>Even as a kid, you can start developing skills that will help you earn money throughout your life:</p>
+            
+            <h4>Communication Skills</h4>
+            <ul>
+              <li>Practice speaking clearly and politely to adults</li>
+              <li>Learn to listen carefully and follow instructions</li>
+              <li>Develop writing skills through school assignments</li>
+              <li>Learn to explain things to others</li>
+            </ul>
+            
+            <h4>Problem-Solving Skills</h4>
+            <ul>
+              <li>When you encounter problems, try to think of solutions</li>
+              <li>Ask "How can I make this better?" about situations around you</li>
+              <li>Practice breaking big problems into smaller, manageable pieces</li>
+              <li>Learn from mistakes and try different approaches</li>
+            </ul>
+            
+            <h4>Responsibility and Reliability</h4>
+            <ul>
+              <li>Always do what you say you'll do</li>
+              <li>Show up on time and be prepared</li>
+              <li>Take care of your belongings and other people's property</li>
+              <li>Admit mistakes and work to fix them</li>
+            </ul>
+            
+            <h3>The Importance of Education</h3>
+            <p>Education is one of the most important investments you can make in your earning potential:</p>
+            
+            <h4>Basic Education</h4>
+            <p>Reading, writing, and math skills are essential for almost every job. The better you are at these basics, the more opportunities you'll have.</p>
+            
+            <h4>Specialized Knowledge</h4>
+            <p>Learning special skills like computer programming, foreign languages, or technical abilities can open doors to higher-paying careers.</p>
+            
+            <h4>Continuous Learning</h4>
+            <p>The most successful people never stop learning. They read books, take classes, and constantly look for ways to improve their skills.</p>
+            
+            <h3>Understanding Different Types of Income</h3>
+            <p>There are several ways people can earn money:</p>
+            
+            <h4>Active Income</h4>
+            <p>This is money you earn by actively working - trading your time and effort for pay. Most jobs provide active income. Examples include:</p>
+            <ul>
+              <li>Hourly wages from a job</li>
+              <li>Salary from full-time work</li>
+              <li>Money from chores or odd jobs</li>
+              <li>Payment for services like tutoring or pet-sitting</li>
+            </ul>
+            
+            <h4>Passive Income</h4>
+            <p>This is money that comes in without you actively working for it. It usually requires some initial work or investment. Examples include:</p>
+            <ul>
+              <li>Interest from money in savings accounts</li>
+              <li>Money from investments like stocks</li>
+              <li>Rental income from property</li>
+              <li>Royalties from creating something (like a book or song)</li>
+            </ul>
+            
+            <h3>Creating Your Own Opportunities</h3>
+            <p>Sometimes the best way to earn money is to create your own opportunities:</p>
+            
+            <h4>Entrepreneurship for Kids</h4>
+            <ul>
+              <li><strong>Lemonade Stands</strong> - Classic first business teaching sales and customer service</li>
+              <li><strong>Craft Sales</strong> - Making and selling handmade items</li>
+              <li><strong>Service Businesses</strong> - Offering services like pet-sitting or lawn care</li>
+              <li><strong>Digital Ventures</strong> - Creating content or simple apps (with parental guidance)</li>
+            </ul>
+            
+            <h3>The Role of Passion and Interest</h3>
+            <p>While money is important, the most successful and happy workers often combine earning money with doing things they enjoy:</p>
+            
+            <h4>Finding Your Interests</h4>
+            <ul>
+              <li>Pay attention to activities you naturally enjoy</li>
+              <li>Notice what subjects come easily to you in school</li>
+              <li>Think about problems in the world you'd like to help solve</li>
+              <li>Consider what kind of work environment appeals to you</li>
+            </ul>
+            
+            <h4>Turning Interests into Income</h4>
+            <p>Almost any interest can be turned into income if you think creatively:</p>
+            <ul>
+              <li>Love animals? Consider veterinary work, pet training, or animal research</li>
+              <li>Enjoy building things? Explore engineering, construction, or product design</li>
+              <li>Like helping people? Look into healthcare, teaching, or social work</li>
+              <li>Fascinated by technology? Investigate programming, robotics, or digital design</li>
+            </ul>
+            
+            <h3>Planning Your Future Career</h3>
+            <p>It's never too early to start thinking about what kind of work you might want to do when you grow up:</p>
+            
+            <h4>Exploring Career Options</h4>
+            <ul>
+              <li>Talk to adults about their jobs - ask what they like and dislike</li>
+              <li>Visit workplaces when possible (like "Take Your Child to Work Day")</li>
+              <li>Research different careers online or at the library</li>
+              <li>Try volunteer work or internships when you're old enough</li>
+            </ul>
+            
+            <h4>Setting Goals</h4>
+            <ul>
+              <li>Think about what kind of lifestyle you want</li>
+              <li>Consider how much money you'll need for your goals</li>
+              <li>Identify the education and skills you'll need</li>
+              <li>Make a plan for developing those skills</li>
+            </ul>
+            
+            <h3>Money and Work Ethics</h3>
+            <p>How you earn money is just as important as how much you earn:</p>
+            
+            <h4>Honest Work</h4>
+            <ul>
+              <li>Always be truthful about your abilities and experience</li>
+              <li>Do quality work even when no one is watching</li>
+              <li>Respect other people's property and time</li>
+              <li>Keep your promises and commitments</li>
+            </ul>
+            
+            <h4>Fair Exchange</h4>
+            <ul>
+              <li>Make sure the work you do is worth the money you receive</li>
+              <li>Don't try to take advantage of people</li>
+              <li>Be willing to work for what you earn</li>
+              <li>Appreciate the opportunities others give you</li>
+            </ul>
+            
+            <h3>The Bigger Picture: Work and Society</h3>
+            <p>Understanding how individual work contributes to society helps you see the bigger picture:</p>
+            
+            <h4>How Work Benefits Everyone</h4>
+            <ul>
+              <li>When people work, they create goods and services that improve life for everyone</li>
+              <li>Workers pay taxes that fund schools, roads, and public services</li>
+              <li>Employment gives people purpose and helps them support their families</li>
+              <li>Innovation at work leads to new technologies and solutions</li>
+            </ul>
+            
+            <h4>Your Future Contribution</h4>
+            <p>As you think about your future career, consider how you want to contribute to making the world better. The most fulfilling careers often involve helping others while earning a living.</p>
+            
+            <h3>Getting Started Today</h3>
+            <p>Here are practical steps you can take right now to start your journey toward earning money:</p>
+            
+            <h4>At Home</h4>
+            <ul>
+              <li>Ask your parents about chores you can do for an allowance</li>
+              <li>Volunteer to help with family projects</li>
+              <li>Take care of your own responsibilities without being asked</li>
+              <li>Learn basic life skills like cooking, cleaning, and organizing</li>
+            </ul>
+            
+            <h4>At School</h4>
+            <ul>
+              <li>Work hard in all your subjects to build a strong foundation</li>
+              <li>Participate in clubs and activities to develop different skills</li>
+              <li>Help classmates when appropriate (this builds leadership skills)</li>
+              <li>Ask teachers about careers related to subjects you enjoy</li>
+            </ul>
+            
+            <h4>In Your Community</h4>
+            <ul>
+              <li>Look for age-appropriate volunteer opportunities</li>
+              <li>Offer to help neighbors with simple tasks</li>
+              <li>Observe different types of work happening around you</li>
+              <li>Be respectful and helpful to create a good reputation</li>
+            </ul>
+            
+            <p>Remember, earning money through work is not just about getting paid - it's about developing skills, contributing to society, and building the foundation for a successful and fulfilling life. Every small step you take now toward understanding work and developing good habits will pay off in the future!</p>
           `
         },
         quiz: [],
@@ -232,7 +476,231 @@ const LessonViewer = () => {
         videoTitle: "Grade 3: Financial Literacy—Needs and Wants for Kids",
         article: {
           title: "Understanding the Difference Between Needs and Wants",
-          content: `<h2>Understanding Needs vs Wants</h2><p>Learning the difference between needs and wants is fundamental to making smart financial decisions.</p>`
+          content: `
+            <h2>Understanding Needs vs Wants: The Foundation of Smart Financial Decisions</h2>
+            <p>Learning the difference between needs and wants is one of the most fundamental skills in financial literacy. This concept will guide every money decision you make for the rest of your life. When you truly understand this difference, you'll be able to make smart choices that help you achieve your goals while staying financially secure.</p>
+            
+            <h3>What Are Needs? The Essentials for Life</h3>
+            <p>Needs are things that are absolutely necessary for your survival, health, safety, and basic well-being. These are items you cannot live without, and they must be your first priority when spending money. Without these basic needs, your life would be in danger or your ability to function in society would be severely limited.</p>
+            
+            <h4>Physical Survival Needs</h4>
+            <p>These are the most basic requirements for staying alive and healthy:</p>
+            <ul>
+              <li><strong>Food and Nutrition</strong> - Your body needs healthy food to grow, develop, and maintain energy. This includes fruits, vegetables, proteins, grains, and clean drinking water. Without proper nutrition, you cannot think clearly, grow properly, or stay healthy.</li>
+              <li><strong>Shelter and Housing</strong> - Everyone needs a safe place to live that protects them from weather, provides security, and offers basic amenities like running water and electricity. This includes rent or mortgage payments, basic utilities, and essential home maintenance.</li>
+              <li><strong>Clothing</strong> - You need appropriate clothing to protect your body from weather, maintain health and hygiene, and meet social expectations. This includes weather-appropriate outer wear, undergarments, shoes, and clothes suitable for school or work.</li>
+              <li><strong>Healthcare</strong> - Medical care when you're sick or injured, preventive care like checkups and vaccinations, dental care, and vision care. Your health is your most valuable asset.</li>
+              <li><strong>Safety and Security</strong> - Protection from harm, including physical safety, financial security, and protection of your property and personal information.</li>
+            </ul>
+            
+            <h4>Social and Educational Needs</h4>
+            <ul>
+              <li><strong>Basic Education</strong> - Learning to read, write, and do math, plus knowledge needed to function in society</li>
+              <li><strong>School Supplies</strong> - Basic materials needed for education like notebooks, pencils, and required books</li>
+              <li><strong>Communication</strong> - Some way to communicate with others, which might include a basic phone for emergencies</li>
+              <li><strong>Transportation</strong> - Some way to get to work, school, medical appointments, and essential errands</li>
+            </ul>
+            
+            <h3>What Are Wants? The Nice-to-Haves</h3>
+            <p>Wants are things that would make life more enjoyable, convenient, or fun, but you can live without them. Wants are preferences and desires beyond the basic necessities. While wants can add happiness and comfort to life, they're not essential for survival or basic well-being.</p>
+            
+            <h4>Entertainment and Recreation Wants</h4>
+            <ul>
+              <li><strong>Toys and Games</strong> - Video games, board games, sports equipment, dolls, action figures</li>
+              <li><strong>Entertainment Subscriptions</strong> - Streaming services, gaming subscriptions, magazine subscriptions</li>
+              <li><strong>Sports and Activities</strong> - Expensive sports equipment, premium gym memberships, hobby supplies</li>
+              <li><strong>Books and Media</strong> - Books for pleasure reading, movies, music (beyond educational materials)</li>
+              <li><strong>Outings and Events</strong> - Movies, concerts, amusement parks, sporting events, vacation trips</li>
+            </ul>
+            
+            <h4>Luxury and Brand Name Items</h4>
+            <ul>
+              <li><strong>Designer Clothing</strong> - Expensive brand-name clothes with logos when basic clothing would serve the same purpose</li>
+              <li><strong>Premium Electronics</strong> - The latest smartphone, tablet, or gaming system when you have functional alternatives</li>
+              <li><strong>Luxury Items</strong> - Expensive jewelry, watches, or other status symbols</li>
+              <li><strong>Premium Versions</strong> - More expensive versions of things you need, like designer shoes instead of basic shoes</li>
+            </ul>
+            
+            <h4>Food and Treat Wants</h4>
+            <ul>
+              <li><strong>Candy and Sweets</strong> - Cookies, ice cream, candy, soda, and other treats</li>
+              <li><strong>Restaurant Meals</strong> - Eating out for pleasure rather than necessity</li>
+              <li><strong>Specialty Foods</strong> - Expensive or exotic foods that aren't necessary for nutrition</li>
+              <li><strong>Premium Brands</strong> - Name-brand foods when generic versions would provide the same nutrition</li>
+            </ul>
+            
+            <h4>Convenience Wants</h4>
+            <ul>
+              <li><strong>Multiple Items</strong> - Having several of something when one would be sufficient</li>
+              <li><strong>Convenience Services</strong> - Having things delivered when you could get them yourself</li>
+              <li><strong>Time-Saving Gadgets</strong> - Devices that save time but aren't necessary</li>
+              <li><strong>Premium Services</strong> - Faster, more convenient, or luxury versions of basic services</li>
+            </ul>
+            
+            <h3>The Gray Area: When Needs and Wants Overlap</h3>
+            <p>Sometimes it can be tricky to distinguish between needs and wants because they can overlap. Here are some examples of this gray area:</p>
+            
+            <h4>Technology Needs vs Wants</h4>
+            <ul>
+              <li><strong>Need</strong>: A basic cell phone for emergencies and essential communication</li>
+              <li><strong>Want</strong>: The latest smartphone with all the newest features</li>
+              <li><strong>Need</strong>: Basic internet access for school research and homework</li>
+              <li><strong>Want</strong>: High-speed internet for gaming and streaming videos</li>
+            </ul>
+            
+            <h4>Transportation Needs vs Wants</h4>
+            <ul>
+              <li><strong>Need</strong>: Reliable transportation to school, work, and essential appointments</li>
+              <li><strong>Want</strong>: A brand-new, luxury, or sports car when a basic reliable car would work</li>
+              <li><strong>Need</strong>: A bicycle for transportation in some circumstances</li>
+              <li><strong>Want</strong>: An expensive mountain bike when a basic bike would serve the transportation need</li>
+            </ul>
+            
+            <h4>Clothing Needs vs Wants</h4>
+            <ul>
+              <li><strong>Need</strong>: Weather-appropriate clothes, school uniforms, work clothes</li>
+              <li><strong>Want</strong>: Multiple outfits, designer labels, trendy fashion items</li>
+              <li><strong>Need</strong>: Sturdy shoes that fit well and protect your feet</li>
+              <li><strong>Want</strong>: Multiple pairs of shoes, expensive athletic shoes for casual wear</li>
+            </ul>
+            
+            <h3>The Smart Money Strategy: Prioritizing Your Spending</h3>
+            <p>Now that you understand the difference between needs and wants, here's how to use this knowledge to make smart money decisions:</p>
+            
+            <h4>Step 1: Always Meet Your Needs First</h4>
+            <p>Before spending money on anything else, make sure all your basic needs are covered. This includes:</p>
+            <ul>
+              <li>Healthy food for proper nutrition</li>
+              <li>Safe and appropriate housing</li>
+              <li>Weather-appropriate clothing</li>
+              <li>Basic healthcare and hygiene</li>
+              <li>Required school supplies and materials</li>
+              <li>Transportation to essential places</li>
+            </ul>
+            
+            <h4>Step 2: Build Your Emergency and Savings Fund</h4>
+            <p>After covering needs, set aside money for:</p>
+            <ul>
+              <li><strong>Emergency Fund</strong> - Money for unexpected needs like medical bills or urgent repairs</li>
+              <li><strong>Future Needs</strong> - Saving for needs you'll have later, like school supplies for next year</li>
+              <li><strong>Goal Savings</strong> - Money for bigger things you're working toward</li>
+            </ul>
+            
+            <h4>Step 3: Plan for Reasonable Wants</h4>
+            <p>Only after needs are met and some money is saved should you consider spending on wants. When you do:</p>
+            <ul>
+              <li><strong>Make a List</strong> - Write down things you want and prioritize them</li>
+              <li><strong>Wait and Think</strong> - Don't buy wants immediately; wait at least a day or week</li>
+              <li><strong>Compare Options</strong> - Look for the best value when buying wants</li>
+              <li><strong>Set Limits</strong> - Decide in advance how much you'll spend on wants</li>
+            </ul>
+            
+            <h3>Practical Decision-Making Tools</h3>
+            
+            <h4>The 24-Hour Rule</h4>
+            <p>Before buying any want, wait 24 hours and ask yourself:</p>
+            <ul>
+              <li>Do I still want this as much as I did yesterday?</li>
+              <li>Will I use this regularly or just once?</li>
+              <li>Is there something I need more?</li>
+              <li>Could I be happy without this?</li>
+            </ul>
+            
+            <h4>The Opportunity Cost Question</h4>
+            <p>For every want you're considering buying, ask: "What else could I do with this money?" Maybe saving that money could help you buy something more important later.</p>
+            
+            <h4>The Value Test</h4>
+            <p>Ask yourself these questions:</p>
+            <ul>
+              <li>How many hours would I need to work to earn the money for this?</li>
+              <li>How long will I enjoy or use this item?</li>
+              <li>Will this help me achieve my bigger goals?</li>
+              <li>Am I buying this because I really want it, or because my friends have it?</li>
+            </ul>
+            
+            <h3>Common Mistakes People Make</h3>
+            
+            <h4>Confusing Wants with Needs</h4>
+            <p>Many people convince themselves that wants are actually needs. Be honest with yourself - you need transportation, but you don't need a luxury car. You need communication, but you don't need the latest smartphone.</p>
+            
+            <h4>Spending on Wants Before Securing Needs</h4>
+            <p>Some people buy toys, games, or treats before making sure they have money for lunch, school supplies, or other essentials. This can lead to serious problems.</p>
+            
+            <h4>Impulse Buying</h4>
+            <p>Making quick decisions to buy wants without thinking them through often leads to regret and financial problems.</p>
+            
+            <h4>Keeping Up with Others</h4>
+            <p>Buying things because friends have them rather than because you truly need or want them is a recipe for overspending and debt.</p>
+            
+            <h3>Teaching Others About Needs vs Wants</h3>
+            <p>Once you understand this concept, you can help teach others:</p>
+            <ul>
+              <li><strong>Younger Siblings</strong> - Help them understand why they can't have everything they see in stores</li>
+              <li><strong>Friends</strong> - Share smart money strategies when appropriate</li>
+              <li><strong>Family Discussions</strong> - Participate in family conversations about spending priorities</li>
+            </ul>
+            
+            <h3>Cultural and Social Influences on Needs vs Wants</h3>
+            <p>It's important to understand that advertising, social media, and peer pressure constantly try to convince us that wants are needs:</p>
+            
+            <h4>Advertising Tricks</h4>
+            <ul>
+              <li>Making wants seem essential for happiness</li>
+              <li>Creating fake urgency ("limited time offers")</li>
+              <li>Suggesting you need things to fit in or be successful</li>
+              <li>Using celebrity endorsements to make products seem necessary</li>
+            </ul>
+            
+            <h4>Social Media Pressure</h4>
+            <ul>
+              <li>Seeing others with things you don't have</li>
+              <li>Feeling like you need things to look successful online</li>
+              <li>Constant exposure to new products and trends</li>
+            </ul>
+            
+            <h3>Long-Term Benefits of Understanding Needs vs Wants</h3>
+            <p>Mastering this concept will help you throughout life by:</p>
+            <ul>
+              <li><strong>Avoiding Debt</strong> - Not borrowing money for wants you can't afford</li>
+              <li><strong>Building Wealth</strong> - Saving money that can grow over time</li>
+              <li><strong>Reducing Stress</strong> - Not worrying about money because your needs are always covered</li>
+              <li><strong>Achieving Goals</strong> - Having money available for things that truly matter to you</li>
+              <li><strong>Making Better Decisions</strong> - Thinking clearly about purchases rather than acting on impulse</li>
+              <li><strong>Finding Contentment</strong> - Being happy with what you have rather than always wanting more</li>
+            </ul>
+            
+            <h3>Practical Exercises to Practice This Skill</h3>
+            
+            <h4>The Weekly Budget Challenge</h4>
+            <p>If you receive allowance or earn money from chores, try this exercise:</p>
+            <ul>
+              <li>Write down all the things you want to buy this week</li>
+              <li>Label each item as either a "need" or a "want"</li>
+              <li>Calculate the total cost of all needs</li>
+              <li>See how much money is left for wants</li>
+              <li>Prioritize your wants and choose only what fits your budget</li>
+            </ul>
+            
+            <h4>The Store Walk-Through</h4>
+            <p>Next time you're in a store with your family:</p>
+            <ul>
+              <li>Look at different items and ask yourself "need or want?"</li>
+              <li>Notice how stores try to make wants seem like needs</li>
+              <li>Practice walking past things you want but don't need</li>
+              <li>Observe how advertising tries to influence your decisions</li>
+            </ul>
+            
+            <h4>The Future Goals Connection</h4>
+            <p>Connect your needs vs wants decisions to your future goals:</p>
+            <ul>
+              <li>Write down something big you want to achieve (like buying a bike or saving for college)</li>
+              <li>Calculate how much money you need</li>
+              <li>Figure out how long it will take to save if you buy wants vs if you focus on needs</li>
+              <li>Make a plan that balances enjoying some wants while still working toward your goal</li>
+            </ul>
+            
+            <p>Understanding needs vs wants is like having a financial superpower. It helps you make decisions that keep you safe and secure while still allowing you to enjoy life. The earlier you master this skill, the better your financial future will be!</p>
+          `
         },
         quiz: [],
         xpReward: 100
@@ -244,7 +712,201 @@ const LessonViewer = () => {
         videoTitle: "Grade 3: Financial Literacy for Kids - Learn the Basics",
         article: {
           title: "Making Smart Spending Decisions",
-          content: `<h2>Learning to Make Smart Spending Choices</h2><p>Making good spending choices is important for your financial future.</p>`
+          content: `
+            <h2>Learning to Make Smart Spending Choices: Your Guide to Wise Money Decisions</h2>
+            <p>Making good spending choices is one of the most important money skills you can learn. Every time you spend money, you're making a decision that affects your future financial success. Learning to think before you spend will help you throughout your entire life, from buying candy with your allowance to making major purchases as an adult.</p>
+            
+            <h3>What is a Spending Choice?</h3>
+            <p>A spending choice is any decision you make about using your money to buy something. Whether you're spending 25 cents on a piece of candy or $25 on a toy, you're making a spending choice. Good spending choices help you get the most value from your money and achieve your goals, while poor spending choices can leave you with regret and empty pockets.</p>
+            
+            <p>Every spending decision involves giving up one thing to get another. This is called "opportunity cost" - what you give up when you choose one option over another. Understanding this concept helps you make better decisions by thinking about what you're giving up, not just what you're getting.</p>
+            
+            <h3>The Smart Spending Process</h3>
+            <p>Smart spenders don't make quick, impulsive decisions. Instead, they follow a thoughtful process that helps them make choices they'll be happy with later.</p>
+            
+            <h4>Step 1: Stop and Think</h4>
+            <p>Before you buy anything, take a moment to stop and think. This simple pause can save you from making mistakes you'll regret later. Ask yourself these important questions:</p>
+            <ul>
+              <li><strong>Do I really need this or just want it?</strong> - Remember the difference between needs (things necessary for health and safety) and wants (things that would be nice to have)</li>
+              <li><strong>Will I still be happy with this purchase next week? Next month?</strong> - Think beyond the immediate excitement of buying something</li>
+              <li><strong>Is this the best price I can find?</strong> - Don't assume the first price you see is the best deal</li>
+              <li><strong>What else could I do with this money?</strong> - Consider other things you could buy or goals you could work toward</li>
+              <li><strong>Do I have enough money for this without compromising my needs or savings goals?</strong> - Make sure spending this money won't cause problems later</li>
+            </ul>
+            
+            <h4>Step 2: Compare Your Options</h4>
+            <p>Smart shoppers always look at different choices before making a decision. This comparison shopping can save you money and help you find better options:</p>
+            <ul>
+              <li><strong>Compare prices at different stores</strong> - The same item might cost different amounts at different places</li>
+              <li><strong>Consider buying used instead of new</strong> - You can often get the same quality for much less money</li>
+              <li><strong>Think about waiting for a sale</strong> - Many items go on sale regularly if you're patient</li>
+              <li><strong>Ask if there's a similar item that costs less</strong> - Sometimes a slightly different product can meet your needs for less money</li>
+              <li><strong>Check online and in-store prices</strong> - Sometimes online prices are better, sometimes store prices are better</li>
+              <li><strong>Look for coupons or discounts</strong> - A little research can often save you money</li>
+            </ul>
+            
+            <h4>Step 3: Make Your Decision</h4>
+            <p>After thinking and comparing, make your choice. Remember, it's perfectly okay to decide NOT to buy something! Sometimes the smartest spending choice is to save your money for something more important later.</p>
+            
+            <h3>Understanding Value vs Price</h3>
+            <p>Smart spenders understand that the cheapest option isn't always the best choice, and the most expensive option isn't always the best quality. Instead, they look for the best value - the right balance of quality, usefulness, and price.</p>
+            
+            <h4>Factors That Determine Value</h4>
+            <ul>
+              <li><strong>Quality and Durability</strong> - Will this last a long time or break quickly?</li>
+              <li><strong>Usefulness</strong> - How often will you actually use this?</li>
+              <li><strong>Enjoyment</strong> - How much happiness will this bring you?</li>
+              <li><strong>Learning or Growth</strong> - Will this help you learn something or develop a skill?</li>
+              <li><strong>Safety</strong> - Is this safe to use? Does it meet safety standards?</li>
+              <li><strong>Environmental Impact</strong> - Is this good for the environment?</li>
+            </ul>
+            
+            <h4>The "Cost Per Use" Calculation</h4>
+            <p>A great way to evaluate value is to think about cost per use. For example:</p>
+            <ul>
+              <li>A $20 book you'll read many times might be worth more than a $5 toy you'll use once</li>
+              <li>A $50 bike you'll ride every day is better value than a $30 game you'll play for a week</li>
+              <li>Quality shoes that last two years are often better value than cheap shoes that wear out in two months</li>
+            </ul>
+            
+            <h3>Common Spending Traps to Avoid</h3>
+            <p>Even smart people can fall into spending traps. Being aware of these common mistakes helps you avoid them:</p>
+            
+            <h4>Impulse Buying</h4>
+            <p>This happens when you buy something without thinking, often because you're excited or because someone is pressuring you to decide quickly. To avoid impulse buying:</p>
+            <ul>
+              <li>Always wait at least 24 hours before buying anything that's not a necessity</li>
+              <li>Make a shopping list before going to stores and stick to it</li>
+              <li>Avoid shopping when you're emotional (excited, sad, bored, or stressed)</li>
+              <li>Be suspicious of "limited time offers" that pressure you to decide immediately</li>
+            </ul>
+            
+            <h4>Peer Pressure Purchasing</h4>
+            <p>Buying things because friends have them or to fit in can lead to poor spending choices:</p>
+            <ul>
+              <li>Remember that true friends won't judge you based on what you own</li>
+              <li>Focus on your own needs and goals, not what others have</li>
+              <li>Understand that people often show off their purchases but don't talk about their financial struggles</li>
+              <li>Find ways to have fun with friends that don't involve spending money</li>
+            </ul>
+            
+            <h4>Emotional Spending</h4>
+            <p>Using shopping to make yourself feel better when you're sad, stressed, or bored often leads to purchases you'll regret:</p>
+            <ul>
+              <li>Find other ways to deal with emotions, like talking to friends, exercising, or pursuing hobbies</li>
+              <li>If you feel the urge to buy something when you're emotional, write it down and wait until you're feeling better</li>
+              <li>Remember that the good feeling from buying something usually doesn't last long</li>
+            </ul>
+            
+            <h4>The "Sale" Trap</h4>
+            <p>Just because something is on sale doesn't mean it's a good deal or that you should buy it:</p>
+            <ul>
+              <li>Ask yourself if you would want the item even if it wasn't on sale</li>
+              <li>Calculate the actual savings - is it really a significant amount?</li>
+              <li>Make sure you have a real use for the item, not just that it's cheap</li>
+              <li>Remember that buying something you don't need is never a good deal, regardless of price</li>
+            </ul>
+            
+            <h3>Smart Shopping Strategies</h3>
+            
+            <h4>The Planning Approach</h4>
+            <ul>
+              <li><strong>Make lists</strong> - Write down what you need before shopping</li>
+              <li><strong>Set budgets</strong> - Decide how much you can spend before you start shopping</li>
+              <li><strong>Research prices</strong> - Look up typical prices for items you're considering</li>
+              <li><strong>Time your purchases</strong> - Learn when items typically go on sale</li>
+            </ul>
+            
+            <h4>The Smart Evaluation Process</h4>
+            <ul>
+              <li><strong>Read reviews</strong> - See what other people say about products before buying</li>
+              <li><strong>Check return policies</strong> - Make sure you can return items if there's a problem</li>
+              <li><strong>Ask questions</strong> - Don't be afraid to ask salespeople about products</li>
+              <li><strong>Consider warranties</strong> - Understand what protection you have if something breaks</li>
+            </ul>
+            
+            <h4>The Money Management Integration</h4>
+            <ul>
+              <li><strong>Track your spending</strong> - Keep records of what you buy so you can learn from your decisions</li>
+              <li><strong>Set savings goals</strong> - Having specific goals makes it easier to resist unnecessary purchases</li>
+              <li><strong>Use the envelope method</strong> - Set aside specific amounts for different types of spending</li>
+              <li><strong>Regular review</strong> - Look back at your purchases and evaluate whether they were good decisions</li>
+            </ul>
+            
+            <h3>Teaching Smart Spending to Others</h3>
+            <p>Once you learn these skills, you can help others make better spending decisions too:</p>
+            
+            <h4>Helping Younger Kids</h4>
+            <ul>
+              <li>Explain why you make certain choices when shopping together</li>
+              <li>Help them practice comparing options in low-stakes situations</li>
+              <li>Teach them to ask questions before buying anything</li>
+              <li>Show them how to save up for things they really want</li>
+            </ul>
+            
+            <h4>Sharing with Friends</h4>
+            <ul>
+              <li>Model good decision-making when shopping with friends</li>
+              <li>Share money-saving tips you discover</li>
+              <li>Suggest free or low-cost activities as alternatives to expensive outings</li>
+              <li>Support friends who are trying to save money by not pressuring them to spend</li>
+            </ul>
+            
+            <h3>The Psychology of Spending</h3>
+            <p>Understanding why we want to buy things helps us make better decisions:</p>
+            
+            <h4>Marketing and Advertising Influences</h4>
+            <ul>
+              <li><strong>Emotional appeals</strong> - Ads try to make you feel like you need something to be happy or successful</li>
+              <li><strong>Artificial scarcity</strong> - "Limited time" or "only a few left" messages create pressure to buy quickly</li>
+              <li><strong>Social proof</strong> - "Everyone else is buying this" messages make you want to fit in</li>
+              <li><strong>Celebrity endorsements</strong> - Using famous people to make products seem more desirable</li>
+            </ul>
+            
+            <h4>Internal Motivations</h4>
+            <ul>
+              <li><strong>Instant gratification</strong> - The desire to have something right now rather than wait</li>
+              <li><strong>Status seeking</strong> - Wanting to show off or impress others with purchases</li>
+              <li><strong>Convenience</strong> - Paying extra for things that save time or effort</li>
+              <li><strong>Habit</strong> - Buying certain things because you always have, without thinking about whether you still need them</li>
+            </ul>
+            
+            <h3>Building Long-Term Spending Skills</h3>
+            
+            <h4>Developing Your Personal Spending Philosophy</h4>
+            <p>Think about what matters most to you and let that guide your spending decisions:</p>
+            <ul>
+              <li>What kind of life do you want to live?</li>
+              <li>What experiences are most important to you?</li>
+              <li>How do you want to help others?</li>
+              <li>What are your biggest goals and dreams?</li>
+            </ul>
+            
+            <h4>Learning from Mistakes</h4>
+            <p>Everyone makes poor spending choices sometimes. The key is to learn from them:</p>
+            <ul>
+              <li>When you regret a purchase, think about what you could have done differently</li>
+              <li>Notice patterns in your spending mistakes</li>
+              <li>Don't beat yourself up about past mistakes - focus on making better choices going forward</li>
+              <li>Share your experiences with others so they can learn too</li>
+            </ul>
+            
+            <h4>Practicing with Small Decisions</h4>
+            <p>The best way to develop smart spending skills is to practice with small, low-risk purchases:</p>
+            <ul>
+              <li>Use your allowance or small amounts of earned money to practice decision-making</li>
+              <li>Try different strategies and see what works best for you</li>
+              <li>Keep track of which purchases you're happy with and which you regret</li>
+              <li>Gradually apply these skills to bigger purchases as you get older</li>
+            </ul>
+            
+            <h3>The Bigger Picture: Spending and Life Goals</h3>
+            <p>Smart spending isn't about never buying anything fun or always choosing the cheapest option. It's about making conscious choices that align with your values and help you achieve your goals.</p>
+            
+            <p>When you develop good spending habits now, you're building skills that will serve you throughout your life. You'll be able to afford the things that truly matter to you, avoid financial stress, and have the freedom to make choices based on what's best for you rather than being forced into decisions by financial pressure.</p>
+            
+            <p>Remember: every spending decision is an opportunity to practice making good choices. The more you practice thinking before you spend, comparing options, and making decisions based on value rather than impulse, the better you'll become at managing money and achieving your dreams.</p>
+          `
         },
         quiz: [],
         xpReward: 100
@@ -1466,6 +2128,11 @@ const LessonViewer = () => {
       await updateProgress('video_completed', true);
     }
     toast.success("Video completed! Great job!");
+    
+    // Auto-progress to article section
+    setTimeout(() => {
+      setCurrentSection('article');
+    }, 1500);
   };
 
   const handleArticleComplete = async () => {
@@ -1474,6 +2141,11 @@ const LessonViewer = () => {
       await updateProgress('article_completed', true);
     }
     toast.success("Article completed! Keep it up!");
+    
+    // Auto-progress to quiz section
+    setTimeout(() => {
+      setCurrentSection('quiz');
+    }, 1500);
   };
 
   const updateProgress = async (field: string, value: any) => {
@@ -1686,13 +2358,13 @@ const LessonViewer = () => {
               )}
 
               {currentSection === 'article' && (
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">{currentLessonContent.article.title}</h2>
+                <div className="text-white">
+                  <h2 className="text-2xl font-bold mb-6 text-white">{currentLessonContent.article.title}</h2>
                   <div 
-                    className="prose prose-lg max-w-none"
+                    className="prose prose-lg prose-invert max-w-none text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>li]:text-white [&>strong]:text-white"
                     dangerouslySetInnerHTML={{ __html: currentLessonContent.article.content }}
                   />
-                  <div className="mt-8 pt-6 border-t">
+                  <div className="mt-8 pt-6 border-t border-white/20">
                     <Button onClick={handleArticleComplete} disabled={articleCompleted}>
                       {articleCompleted ? (
                         <>
