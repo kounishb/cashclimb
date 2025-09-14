@@ -117,7 +117,7 @@ const Product = () => {
                 Master personal finance with our comprehensive educational platform designed for grades 3-8. Build real-world money skills through structured learning!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg" className="animate-pulse" asChild>
+                <Button variant="hero" size="lg" asChild>
                   <Link to="/game">
                     Start Learning Today
                   </Link>
@@ -233,7 +233,7 @@ const Product = () => {
             Start your journey to financial literacy today! Master essential money skills through our comprehensive educational platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="animate-pulse" asChild>
+            <Button variant="hero" size="lg" asChild>
               <Link to="/auth">
                 Start Learning Today
               </Link>

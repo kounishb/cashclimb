@@ -17,6 +17,7 @@ import LessonViewer from "./pages/LessonViewer";
 import Curriculum from "./pages/Curriculum";
 import Game from "./pages/Game";
 import Auth from "./pages/Auth";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -93,6 +94,16 @@ const App = () => (
                 <ProtectedRoute>
                   <DashboardLayout>
                     <LessonViewer />
+                  </DashboardLayout>
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <DashboardLayout>
+                    <Profile />
                   </DashboardLayout>
                 </ProtectedRoute>
               } 

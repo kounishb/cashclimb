@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { LogOut, User } from "lucide-react";
+import { LogOut, User, Menu, Home } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 
 interface DashboardLayoutProps {
@@ -24,15 +24,26 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               </span>
             </div>
 
-            {/* User Profile */}
+            {/* Hamburger Menu */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm">
-                  <User className="h-4 w-4 mr-2" />
-                  My Profile
+                  <Menu className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <a href="/" className="flex items-center w-full">
+                    <Home className="h-4 w-4 mr-2" />
+                    Home
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/profile" className="flex items-center w-full">
+                    <User className="h-4 w-4 mr-2" />
+                    My Profile
+                  </a>
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={logout}>
                   <LogOut className="h-4 w-4 mr-2" />
                   Logout
