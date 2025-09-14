@@ -26,9 +26,9 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
-      });
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([formData]);
 
       if (error) {
         throw error;
@@ -36,12 +36,12 @@ const Contact = () => {
 
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We've received your message and will get back to you soon.",
       });
       
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.error('Error sending contact form:', error);
+      console.error('Error saving contact message:', error);
       toast({
         title: "Error sending message",
         description: "Please try again later or contact us directly.",
