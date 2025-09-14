@@ -181,7 +181,7 @@ const GameStart = () => {
                           size="sm"
                           onClick={(e) => {
                             e.stopPropagation();
-                            navigate(`/curriculum/${grade.grade}`);
+                            navigate(`/curriculum/${grade.grade}?from=dashboard`);
                           }}
                         >
                           View Curriculum

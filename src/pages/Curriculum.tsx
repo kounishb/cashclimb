@@ -275,7 +275,14 @@ const Curriculum = () => {
   const currentCurriculum = curriculumData[grade as keyof typeof curriculumData];
 
   const goBack = () => {
-    navigate('/game');
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromDashboard = urlParams.get('from') === 'dashboard';
+    
+    if (fromDashboard) {
+      navigate('/game');
+    } else {
+      navigate(`/education/grade/${grade}`);
+    }
   };
 
   return (
@@ -286,7 +293,7 @@ const Curriculum = () => {
           <div className="flex items-center gap-4 mb-4">
             <Button variant="outline" size="sm" onClick={goBack}>
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Dashboard
+              {new URLSearchParams(window.location.search).get('from') === 'dashboard' ? 'Back to Dashboard' : 'Back to Grade Modules'}
             </Button>
             <Badge variant="outline">Curriculum Overview</Badge>
           </div>

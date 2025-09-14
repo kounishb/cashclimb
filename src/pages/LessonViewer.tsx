@@ -651,7 +651,7 @@ const LessonViewer = () => {
                   {videoCompleted && (
                     <>
                       <div 
-                        className="prose prose-lg dark:prose-invert max-w-none prose-slate"
+                        className="prose prose-lg dark:prose-invert max-w-none"
                         style={{
                           color: 'hsl(var(--foreground))',
                         } as React.CSSProperties}
@@ -854,8 +854,8 @@ const LessonViewer = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${videoCompleted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
-                    <Play className={`h-4 w-4 ${videoCompleted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${videoCompleted ? 'bg-green-500/10 border-green-500/20' : 'bg-primary/10 border-primary/20'}`}>
+                    <Play className={`h-4 w-4 ${videoCompleted ? 'text-green-500' : 'text-primary'}`} />
                     <span className="text-sm flex-1 text-foreground">Watch Video</span>
                     {videoCompleted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
@@ -863,8 +863,8 @@ const LessonViewer = () => {
                       <div className="h-4 w-4 border-2 border-muted-foreground rounded-full" />
                     )}
                   </div>
-                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${articleCompleted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
-                    <FileText className={`h-4 w-4 ${articleCompleted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${articleCompleted ? 'bg-green-500/10 border-green-500/20' : 'bg-primary/10 border-primary/20'}`}>
+                    <FileText className={`h-4 w-4 ${articleCompleted ? 'text-green-500' : 'text-primary'}`} />
                     <span className="text-sm flex-1 text-foreground">Read Article</span>
                     {articleCompleted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
@@ -872,8 +872,8 @@ const LessonViewer = () => {
                       <div className="h-4 w-4 border-2 border-muted-foreground rounded-full" />
                     )}
                   </div>
-                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${quizSubmitted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
-                    <HelpCircle className={`h-4 w-4 ${quizSubmitted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${quizSubmitted ? 'bg-green-500/10 border-green-500/20' : 'bg-primary/10 border-primary/20'}`}>
+                    <HelpCircle className={`h-4 w-4 ${quizSubmitted ? 'text-green-500' : 'text-primary'}`} />
                     <span className="text-sm flex-1 text-foreground">Complete Quiz (10 questions)</span>
                     {quizSubmitted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
