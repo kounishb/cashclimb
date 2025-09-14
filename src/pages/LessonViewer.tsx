@@ -109,7 +109,7 @@ const LessonViewer = () => {
     3: {
       1: {
         title: "What is Money?",
-        videoUrl: "https://www.youtube.com/embed/IvbQNbGPbFY",
+        videoUrl: "https://www.youtube.com/embed/pRL93risEg4",
         videoTitle: "Grade 3: What is Money? - Introduction to Currency",
         article: {
           title: "Understanding Money: The Complete Guide for Young Learners",
@@ -307,7 +307,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "How Do People Earn Money?",
-        videoUrl: "https://www.youtube.com/embed/3FMU1p1b7Q0",
+        videoUrl: "https://www.youtube.com/embed/SijcDBh8a5c",
         videoTitle: "Grade 3: Simple Jobs and Earning Money for Kids",
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
@@ -568,7 +568,7 @@ const LessonViewer = () => {
       },
       3: {
         title: "My Needs and Wants",
-        videoUrl: "https://www.youtube.com/embed/hvwqYi-vB48",
+        videoUrl: "https://www.youtube.com/embed/aRcXutXvfmM",
         videoTitle: "Grade 3: Needs vs Wants - Making Smart Choices",
         article: {
           title: "Making Smart Choices: Understanding Needs vs Wants",
@@ -849,7 +849,7 @@ const LessonViewer = () => {
       },
       4: {
         title: "Smart Shopping Choices",
-        videoUrl: "https://www.youtube.com/embed/JM-_KlY5WaE",
+        videoUrl: "https://www.youtube.com/embed/0iRbD5rM5qc",
         videoTitle: "Grade 3: Making Smart Shopping and Spending Decisions",
         article: {
           title: "Making Smart Spending Decisions",
@@ -903,31 +903,294 @@ const LessonViewer = () => {
       },
       5: {
         title: "My First Savings",
-        videoUrl: "https://www.youtube.com/embed/UK_VfPbBKMs",
+        videoUrl: "https://www.youtube.com/embed/n2cSG1dcCHs",
         videoTitle: "Grade 3: Learning to Save Money - Piggy Bank Basics",
         article: {
-          title: "The Power of Saving Money",
+          title: "The Power of Saving Money: Your Complete Guide to Financial Security",
           content: `
-            <h2>Why Saving Money is Super Important</h2>
-            <p>Saving money means keeping some of your money instead of spending it all right away. It's like planting seeds that will grow into bigger amounts of money later. Learning to save is one of the most powerful money skills you can develop!</p>
+            <h2>The Power of Saving Money: Building Your Financial Future One Dollar at a Time</h2>
+            <p>Saving money is one of the most important life skills you can learn! It means keeping some of your money instead of spending it all right away. Think of saving like planting magic seeds that will grow into bigger amounts of money later. Learning to save is one of the most powerful money skills you can develop, and it will serve you well throughout your entire life!</p>
             
-            <h3>Why Should You Save Money?</h3>
+            <h3>Why Should You Save Money? The Amazing Benefits!</h3>
+            
+            <h4>1. Emergency Protection - Your Financial Safety Net</h4>
+            <p>Life is full of surprises, and not all of them are good ones. Having money saved helps you handle unexpected situations:</p>
             <ul>
-              <li><strong>For Emergencies</strong> - Unexpected things happen, and having money saved helps you handle them</li>
-              <li><strong>For Big Goals</strong> - Some things cost more than your weekly allowance, so saving helps you buy them</li>
-              <li><strong>For Opportunities</strong> - Sometimes great deals come up, and saved money lets you take advantage of them</li>
-              <li><strong>For Peace of Mind</strong> - Having money saved makes you feel more secure and confident</li>
+              <li><strong>Medical Emergencies</strong> - If you or a family member gets sick or injured unexpectedly</li>
+              <li><strong>Home Repairs</strong> - When appliances break or the house needs urgent fixes</li>
+              <li><strong>Car Problems</strong> - Vehicle breakdowns or necessary repairs</li>
+              <li><strong>Job Loss</strong> - If a parent loses their job temporarily</li>
+              <li><strong>Natural Disasters</strong> - Storms, floods, or other emergencies that require extra expenses</li>
+              <li><strong>School Needs</strong> - Unexpected school fees, supplies, or activities</li>
             </ul>
             
-            <h3>Easy Ways to Start Saving</h3>
-            <h4>The Piggy Bank Method</h4>
-            <p>Get a piggy bank, jar, or special box just for savings. Every time you get money, put some in your savings container before spending any.</p>
+            <h4>2. Goal Achievement - Making Dreams Come True</h4>
+            <p>Some wonderful things in life cost more money than you might have in your allowance:</p>
+            <ul>
+              <li><strong>Special Toys and Games</strong> - That expensive video game or toy you really want</li>
+              <li><strong>Electronics</strong> - Tablets, phones, computers, or gaming systems</li>
+              <li><strong>Sports Equipment</strong> - Bicycles, skateboards, or sports gear</li>
+              <li><strong>Art Supplies</strong> - Professional art materials for your creative projects</li>
+              <li><strong>Books and Educational Materials</strong> - Special books, courses, or learning tools</li>
+              <li><strong>Experience Goals</strong> - Trips, concerts, or special activities with friends and family</li>
+            </ul>
             
-            <h4>The 10% Rule</h4>
-            <p>Try to save at least 10% of any money you receive. If you get $10, save $1. If you get $5, save 50 cents.</p>
+            <h4>3. Opportunity Readiness - Seizing Great Deals</h4>
+            <p>Sometimes amazing opportunities come up unexpectedly, and having money saved lets you take advantage of them:</p>
+            <ul>
+              <li><strong>Sales and Discounts</strong> - When something you want goes on sale for a limited time</li>
+              <li><strong>Educational Opportunities</strong> - Special classes, camps, or workshops that become available</li>
+              <li><strong>Investment Opportunities</strong> - Chances to earn more money or learn new skills</li>
+              <li><strong>Social Opportunities</strong> - Being able to join friends for activities or events</li>
+              <li><strong>Creative Projects</strong> - Having materials ready when inspiration strikes</li>
+            </ul>
             
-            <h4>The Goal Setting Method</h4>
-            <p>Pick something specific you want to save for, like a toy or game. Figure out how much you need to save each week to reach your goal.</p>
+            <h4>4. Peace of Mind - Feeling Secure and Confident</h4>
+            <p>Having money saved makes you feel more secure and confident because:</p>
+            <ul>
+              <li><strong>Reduced Stress</strong> - You don't worry as much about money problems</li>
+              <li><strong>Independence</strong> - You can make choices without always asking others for money</li>
+              <li><strong>Pride and Accomplishment</strong> - You feel good about your self-control and planning</li>
+              <li><strong>Future Security</strong> - You know you're building a foundation for financial success</li>
+              <li><strong>Family Harmony</strong> - Less stress about money in your household</li>
+            </ul>
+            
+            <h3>Easy and Fun Ways to Start Saving Today!</h3>
+            
+            <h4>The Classic Piggy Bank Method</h4>
+            <p>This traditional method is still one of the best ways to start saving:</p>
+            <ul>
+              <li><strong>Choose Your Container</strong> - Get a piggy bank, mason jar, decorative box, or special savings container</li>
+              <li><strong>Decorate It</strong> - Make your savings container special by decorating it with your favorite colors or themes</li>
+              <li><strong>Place It Strategically</strong> - Put it somewhere you'll see it every day to remind you to save</li>
+              <li><strong>Make It a Ritual</strong> - Every time you get money, put some in your savings container before doing anything else</li>
+              <li><strong>Watch It Grow</strong> - Periodically count your savings to see your progress</li>
+              <li><strong>Celebrate Milestones</strong> - When you reach certain amounts, celebrate your achievement!</li>
+            </ul>
+            
+            <h4>The Percentage Rules - Simple Math for Smart Saving</h4>
+            
+            <h5>The 10% Rule - A Great Starting Point</h5>
+            <p>Try to save at least 10% of any money you receive:</p>
+            <ul>
+              <li>If you get $10 in allowance, save $1</li>
+              <li>If you receive $20 for your birthday, save $2</li>
+              <li>If you earn $5 doing chores, save 50 cents</li>
+              <li>This rule is easy to remember and calculate</li>
+            </ul>
+            
+            <h5>The 20% Rule - For Serious Savers</h5>
+            <p>If you want to save faster, try saving 20% of your money:</p>
+            <ul>
+              <li>If you get $10, save $2</li>
+              <li>If you receive $25, save $5</li>
+              <li>This helps you reach your goals twice as fast as the 10% rule</li>
+            </ul>
+            
+            <h5>The 50-30-20 Rule - Advanced Money Management</h5>
+            <p>This rule divides your money into three categories:</p>
+            <ul>
+              <li><strong>50% for Needs</strong> - Things you absolutely must have</li>
+              <li><strong>30% for Wants</strong> - Fun things you'd like to buy</li>
+              <li><strong>20% for Savings</strong> - Money set aside for the future</li>
+            </ul>
+            
+            <h4>The Goal Setting Method - Turning Dreams into Plans</h4>
+            
+            <h5>Setting SMART Savings Goals</h5>
+            <p>Make your savings goals SMART:</p>
+            <ul>
+              <li><strong>Specific</strong> - Know exactly what you want to buy</li>
+              <li><strong>Measurable</strong> - Know exactly how much it costs</li>
+              <li><strong>Achievable</strong> - Make sure the goal is realistic</li>
+              <li><strong>Relevant</strong> - Choose something that's important to you</li>
+              <li><strong>Time-bound</strong> - Set a deadline for reaching your goal</li>
+            </ul>
+            
+            <h5>Creating a Savings Plan</h5>
+            <p>Here's how to create an effective savings plan:</p>
+            <ol>
+              <li><strong>Identify Your Goal</strong> - What do you want to save for?</li>
+              <li><strong>Research the Cost</strong> - Find out exactly how much it costs</li>
+              <li><strong>Set a Deadline</strong> - When do you want to have it?</li>
+              <li><strong>Calculate Weekly Savings</strong> - Divide the cost by the number of weeks until your deadline</li>
+              <li><strong>Track Your Progress</strong> - Keep a chart or journal of your savings</li>
+              <li><strong>Adjust as Needed</strong> - If you fall behind, revise your plan</li>
+            </ol>
+            
+            <h4>The Multiple Jars System - Organizing Your Money</h4>
+            <p>Use different containers for different purposes:</p>
+            <ul>
+              <li><strong>Spending Jar</strong> - For immediate wants and small purchases</li>
+              <li><strong>Short-term Savings</strong> - For goals you want to reach in a few months</li>
+              <li><strong>Long-term Savings</strong> - For bigger goals that might take a year or more</li>
+              <li><strong>Sharing Jar</strong> - For charitable giving or gifts for others</li>
+              <li><strong>Learning Jar</strong> - For books, classes, or educational materials</li>
+            </ul>
+            
+            <h3>Advanced Saving Strategies for Young Savers</h3>
+            
+            <h4>The Pay Yourself First Strategy</h4>
+            <p>This means saving money before spending any of it:</p>
+            <ul>
+              <li>As soon as you receive money, immediately put your savings amount aside</li>
+              <li>Don't wait until the end to see what's left over</li>
+              <li>This ensures you always save something, even when tempted to spend</li>
+              <li>It makes saving a priority rather than an afterthought</li>
+            </ul>
+            
+            <h4>The Automatic Savings Challenge</h4>
+            <p>Create systems that make saving automatic:</p>
+            <ul>
+              <li><strong>Round-Up Savings</strong> - Round up purchases and save the difference</li>
+              <li><strong>Coin Collection</strong> - Save all coins you receive</li>
+              <li><strong>Bill Denomination Saving</strong> - Save all $1 bills or $5 bills</li>
+              <li><strong>Weekly Challenges</strong> - Save a different amount each week</li>
+            </ul>
+            
+            <h4>Earning Extra Money to Save</h4>
+            <p>Look for opportunities to earn additional money specifically for saving:</p>
+            <ul>
+              <li><strong>Extra Chores</strong> - Volunteer for additional household tasks</li>
+              <li><strong>Seasonal Work</strong> - Rake leaves, shovel snow, or help with yard work</li>
+              <li><strong>Creative Sales</strong> - Make and sell crafts, artwork, or baked goods</li>
+              <li><strong>Service Projects</strong> - Walk dogs, help neighbors, or organize spaces</li>
+              <li><strong>Recycling</strong> - Collect and return bottles and cans where applicable</li>
+            </ul>
+            
+            <h3>Understanding How Money Grows - The Magic of Interest</h3>
+            
+            <h4>What is Interest?</h4>
+            <p>Interest is extra money that gets added to your savings over time:</p>
+            <ul>
+              <li>Banks pay you for letting them use your money</li>
+              <li>The longer you save, the more interest you earn</li>
+              <li>Interest rates are usually given as yearly percentages</li>
+              <li>Higher interest rates mean your money grows faster</li>
+            </ul>
+            
+            <h4>Simple Interest vs. Compound Interest</h4>
+            <p><strong>Simple Interest</strong> - You earn interest only on your original amount:</p>
+            <ul>
+              <li>If you save $100 at 5% simple interest, you earn $5 per year</li>
+              <li>After 5 years, you'd have $125 ($100 + $25 in interest)</li>
+            </ul>
+            
+            <p><strong>Compound Interest</strong> - You earn interest on your original amount PLUS previously earned interest:</p>
+            <ul>
+              <li>If you save $100 at 5% compound interest, you earn $5 the first year</li>
+              <li>The second year, you earn interest on $105, so you earn $5.25</li>
+              <li>After 5 years, you'd have about $127.63</li>
+              <li>The difference grows larger over longer periods</li>
+            </ul>
+            
+            <h3>Common Saving Mistakes to Avoid</h3>
+            
+            <h4>The "I'll Start Tomorrow" Trap</h4>
+            <p>Many people plan to start saving "next week" or "next month," but tomorrow never comes:</p>
+            <ul>
+              <li>Start saving today, even if it's just one coin</li>
+              <li>Beginning is more important than the amount you start with</li>
+              <li>Develop the habit first, then increase the amounts later</li>
+            </ul>
+            
+            <h4>The "It's Too Small to Matter" Mindset</h4>
+            <p>Every penny counts, and small amounts add up over time:</p>
+            <ul>
+              <li>Saving 25 cents per day equals $91.25 per year</li>
+              <li>Small, consistent savings often work better than large, irregular amounts</li>
+              <li>The habit of saving is more valuable than any single deposit</li>
+            </ul>
+            
+            <h4>The "Emergency" Excuse</h4>
+            <p>Using savings for non-emergencies defeats the purpose:</p>
+            <ul>
+              <li>Define what constitutes a real emergency</li>
+              <li>Create separate funds for different purposes</li>
+              <li>Don't raid your savings for regular wants or impulse purchases</li>
+            </ul>
+            
+            <h3>Building a Savings Mindset - Thinking Like a Successful Saver</h3>
+            
+            <h4>Delayed Gratification - The Marshmallow Principle</h4>
+            <p>Learning to wait for better rewards is crucial for financial success:</p>
+            <ul>
+              <li>Sometimes waiting allows you to get something much better</li>
+              <li>Practice saying "I'll think about it" before making purchases</li>
+              <li>Remember that the satisfaction of reaching a savings goal lasts longer than the pleasure of an impulse purchase</li>
+            </ul>
+            
+            <h4>Value-Based Spending and Saving</h4>
+            <p>Align your saving and spending with what's truly important to you:</p>
+            <ul>
+              <li>Identify your core values and priorities</li>
+              <li>Save enthusiastically for things that support these values</li>
+              <li>Spend less on things that don't align with your priorities</li>
+              <li>Remember that your money choices reflect your values</li>
+            </ul>
+            
+            <h3>Making Saving Fun and Rewarding</h3>
+            
+            <h4>Savings Challenges and Games</h4>
+            <ul>
+              <li><strong>The 52-Week Challenge</strong> - Save $1 the first week, $2 the second week, etc.</li>
+              <li><strong>The Penny Double Challenge</strong> - Save 1 penny the first day, 2 the second, 4 the third, doubling daily</li>
+              <li><strong>The Color Challenge</strong> - Save all bills of a certain color or denomination</li>
+              <li><strong>The Weather Challenge</strong> - Save money based on the temperature or weather conditions</li>
+            </ul>
+            
+            <h4>Tracking and Celebrating Progress</h4>
+            <ul>
+              <li><strong>Visual Charts</strong> - Create colorful charts to track your progress</li>
+              <li><strong>Photo Journals</strong> - Take pictures of your growing savings</li>
+              <li><strong>Milestone Celebrations</strong> - Reward yourself when you reach savings goals</li>
+              <li><strong>Progress Sharing</strong> - Share your achievements with family and friends</li>
+            </ul>
+            
+            <h3>The Long-Term Impact of Early Saving Habits</h3>
+            
+            <h4>Financial Security in Adulthood</h4>
+            <p>Starting to save early creates lifelong benefits:</p>
+            <ul>
+              <li>You develop self-discipline and patience</li>
+              <li>You learn to live below your means</li>
+              <li>You understand the value of delayed gratification</li>
+              <li>You build confidence in your ability to reach financial goals</li>
+            </ul>
+            
+            <h4>Setting the Foundation for Wealth Building</h4>
+            <p>Early saving habits create the foundation for future wealth:</p>
+            <ul>
+              <li>You learn that money can work for you, not just the other way around</li>
+              <li>You understand the power of compound growth over time</li>
+              <li>You develop the mindset of an investor rather than just a consumer</li>
+              <li>You create the discipline needed for larger financial goals</li>
+            </ul>
+            
+            <h3>Getting Family Support for Your Savings Goals</h3>
+            
+            <h4>Communicating with Parents and Guardians</h4>
+            <ul>
+              <li>Share your savings goals with your family</li>
+              <li>Ask for their advice and support</li>
+              <li>Request help in avoiding temptations to spend</li>
+              <li>Consider asking them to match a portion of your savings</li>
+            </ul>
+            
+            <h4>Creating Family Savings Challenges</h4>
+            <ul>
+              <li>Challenge family members to save alongside you</li>
+              <li>Create friendly competitions to see who can save the most</li>
+              <li>Work together toward family financial goals</li>
+              <li>Share strategies and celebrate successes together</li>
+            </ul>
+            
+            <h3>Conclusion: Your Journey to Financial Success Starts Today</h3>
+            <p>Learning to save money is one of the most important skills you can develop. It's not just about the money itself - it's about developing self-discipline, learning to plan for the future, and building confidence in your ability to achieve your goals. Every dollar you save today is an investment in your future self.</p>
+            
+            <p>Remember, you don't have to save large amounts to make a difference. Start small, be consistent, and watch your savings grow over time. The habits you develop now will serve you well throughout your entire life. Your future self will thank you for starting today!</p>
+            
+            <p>The journey to financial success begins with a single step - or in this case, a single dollar saved. Take that step today, and you'll be amazed at how far you can go!</p>
           `
         },
         quiz: [
@@ -952,7 +1215,7 @@ const LessonViewer = () => {
     4: {
       1: {
         title: "Understanding Currency",
-        videoUrl: "https://www.youtube.com/embed/nuQgFu6FnFA",
+        videoUrl: "https://www.youtube.com/embed/JcvnWeDwTeg",
         videoTitle: "Grade 4: Understanding Different Types of Currency and Money",
         article: {
           title: "Advanced Money Concepts for Grade 4",
@@ -1343,7 +1606,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Planning My Budget",
-        videoUrl: "https://www.youtube.com/embed/PzGlLQb7HBU",
+        videoUrl: "https://www.youtube.com/embed/AjTwcQYgISA",
         videoTitle: "Grade 4: How to Create Your First Budget - Step by Step",
         article: {
           title: "Creating Your First Budget: A Step-by-Step Guide",
@@ -1456,7 +1719,7 @@ const LessonViewer = () => {
       },
       3: {
         title: "Electronic Payments",
-        videoUrl: "https://www.youtube.com/embed/r9LM-63Rv7w",
+        videoUrl: "https://www.youtube.com/embed/a2ZHCktSjR4",
         videoTitle: "Grade 4: Understanding Digital Money and Payment Cards",
         article: {
           title: "Understanding Digital Money and Modern Payment Systems",
@@ -1670,7 +1933,7 @@ const LessonViewer = () => {
     5: {
       1: {
         title: "How Banks Help Us",
-        videoUrl: "https://www.youtube.com/embed/2ILAM8zOopI",
+        videoUrl: "https://www.youtube.com/embed/KDeSAyYahe4",
         videoTitle: "Grade 5: How Banks Work - Managing Your Money Safely",
         article: {
           title: "Understanding Banks and How They Help Us",
@@ -1909,7 +2172,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Understanding Credit", 
-        videoUrl: "https://www.youtube.com/embed/mzJug7wRauf",
+        videoUrl: "https://www.youtube.com/embed/HOH5Z6g9Ne0",
         videoTitle: "Grade 5: Credit Basics - What Every Student Should Know",
         article: {
           title: "Credit, Loans, and Building Financial Responsibility",
@@ -2166,7 +2429,7 @@ const LessonViewer = () => {
     6: {
       1: {
         title: "Smart Budget Planning",
-        videoUrl: "https://www.youtube.com/embed/mA9jGX1jbgM",
+        videoUrl: "https://www.youtube.com/embed/UpldjEBRAbU",
         videoTitle: "Grade 6: Advanced Budgeting Skills and Money Management",
         article: {
           title: "Mastering Advanced Budgeting Techniques",
@@ -2449,7 +2712,7 @@ const LessonViewer = () => {
     7: {
       1: {
         title: "Building Credit Scores",
-        videoUrl: "https://www.youtube.com/embed/6dWhw1p1cVE",
+        videoUrl: "https://www.youtube.com/embed/yCTWdnLxOag",
         videoTitle: "Grade 7: How to Build and Maintain Good Credit",
         article: {
           title: "Credit Fundamentals: Building Your Financial Future",
@@ -2517,7 +2780,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Managing Debt Safely",
-        videoUrl: "https://www.youtube.com/embed/QlkPlp0gql0",
+        videoUrl: "https://www.youtube.com/embed/1hqQHESMBVY",
         videoTitle: "Grade 7: Smart Strategies for Avoiding and Managing Debt",
         article: {
           title: "Smart Debt Management: Avoiding Financial Pitfalls",
@@ -2596,7 +2859,7 @@ const LessonViewer = () => {
     8: {
       1: {
         title: "Growing Money Through Investing",
-        videoUrl: "https://www.youtube.com/embed/R8VBRCs6y2M",
+        videoUrl: "https://www.youtube.com/embed/pRL93risEg4",
         videoTitle: "Grade 8: Smart Investing for Beginners - Building Future Wealth",
         article: {
           title: "Investment Basics: Growing Your Money Over Time",
@@ -2667,7 +2930,7 @@ const LessonViewer = () => {
       },
       2: {
         title: "Creating My Financial Future",
-        videoUrl: "https://www.youtube.com/embed/TQKo1WBvvkw",
+        videoUrl: "https://www.youtube.com/embed/JcvnWeDwTeg",
         videoTitle: "Grade 8: Advanced Financial Planning for Young Adults",
         article: {
           title: "Creating Your Financial Future: Planning and Goal Setting",
