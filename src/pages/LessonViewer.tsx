@@ -2049,7 +2049,7 @@ const LessonViewer = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Link to="/dashboard">
@@ -2065,148 +2065,119 @@ const LessonViewer = () => {
                 <p className="text-gray-600">{currentLesson.title}</p>
               </div>
             </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="text-right">
-                <div className="text-sm text-gray-600">Overall Progress</div>
-                <div className="flex items-center space-x-2">
-                  <Progress value={getOverallProgress()} className="w-24" />
-                  <span className="text-sm font-medium">{getOverallProgress()}%</span>
-                </div>
-              </div>
-              
-              {badges.length > 0 && (
-                <div className="flex items-center space-x-1">
-                  {badges.slice(0, 3).map((badge, index) => (
-                    <Badge key={index} variant="secondary" className="text-xs">
-                      {badge.name}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-8">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <BookOpen className="w-5 h-5" />
-                  <span>Lesson Sections</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <Button
-                  variant={currentSection === 'video' ? 'default' : 'ghost'}
-                  className="w-full justify-start"
-                  onClick={() => setCurrentSection('video')}
-                  disabled={!canAccessSection('video')}
-                >
-                  <Play className="w-4 h-4 mr-2" />
-                  Video Lesson
-                  {videoCompleted && <CheckCircle className="w-4 h-4 ml-auto text-green-600" />}
-                </Button>
-                
-                <Button
-                  variant={currentSection === 'article' ? 'default' : 'ghost'}
-                  className="w-full justify-start"
-                  onClick={() => setCurrentSection('article')}
-                  disabled={!canAccessSection('article')}
-                >
-                  <FileText className="w-4 h-4 mr-2" />
-                  Reading Material
-                  {articleCompleted && <CheckCircle className="w-4 h-4 ml-auto text-green-600" />}
-                </Button>
-                
-                <Button
-                  variant={currentSection === 'quiz' ? 'default' : 'ghost'}
-                  className="w-full justify-start"
-                  onClick={() => setCurrentSection('quiz')}
-                  disabled={!canAccessSection('quiz')}
-                >
-                  <HelpCircle className="w-4 h-4 mr-2" />
-                  Knowledge Quiz
-                  {progress.quiz_completed && <CheckCircle className="w-4 h-4 ml-auto text-green-600" />}
-                </Button>
-              </CardContent>
-            </Card>
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* Main Content Sections */}
+        <div className="space-y-8">
+          {/* Video Section */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center space-x-2">
+                <Play className="w-5 h-5" />
+                <span>Video Lesson</span>
+                {videoCompleted && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {renderVideoSection()}
+            </CardContent>
+          </Card>
 
-            {/* Navigation */}
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle className="text-lg">Navigation</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {previousModule && (
-                  <Link to={`/lesson/${previousModule.grade}/${previousModule.module}`}>
-                    <Button variant="outline" className="w-full justify-start">
-                      <ArrowLeft className="w-4 h-4 mr-2" />
-                      Previous Module
-                    </Button>
-                  </Link>
-                )}
-                
-                {nextModule && (
-                  <Link to={`/lesson/${nextModule.grade}/${nextModule.module}`}>
-                    <Button variant="outline" className="w-full justify-start">
-                      Next Module
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                )}
-              </CardContent>
-            </Card>
+          {/* Article Section */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center space-x-2">
+                <FileText className="w-5 h-5" />
+                <span>Reading Material</span>
+                {articleCompleted && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {renderArticleSection()}
+            </CardContent>
+          </Card>
 
-            {/* Progress Stats */}
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center space-x-2">
-                  <Star className="w-5 h-5" />
-                  <span>Your Stats</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
+          {/* Quiz Section */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center space-x-2">
+                <HelpCircle className="w-5 h-5" />
+                <span>Knowledge Quiz</span>
+                {progress.quiz_completed && <CheckCircle className="w-5 h-5 ml-auto text-green-600" />}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {renderQuizSection()}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Bottom Section - Navigation and Stats */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Navigation */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Navigation</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {previousModule && (
+                <Link to={`/lesson/${previousModule.grade}/${previousModule.module}`}>
+                  <Button variant="outline" className="w-full justify-start">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Previous Module
+                  </Button>
+                </Link>
+              )}
+              
+              {nextModule && (
+                <Link to={`/lesson/${nextModule.grade}/${nextModule.module}`}>
+                  <Button variant="outline" className="w-full justify-start">
+                    Next Module
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Progress Stats */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center space-x-2">
+                <Star className="w-5 h-5" />
+                <span>Your Progress</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600">XP Earned</span>
+                <Badge variant="secondary">{progress.xp_earned || 0} XP</Badge>
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600">Quiz Attempts</span>
+                <Badge variant="outline">{progress.quiz_attempts || 0}</Badge>
+              </div>
+              
+              {progress.quiz_score && (
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">XP Earned</span>
-                  <Badge variant="secondary">{progress.xp_earned || 0} XP</Badge>
+                  <span className="text-sm text-gray-600">Best Score</span>
+                  <Badge variant="secondary">{progress.quiz_score}%</Badge>
                 </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Quiz Attempts</span>
-                  <Badge variant="outline">{progress.quiz_attempts || 0}</Badge>
+              )}
+              
+              <div className="pt-2 border-t">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-gray-600">Overall Progress</span>
+                  <span className="font-medium">{getOverallProgress()}%</span>
                 </div>
-                
-                {progress.quiz_score && (
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Best Score</span>
-                    <Badge variant="secondary">{progress.quiz_score}%</Badge>
-                  </div>
-                )}
-                
-                <div className="pt-2 border-t">
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-600">Completion</span>
-                    <span className="font-medium">{getOverallProgress()}%</span>
-                  </div>
-                  <Progress value={getOverallProgress()} className="mt-1" />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            <Card className="min-h-[600px]">
-              <CardContent className="p-8">
-                {renderContent()}
-              </CardContent>
-            </Card>
-          </div>
+                <Progress value={getOverallProgress()} className="mt-1" />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
