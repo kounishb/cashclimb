@@ -38,7 +38,7 @@ const Home = () => {
               Master personal finance through interactive education. Build wealth, achieve goals, and unlock your financial potential with Cash Climb.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="animate-float" asChild>
+              <Button variant="hero" size="lg" asChild>
                 <Link to="/game">
                   Start Your Climb
                   <ChevronRight className="ml-2 h-5 w-5" />

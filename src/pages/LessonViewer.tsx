@@ -651,7 +651,10 @@ const LessonViewer = () => {
                   {videoCompleted && (
                     <>
                       <div 
-                        className="prose prose-lg max-w-none"
+                        className="prose prose-lg dark:prose-invert max-w-none prose-slate"
+                        style={{
+                          color: 'hsl(var(--foreground))',
+                        } as React.CSSProperties}
                         dangerouslySetInnerHTML={{ __html: currentLesson.article.content }}
                       />
                       
@@ -730,15 +733,15 @@ const LessonViewer = () => {
                           </div>
                           
                           {currentLesson.quiz.map((question, index) => (
-                            <div key={question.id} className="space-y-3 p-4 bg-gray-50 rounded-lg">
-                              <h3 className="font-semibold text-lg">
+                            <div key={question.id} className="space-y-3 p-4 bg-card rounded-lg border">
+                              <h3 className="font-semibold text-lg text-foreground">
                                 Question {index + 1}: {question.question}
                               </h3>
                               <div className="space-y-2">
                                 {question.options.map((option, optionIndex) => (
                                   <label 
                                     key={optionIndex}
-                                    className="flex items-center space-x-3 p-3 border rounded-lg hover:bg-white cursor-pointer transition-colors"
+                                    className="flex items-center space-x-3 p-3 border rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
                                   >
                                     <input
                                       type="radio"
@@ -781,31 +784,31 @@ const LessonViewer = () => {
                            </div>
 
                            {/* Quiz Results */}
-                           <div className="space-y-4 text-left">
-                             {currentLesson.quiz.map((question, index) => {
-                               const userAnswer = quizAnswers[question.id];
-                               const isCorrect = userAnswer === question.correct;
-                               
-                               return (
-                                 <div key={question.id} className={`p-4 rounded-lg border ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
-                                   <div className="flex items-center gap-2 mb-2">
-                                     {isCorrect ? (
-                                       <CheckCircle className="h-5 w-5 text-green-500" />
-                                     ) : (
-                                       <div className="h-5 w-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">×</div>
-                                     )}
-                                     <span className="font-semibold">{index + 1}. {question.question}</span>
-                                   </div>
-                                   {!isCorrect && (
-                                     <>
-                                       <p className="text-sm text-red-700 mb-1">Your answer: {userAnswer}</p>
-                                       <p className="text-sm text-green-700 mb-1">Correct answer: {question.correct}</p>
-                                     </>
-                                   )}
-                                   <p className="text-sm text-muted-foreground">{question.explanation}</p>
-                                 </div>
-                               );
-                             })}
+                        <div className="space-y-4 text-left">
+                          {currentLesson.quiz.map((question, index) => {
+                            const userAnswer = quizAnswers[question.id];
+                            const isCorrect = userAnswer === question.correct;
+                            
+                            return (
+                              <div key={question.id} className={`p-4 rounded-lg border ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
+                                <div className="flex items-center gap-2 mb-2">
+                                  {isCorrect ? (
+                                    <CheckCircle className="h-5 w-5 text-green-500" />
+                                  ) : (
+                                    <div className="h-5 w-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">×</div>
+                                  )}
+                                  <span className="font-semibold text-foreground">{index + 1}. {question.question}</span>
+                                </div>
+                                {!isCorrect && (
+                                  <>
+                                    <p className="text-sm text-red-700 mb-1">Your answer: {userAnswer}</p>
+                                    <p className="text-sm text-green-700 mb-1">Correct answer: {question.correct}</p>
+                                  </>
+                                )}
+                                <p className="text-sm text-muted-foreground">{question.explanation}</p>
+                              </div>
+                            );
+                          })}
                            </div>
 
                            <div className="flex gap-4 justify-center">
@@ -851,31 +854,31 @@ const LessonViewer = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <div className={`flex items-center gap-2 p-2 rounded-lg ${videoCompleted ? 'bg-green-50 border border-green-200' : 'bg-primary/10'}`}>
-                    <Play className={`h-4 w-4 ${videoCompleted ? 'text-green-600' : 'text-primary'}`} />
-                    <span className="text-sm flex-1">Watch Video</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${videoCompleted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
+                    <Play className={`h-4 w-4 ${videoCompleted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                    <span className="text-sm flex-1 text-foreground">Watch Video</span>
                     {videoCompleted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
                     ) : (
-                      <div className="h-4 w-4 border-2 border-gray-300 rounded-full" />
+                      <div className="h-4 w-4 border-2 border-muted-foreground rounded-full" />
                     )}
                   </div>
-                  <div className={`flex items-center gap-2 p-2 rounded-lg ${articleCompleted ? 'bg-green-50 border border-green-200' : 'bg-primary/10'}`}>
-                    <FileText className={`h-4 w-4 ${articleCompleted ? 'text-green-600' : 'text-primary'}`} />
-                    <span className="text-sm flex-1">Read Article</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${articleCompleted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
+                    <FileText className={`h-4 w-4 ${articleCompleted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                    <span className="text-sm flex-1 text-foreground">Read Article</span>
                     {articleCompleted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
                     ) : (
-                      <div className="h-4 w-4 border-2 border-gray-300 rounded-full" />
+                      <div className="h-4 w-4 border-2 border-muted-foreground rounded-full" />
                     )}
                   </div>
-                  <div className={`flex items-center gap-2 p-2 rounded-lg ${quizSubmitted ? 'bg-green-50 border border-green-200' : 'bg-primary/10'}`}>
-                    <HelpCircle className={`h-4 w-4 ${quizSubmitted ? 'text-green-600' : 'text-primary'}`} />
-                    <span className="text-sm flex-1">Complete Quiz (10 questions)</span>
+                  <div className={`flex items-center gap-2 p-2 rounded-lg border ${quizSubmitted ? 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800' : 'bg-primary/10 border-primary/20'}`}>
+                    <HelpCircle className={`h-4 w-4 ${quizSubmitted ? 'text-green-600 dark:text-green-400' : 'text-primary'}`} />
+                    <span className="text-sm flex-1 text-foreground">Complete Quiz (10 questions)</span>
                     {quizSubmitted ? (
                       <CheckCircle className="h-4 w-4 text-green-500" />
                     ) : (
-                      <div className="h-4 w-4 border-2 border-gray-300 rounded-full" />
+                      <div className="h-4 w-4 border-2 border-muted-foreground rounded-full" />
                     )}
                   </div>
                 </div>

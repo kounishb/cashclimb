@@ -109,9 +109,6 @@ const Product = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center">
-              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
-                🎓 Educational Learning Platform
-              </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Learn Finance Through 
                 <span className="bg-gradient-primary bg-clip-text text-transparent"> Education</span>
@@ -122,7 +119,7 @@ const Product = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="animate-glow" asChild>
                   <Link to="/game">
-                    Start Learning Free
+                    Start Learning Today
                     <Play className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -239,7 +236,7 @@ const Product = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" className="animate-glow" asChild>
               <Link to="/auth">
-                Start Learning Today!
+                Start Learning Today
                 <GraduationCap className="ml-2 h-5 w-5" />
               </Link>
             </Button>

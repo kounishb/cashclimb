@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, X, TrendingUp, LogOut, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -47,15 +48,24 @@ const Navigation = () => {
             {isAuthenticated ? (
               <div className="flex items-center space-x-4">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/game">
-                    <User className="h-4 w-4 mr-2" />
+                  <Link to="/game" target="_blank" rel="noopener noreferrer">
                     Dashboard
                   </Link>
                 </Button>
-                <Button variant="ghost" size="sm" onClick={logout}>
-                  <LogOut className="h-4 w-4 mr-2" />
-                  Logout
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm">
+                      <User className="h-4 w-4 mr-2" />
+                      My Profile
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={logout}>
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             ) : (
               <Button variant="hero" size="sm" asChild>
@@ -98,12 +108,11 @@ const Navigation = () => {
                 {isAuthenticated ? (
                   <div className="space-y-2">
                     <Button variant="outline" size="sm" className="w-full" asChild>
-                      <Link to="/game">
-                        <User className="h-4 w-4 mr-2" />
+                      <Link to="/game" target="_blank" rel="noopener noreferrer">
                         Dashboard
                       </Link>
                     </Button>
-                    <Button variant="ghost" size="sm" className="w-full" onClick={logout}>
+                    <Button variant="ghost" size="sm" className="w-full" onClick={() => {logout(); setIsOpen(false);}}>
                       <LogOut className="h-4 w-4 mr-2" />
                       Logout
                     </Button>
