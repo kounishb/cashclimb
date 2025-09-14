@@ -307,8 +307,8 @@ const LessonViewer = () => {
       },
       2: {
         title: "Earning Money",
-        videoUrl: "https://www.youtube.com/embed/sd0r9GuOflo",
-        videoTitle: "How Kids Can Earn Money - Jobs and Chores",
+        videoUrl: "https://www.youtube.com/embed/BYW6C44zo24",
+        videoTitle: "Grade 3: How Kids Earn Money - Chores and Simple Jobs",
         article: {
           title: "How People Earn Money: Jobs, Chores, and Hard Work",
           content: `
@@ -568,8 +568,8 @@ const LessonViewer = () => {
       },
       3: {
         title: "Needs vs Wants",
-        videoUrl: "https://www.youtube.com/embed/2PX4-Y1zu2g",
-        videoTitle: "Needs vs Wants - Smart Money Decisions for Kids",
+        videoUrl: "https://www.youtube.com/embed/qTp-nKCOvT0",
+        videoTitle: "Grade 3: Understanding Needs vs Wants for Kids",
         article: {
           title: "Making Smart Choices: Understanding Needs vs Wants",
           content: `
@@ -849,8 +849,8 @@ const LessonViewer = () => {
       },
       4: {
         title: "Spending Choices",
-        videoUrl: "https://www.youtube.com/embed/GwAIu-RA_WA",
-        videoTitle: "Smart Spending Choices for Kids",
+        videoUrl: "https://www.youtube.com/embed/kA3z_JghRAg",
+        videoTitle: "Grade 3: Making Smart Spending Choices",
         article: {
           title: "Making Smart Spending Decisions",
           content: `
@@ -903,8 +903,8 @@ const LessonViewer = () => {
       },
       5: {
         title: "Saving Basics",
-        videoUrl: "https://www.youtube.com/embed/6B0MS3zvMkM",
-        videoTitle: "Saving Money Basics for Kids",
+        videoUrl: "https://www.youtube.com/embed/hjLZRqdsF5A",
+        videoTitle: "Grade 3: Introduction to Saving Money for Kids",
         article: {
           title: "The Power of Saving Money",
           content: `
@@ -952,8 +952,8 @@ const LessonViewer = () => {
     4: {
       1: {
         title: "Money Review",
-        videoUrl: "https://www.youtube.com/embed/ulKvddvZQzQ",
-        videoTitle: "Money Fundamentals Review - Building Strong Foundations",
+        videoUrl: "https://www.youtube.com/embed/rO9iPPawedc",
+        videoTitle: "Grade 4: Advanced Money Concepts Review",
         article: {
           title: "Advanced Money Concepts for Grade 4",
           content: `
@@ -1343,8 +1343,8 @@ const LessonViewer = () => {
       },
       2: {
         title: "Making a Budget",
-        videoUrl: "https://www.youtube.com/embed/J8P3sCooGg0",
-        videoTitle: "Budgeting Basics - How to Plan Your Spending",
+        videoUrl: "https://www.youtube.com/embed/sVhAvPj-iAg",
+        videoTitle: "Grade 4: Budgeting Basics for Kids",
         article: {
           title: "Creating Your First Budget: A Step-by-Step Guide",
           content: `
@@ -1456,8 +1456,8 @@ const LessonViewer = () => {
       },
       3: {
         title: "Digital Money & Technology",
-        videoUrl: "https://www.youtube.com/embed/5tA5qAm3mgI",
-        videoTitle: "Digital Money and Payment Technology for Kids",
+        videoUrl: "https://www.youtube.com/embed/iJNc46n3aqc",
+        videoTitle: "Grade 4: Digital Money and Online Payment Safety",
         article: {
           title: "Understanding Digital Money and Modern Payment Systems",
           content: `
@@ -1670,8 +1670,8 @@ const LessonViewer = () => {
     5: {
       1: {
         title: "Banking Basics",
-        videoUrl: "https://www.youtube.com/embed/F_3cfnD7qb0",
-        videoTitle: "How Banks Work - Banking for Kids",
+        videoUrl: "https://www.youtube.com/embed/N762x-Ki1-o",
+        videoTitle: "Grade 5: How Banks Work and Help Your Money",
         article: {
           title: "Understanding Banks and How They Help Us",
           content: `
@@ -1909,8 +1909,8 @@ const LessonViewer = () => {
       },
       2: {
         title: "Credit and Loans", 
-        videoUrl: "https://www.youtube.com/embed/q8u0ECTlGlE",
-        videoTitle: "Understanding Credit and Loans for Young People",
+        videoUrl: "https://www.youtube.com/embed/KgwCsHr8xxQ",
+        videoTitle: "Grade 5: Understanding Credit and Loans for Students",
         article: {
           title: "Credit, Loans, and Building Financial Responsibility",
           content: `
@@ -2166,8 +2166,8 @@ const LessonViewer = () => {
     6: {
       1: {
         title: "Advanced Budgeting",
-        videoUrl: "https://www.youtube.com/embed/sVKQn2I4HDM",
-        videoTitle: "Advanced Budgeting Strategies and Financial Planning",
+        videoUrl: "https://www.youtube.com/embed/czT1drz38GE",
+        videoTitle: "Grade 6: Advanced Budgeting and Financial Planning",
         article: {
           title: "Mastering Advanced Budgeting Techniques",
           content: `
@@ -2441,6 +2441,319 @@ const LessonViewer = () => {
             options: ["It's more complicated", "Different goals have different timeframes and priorities", "Banks require it", "It's not important"],
             correct: "Different goals have different timeframes and priorities",
             explanation: "Multiple savings goals help you organize your money for different purposes - emergency funds, short-term wants, and long-term goals like college all need different strategies!"
+          }
+        ],
+        xpReward: 150
+      }
+    },
+    7: {
+      1: {
+        title: "Introduction to Credit",
+        videoUrl: "https://www.youtube.com/embed/zWs5m4F7NYM",
+        videoTitle: "Grade 7: Understanding Credit and Credit Scores",
+        article: {
+          title: "Credit Fundamentals: Building Your Financial Future",
+          content: `
+            <h2>Understanding Credit: Your Gateway to Financial Opportunities</h2>
+            <p>Credit is one of the most important financial concepts you'll encounter as you grow up. Understanding credit early gives you a huge advantage in building a strong financial future. Let's explore what credit is, how it works, and why it matters so much.</p>
+            
+            <h3>What is Credit?</h3>
+            <p>Credit is essentially trust in financial form. When someone gives you credit, they're trusting that you'll pay back money you borrow. It's like a promise system - you promise to pay back what you owe, and lenders trust you to keep that promise.</p>
+            
+            <h3>Types of Credit</h3>
+            <ul>
+              <li><strong>Credit Cards</strong> - Revolving credit you can use repeatedly</li>
+              <li><strong>Student Loans</strong> - Money borrowed for education expenses</li>
+              <li><strong>Car Loans</strong> - Loans specifically for purchasing vehicles</li>
+              <li><strong>Mortgages</strong> - Large loans for buying homes</li>
+              <li><strong>Personal Loans</strong> - General purpose loans for various needs</li>
+            </ul>
+            
+            <h3>Credit Scores Explained</h3>
+            <p>Your credit score is like a grade for how well you handle credit. It ranges from 300 to 850, with higher scores being better. A good credit score opens doors to better interest rates, easier loan approvals, and even better job opportunities in some cases.</p>
+            
+            <h3>Building Credit Responsibly</h3>
+            <p>The key to building good credit is consistency and responsibility. Always pay your bills on time, never borrow more than you can afford to pay back, and understand the terms of any credit agreement before signing.</p>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is a credit score?",
+            options: ["A grade for how well you handle money", "A type of credit card", "A bank account balance", "A loan amount"],
+            correct: "A grade for how well you handle money",
+            explanation: "A credit score is like a grade that shows lenders how responsible you are with borrowing and paying back money!"
+          },
+          {
+            id: 2,
+            question: "What's the typical range for credit scores?",
+            options: ["0 to 100", "300 to 850", "500 to 1000", "1 to 10"],
+            correct: "300 to 850",
+            explanation: "Credit scores typically range from 300 to 850, with higher scores being better for getting loans and credit cards!"
+          },
+          {
+            id: 3,
+            question: "Which factor is most important for building good credit?",
+            options: ["Having lots of credit cards", "Paying bills on time", "Borrowing as much as possible", "Avoiding all credit"],
+            correct: "Paying bills on time",
+            explanation: "Paying your bills on time is the most important factor in building and maintaining a good credit score!"
+          },
+          {
+            id: 4,
+            question: "What happens if you have a good credit score?",
+            options: ["You get free money", "You get better interest rates on loans", "You never have to pay bills", "Banks pay you money"],
+            correct: "You get better interest rates on loans",
+            explanation: "A good credit score helps you qualify for loans with lower interest rates, saving you money over time!"
+          },
+          {
+            id: 5,
+            question: "What is a credit card?",
+            options: ["A debit card", "A gift card", "A way to borrow money that you pay back later", "A savings account"],
+            correct: "A way to borrow money that you pay back later",
+            explanation: "A credit card lets you borrow money for purchases that you promise to pay back, usually with interest if not paid quickly!"
+          }
+        ],
+        xpReward: 120
+      },
+      2: {
+        title: "Debt Management",
+        videoUrl: "https://www.youtube.com/embed/3VIzj-aU-d4",
+        videoTitle: "Grade 7: Understanding and Managing Debt Wisely",
+        article: {
+          title: "Smart Debt Management: Avoiding Financial Pitfalls",
+          content: `
+            <h2>Understanding Debt: The Good, The Bad, and The Dangerous</h2>
+            <p>Not all debt is created equal. Learning to distinguish between good debt and bad debt is crucial for your financial health. Let's explore how to manage debt wisely and avoid common traps.</p>
+            
+            <h3>Good Debt vs Bad Debt</h3>
+            <p><strong>Good Debt</strong> helps you build wealth or increase your income over time:</p>
+            <ul>
+              <li>Student loans for education</li>
+              <li>Mortgages for homes</li>
+              <li>Business loans for starting companies</li>
+            </ul>
+            
+            <p><strong>Bad Debt</strong> doesn't improve your financial position:</p>
+            <ul>
+              <li>Credit card debt for shopping</li>
+              <li>Car loans for expensive cars you can't afford</li>
+              <li>Payday loans with extremely high interest</li>
+            </ul>
+            
+            <h3>The Debt Trap</h3>
+            <p>It's easy to fall into a debt trap where you're only paying minimum amounts and never reducing what you owe. Understanding compound interest working against you is crucial for avoiding this situation.</p>
+            
+            <h3>Strategies for Staying Debt-Free</h3>
+            <ul>
+              <li>Live below your means</li>
+              <li>Build an emergency fund</li>
+              <li>Pay off high-interest debt first</li>
+              <li>Avoid impulse purchases on credit</li>
+              <li>Track all your expenses</li>
+            </ul>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is an example of 'good debt'?",
+            options: ["Credit card shopping", "Student loans", "Payday loans", "Expensive car loans"],
+            correct: "Student loans",
+            explanation: "Student loans are considered good debt because education typically increases your earning potential over time!"
+          },
+          {
+            id: 2,
+            question: "What makes debt 'bad debt'?",
+            options: ["It helps you earn more money", "It doesn't improve your financial position", "It has low interest rates", "It's from a bank"],
+            correct: "It doesn't improve your financial position",
+            explanation: "Bad debt doesn't help improve your financial situation or increase your wealth over time!"
+          },
+          {
+            id: 3,
+            question: "What should you pay off first?",
+            options: ["Lowest balance debt", "Highest interest rate debt", "Newest debt", "Oldest debt"],
+            correct: "Highest interest rate debt",
+            explanation: "Paying off high-interest debt first saves you the most money in the long run!"
+          },
+          {
+            id: 4,
+            question: "What is a debt trap?",
+            options: ["When you pay off debt quickly", "When you only make minimum payments and never reduce what you owe", "When you have no debt", "When you get a loan"],
+            correct: "When you only make minimum payments and never reduce what you owe",
+            explanation: "A debt trap happens when you're stuck making minimum payments while interest keeps your debt from decreasing!"
+          },
+          {
+            id: 5,
+            question: "What's the best way to avoid debt problems?",
+            options: ["Borrow as much as possible", "Live below your means", "Only make minimum payments", "Avoid all types of credit"],
+            correct: "Live below your means",
+            explanation: "Living below your means ensures you spend less than you earn, helping you avoid accumulating too much debt!"
+          }
+        ],
+        xpReward: 130
+      }
+    },
+    8: {
+      1: {
+        title: "Investment Fundamentals",
+        videoUrl: "https://www.youtube.com/embed/LIm_m-nGJM4",
+        videoTitle: "Grade 8: Introduction to Investing and Building Wealth",
+        article: {
+          title: "Investment Basics: Growing Your Money Over Time",
+          content: `
+            <h2>The Power of Investing: Making Your Money Work for You</h2>
+            <p>Investing is one of the most powerful ways to build wealth over time. By understanding the basics of investing early, you'll have a significant advantage in building financial security for your future.</p>
+            
+            <h3>What is Investing?</h3>
+            <p>Investing means putting your money into something with the expectation that it will grow in value over time. Instead of just saving money in a bank account, you're using your money to potentially earn more money.</p>
+            
+            <h3>Types of Investments</h3>
+            <ul>
+              <li><strong>Stocks</strong> - Owning small pieces of companies</li>
+              <li><strong>Bonds</strong> - Lending money to companies or governments</li>
+              <li><strong>Mutual Funds</strong> - Pooled money invested in many different things</li>
+              <li><strong>Real Estate</strong> - Buying property to rent or sell later</li>
+              <li><strong>Index Funds</strong> - Low-cost funds that track market performance</li>
+            </ul>
+            
+            <h3>Risk and Return</h3>
+            <p>All investments involve some risk - the chance that you might lose money. Generally, investments with higher potential returns also have higher risks. The key is finding the right balance for your goals and timeline.</p>
+            
+            <h3>The Magic of Compound Interest</h3>
+            <p>When you invest, you earn returns on your original money AND on the returns you've already earned. Over time, this compounding effect can turn small amounts into substantial wealth.</p>
+            
+            <h3>Starting Early Matters</h3>
+            <p>The earlier you start investing, the more time your money has to grow through compounding. Even small amounts invested early can become large sums over decades.</p>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is investing?",
+            options: ["Saving money in a bank", "Putting money into something expecting it to grow", "Spending money on things you want", "Borrowing money"],
+            correct: "Putting money into something expecting it to grow",
+            explanation: "Investing means using your money with the expectation that it will increase in value over time!"
+          },
+          {
+            id: 2,
+            question: "What is a stock?",
+            options: ["A loan to a company", "A small ownership piece of a company", "A type of savings account", "A government bond"],
+            correct: "A small ownership piece of a company",
+            explanation: "When you buy stock, you're purchasing a small piece of ownership in that company!"
+          },
+          {
+            id: 3,
+            question: "What is compound interest in investing?",
+            options: ["Interest on your original investment only", "Earning returns on both your original money and previous earnings", "A type of bank account", "A penalty for early withdrawal"],
+            correct: "Earning returns on both your original money and previous earnings",
+            explanation: "Compound interest means you earn returns on your original investment plus all the returns you've earned before - it's money making money!"
+          },
+          {
+            id: 4,
+            question: "Generally, what's true about risk and return in investing?",
+            options: ["Higher risk means guaranteed higher returns", "Higher potential returns usually come with higher risk", "All investments have the same risk", "Risk doesn't matter in investing"],
+            correct: "Higher potential returns usually come with higher risk",
+            explanation: "In investing, there's typically a relationship between risk and potential return - higher potential gains usually mean higher potential losses too!"
+          },
+          {
+            id: 5,
+            question: "Why is starting to invest early important?",
+            options: ["You can only invest when you're young", "More time allows compound interest to work", "Investments are cheaper when you're young", "You have more money when you're young"],
+            correct: "More time allows compound interest to work",
+            explanation: "Starting early gives your investments more time to grow through compound interest, turning small amounts into larger sums!"
+          }
+        ],
+        xpReward: 140
+      },
+      2: {
+        title: "Financial Planning & Goals",
+        videoUrl: "https://www.youtube.com/embed/8JJ-v66l-HM",
+        videoTitle: "Grade 8: Long-term Financial Planning and Goal Setting",
+        article: {
+          title: "Creating Your Financial Future: Planning and Goal Setting",
+          content: `
+            <h2>Building Your Financial Roadmap</h2>
+            <p>Financial planning is like creating a roadmap for your money. It helps you figure out where you want to go financially and how to get there. The earlier you start planning, the more options and opportunities you'll have.</p>
+            
+            <h3>Types of Financial Goals</h3>
+            <p><strong>Short-term goals (1 year or less):</strong></p>
+            <ul>
+              <li>Buying a new phone or laptop</li>
+              <li>Saving for a special trip</li>
+              <li>Building an emergency fund</li>
+            </ul>
+            
+            <p><strong>Medium-term goals (1-5 years):</strong></p>
+            <ul>
+              <li>Saving for college</li>
+              <li>Buying a car</li>
+              <li>Starting a business</li>
+            </ul>
+            
+            <p><strong>Long-term goals (5+ years):</strong></p>
+            <ul>
+              <li>Buying a home</li>
+              <li>Retirement savings</li>
+              <li>Building generational wealth</li>
+            </ul>
+            
+            <h3>Creating SMART Financial Goals</h3>
+            <p>Use the SMART framework for your financial goals:</p>
+            <ul>
+              <li><strong>Specific</strong> - Clearly defined what you want</li>
+              <li><strong>Measurable</strong> - You can track your progress</li>
+              <li><strong>Achievable</strong> - Realistic given your situation</li>
+              <li><strong>Relevant</strong> - Important to your life and values</li>
+              <li><strong>Time-bound</strong> - Has a specific deadline</li>
+            </ul>
+            
+            <h3>The 50/30/20 Rule</h3>
+            <p>A simple budgeting guideline for managing your income:</p>
+            <ul>
+              <li>50% for needs (housing, food, transportation)</li>
+              <li>30% for wants (entertainment, hobbies, dining out)</li>
+              <li>20% for savings and debt payments</li>
+            </ul>
+            
+            <h3>Building Multiple Income Streams</h3>
+            <p>Don't rely on just one source of income. Consider developing skills that could generate money from various sources: employment, freelancing, investments, and potentially starting your own business.</p>
+          `
+        },
+        quiz: [
+          {
+            id: 1,
+            question: "What is a short-term financial goal?",
+            options: ["Retirement savings", "Buying a house", "Saving for a phone in 6 months", "College planning"],
+            correct: "Saving for a phone in 6 months",
+            explanation: "Short-term goals are things you want to achieve within a year or less, like saving for a phone!"
+          },
+          {
+            id: 2,
+            question: "In the 50/30/20 rule, what does the 20% represent?",
+            options: ["Entertainment spending", "Housing costs", "Savings and debt payments", "Food expenses"],
+            correct: "Savings and debt payments",
+            explanation: "The 20% in the 50/30/20 rule is for savings and paying off any debts you might have!"
+          },
+          {
+            id: 3,
+            question: "What does the 'M' in SMART goals stand for?",
+            options: ["Money", "Measurable", "Monthly", "Maximum"],
+            correct: "Measurable",
+            explanation: "Measurable means you can track your progress toward the goal with specific numbers or milestones!"
+          },
+          {
+            id: 4,
+            question: "Why is it good to have multiple income streams?",
+            options: ["It's more complicated", "It provides financial security if one source fails", "You can spend more money", "It's required by law"],
+            correct: "It provides financial security if one source fails",
+            explanation: "Multiple income streams provide security - if you lose one source of income, you still have others to rely on!"
+          },
+          {
+            id: 5,
+            question: "What's an example of a long-term financial goal?",
+            options: ["Buying lunch tomorrow", "Saving for a movie ticket", "Retirement planning", "Buying a candy bar"],
+            correct: "Retirement planning",
+            explanation: "Retirement planning is a long-term goal that takes many years or decades to achieve!"
           }
         ],
         xpReward: 150

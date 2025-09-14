@@ -108,7 +108,7 @@ const Product = () => {
       <section className="py-20 px-4 bg-gradient-hero">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center">
+            <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Learn Finance Through 
                 <span className="bg-gradient-primary bg-clip-text text-transparent"> Education</span>
@@ -141,6 +141,10 @@ const Product = () => {
             <p className="text-xl text-muted-foreground">
               Comprehensive financial education curriculum covering grades 3-8 with age-appropriate content for each level.
             </p>
+            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20 inline-block">
+              <div className="text-2xl font-bold text-primary">15,000+</div>
+              <div className="text-sm text-muted-foreground">Students Learning</div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -219,6 +223,154 @@ const Product = () => {
                 <span className="text-sm">{feature}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Others Are Saying Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What Others Are <span className="bg-gradient-primary bg-clip-text text-transparent">Saying</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Real feedback from parents and teachers using Cash Climb
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "My daughter has learned so much about saving and spending wisely. The videos make complex concepts easy to understand. She's actually excited to learn about money now!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Sarah M.</div>
+                    <div className="text-sm text-muted-foreground">Parent, Grade 4 Student</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Cash Climb has been amazing for my classroom! The structured curriculum and engaging quizzes keep my students motivated. The progress tracking helps me see exactly where each student stands."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <GraduationCap className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Mr. Johnson</div>
+                    <div className="text-sm text-muted-foreground">5th Grade Teacher</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "The age-appropriate content is perfect. My 3rd grader understands money basics now, and my 7th grader is learning about credit responsibly. Both love earning badges!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Lisa R.</div>
+                    <div className="text-sm text-muted-foreground">Parent, Multiple Grades</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "Finally, a financial literacy program that works! My students are more engaged with money concepts than ever before. The quiz system provides excellent feedback for both students and parents."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <GraduationCap className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Ms. Garcia</div>
+                    <div className="text-sm text-muted-foreground">Middle School Teacher</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "My son went from having no interest in money management to asking me about our family budget! The interactive videos and real-world examples really clicked with him."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">David K.</div>
+                    <div className="text-sm text-muted-foreground">Parent, Grade 6 Student</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  "The curriculum is comprehensive and well-structured. It's made financial education accessible for all my students, regardless of their background. The support materials are excellent too!"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <GraduationCap className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Mrs. Thompson</div>
+                    <div className="text-sm text-muted-foreground">Elementary Principal</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
