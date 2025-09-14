@@ -4,42 +4,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { 
-  BookOpen,
-  Home,
-  Star,
-  Trophy,
-  ArrowLeft,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  FileText,
-  HelpCircle,
-  Award,
-  Clock,
-  ExternalLink
-} from "lucide-react";
+import { BookOpen, Home, Star, Trophy, ArrowLeft, ArrowRight, CheckCircle, Play, FileText, HelpCircle, Award, Clock, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-
 const LessonViewer = () => {
-  const { gradeId, moduleId } = useParams();
+  const {
+    gradeId,
+    moduleId
+  } = useParams();
   const navigate = useNavigate();
   const grade = parseInt(gradeId || "3");
   const module = parseInt(moduleId || "1");
-  
   const [currentSection, setCurrentSection] = useState<'video' | 'article' | 'quiz'>('video');
-  const [quizAnswers, setQuizAnswers] = useState<{[key: number]: string}>({});
+  const [quizAnswers, setQuizAnswers] = useState<{
+    [key: number]: string;
+  }>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [xpEarned, setXpEarned] = useState(0);
   const [videoCompleted, setVideoCompleted] = useState(false);
   const [articleCompleted, setArticleCompleted] = useState(false);
-  const [progress, setProgress] = useState<any>({ video_completed: false, article_completed: false, quiz_completed: false, quiz_attempts: 0 });
+  const [progress, setProgress] = useState<any>({
+    video_completed: false,
+    article_completed: false,
+    quiz_completed: false,
+    quiz_attempts: 0
+  });
   const [badges, setBadges] = useState<any[]>([]);
   const [user, setUser] = useState<any>(null);
-
   useEffect(() => {
     // Reset all progress states when navigating to a new module
     setCurrentSection('video');
@@ -49,13 +42,24 @@ const LessonViewer = () => {
     setXpEarned(0);
     setVideoCompleted(false);
     setArticleCompleted(false);
-    setProgress({ video_completed: false, article_completed: false, quiz_completed: false, quiz_attempts: 0 });
-    
+    setProgress({
+      video_completed: false,
+      article_completed: false,
+      quiz_completed: false,
+      quiz_attempts: 0
+    });
+
     // Scroll to top when navigating to new module
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
     const getUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
+      const {
+        data: {
+          user
+        }
+      } = await supabase.auth.getUser();
       setUser(user);
       if (user) {
         loadProgress(user.id);
@@ -64,23 +68,14 @@ const LessonViewer = () => {
     };
     getUser();
   }, [grade, module]);
-
   const loadProgress = async (userId: string) => {
-    const { data: lesson } = await supabase
-      .from('lessons')
-      .select('id')
-      .eq('grade_level', grade)
-      .eq('module_number', module)
-      .single();
-
+    const {
+      data: lesson
+    } = await supabase.from('lessons').select('id').eq('grade_level', grade).eq('module_number', module).single();
     if (lesson) {
-      const { data: progressData } = await supabase
-        .from('lesson_progress')
-        .select('*')
-        .eq('user_id', userId)
-        .eq('lesson_id', lesson.id)
-        .single();
-
+      const {
+        data: progressData
+      } = await supabase.from('lesson_progress').select('*').eq('user_id', userId).eq('lesson_id', lesson.id).single();
       if (progressData) {
         setProgress(progressData);
         setVideoCompleted(progressData.video_completed);
@@ -93,13 +88,10 @@ const LessonViewer = () => {
       }
     }
   };
-
   const loadBadges = async (userId: string) => {
-    const { data } = await supabase
-      .from('user_badges')
-      .select('badges(*)')
-      .eq('user_id', userId);
-    
+    const {
+      data
+    } = await supabase.from('user_badges').select('badges(*)').eq('user_id', userId);
     if (data) {
       setBadges(data.map(item => item.badges));
     }
@@ -178,78 +170,67 @@ const LessonViewer = () => {
             <p>Money allows us to save value for the future. If you do chores today and earn $10, you can save that money and it will still be worth something next month when you want to buy a toy.</p>
           `
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What is the main purpose of money?",
-            options: ["To look pretty", "To help people trade and buy things", "To be collected", "To make noise"],
-            correct: "To help people trade and buy things",
-            explanation: "Money is a tool that makes it easier for people to trade and buy the things they need and want!"
-          },
-          {
-            id: 2,
-            question: "How much is a quarter worth?",
-            options: ["1 cent", "5 cents", "10 cents", "25 cents"],
-            correct: "25 cents",
-            explanation: "A quarter is worth 25 cents, which is the same as 5 nickels or 25 pennies!"
-          },
-          {
-            id: 3,
-            question: "Which of these is NOT a type of money we use today?",
-            options: ["Coins", "Bills", "Rocks", "Digital money"],
-            correct: "Rocks",
-            explanation: "While some ancient cultures used rocks or stones as money, today we use coins, bills, and digital money!"
-          },
-          {
-            id: 4,
-            question: "What should you do to take care of paper money?",
-            options: ["Write your name on it", "Fold it many times", "Keep it flat and clean", "Use it as paper for drawing"],
-            correct: "Keep it flat and clean",
-            explanation: "To take care of money, we should keep bills flat and clean, and never write on them or damage them!"
-          },
-          {
-            id: 5,
-            question: "Before money was invented, how did people trade?",
-            options: ["They used rocks", "They used a barter system", "They didn't trade", "They used leaves"],
-            correct: "They used a barter system",
-            explanation: "Before money, people traded goods directly with each other using the barter system."
-          },
-          {
-            id: 6,
-            question: "What are coins made of?",
-            options: ["Paper", "Plastic", "Metal", "Wood"],
-            correct: "Metal",
-            explanation: "Coins are made of metal, like copper, nickel, and zinc, which makes them durable."
-          },
-          {
-            id: 7,
-            question: "Which president is on the $1 bill?",
-            options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Benjamin Franklin"],
-            correct: "George Washington",
-            explanation: "George Washington, the first U.S. President, is featured on the $1 bill."
-          },
-          {
-            id: 8,
-            question: "What is digital money?",
-            options: ["Money on a computer screen", "Money stored electronically", "Fake money", "Money made of digits"],
-            correct: "Money stored electronically",
-            explanation: "Digital money exists as electronic records in computers rather than physical coins and bills."
-          },
-          {
-            id: 9,
-            question: "Why is money better than bartering?",
-            options: ["It's prettier", "It makes trading easier", "It's heavier", "It's more fun"],
-            correct: "It makes trading easier",
-            explanation: "Money makes trading much easier because everyone accepts it, unlike bartering where you need to find someone who wants exactly what you have."
-          },
-          {
-            id: 10,
-            question: "What does money help us do?",
-            options: ["Store value for the future", "Measure the value of things", "Trade easily with others", "All of the above"],
-            correct: "All of the above",
-            explanation: "Money serves as a medium of exchange, a unit of account, and a store of value - helping us with all these important functions!"
-          }
-        ],
+        quiz: [{
+          id: 1,
+          question: "What is the main purpose of money?",
+          options: ["To look pretty", "To help people trade and buy things", "To be collected", "To make noise"],
+          correct: "To help people trade and buy things",
+          explanation: "Money is a tool that makes it easier for people to trade and buy the things they need and want!"
+        }, {
+          id: 2,
+          question: "How much is a quarter worth?",
+          options: ["1 cent", "5 cents", "10 cents", "25 cents"],
+          correct: "25 cents",
+          explanation: "A quarter is worth 25 cents, which is the same as 5 nickels or 25 pennies!"
+        }, {
+          id: 3,
+          question: "Which of these is NOT a type of money we use today?",
+          options: ["Coins", "Bills", "Rocks", "Digital money"],
+          correct: "Rocks",
+          explanation: "While some ancient cultures used rocks or stones as money, today we use coins, bills, and digital money!"
+        }, {
+          id: 4,
+          question: "What should you do to take care of paper money?",
+          options: ["Write your name on it", "Fold it many times", "Keep it flat and clean", "Use it as paper for drawing"],
+          correct: "Keep it flat and clean",
+          explanation: "To take care of money, we should keep bills flat and clean, and never write on them or damage them!"
+        }, {
+          id: 5,
+          question: "Before money was invented, how did people trade?",
+          options: ["They used rocks", "They used a barter system", "They didn't trade", "They used leaves"],
+          correct: "They used a barter system",
+          explanation: "Before money, people traded goods directly with each other using the barter system."
+        }, {
+          id: 6,
+          question: "What are coins made of?",
+          options: ["Paper", "Plastic", "Metal", "Wood"],
+          correct: "Metal",
+          explanation: "Coins are made of metal, like copper, nickel, and zinc, which makes them durable."
+        }, {
+          id: 7,
+          question: "Which president is on the $1 bill?",
+          options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Benjamin Franklin"],
+          correct: "George Washington",
+          explanation: "George Washington, the first U.S. President, is featured on the $1 bill."
+        }, {
+          id: 8,
+          question: "What is digital money?",
+          options: ["Money on a computer screen", "Money stored electronically", "Fake money", "Money made of digits"],
+          correct: "Money stored electronically",
+          explanation: "Digital money exists as electronic records in computers rather than physical coins and bills."
+        }, {
+          id: 9,
+          question: "Why is money better than bartering?",
+          options: ["It's prettier", "It makes trading easier", "It's heavier", "It's more fun"],
+          correct: "It makes trading easier",
+          explanation: "Money makes trading much easier because everyone accepts it, unlike bartering where you need to find someone who wants exactly what you have."
+        }, {
+          id: 10,
+          question: "What does money help us do?",
+          options: ["Store value for the future", "Measure the value of things", "Trade easily with others", "All of the above"],
+          correct: "All of the above",
+          explanation: "Money serves as a medium of exchange, a unit of account, and a store of value - helping us with all these important functions!"
+        }],
         xpReward: 100
       },
       2: {
@@ -508,78 +489,67 @@ const LessonViewer = () => {
             <p>Remember, earning money through work is not just about getting paid - it's about developing skills, contributing to society, and building the foundation for a successful and fulfilling life. Every small step you take now toward understanding work and developing good habits will pay off in the future!</p>
           `
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What are the two main types of income people earn?",
-            options: ["Cash and credit", "Earned and unearned income", "Big and small", "Daily and monthly"],
-            correct: "Earned and unearned income",
-            explanation: "Earned income comes from working (like wages), while unearned income comes from investments or gifts."
-          },
-          {
-            id: 2,
-            question: "Which is an example of earned income?",
-            options: ["Birthday money", "Money from a lemonade stand", "Finding money on the ground", "Interest from a bank"],
-            correct: "Money from a lemonade stand",
-            explanation: "Money from a lemonade stand is earned because you worked to make and sell the lemonade."
-          },
-          {
-            id: 3,
-            question: "What should you do first when you earn money?",
-            options: ["Spend it immediately", "Think about your goals", "Give it away", "Hide it"],
-            correct: "Think about your goals",
-            explanation: "Before spending money, it's smart to think about what you want to accomplish with it."
-          },
-          {
-            id: 4,
-            question: "Which job would likely earn more money?",
-            options: ["A job requiring special training", "A job anyone can do", "A job you do for fun", "A job that's very easy"],
-            correct: "A job requiring special training",
-            explanation: "Jobs that require special skills or training usually pay more because fewer people can do them."
-          },
-          {
-            id: 5,
-            question: "What is the best way for a kid to start earning money?",
-            options: ["Asking for handouts", "Doing chores and helping others", "Finding money", "Borrowing from friends"],
-            correct: "Doing chores and helping others",
-            explanation: "The best way to earn money is by providing value to others through work and helpful actions."
-          },
-          {
-            id: 6,
-            question: "Why do different jobs pay different amounts?",
-            options: ["It's random", "Based on how much value they create", "Based on age only", "All jobs pay the same"],
-            correct: "Based on how much value they create",
-            explanation: "Jobs that create more value for people and society typically earn higher wages."
-          },
-          {
-            id: 7,
-            question: "What skill is important for almost every job?",
-            options: ["Being tall", "Good communication", "Having lots of money", "Being the youngest"],
-            correct: "Good communication",
-            explanation: "Good communication skills help in almost every job because you need to work with other people."
-          },
-          {
-            id: 8,
-            question: "If you want to earn more money in the future, what should you do now?",
-            options: ["Stop going to school", "Learn new skills and study", "Only play games", "Avoid work completely"],
-            correct: "Learn new skills and study",
-            explanation: "Learning and developing skills now will help you qualify for better-paying jobs in the future."
-          },
-          {
-            id: 9,
-            question: "What's the connection between helping others and earning money?",
-            options: ["There is no connection", "Helping others is how you create value and earn money", "You should never help others", "Helping others costs money"],
-            correct: "Helping others is how you create value and earn money",
-            explanation: "Most jobs involve helping other people solve problems or meet their needs, which is why we get paid."
-          },
-          {
-            id: 10,
-            question: "What's the most important thing to remember about earning money?",
-            options: ["Money appears magically", "All work is the same", "Money must be earned through effort and value creation", "Only adults can earn money"],
-            correct: "Money must be earned through effort and value creation",
-            explanation: "Understanding that money is earned through hard work and creating value for others is a fundamental life lesson."
-          }
-        ],
+        quiz: [{
+          id: 1,
+          question: "What are the two main types of income people earn?",
+          options: ["Cash and credit", "Earned and unearned income", "Big and small", "Daily and monthly"],
+          correct: "Earned and unearned income",
+          explanation: "Earned income comes from working (like wages), while unearned income comes from investments or gifts."
+        }, {
+          id: 2,
+          question: "Which is an example of earned income?",
+          options: ["Birthday money", "Money from a lemonade stand", "Finding money on the ground", "Interest from a bank"],
+          correct: "Money from a lemonade stand",
+          explanation: "Money from a lemonade stand is earned because you worked to make and sell the lemonade."
+        }, {
+          id: 3,
+          question: "What should you do first when you earn money?",
+          options: ["Spend it immediately", "Think about your goals", "Give it away", "Hide it"],
+          correct: "Think about your goals",
+          explanation: "Before spending money, it's smart to think about what you want to accomplish with it."
+        }, {
+          id: 4,
+          question: "Which job would likely earn more money?",
+          options: ["A job requiring special training", "A job anyone can do", "A job you do for fun", "A job that's very easy"],
+          correct: "A job requiring special training",
+          explanation: "Jobs that require special skills or training usually pay more because fewer people can do them."
+        }, {
+          id: 5,
+          question: "What is the best way for a kid to start earning money?",
+          options: ["Asking for handouts", "Doing chores and helping others", "Finding money", "Borrowing from friends"],
+          correct: "Doing chores and helping others",
+          explanation: "The best way to earn money is by providing value to others through work and helpful actions."
+        }, {
+          id: 6,
+          question: "Why do different jobs pay different amounts?",
+          options: ["It's random", "Based on how much value they create", "Based on age only", "All jobs pay the same"],
+          correct: "Based on how much value they create",
+          explanation: "Jobs that create more value for people and society typically earn higher wages."
+        }, {
+          id: 7,
+          question: "What skill is important for almost every job?",
+          options: ["Being tall", "Good communication", "Having lots of money", "Being the youngest"],
+          correct: "Good communication",
+          explanation: "Good communication skills help in almost every job because you need to work with other people."
+        }, {
+          id: 8,
+          question: "If you want to earn more money in the future, what should you do now?",
+          options: ["Stop going to school", "Learn new skills and study", "Only play games", "Avoid work completely"],
+          correct: "Learn new skills and study",
+          explanation: "Learning and developing skills now will help you qualify for better-paying jobs in the future."
+        }, {
+          id: 9,
+          question: "What's the connection between helping others and earning money?",
+          options: ["There is no connection", "Helping others is how you create value and earn money", "You should never help others", "Helping others costs money"],
+          correct: "Helping others is how you create value and earn money",
+          explanation: "Most jobs involve helping other people solve problems or meet their needs, which is why we get paid."
+        }, {
+          id: 10,
+          question: "What's the most important thing to remember about earning money?",
+          options: ["Money appears magically", "All work is the same", "Money must be earned through effort and value creation", "Only adults can earn money"],
+          correct: "Money must be earned through effort and value creation",
+          explanation: "Understanding that money is earned through hard work and creating value for others is a fundamental life lesson."
+        }],
         xpReward: 100
       },
       3: {
@@ -815,78 +785,67 @@ const LessonViewer = () => {
             <p>Understanding needs vs wants is like having a financial superpower. It helps you make decisions that keep you safe and secure while still allowing you to enjoy life. The earlier you master this skill, the better your financial future will be!</p>
           `
         },
-        quiz: [
-          {
-            id: 1,
-            question: "Which of these is a NEED?",
-            options: ["New video game", "Food to eat", "Designer shoes", "Movie tickets"],
-            correct: "Food to eat",
-            explanation: "Food is essential for survival, making it a need rather than a want."
-          },
-          {
-            id: 2,
-            question: "Which of these is a WANT?",
-            options: ["A place to live", "Clean water", "The latest smartphone", "Warm clothes"],
-            correct: "The latest smartphone",
-            explanation: "While communication is important, the 'latest' smartphone is a luxury want, not a basic need."
-          },
-          {
-            id: 3,
-            question: "Before buying something, what question should you ask yourself?",
-            options: ["How much does it cost?", "Do I need this or do I want this?", "What color should I get?", "Where can I buy it?"],
-            correct: "Do I need this or do I want this?",
-            explanation: "Asking whether something is a need or want helps you make smart spending decisions."
-          },
-          {
-            id: 4,
-            question: "If you have $10 and need school lunch ($5) but also want a toy ($8), what should you do?",
-            options: ["Buy the toy", "Buy lunch and save the rest", "Ask for more money", "Don't buy anything"],
-            correct: "Buy lunch and save the rest",
-            explanation: "Needs like food should always come before wants. Buy lunch first, then save what's left."
-          },
-          {
-            id: 5,
-            question: "Which is the best example of a need?",
-            options: ["Ice cream", "A warm coat in winter", "A new bicycle", "Video games"],
-            correct: "A warm coat in winter",
-            explanation: "A warm coat in winter protects you from cold weather, making it essential for health and safety."
-          },
-          {
-            id: 6,
-            question: "If you want to buy candy but also need new school supplies, what should you prioritize?",
-            options: ["Buy the candy first", "Buy school supplies first", "Buy both at the same time", "Wait until next week"],
-            correct: "Buy school supplies first",
-            explanation: "School supplies are needed for your education, while candy is just a want."
-          },
-          {
-            id: 7,
-            question: "Which of these is a WANT for most 3rd graders?",
-            options: ["Drinking water", "A toy robot", "A safe home", "Healthy food"],
-            correct: "A toy robot",
-            explanation: "While toys are fun, they are wants rather than needs. We can live without toys, but not without water, shelter, or food."
-          },
-          {
-            id: 8,
-            question: "What should you do when you can't afford both a need and a want?",
-            options: ["Choose the want because it's more fun", "Choose the need because it's more important", "Ask someone else to buy them", "Don't buy either one"],
-            correct: "Choose the need because it's more important",
-            explanation: "Needs are always more important than wants because they keep us healthy, safe, and secure."
-          },
-          {
-            id: 9,
-            question: "Which situation shows someone choosing a need over a want?",
-            options: ["Buying a new game instead of lunch", "Buying warm socks instead of stickers", "Buying candy instead of a notebook", "Buying a toy instead of medicine"],
-            correct: "Buying warm socks instead of stickers",
-            explanation: "Warm socks help keep you healthy and comfortable (need), while stickers are just for fun (want)."
-          },
-          {
-            id: 10,
-            question: "Why is it important to learn about needs vs wants?",
-            options: ["To spend money faster", "To make smart money decisions", "To buy more things", "To avoid saving money"],
-            correct: "To make smart money decisions",
-            explanation: "Understanding needs vs wants helps you make wise choices about spending and saving money for what's most important."
-          }
-        ],
+        quiz: [{
+          id: 1,
+          question: "Which of these is a NEED?",
+          options: ["New video game", "Food to eat", "Designer shoes", "Movie tickets"],
+          correct: "Food to eat",
+          explanation: "Food is essential for survival, making it a need rather than a want."
+        }, {
+          id: 2,
+          question: "Which of these is a WANT?",
+          options: ["A place to live", "Clean water", "The latest smartphone", "Warm clothes"],
+          correct: "The latest smartphone",
+          explanation: "While communication is important, the 'latest' smartphone is a luxury want, not a basic need."
+        }, {
+          id: 3,
+          question: "Before buying something, what question should you ask yourself?",
+          options: ["How much does it cost?", "Do I need this or do I want this?", "What color should I get?", "Where can I buy it?"],
+          correct: "Do I need this or do I want this?",
+          explanation: "Asking whether something is a need or want helps you make smart spending decisions."
+        }, {
+          id: 4,
+          question: "If you have $10 and need school lunch ($5) but also want a toy ($8), what should you do?",
+          options: ["Buy the toy", "Buy lunch and save the rest", "Ask for more money", "Don't buy anything"],
+          correct: "Buy lunch and save the rest",
+          explanation: "Needs like food should always come before wants. Buy lunch first, then save what's left."
+        }, {
+          id: 5,
+          question: "Which is the best example of a need?",
+          options: ["Ice cream", "A warm coat in winter", "A new bicycle", "Video games"],
+          correct: "A warm coat in winter",
+          explanation: "A warm coat in winter protects you from cold weather, making it essential for health and safety."
+        }, {
+          id: 6,
+          question: "If you want to buy candy but also need new school supplies, what should you prioritize?",
+          options: ["Buy the candy first", "Buy school supplies first", "Buy both at the same time", "Wait until next week"],
+          correct: "Buy school supplies first",
+          explanation: "School supplies are needed for your education, while candy is just a want."
+        }, {
+          id: 7,
+          question: "Which of these is a WANT for most 3rd graders?",
+          options: ["Drinking water", "A toy robot", "A safe home", "Healthy food"],
+          correct: "A toy robot",
+          explanation: "While toys are fun, they are wants rather than needs. We can live without toys, but not without water, shelter, or food."
+        }, {
+          id: 8,
+          question: "What should you do when you can't afford both a need and a want?",
+          options: ["Choose the want because it's more fun", "Choose the need because it's more important", "Ask someone else to buy them", "Don't buy either one"],
+          correct: "Choose the need because it's more important",
+          explanation: "Needs are always more important than wants because they keep us healthy, safe, and secure."
+        }, {
+          id: 9,
+          question: "Which situation shows someone choosing a need over a want?",
+          options: ["Buying a new game instead of lunch", "Buying warm socks instead of stickers", "Buying candy instead of a notebook", "Buying a toy instead of medicine"],
+          correct: "Buying warm socks instead of stickers",
+          explanation: "Warm socks help keep you healthy and comfortable (need), while stickers are just for fun (want)."
+        }, {
+          id: 10,
+          question: "Why is it important to learn about needs vs wants?",
+          options: ["To spend money faster", "To make smart money decisions", "To buy more things", "To avoid saving money"],
+          correct: "To make smart money decisions",
+          explanation: "Understanding needs vs wants helps you make wise choices about spending and saving money for what's most important."
+        }],
         xpReward: 100
       },
       4: {
@@ -1092,78 +1051,67 @@ const LessonViewer = () => {
             <p>Remember: every spending decision is an opportunity to practice making good choices. The more you practice thinking before you spend, comparing options, and making decisions based on value rather than impulse, the better you'll become at managing money and achieving your dreams.</p>
           `
         },
-        quiz: [
-          {
-            id: 1,
-            question: "What should you do before buying anything?",
-            options: ["Buy it immediately", "Think about whether you need it or want it", "Ask your friends", "Check the color"],
-            correct: "Think about whether you need it or want it",
-            explanation: "Always pause and consider if something is a need or want before making a purchase."
-          },
-          {
-            id: 2,
-            question: "What is comparison shopping?",
-            options: ["Shopping with friends", "Checking prices at different stores", "Buying everything at once", "Shopping online only"],
-            correct: "Checking prices at different stores",
-            explanation: "Comparison shopping means looking at different options and prices to find the best deal."
-          },
-          {
-            id: 3,
-            question: "What is impulse buying?",
-            options: ["Buying things without thinking", "Buying things on sale", "Buying things you need", "Buying things for others"],
-            correct: "Buying things without thinking",
-            explanation: "Impulse buying is purchasing something quickly without thinking it through, which often leads to regret."
-          },
-          {
-            id: 4,
-            question: "Which question should you ask yourself before buying something?",
-            options: ["What color is it?", "Will I still want this next week?", "Who else has this?", "Is it the biggest one?"],
-            correct: "Will I still want this next week?",
-            explanation: "Thinking about whether you'll still value the item later helps avoid purchases you might regret."
-          },
-          {
-            id: 5,
-            question: "What does 'value' mean when shopping?",
-            options: ["The highest price", "The right balance of quality and price", "The cheapest option", "The most popular item"],
-            correct: "The right balance of quality and price",
-            explanation: "Value isn't just about price - it's about getting good quality for a fair price that will last and be useful."
-          },
-          {
-            id: 6,
-            question: "What should you do if something seems like a 'great deal' but you don't need it?",
-            options: ["Buy it anyway because it's cheap", "Don't buy it", "Buy multiple ones", "Ask everyone you know if they want it"],
-            correct: "Don't buy it",
-            explanation: "If you don't need something, it's never a good deal, no matter how cheap it is."
-          },
-          {
-            id: 7,
-            question: "What is opportunity cost?",
-            options: ["The price of something", "What you give up to get something else", "A type of store", "A way to pay"],
-            correct: "What you give up to get something else",
-            explanation: "Opportunity cost is what you sacrifice when you choose one option over another - like buying a toy instead of saving for a bike."
-          },
-          {
-            id: 8,
-            question: "Why should you avoid shopping when you're feeling sad or excited?",
-            options: ["Stores are closed", "You might make poor decisions", "It's against the law", "You'll spend too much time"],
-            correct: "You might make poor decisions",
-            explanation: "Strong emotions can lead to impulsive purchases that you might regret later."
-          },
-          {
-            id: 9,
-            question: "What's the best way to avoid overspending at a store?",
-            options: ["Don't bring any money", "Make a list and stick to it", "Shop as fast as possible", "Only buy the most expensive items"],
-            correct: "Make a list and stick to it",
-            explanation: "Having a shopping list helps you stay focused on what you actually need and avoid impulse purchases."
-          },
-          {
-            id: 10,
-            question: "When is the best time to buy something you want but don't need?",
-            options: ["Right away", "When you're bored", "After you've thought about it and saved money for it", "Never"],
-            correct: "After you've thought about it and saved money for it",
-            explanation: "Taking time to think and save for wants helps ensure you really value them and can afford them responsibly."
-          }
-        ],
+        quiz: [{
+          id: 1,
+          question: "What should you do before buying anything?",
+          options: ["Buy it immediately", "Think about whether you need it or want it", "Ask your friends", "Check the color"],
+          correct: "Think about whether you need it or want it",
+          explanation: "Always pause and consider if something is a need or want before making a purchase."
+        }, {
+          id: 2,
+          question: "What is comparison shopping?",
+          options: ["Shopping with friends", "Checking prices at different stores", "Buying everything at once", "Shopping online only"],
+          correct: "Checking prices at different stores",
+          explanation: "Comparison shopping means looking at different options and prices to find the best deal."
+        }, {
+          id: 3,
+          question: "What is impulse buying?",
+          options: ["Buying things without thinking", "Buying things on sale", "Buying things you need", "Buying things for others"],
+          correct: "Buying things without thinking",
+          explanation: "Impulse buying is purchasing something quickly without thinking it through, which often leads to regret."
+        }, {
+          id: 4,
+          question: "Which question should you ask yourself before buying something?",
+          options: ["What color is it?", "Will I still want this next week?", "Who else has this?", "Is it the biggest one?"],
+          correct: "Will I still want this next week?",
+          explanation: "Thinking about whether you'll still value the item later helps avoid purchases you might regret."
+        }, {
+          id: 5,
+          question: "What does 'value' mean when shopping?",
+          options: ["The highest price", "The right balance of quality and price", "The cheapest option", "The most popular item"],
+          correct: "The right balance of quality and price",
+          explanation: "Value isn't just about price - it's about getting good quality for a fair price that will last and be useful."
+        }, {
+          id: 6,
+          question: "What should you do if something seems like a 'great deal' but you don't need it?",
+          options: ["Buy it anyway because it's cheap", "Don't buy it", "Buy multiple ones", "Ask everyone you know if they want it"],
+          correct: "Don't buy it",
+          explanation: "If you don't need something, it's never a good deal, no matter how cheap it is."
+        }, {
+          id: 7,
+          question: "What is opportunity cost?",
+          options: ["The price of something", "What you give up to get something else", "A type of store", "A way to pay"],
+          correct: "What you give up to get something else",
+          explanation: "Opportunity cost is what you sacrifice when you choose one option over another - like buying a toy instead of saving for a bike."
+        }, {
+          id: 8,
+          question: "Why should you avoid shopping when you're feeling sad or excited?",
+          options: ["Stores are closed", "You might make poor decisions", "It's against the law", "You'll spend too much time"],
+          correct: "You might make poor decisions",
+          explanation: "Strong emotions can lead to impulsive purchases that you might regret later."
+        }, {
+          id: 9,
+          question: "What's the best way to avoid overspending at a store?",
+          options: ["Don't bring any money", "Make a list and stick to it", "Shop as fast as possible", "Only buy the most expensive items"],
+          correct: "Make a list and stick to it",
+          explanation: "Having a shopping list helps you stay focused on what you actually need and avoid impulse purchases."
+        }, {
+          id: 10,
+          question: "When is the best time to buy something you want but don't need?",
+          options: ["Right away", "When you're bored", "After you've thought about it and saved money for it", "Never"],
+          correct: "After you've thought about it and saved money for it",
+          explanation: "Taking time to think and save for wants helps ensure you really value them and can afford them responsibly."
+        }],
         xpReward: 100
       },
       5: {
@@ -2354,13 +2302,10 @@ const LessonViewer = () => {
       }
     }
   };
-
   const gradeContent = lessonContent[grade as keyof typeof lessonContent];
   const currentLessonContent = gradeContent?.[module as keyof typeof gradeContent];
-
   if (!currentLessonContent) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
+    return <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
         <div className="max-w-4xl mx-auto">
           <Card className="p-8 text-center">
             <h2 className="text-2xl font-bold text-destructive mb-4">Lesson Not Found</h2>
@@ -2373,115 +2318,95 @@ const LessonViewer = () => {
             </Button>
           </Card>
         </div>
-      </div>
-    );
+      </div>;
   }
-
   const handleVideoComplete = async () => {
     setVideoCompleted(true);
     if (user) {
       await updateProgress('video_completed', true);
     }
     toast.success("Video completed! Great job!");
-    
+
     // Auto-progress to article section
     setTimeout(() => {
       setCurrentSection('article');
     }, 1500);
   };
-
   const handleArticleComplete = async () => {
     setArticleCompleted(true);
     if (user) {
       await updateProgress('article_completed', true);
     }
     toast.success("Article completed! Keep it up!");
-    
+
     // Auto-progress to quiz section and scroll to top
     setTimeout(() => {
       setCurrentSection('quiz');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }, 1500);
   };
-
   const updateProgress = async (field: string, value: any) => {
     if (!user) return;
-
-    const { data: lesson } = await supabase
-      .from('lessons')
-      .select('id')
-      .eq('grade_level', grade)
-      .eq('module_number', module)
-      .single();
-
+    const {
+      data: lesson
+    } = await supabase.from('lessons').select('id').eq('grade_level', grade).eq('module_number', module).single();
     if (lesson) {
-      const { data: existingProgress } = await supabase
-        .from('lesson_progress')
-        .select('*')
-        .eq('user_id', user.id)
-        .eq('lesson_id', lesson.id)
-        .single();
-
+      const {
+        data: existingProgress
+      } = await supabase.from('lesson_progress').select('*').eq('user_id', user.id).eq('lesson_id', lesson.id).single();
       const updateData = {
         user_id: user.id,
         lesson_id: lesson.id,
         [field]: value,
         ...existingProgress
       };
-
-      await supabase
-        .from('lesson_progress')
-        .upsert(updateData);
+      await supabase.from('lesson_progress').upsert(updateData);
     }
   };
-
   const handleQuizSubmit = async () => {
     if (!currentLessonContent.quiz) return;
-    
     let correctAnswers = 0;
     currentLessonContent.quiz.forEach((question: any) => {
       if (quizAnswers[question.id] === question.correct) {
         correctAnswers++;
       }
     });
-
-    const scorePercentage = (correctAnswers / currentLessonContent.quiz.length) * 100;
-    const earnedXp = Math.floor((scorePercentage / 100) * currentLessonContent.xpReward);
-    
+    const scorePercentage = correctAnswers / currentLessonContent.quiz.length * 100;
+    const earnedXp = Math.floor(scorePercentage / 100 * currentLessonContent.xpReward);
     setScore(scorePercentage);
     setXpEarned(earnedXp);
     setQuizSubmitted(true);
-
     if (user) {
       await updateProgress('quiz_completed', true);
       await updateProgress('quiz_score', scorePercentage);
       await updateProgress('xp_earned', earnedXp);
-      
+
       // Update user's total XP
-      const { data: profile } = await supabase
-        .from('user_profiles')
-        .select('*')
-        .eq('user_id', user.id)
-        .single();
+      const {
+        data: profile
+      } = await supabase.from('user_profiles').select('*').eq('user_id', user.id).single();
 
       // Handle profile creation or update
-      await supabase
-        .from('user_profiles')
-        .upsert({
-          user_id: user.id,
-          display_name: profile?.display_name || 'Student'
-        });
+      await supabase.from('user_profiles').upsert({
+        user_id: user.id,
+        display_name: profile?.display_name || 'Student'
+      });
     }
-
     if (scorePercentage >= 80) {
       toast.success(`Excellent! You scored ${scorePercentage.toFixed(1)}% and earned ${earnedXp} XP!`);
     } else if (scorePercentage >= 60) {
-      toast("Good job! You can retake the quiz to improve your score.", { description: `Score: ${scorePercentage.toFixed(1)}%` });
+      toast("Good job! You can retake the quiz to improve your score.", {
+        description: `Score: ${scorePercentage.toFixed(1)}%`
+      });
     } else {
-      toast("Keep trying! Review the material and retake the quiz.", { description: `Score: ${scorePercentage.toFixed(1)}%` });
+      toast("Keep trying! Review the material and retake the quiz.", {
+        description: `Score: ${scorePercentage.toFixed(1)}%`
+      });
     }
   };
-
   const nextModule = () => {
     if (module < 17) {
       navigate(`/education/grade/${grade}/module/${module + 1}`);
@@ -2489,7 +2414,6 @@ const LessonViewer = () => {
       navigate(`/education/grade/${grade + 1}/module/1`);
     }
   };
-
   const prevModule = () => {
     if (module > 1) {
       navigate(`/education/grade/${grade}/module/${module - 1}`);
@@ -2497,11 +2421,8 @@ const LessonViewer = () => {
       navigate(`/education/grade/${grade - 1}/module/17`);
     }
   };
-
   const overallProgress = ((videoCompleted ? 1 : 0) + (articleCompleted ? 1 : 0) + (quizSubmitted && score >= 60 ? 1 : 0)) / 3 * 100;
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
+  return <div className="min-h-screen bg-gradient-to-br from-background to-muted p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8 bg-card/80 backdrop-blur-sm p-6 rounded-lg border shadow-sm mt-4">
@@ -2526,29 +2447,17 @@ const LessonViewer = () => {
 
         {/* Navigation Tabs */}
         <div className="flex gap-2 mb-6">
-          <Button
-            variant={currentSection === 'video' ? 'default' : 'outline'}
-            onClick={() => setCurrentSection('video')}
-            className="flex items-center gap-2"
-          >
+          <Button variant={currentSection === 'video' ? 'default' : 'outline'} onClick={() => setCurrentSection('video')} className="flex items-center gap-2">
             <Play className="w-4 h-4" />
             Video
             {videoCompleted && <CheckCircle className="w-4 h-4 text-green-500" />}
           </Button>
-          <Button
-            variant={currentSection === 'article' ? 'default' : 'outline'}
-            onClick={() => setCurrentSection('article')}
-            className="flex items-center gap-2"
-          >
+          <Button variant={currentSection === 'article' ? 'default' : 'outline'} onClick={() => setCurrentSection('article')} className="flex items-center gap-2">
             <FileText className="w-4 h-4" />
             Article
             {articleCompleted && <CheckCircle className="w-4 h-4 text-green-500" />}
           </Button>
-          <Button
-            variant={currentSection === 'quiz' ? 'default' : 'outline'}
-            onClick={() => setCurrentSection('quiz')}
-            className="flex items-center gap-2"
-          >
+          <Button variant={currentSection === 'quiz' ? 'default' : 'outline'} onClick={() => setCurrentSection('quiz')} className="flex items-center gap-2">
             <HelpCircle className="w-4 h-4" />
             Quiz
             {quizSubmitted && score >= 60 && <CheckCircle className="w-4 h-4 text-green-500" />}
@@ -2560,22 +2469,13 @@ const LessonViewer = () => {
           {/* Main Content */}
           <div className="lg:col-span-3">
             <Card className="p-6">
-              {currentSection === 'video' && (
-                <div>
+              {currentSection === 'video' && <div>
                   <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <Play className="w-6 h-6" />
                     {currentLessonContent.videoTitle}
                   </h2>
                   <div className="aspect-video mb-4 rounded-lg overflow-hidden bg-muted">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={currentLessonContent.videoUrl}
-                      title={currentLessonContent.videoTitle}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
+                    <iframe width="100%" height="100%" src={currentLessonContent.videoUrl} title={currentLessonContent.videoTitle} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   </div>
                   
                   {/* Direct YouTube Link */}
@@ -2583,12 +2483,7 @@ const LessonViewer = () => {
                     <p className="text-sm text-muted-foreground mb-2">
                       If the video doesn't work above, you can watch it directly on YouTube:
                     </p>
-                    <a 
-                      href={currentLessonContent.videoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary hover:underline"
-                    >
+                    <a href={currentLessonContent.videoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
                       <ExternalLink className="w-4 h-4" />
                       Open in YouTube
                     </a>
@@ -2596,107 +2491,74 @@ const LessonViewer = () => {
 
                   <div className="flex justify-end items-center">
                     <Button onClick={handleVideoComplete} disabled={videoCompleted}>
-                      {videoCompleted ? (
-                        <>
+                      {videoCompleted ? <>
                           <CheckCircle className="w-4 h-4 mr-2" />
                           Completed
-                        </>
-                      ) : (
-                        'Mark as Watched'
-                      )}
+                        </> : 'Mark as Watched'}
                     </Button>
                   </div>
-                </div>
-              )}
+                </div>}
 
-              {currentSection === 'article' && (
-                <div className="text-white">
+              {currentSection === 'article' && <div className="text-white">
                   <h2 className="text-2xl font-bold mb-6 text-white">{currentLessonContent.article.title}</h2>
-                  <div 
-                    className="prose prose-lg prose-invert max-w-none text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>li]:text-white [&>strong]:text-white"
-                    dangerouslySetInnerHTML={{ __html: currentLessonContent.article.content }}
-                  />
+                  <div className="prose prose-lg prose-invert max-w-none text-white [&>h2]:text-white [&>h3]:text-white [&>h4]:text-white [&>p]:text-white [&>ul]:text-white [&>li]:text-white [&>strong]:text-white" dangerouslySetInnerHTML={{
+                __html: currentLessonContent.article.content
+              }} />
                   <div className="mt-8 pt-6 border-t border-white/20 flex justify-end">
                     <Button onClick={handleArticleComplete} disabled={articleCompleted}>
-                      {articleCompleted ? (
-                        <>
+                      {articleCompleted ? <>
                           <CheckCircle className="w-4 h-4 mr-2" />
                           Completed
-                        </>
-                      ) : (
-                        'Mark as Read'
-                      )}
+                        </> : 'Mark as Read'}
                     </Button>
                   </div>
-                </div>
-              )}
+                </div>}
 
-              {currentSection === 'quiz' && currentLessonContent.quiz && (
-                <div>
+              {currentSection === 'quiz' && currentLessonContent.quiz && <div>
                   <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                     <HelpCircle className="w-6 h-6" />
                     Knowledge Check
                   </h2>
                   
-                  {!quizSubmitted ? (
-                    <div className="space-y-6">
-                      {currentLessonContent.quiz.map((question: any, index: number) => (
-                        <Card key={question.id} className="p-4">
+                  {!quizSubmitted ? <div className="space-y-6">
+                      {currentLessonContent.quiz.map((question: any, index: number) => <Card key={question.id} className="p-4">
                           <h3 className="font-semibold mb-4">
                             {index + 1}. {question.question}
                           </h3>
                           <div className="space-y-2">
-                            {question.options.map((option: string) => (
-                              <label key={option} className="flex items-center gap-3 p-2 rounded hover:bg-muted cursor-pointer">
-                                <input
-                                  type="radio"
-                                  name={`question-${question.id}`}
-                                  value={option}
-                                  onChange={(e) => setQuizAnswers(prev => ({ ...prev, [question.id]: e.target.value }))}
-                                  className="w-4 h-4"
-                                />
+                            {question.options.map((option: string) => <label key={option} className="flex items-center gap-3 p-2 rounded hover:bg-muted cursor-pointer">
+                                <input type="radio" name={`question-${question.id}`} value={option} onChange={e => setQuizAnswers(prev => ({
+                        ...prev,
+                        [question.id]: e.target.value
+                      }))} className="w-4 h-4" />
                                 <span>{option}</span>
-                              </label>
-                            ))}
+                              </label>)}
                           </div>
-                        </Card>
-                      ))}
+                        </Card>)}
                       
-                      <Button 
-                        onClick={handleQuizSubmit}
-                        disabled={Object.keys(quizAnswers).length !== currentLessonContent.quiz.length}
-                        className="w-full"
-                      >
+                      <Button onClick={handleQuizSubmit} disabled={Object.keys(quizAnswers).length !== currentLessonContent.quiz.length} className="w-full">
                         Submit Quiz
                       </Button>
-                    </div>
-                  ) : (
-                    <div className="space-y-6">
+                    </div> : <div className="space-y-6">
                       <div className="text-center p-6 bg-muted rounded-lg">
                         <Award className="w-16 h-16 mx-auto mb-4 text-yellow-500" />
                         <h3 className="text-2xl font-bold mb-2">Quiz Completed!</h3>
                         <p className="text-lg mb-2">Score: {score.toFixed(1)}%</p>
                         <p className="text-lg">XP Earned: {xpEarned}</p>
-                        {score < 60 && (
-                          <Button 
-                            onClick={() => {
-                              setQuizSubmitted(false);
-                              setQuizAnswers({});
-                              setScore(0);
-                              setXpEarned(0);
-                            }}
-                            className="mt-4"
-                          >
+                        {score < 60 && <Button onClick={() => {
+                    setQuizSubmitted(false);
+                    setQuizAnswers({});
+                    setScore(0);
+                    setXpEarned(0);
+                  }} className="mt-4">
                             Retake Quiz
-                          </Button>
-                        )}
+                          </Button>}
                       </div>
                       
                       {/* Show correct answers */}
                       <div className="space-y-4">
                         <h3 className="text-xl font-bold">Answer Review:</h3>
-                        {currentLessonContent.quiz.map((question: any, index: number) => (
-                          <Card key={question.id} className="p-4">
+                        {currentLessonContent.quiz.map((question: any, index: number) => <Card key={question.id} className="p-4">
                             <h4 className="font-semibold mb-2">
                               {index + 1}. {question.question}
                             </h4>
@@ -2711,13 +2573,10 @@ const LessonViewer = () => {
                                 <strong>Explanation:</strong> {question.explanation}
                               </div>
                             </div>
-                          </Card>
-                        ))}
+                          </Card>)}
                       </div>
-                    </div>
-                  )}
-                </div>
-              )}
+                    </div>}
+                </div>}
             </Card>
           </div>
 
@@ -2732,61 +2591,27 @@ const LessonViewer = () => {
                     <Play className="w-4 h-4" />
                     Video
                   </span>
-                  {videoCompleted ? (
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
-                  )}
+                  {videoCompleted ? <CheckCircle className="w-4 h-4 text-green-500" /> : <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />}
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-2">
                     <FileText className="w-4 h-4" />
                     Article
                   </span>
-                  {articleCompleted ? (
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
-                  )}
+                  {articleCompleted ? <CheckCircle className="w-4 h-4 text-green-500" /> : <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />}
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-2">
                     <HelpCircle className="w-4 h-4" />
                     Quiz
                   </span>
-                  {quizSubmitted && score >= 60 ? (
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />
-                  )}
+                  {quizSubmitted && score >= 60 ? <CheckCircle className="w-4 h-4 text-green-500" /> : <div className="w-4 h-4 border-2 border-muted-foreground rounded-full" />}
                 </div>
               </div>
             </Card>
 
             {/* Navigation Card */}
-            <Card className="p-4">
-              <h3 className="font-bold mb-3">Navigation</h3>
-              <div className="space-y-2">
-                <Button 
-                  variant="outline" 
-                  onClick={prevModule}
-                  disabled={grade === 3 && module === 1}
-                  className="w-full justify-start"
-                >
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Previous Module
-                </Button>
-                <Button 
-                  variant="outline" 
-                  onClick={nextModule}
-                  disabled={grade === 8 && module === 17}
-                  className="w-full justify-start"
-                >
-                  Next Module
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            </Card>
+            
 
             {/* Module Info Card */}
             <Card className="p-4">
@@ -2804,39 +2629,29 @@ const LessonViewer = () => {
                   <span>Max XP:</span>
                   <span>{currentLessonContent.xpReward}</span>
                 </div>
-                {xpEarned > 0 && (
-                  <div className="flex justify-between font-semibold text-green-600">
+                {xpEarned > 0 && <div className="flex justify-between font-semibold text-green-600">
                     <span>XP Earned:</span>
                     <span>{xpEarned}</span>
-                  </div>
-                )}
+                  </div>}
               </div>
             </Card>
 
             {/* Badges Card */}
-            {badges.length > 0 && (
-              <Card className="p-4">
+            {badges.length > 0 && <Card className="p-4">
                 <h3 className="font-bold mb-3">Your Badges</h3>
                 <div className="grid grid-cols-3 gap-2">
-                  {badges.slice(0, 6).map((badge) => (
-                    <div key={badge.id} className="text-center">
+                  {badges.slice(0, 6).map(badge => <div key={badge.id} className="text-center">
                       <div className="text-2xl mb-1">{badge.icon}</div>
                       <div className="text-xs">{badge.name}</div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-                {badges.length > 6 && (
-                  <p className="text-xs text-muted-foreground mt-2 text-center">
+                {badges.length > 6 && <p className="text-xs text-muted-foreground mt-2 text-center">
                     +{badges.length - 6} more badges
-                  </p>
-                )}
-              </Card>
-            )}
+                  </p>}
+              </Card>}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default LessonViewer;
