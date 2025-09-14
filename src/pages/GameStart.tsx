@@ -98,7 +98,7 @@ const GameStart = () => {
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold text-primary">
-              Cash Climb
+              Cash Climb Dashboard
             </h1>
           </div>
         </div>
@@ -176,7 +176,14 @@ const GameStart = () => {
                           <Trophy className="h-4 w-4 text-primary" />
                           <span className="text-sm font-medium">{grade.totalXP} XP Earned</span>
                         </div>
-                        <Button variant="outline" size="sm">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/curriculum/${grade.grade}`);
+                          }}
+                        >
                           View Curriculum
                         </Button>
                       </div>
@@ -196,22 +203,6 @@ const GameStart = () => {
             <Card className="sticky top-24">
               <CardContent className="space-y-6 p-6">
 
-                {/* Overall Stats */}
-                <div className="border-t pt-4">
-                  <h4 className="font-semibold mb-3">Platform Overview</h4>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm">Total Modules:</span>
-                      <span className="text-sm font-bold">
-                        {grades.reduce((sum, grade) => sum + grade.moduleCount, 0)}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm">Grade Levels:</span>
-                      <span className="text-sm font-bold">6 (3rd-8th)</span>
-                    </div>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
