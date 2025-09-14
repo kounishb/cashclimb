@@ -63,22 +63,19 @@ const GradeModules = () => {
 
   const loadCompletedModules = async (userId: string) => {
     try {
-      // Get completed modules from game_progress table
-      const { data: gameProgress } = await supabase
-        .from('game_progress')
-        .select('module_id, completed')
-        .eq('user_id', userId)
-        .eq('completed', true);
-
-      // Get XP from lesson_progress table
+      // Get lessons for this grade
       const { data: lessons } = await supabase
         .from('lessons')
         .select('id, module_number')
         .eq('grade_level', grade);
 
+      let completedModuleNumbers: number[] = [];
       let totalXpEarned = 0;
+
       if (lessons) {
         const lessonIds = lessons.map(l => l.id);
+        
+        // Get XP from lesson_progress table
         const { data: progress } = await supabase
           .from('lesson_progress')
           .select('xp_earned')
@@ -88,9 +85,19 @@ const GradeModules = () => {
         if (progress) {
           totalXpEarned = progress.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
         }
+
+        // Get completed modules for this specific grade
+        const gradeModuleNumbers = [...new Set(lessons.map(l => l.module_number))];
+        const { data: gameProgress } = await supabase
+          .from('game_progress')
+          .select('module_id, completed')
+          .eq('user_id', userId)
+          .eq('completed', true)
+          .in('module_id', gradeModuleNumbers);
+
+        completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
       }
 
-      const completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
       setCompletedModules(completedModuleNumbers);
       setTotalXP(totalXpEarned);
       
@@ -352,10 +359,17 @@ const GradeModules = () => {
                         </div>
                       </div>
                       {module.isUnlocked && (
-                        <Button size="sm" className="bg-primary hover:bg-primary/90">
-                          <Play className="h-4 w-4 mr-2" />
-                          {module.isCompleted ? 'Completed' : 'Start'}
-                        </Button>
+                        module.isCompleted ? (
+                          <Badge className="bg-green-500 text-white border-green-500">
+                            <CheckCircle className="h-3 w-3 mr-1" />
+                            Completed
+                          </Badge>
+                        ) : (
+                          <Button size="sm" className="bg-primary hover:bg-primary/90">
+                            <Play className="h-4 w-4 mr-2" />
+                            Start
+                          </Button>
+                        )
                       )}
                     </div>
 

@@ -68,22 +68,19 @@ const GameStart = () => {
       
       // Load progress for each grade
       for (let grade = 3; grade <= 8; grade++) {
-        // Get completed modules from game_progress table
-        const { data: gameProgress } = await supabase
-          .from('game_progress')
-          .select('module_id, completed')
-          .eq('user_id', userId)
-          .eq('completed', true);
-
-        // Get XP from lesson_progress table
+        // Get lessons for this grade to filter completed modules
         const { data: lessons } = await supabase
           .from('lessons')
           .select('id, module_number')
           .eq('grade_level', grade);
 
+        let completedModuleNumbers: number[] = [];
         let totalXpEarned = 0;
+
         if (lessons) {
           const lessonIds = lessons.map(l => l.id);
+          
+          // Get XP from lesson_progress table
           const { data: progressData } = await supabase
             .from('lesson_progress')
             .select('xp_earned')
@@ -93,9 +90,18 @@ const GameStart = () => {
           if (progressData) {
             totalXpEarned = progressData.reduce((sum, p) => sum + (p.xp_earned || 0), 0);
           }
-        }
 
-        const completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
+          // Get completed modules for this specific grade by getting unique module numbers
+          const gradeModuleNumbers = [...new Set(lessons.map(l => l.module_number))];
+          const { data: gameProgress } = await supabase
+            .from('game_progress')
+            .select('module_id, completed')
+            .eq('user_id', userId)
+            .eq('completed', true)
+            .in('module_id', gradeModuleNumbers);
+
+          completedModuleNumbers = gameProgress ? gameProgress.map(gp => gp.module_id) : [];
+        }
         
         progress[grade] = {
           completedModules: completedModuleNumbers,
