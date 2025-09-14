@@ -2228,17 +2228,17 @@ const LessonViewer = () => {
 
   const nextModule = () => {
     if (module < 17) {
-      navigate(`/lesson/${grade}/${module + 1}`);
+      navigate(`/education/grade/${grade}/module/${module + 1}`);
     } else if (grade < 8) {
-      navigate(`/lesson/${grade + 1}/1`);
+      navigate(`/education/grade/${grade + 1}/module/1`);
     }
   };
 
   const prevModule = () => {
     if (module > 1) {
-      navigate(`/lesson/${grade}/${module - 1}`);
+      navigate(`/education/grade/${grade}/module/${module - 1}`);
     } else if (grade > 3) {
-      navigate(`/lesson/${grade - 1}/17`);
+      navigate(`/education/grade/${grade - 1}/module/17`);
     }
   };
 
@@ -2338,11 +2338,7 @@ const LessonViewer = () => {
                     </a>
                   </div>
 
-                  <div className="flex justify-between items-center">
-                    <Badge variant="secondary">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Educational Video
-                    </Badge>
+                  <div className="flex justify-end items-center">
                     <Button onClick={handleVideoComplete} disabled={videoCompleted}>
                       {videoCompleted ? (
                         <>
