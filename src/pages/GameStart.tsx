@@ -197,9 +197,9 @@ const GameStart = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid gap-8">
           {/* Grade Selection */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="mb-6">
               <h2 className="text-2xl font-bold mb-2">Select Your Grade Level</h2>
               <p className="text-muted-foreground">
@@ -292,14 +292,6 @@ const GameStart = () => {
             </div>
           </div>
 
-          {/* Information Panel */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-24">
-              <CardContent className="space-y-6 p-6">
-
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </div>
