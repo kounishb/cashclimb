@@ -132,43 +132,43 @@ const GameStart = () => {
       grade: 3,
       color: "bg-green-500",
       moduleCount: 12,
-      topics: ["What is money?", "Coins and bills", "Earning money", "Needs vs wants", "Spending choices"],
-      skills: ["Basic money recognition", "Simple counting", "Making choices"]
+      topics: ["What is money?", "Coins and bills", "Counting money", "Needs vs wants", "Where money comes from"],
+      skills: ["Money recognition", "Basic counting", "Simple choices"]
     },
     {
       grade: 4,
       color: "bg-blue-500", 
       moduleCount: 14,
-      topics: ["Saving money", "Making a budget", "Comparing prices", "Money goals", "Bank basics"],
-      skills: ["Basic budgeting", "Goal setting", "Price comparison"]
+      topics: ["Saving in piggy banks", "Spending wisely", "Earning allowance", "Wants vs needs practice", "Making change"],
+      skills: ["Basic saving", "Smart spending", "Money counting"]
     },
     {
       grade: 5,
       color: "bg-purple-500",
       moduleCount: 16,
-      topics: ["Long-term saving", "Interest basics", "Job types", "Banking", "Financial goals"],
-      skills: ["Saving strategies", "Understanding interest", "Career awareness"]
+      topics: ["Setting money goals", "Comparing store prices", "Different jobs people do", "What banks do", "Planning purchases"],
+      skills: ["Goal setting", "Price comparison", "Career exploration"]
     },
     {
       grade: 6,
       color: "bg-orange-500",
       moduleCount: 18,
-      topics: ["Credit basics", "Debt understanding", "Investment intro", "Entrepreneurship", "Digital money"],
-      skills: ["Credit awareness", "Risk assessment", "Basic investing"]
+      topics: ["Making a budget", "Saving for big goals", "Online safety with money", "Starting a small business", "Debit vs credit cards"],
+      skills: ["Budget planning", "Long-term saving", "Digital literacy"]
     },
     {
       grade: 7,
       color: "bg-red-500",
       moduleCount: 20,
-      topics: ["Advanced budgeting", "Tax basics", "Insurance", "Scam protection", "Economic concepts"],
-      skills: ["Strategic planning", "Risk management", "Economic thinking"]
+      topics: ["Managing multiple expenses", "Understanding advertisements", "Avoiding money scams", "Basic entrepreneurship", "Income vs expenses"],
+      skills: ["Expense tracking", "Critical thinking", "Business basics"]
     },
     {
       grade: 8,
       color: "bg-indigo-500",
       moduleCount: 22,
-      topics: ["Investment strategies", "College planning", "Career prep", "Advanced economics", "Global finance"],
-      skills: ["Investment analysis", "Long-term planning", "Global awareness"]
+      topics: ["Planning for high school costs", "Understanding simple loans", "Building good money habits", "Career exploration", "Financial goal planning"],
+      skills: ["Future planning", "Habit building", "Career readiness"]
     }
   ].map(grade => {
     const progress = userProgress[grade.grade] || { completedModules: [], totalXP: 0 };
