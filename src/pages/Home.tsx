@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Target, Trophy, Users, Star, ChevronRight, BookOpen, Shield, Clock, Gamepad2, DollarSign, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/hero-bg-clean.jpg";
+import heroImage from "../assets/hero-bg-professional.jpg";
 const Home = () => {
   const features = [{
     icon: <Target className="h-8 w-8" />,

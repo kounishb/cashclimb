@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,11 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -206,7 +211,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-2">What age group is Cash Climb designed for?</h3>
                 <p className="text-muted-foreground">
-                  Cash Climb is specifically designed for students in grades 4-8 (ages 9-14). Each module is grade-appropriate and builds progressively on financial concepts suitable for young learners.
+                  Cash Climb is specifically designed for students in grades 3-8 and ages 8-14. Each module is grade-appropriate and builds progressively on financial concepts suitable for young learners.
                 </p>
               </CardContent>
             </Card>
