@@ -303,7 +303,7 @@ const Product = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Mrs. Thompson</div>
-                    <div className="text-sm text-muted-foreground">Elementary Principal</div>
+                    <div className="text-sm text-muted-foreground">Elementary Teacher</div>
                   </div>
                 </div>
               </CardContent>
