@@ -1,109 +1,67 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  BookOpen, 
-  Trophy, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Shield, 
-  Smartphone, 
-  Zap,
-  CheckCircle,
-  Star,
-  GraduationCap,
-  ChevronRight,
-  Play
-} from "lucide-react";
+import { BookOpen, Trophy, Target, Users, BarChart3, Shield, Smartphone, Zap, CheckCircle, Star, GraduationCap, ChevronRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Product = () => {
-  const features = [
-    {
-      icon: <BookOpen className="h-8 w-8" />,
-      title: "Interactive Learning Modules",
-      description: "Engage with educational content through videos, articles, and quizzes designed for grades 3-8.",
-      highlight: "Comprehensive curriculum"
-    },
-    {
-      icon: <Trophy className="h-8 w-8" />,
-      title: "Achievement System",
-      description: "Earn badges, unlock levels, and compete on leaderboards as you master budgeting, investing, and financial planning.",
-      highlight: "50+ achievements"
-    },
-    {
-      icon: <Target className="h-8 w-8" />,
-      title: "Personal Goal Tracking",
-      description: "Set financial goals and track your progress with visual indicators, milestone celebrations, and personalized recommendations.",
-      highlight: "Smart goal AI"
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      title: "Community Challenges",
-      description: "Join group challenges, share progress with friends, and learn from a community of like-minded financial climbers.",
-      highlight: "Active community"
-    },
-    {
-      icon: <BarChart3 className="h-8 w-8" />,
-      title: "Real-Time Analytics",
-      description: "Track your learning progress with detailed analytics, performance metrics, and personalized insights to optimize your financial education journey.",
-      highlight: "Smart insights"
-    },
-    {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Security & Privacy",
-      description: "Bank-level encryption protects your data. We never ask for real financial account information or passwords.",
-      highlight: "256-bit encryption"
-    }
-  ];
-
-  const gameFeatures = [
-    "Interactive video lessons",
-    "Comprehensive articles",
-    "10-question quizzes",
-    "XP-based progress tracking",
-    "Achievement badges",
-    "Teacher dashboard",
-    "Classroom management",
-    "Progress reporting"
-  ];
-
-  const gameModules = [
-    { 
-      title: "Money Basics", 
-      description: "Understanding money, needs vs wants, and simple budgeting",
-      grades: "3"
-    },
-    { 
-      title: "Smart Spending", 
-      description: "Making wise spending decisions and comparison shopping",
-      grades: "4"
-    },
-    { 
-      title: "Banking & Saving", 
-      description: "Bank accounts, savings goals, and compound interest",
-      grades: "5"
-    },
-    { 
-      title: "Budgeting & Goals", 
-      description: "Creating budgets, tracking expenses, and smart financial goals",
-      grades: "6"
-    },
-    { 
-      title: "Credit & Debt", 
-      description: "Understanding credit scores, loans, and responsible borrowing",
-      grades: "7"
-    },
-    { 
-      title: "Investment Basics", 
-      description: "Introduction to investing, risk, and building wealth",
-      grades: "8"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen pt-16">
+  const features = [{
+    icon: <BookOpen className="h-8 w-8" />,
+    title: "Interactive Learning Modules",
+    description: "Engage with educational content through videos, articles, and quizzes designed for grades 3-8.",
+    highlight: "Comprehensive curriculum"
+  }, {
+    icon: <Trophy className="h-8 w-8" />,
+    title: "Achievement System",
+    description: "Earn badges, unlock levels, and compete on leaderboards as you master budgeting, investing, and financial planning.",
+    highlight: "50+ achievements"
+  }, {
+    icon: <Target className="h-8 w-8" />,
+    title: "Personal Goal Tracking",
+    description: "Set financial goals and track your progress with visual indicators, milestone celebrations, and personalized recommendations.",
+    highlight: "Smart goal AI"
+  }, {
+    icon: <Users className="h-8 w-8" />,
+    title: "Community Challenges",
+    description: "Join group challenges, share progress with friends, and learn from a community of like-minded financial climbers.",
+    highlight: "Active community"
+  }, {
+    icon: <BarChart3 className="h-8 w-8" />,
+    title: "Real-Time Analytics",
+    description: "Track your learning progress with detailed analytics, performance metrics, and personalized insights to optimize your financial education journey.",
+    highlight: "Smart insights"
+  }, {
+    icon: <Shield className="h-8 w-8" />,
+    title: "Security & Privacy",
+    description: "Bank-level encryption protects your data. We never ask for real financial account information or passwords.",
+    highlight: "256-bit encryption"
+  }];
+  const gameFeatures = ["Interactive video lessons", "Comprehensive articles", "10-question quizzes", "XP-based progress tracking", "Achievement badges", "Teacher dashboard", "Classroom management", "Progress reporting"];
+  const gameModules = [{
+    title: "Money Basics",
+    description: "Understanding money, needs vs wants, and simple budgeting",
+    grades: "3"
+  }, {
+    title: "Smart Spending",
+    description: "Making wise spending decisions and comparison shopping",
+    grades: "4"
+  }, {
+    title: "Banking & Saving",
+    description: "Bank accounts, savings goals, and compound interest",
+    grades: "5"
+  }, {
+    title: "Budgeting & Goals",
+    description: "Creating budgets, tracking expenses, and smart financial goals",
+    grades: "6"
+  }, {
+    title: "Credit & Debt",
+    description: "Understanding credit scores, loans, and responsible borrowing",
+    grades: "7"
+  }, {
+    title: "Investment Basics",
+    description: "Introduction to investing, risk, and building wealth",
+    grades: "8"
+  }];
+  return <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-hero">
         <div className="max-w-6xl mx-auto">
@@ -141,15 +99,11 @@ const Product = () => {
             <p className="text-xl text-muted-foreground">
               Comprehensive financial education curriculum covering grades 3-8 with age-appropriate content for each level.
             </p>
-            <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20 inline-block">
-              <div className="text-2xl font-bold text-primary">15,000+</div>
-              <div className="text-sm text-muted-foreground">Students Learning</div>
-            </div>
+            
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gameModules.map((module, index) => (
-              <Card key={index} className="hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
+            {gameModules.map((module, index) => <Card key={index} className="hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
                 <CardContent className="p-6">
                   <div className="mb-4">
                     <Badge variant="secondary" className="mb-2">
@@ -166,8 +120,7 @@ const Product = () => {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -185,8 +138,7 @@ const Product = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
+            {features.map((feature, index) => <Card key={index} className="group hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 hover:shadow-glow">
                 <CardContent className="p-6">
                   <div className="flex justify-start mb-4">
                     <div className="bg-gradient-primary p-3 rounded-lg group-hover:animate-float">
@@ -198,8 +150,7 @@ const Product = () => {
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -217,12 +168,10 @@ const Product = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {gameFeatures.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-2 p-3 bg-background/50 rounded-lg">
+            {gameFeatures.map((feature, index) => <div key={index} className="flex items-center space-x-2 p-3 bg-background/50 rounded-lg">
                 <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-sm">{feature}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -243,9 +192,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "My daughter has learned so much about saving and spending wisely. The videos make complex concepts easy to understand. She's actually excited to learn about money now!"
@@ -265,9 +212,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "Cash Climb has been amazing for my classroom! The structured curriculum and engaging quizzes keep my students motivated. The progress tracking helps me see exactly where each student stands."
@@ -287,9 +232,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "The age-appropriate content is perfect. My 3rd grader understands money basics now, and my 7th grader is learning about credit responsibly. Both love earning badges!"
@@ -309,9 +252,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "Finally, a financial literacy program that works! My students are more engaged with money concepts than ever before. The quiz system provides excellent feedback for both students and parents."
@@ -331,9 +272,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "My son went from having no interest in money management to asking me about our family budget! The interactive videos and real-world examples really clicked with him."
@@ -353,9 +292,7 @@ const Product = () => {
             <Card className="border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-muted-foreground mb-4">
                   "The curriculum is comprehensive and well-structured. It's made financial education accessible for all my students, regardless of their background. The support materials are excellent too!"
@@ -393,8 +330,6 @@ const Product = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Product;
