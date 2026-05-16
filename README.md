@@ -1,73 +1,124 @@
-# Welcome to your Lovable project
+# Cash Climb
 
-## Project info
+Cash Climb is a gamified financial literacy platform that helps students learn personal finance through interactive lessons, scenario-based decision making, and progress-driven learning.
 
-**URL**: https://lovable.dev/projects/d27421d3-17a0-471a-be94-6921107868a6
+The platform is built to make core financial topics like budgeting, saving, investing, credit, and long-term planning easier for young learners to understand through a more visual and interactive experience.
 
-## How can I edit this code?
+## Live Demo
 
-There are several ways of editing your application.
+https://cash-climb.com
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d27421d3-17a0-471a-be94-6921107868a6) and start prompting.
+- Interactive financial literacy lessons
+- Scenario-based money decision modules
+- Gamified progression system for student engagement
+- Responsive interface for desktop and mobile use
+- Supabase-backed data layer
+- Modular React component structure
+- Typed frontend architecture using TypeScript
+- Routing-based page structure for scalable lesson and dashboard flows
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Supabase
+- React Router
+- TanStack Query
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Technical Highlights
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Built with a component-based React architecture to separate pages, reusable UI elements, lesson modules, and application layout.
+- Uses TypeScript across the frontend to improve reliability and make financial-learning data structures easier to maintain.
+- Uses Supabase as the backend layer for database-backed application features and future user progress tracking.
+- Uses React Router for multi-page navigation and scalable feature expansion.
+- Uses TanStack Query to support cleaner async data fetching and state handling.
+- Uses Tailwind CSS and shadcn/ui for a consistent responsive design system.
+- Designed with environment-based configuration so deployment credentials stay separate from source code.
 
-Follow these steps:
+## Architecture
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Cash Climb is structured as a React + TypeScript frontend backed by Supabase.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```txt
+React + TypeScript frontend
+        ↓
+Reusable lesson and UI components
+        ↓
+Supabase data layer
+        ↓
+Future support for user progress, quizzes, and personalized learning paths
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Repository Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```txt
+cashclimb/
+├── public/              # Static assets
+├── src/                 # Application source code
+├── supabase/            # Supabase configuration and database-related files
+├── components.json      # shadcn/ui configuration
+├── tailwind.config.ts   # Tailwind design configuration
+├── vite.config.ts       # Vite build configuration
+└── package.json         # Scripts and dependencies
+```
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kounishb/cashclimb.git
+cd cashclimb
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+Preview the production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run preview
+```
 
-## What technologies are used for this project?
+## Environment Variables
 
-This project is built with:
+Create a `.env.local` file in the root directory:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-## How can I deploy this project?
+Do not commit real environment variables.
 
-Simply open [Lovable](https://lovable.dev/projects/d27421d3-17a0-471a-be94-6921107868a6) and click on Share -> Publish.
+## Why I Built This
 
-## Can I connect a custom domain to my Lovable project?
+Financial literacy is often taught too late, even though students begin making money-related decisions early. Cash Climb is designed to make personal finance feel more approachable by turning financial concepts into interactive learning experiences rather than static textbook lessons.
 
-Yes, you can!
+## Status
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Cash Climb is in active development. Current work focuses on strengthening the learning modules, improving the gamified progression system, and expanding the backend structure for user progress and personalized financial education.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Author
+
+Created by Kounish Bhattacharjee.
